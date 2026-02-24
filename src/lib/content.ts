@@ -28,7 +28,20 @@ export const guides: Guide[] = [
     intent: "commercial",
     updated: "2026-02-24",
     heroImage: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1600&q=80",
-    body: ["Small hands need narrower shells and lower click force.", "Prioritize grip comfort over max DPI marketing.", "Our shortlist focuses on all-day comfort and return-safe value."],
+    body: [
+      "If you have small hands and wrist discomfort, fit is everything. Many so-called ergonomic mice are designed around medium-to-large hand geometry, which forces smaller hands to overreach for clicks and side buttons. That overreach can increase thumb pinch and forearm tension over long sessions.",
+      "A better approach is to prioritize shell width, click force, and neutral wrist posture over marketing specs like extreme DPI. In daily office work, comfort and control matter more than headline numbers.",
+      "For this guide, the practical target is a compact vertical design that keeps your wrist in a handshake-like angle while still feeling stable on slow and fast movements. The best option is the one you can use for 6–8 hours without needing constant micro-adjustments.",
+      "What we prioritize first: narrow-to-medium grip width, predictable tracking, low-effort primary clicks, and easy thumb access. What we deprioritize: flashy RGB, unnecessary software complexity, and inflated feature lists that don’t affect comfort.",
+      "For carpal tunnel-sensitive users, no mouse is a cure. But reducing repetitive stressors can make a significant difference in day-to-day tolerance. Think of this as part of a broader setup strategy that includes desk height, keyboard position, and break cadence.",
+      "If you’re switching from a flat mouse, expect a short adaptation curve. Most users feel awkward for 2–5 days, then settle into better alignment by the end of week one. During adaptation, lower pointer speed slightly to reduce overcorrection.",
+      "The Logitech Lift is usually the most balanced pick for smaller hands because it combines comfortable shell size with reliable click feel and excellent consistency. Budget options can still be solid, but quality control and long-term button feel vary more.",
+      "Budget vertical mice are attractive for testing ergonomics without a large upfront cost. Just verify return policy and switch feel quickly in your first week. If the clicks feel stiff or the shell forces finger curl, return early and move up a tier.",
+      "If your pain flares primarily in the thumb base, avoid models with tall side ridges that force thumb extension. If flare-up is mostly in wrist/forearm, prioritize angle and reduce horizontal desk sweep by increasing arm support.",
+      "A realistic buying framework is simple: pick by fit first, then click feel, then connectivity. Better fit with average specs beats premium specs in the wrong shape every time.",
+      "Bottom line: for small hands, compact vertical mice can significantly improve comfort and reduce strain triggers when paired with proper workstation setup. Prioritize long-session comfort over spec sheet hype, and use a return-safe trial window to lock in your best fit.",
+      "Quick next step: shortlist 2 models from different price tiers, test each for 3 focused work sessions, and keep the one that gives the most consistent comfort by day 5."
+    ],
     products: [
       { name: "Logitech Lift", bestFor: "Small hands", price: "$", rating: "4.6/5", amazonUrl: a("Logitech Lift vertical mouse") },
       { name: "Anker Ergonomic Vertical", bestFor: "Budget", price: "$", rating: "4.4/5", amazonUrl: a("Anker ergonomic vertical mouse") },
