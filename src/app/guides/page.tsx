@@ -1,23 +1,31 @@
 import Link from "next/link";
 import { guides } from "@/lib/content";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export const metadata = {
-  title: "All Guides",
-};
+export const metadata = { title: "All Guides" };
 
 export default function GuidesPage() {
   return (
-    <div>
-      <h1 className="mb-6 text-3xl font-bold">All ergonomic buying guides</h1>
-      <div className="space-y-4">
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-3xl font-bold">All ErgoMint Guides</h1>
+        <p className="text-slate-600">15 high-intent pages designed for conversions and SEO depth.</p>
+      </div>
+      <div className="grid gap-4 md:grid-cols-2">
         {guides.map((g) => (
-          <article key={g.slug} className="rounded-lg border border-slate-200 p-4">
-            <p className="text-xs uppercase text-slate-500">{g.intent}</p>
-            <h2 className="text-xl font-semibold">
-              <Link href={`/guides/${g.slug}`}>{g.title}</Link>
-            </h2>
-            <p className="mt-1 text-slate-600">{g.description}</p>
-          </article>
+          <Card key={g.slug} className="overflow-hidden">
+            <div className="h-36 w-full bg-cover bg-center" style={{ backgroundImage: `url(${g.heroImage})` }} />
+            <CardHeader>
+              <Badge variant="secondary" className="w-fit capitalize">{g.intent}</Badge>
+              <CardTitle className="text-xl">
+                <Link href={`/guides/${g.slug}`}>{g.title}</Link>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-600">{g.description}</p>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </div>
