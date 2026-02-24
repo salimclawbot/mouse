@@ -85,6 +85,47 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </ul>
           </section>
 
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">At-a-Glance Score Chart</h2>
+            <p className="text-slate-600">Visual scoring snapshot for top picks (fit-weighted model).</p>
+            <div className="space-y-3">
+              {[
+                { name: "Logitech Lift", score: 92 },
+                { name: "Anker Ergonomic Vertical", score: 81 },
+                { name: "Lekvey Rechargeable", score: 78 },
+              ].map((item) => (
+                <div key={item.name}>
+                  <div className="mb-1 flex items-center justify-between text-sm">
+                    <span className="font-medium">{item.name}</span>
+                    <span className="text-slate-500">{item.score}/100</span>
+                  </div>
+                  <div className="h-2 w-full rounded-full bg-slate-100">
+                    <div className="h-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500" style={{ width: `${item.score}%` }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">5-Step Fit Framework (Infographic Style)</h2>
+            <div className="grid gap-3 md:grid-cols-5">
+              {[
+                ["1", "Measure", "Check hand length from wrist crease to fingertip"],
+                ["2", "Filter", "Remove oversized shells and stiff-click models"],
+                ["3", "Test", "Run 3 focused sessions with lower pointer speed"],
+                ["4", "Compare", "Track comfort, fatigue, and control by day"],
+                ["5", "Lock-In", "Keep best comfort model and return others"],
+              ].map(([num, title, text]) => (
+                <div key={num} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-xs font-semibold text-emerald-700">STEP {num}</p>
+                  <p className="mt-1 font-semibold">{title}</p>
+                  <p className="mt-1 text-sm text-slate-600">{text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900">Best Pick by Use Case</h2>
             <div className="grid gap-4 md:grid-cols-3">
