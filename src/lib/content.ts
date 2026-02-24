@@ -43,9 +43,16 @@ export const guides: Guide[] = [
       "Quick next step: shortlist 2 models from different price tiers, test each for 3 focused work sessions, and keep the one that gives the most consistent comfort by day 5."
     ],
     products: [
-      { name: "Logitech Lift", bestFor: "Small hands", price: "$", rating: "4.6/5", amazonUrl: a("Logitech Lift vertical mouse") },
-      { name: "Anker Ergonomic Vertical", bestFor: "Budget", price: "$", rating: "4.4/5", amazonUrl: a("Anker ergonomic vertical mouse") },
-      { name: "Lekvey Rechargeable Vertical", bestFor: "Rechargeable value", price: "$", rating: "4.3/5", amazonUrl: a("Lekvey vertical mouse rechargeable") },
+      { name: "Logitech Lift", bestFor: "Best overall for small hands", price: "$$", rating: "4.6/5", amazonUrl: a("Logitech Lift vertical mouse") },
+      { name: "Anker Ergonomic Vertical", bestFor: "Best budget starter", price: "$", rating: "4.4/5", amazonUrl: a("Anker ergonomic vertical mouse") },
+      { name: "Lekvey Rechargeable Vertical", bestFor: "Best cheap rechargeable", price: "$", rating: "4.3/5", amazonUrl: a("Lekvey vertical mouse rechargeable") },
+      { name: "Logitech MX Vertical", bestFor: "Premium larger grip", price: "$$$", rating: "4.5/5", amazonUrl: a("Logitech MX Vertical") },
+      { name: "Evoluent VerticalMouse 4", bestFor: "Clinical-ergonomic shape", price: "$$$", rating: "4.4/5", amazonUrl: a("Evoluent VerticalMouse 4") },
+      { name: "Delux M618 Mini", bestFor: "Extra-compact shape", price: "$$", rating: "4.1/5", amazonUrl: a("Delux M618 Mini vertical mouse") },
+      { name: "ProtoArc EM11 NL", bestFor: "Quiet office use", price: "$$", rating: "4.4/5", amazonUrl: a("ProtoArc EM11 NL vertical mouse") },
+      { name: "Perixx PERIMICE-713", bestFor: "Small-hand wired reliability", price: "$", rating: "4.2/5", amazonUrl: a("Perixx PERIMICE-713") },
+      { name: "J-Tech Digital V628", bestFor: "Palm shelf support", price: "$$", rating: "4.3/5", amazonUrl: a("J-Tech Digital V628") },
+      { name: "Kensington Pro Fit Ergo Vertical", bestFor: "Conservative vertical angle", price: "$$", rating: "4.2/5", amazonUrl: a("Kensington Pro Fit Ergo vertical mouse") },
     ],
   },
   {

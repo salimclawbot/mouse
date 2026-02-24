@@ -103,8 +103,15 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <div className="space-y-3">
               {[
                 { name: "Logitech Lift", score: 92 },
+                { name: "Evoluent VerticalMouse 4", score: 88 },
+                { name: "Delux M618 Mini", score: 86 },
+                { name: "ProtoArc EM11 NL", score: 84 },
                 { name: "Anker Ergonomic Vertical", score: 81 },
+                { name: "Perixx PERIMICE-713", score: 80 },
+                { name: "Logitech MX Vertical", score: 79 },
+                { name: "Kensington Pro Fit Ergo Vertical", score: 78 },
                 { name: "Lekvey Rechargeable", score: 78 },
+                { name: "J-Tech Digital V628", score: 75 },
               ].map((item) => (
                 <div key={item.name}>
                   <div className="mb-1 flex items-center justify-between text-sm">
@@ -168,18 +175,58 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 p-4 transition hover:-translate-y-0.5 hover:shadow-sm">
                 <p className="text-sm text-slate-500">Best Overall</p>
                 <p className="font-semibold">Logitech Lift</p>
-                <p className="text-sm text-slate-600">Best blend of compact fit, switch feel, and reliability.</p>
+                <p className="text-sm text-slate-600">Best blend of compact fit, switch feel, and long-session consistency.</p>
               </div>
               <div className="rounded-xl border border-slate-200 p-4 transition hover:-translate-y-0.5 hover:shadow-sm">
                 <p className="text-sm text-slate-500">Best Budget</p>
                 <p className="font-semibold">Anker Ergonomic Vertical</p>
-                <p className="text-sm text-slate-600">Low-cost way to test vertical ergonomics first.</p>
+                <p className="text-sm text-slate-600">Low-cost way to validate whether vertical posture helps your symptoms.</p>
               </div>
               <div className="rounded-xl border border-slate-200 p-4 transition hover:-translate-y-0.5 hover:shadow-sm">
                 <p className="text-sm text-slate-500">Best Rechargeable Value</p>
                 <p className="font-semibold">Lekvey Rechargeable</p>
-                <p className="text-sm text-slate-600">Decent comfort + USB charging at entry-tier pricing.</p>
+                <p className="text-sm text-slate-600">Decent comfort with USB charging if you want fewer battery swaps.</p>
               </div>
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Deep Model Coverage: 10 Popular Options and Their Tradeoffs</h2>
+            <p className="text-slate-700">Below is the practical shortlist most readers compare. Instead of pretending there is one perfect mouse, we focus on tradeoffs: shell size, click feel, weight, connectivity, and adaptation friction.</p>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Logitech Lift</strong> — The safest small-hand recommendation. Pros: compact body, predictable clicks, strong software support. Tradeoff: not the cheapest option and still not tiny for very short fingers.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Anker Ergonomic Vertical</strong> — Best test-drive budget pick. Pros: very affordable, familiar shape. Tradeoff: quality-control variance, occasionally stiffer click feel out of the box.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Lekvey Rechargeable Vertical</strong> — Good entry rechargeable model. Pros: simple USB charging, value pricing. Tradeoff: button feel can soften unevenly over heavy 6+ month use.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Logitech MX Vertical</strong> — Premium build and sensor consistency. Pros: excellent stability and finish. Tradeoff: physically larger shell can force overreach for smaller hands.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Evoluent VerticalMouse 4</strong> — Medical-style ergonomic profile. Pros: distinct finger ledges and reduced pronation feel. Tradeoff: shape is love-or-hate and adaptation can be longer.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Delux M618 Mini</strong> — One of few deliberately compact shells. Pros: easier reach for tiny hands. Tradeoff: premium feel and software polish lag behind Logitech.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>ProtoArc EM11 NL</strong> — Quiet click office choice. Pros: lower click noise for shared spaces. Tradeoff: shape comfort is good but long-term durability data is thinner.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Perixx PERIMICE-713</strong> — Wired reliability option. Pros: no charging cycle anxiety, stable tracking for fixed desk setups. Tradeoff: cable drag and less flexibility for hybrid work.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>J-Tech Digital V628</strong> — Pronounced palm shelf support. Pros: can reduce grip squeeze for some users. Tradeoff: bulkier shape makes it awkward for very small hands.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Kensington Pro Fit Ergo Vertical</strong> — Conservative angle for easier transition. Pros: gentler learning curve from normal mice. Tradeoff: less aggressive wrist-neutral posture than steeper designs.</p></div>
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Decision Layering: Which Model Wins for Your Specific Pain Pattern?</h2>
+            <div className="space-y-3 text-slate-700">
+              <p><strong>If your thumb base hurts first:</strong> avoid tall thumb ridges and oversized shells. Lift, Delux M618 Mini, and Perixx 713 generally allow easier thumb parking with less extension tension.</p>
+              <p><strong>If your wrist and forearm ache most:</strong> prioritize more neutral hand posture and reduced squeeze force. Lift, Evoluent VM4, and J-Tech V628 often test well when paired with forearm support and lower pointer speed.</p>
+              <p><strong>If finger joints fatigue from clicking:</strong> choose lower-force switches even if tracking specs are average. Lift and ProtoArc are usually friendlier than stiff, budget-heavy switches.</p>
+              <p><strong>If you travel between laptop + desk:</strong> Bluetooth convenience matters more than niche features. Lift and MX Vertical are usually the least frustrating multi-device choices.</p>
+              <p><strong>If budget is fixed under $40:</strong> Anker, Lekvey, and Perixx are the realistic pool. Buy from retailers with easy returns because same-model variance can affect click weight and shell finish.</p>
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides (Pick Your Intent)</h2>
+            <div className="grid gap-3 md:grid-cols-2">
+              <Link href="/guides/logitech-lift-vs-mx-vertical" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Still deciding between Lift and MX Vertical?</strong><br /><span className="text-sm text-slate-600">See our direct size-fit and value comparison.</span></Link>
+              <Link href="/guides/best-vertical-mouse-under-50" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need to stay under $50?</strong><br /><span className="text-sm text-slate-600">Budget picks ranked by comfort-per-dollar.</span></Link>
+              <Link href="/guides/vertical-mouse-for-wrist-pain-no-pronation" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Wrist pain is your main issue?</strong><br /><span className="text-sm text-slate-600">Read our no-pronation angle and posture guide.</span></Link>
+              <Link href="/guides/vertical-mouse-vs-trackball-tendonitis" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Considering trackballs instead?</strong><br /><span className="text-sm text-slate-600">Compare movement load and adaptation time.</span></Link>
+              <Link href="/guides/best-vertical-mouse-for-macbook" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Using a MacBook daily?</strong><br /><span className="text-sm text-slate-600">Bluetooth stability and macOS support picks.</span></Link>
+              <Link href="/guides/best-ergonomic-setup-for-wrist-pain" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Want the full desk setup fix?</strong><br /><span className="text-sm text-slate-600">Mouse + keyboard + desk-height stack that works together.</span></Link>
             </div>
           </section>
         </>
@@ -243,20 +290,20 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
 
           <section id="faq" className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold text-slate-900">FAQ (Extended)</h2>
+            <h2 className="text-2xl font-bold text-slate-900">FAQ (People-Also-Ask Style, In Depth)</h2>
             <div className="space-y-3 text-slate-700">
-              <p><strong>Can a vertical mouse cure carpal tunnel?</strong><br />No. It may reduce aggravating posture/load but is not a cure.</p>
-              <p><strong>How long does adaptation take?</strong><br />Usually 3–10 days for office users.</p>
-              <p><strong>What matters more than DPI?</strong><br />Fit, click force, and stability under normal work speed.</p>
-              <p><strong>Should I use Bluetooth or dongle?</strong><br />Dongle is often more stable; Bluetooth is cleaner for travel.</p>
-              <p><strong>What if two mice feel similar?</strong><br />Keep the one with lower finger fatigue by day 5.</p>
-              <p><strong>What hand size is considered small?</strong><br />Typically under ~17cm from wrist crease to middle fingertip.</p>
-              <p><strong>What vertical angle should I start with?</strong><br />Most users do best around 57° as a beginner baseline.</p>
-              <p><strong>Are trackballs better for wrist pain?</strong><br />For some users yes, but vertical mice are often easier to adapt to first.</p>
-              <p><strong>Can I use a vertical mouse for gaming?</strong><br />Casual gaming yes; competitive FPS usually favors traditional shapes.</p>
-              <p><strong>Should I add a wrist rest?</strong><br />For mouse use, light forearm support often helps more than pressing on a wrist rest.</p>
-              <p><strong>How long before I notice comfort improvement?</strong><br />Many users report improvement within 1–3 weeks with proper setup habits.</p>
-              <p><strong>What’s the #1 buying tip?</strong><br />Measure your hand first. Correct size beats extra features every time.</p>
+              <p><strong>Can a vertical mouse cure carpal tunnel syndrome?</strong><br />No. A mouse can reduce common aggravators like pronation stress and grip tension, but it does not treat nerve compression by itself. Treat this as one lever in a bigger plan: posture, keyboard placement, workload pacing, and clinical advice when symptoms persist.</p>
+              <p><strong>How long does it take to get used to a vertical mouse?</strong><br />Most office users feel awkward for 2–5 days and mostly stable by day 7–10. If accuracy still feels poor after two weeks, the shape is probably wrong for your hand size or your pointer speed is too high during adaptation.</p>
+              <p><strong>What matters more than DPI for wrist comfort?</strong><br />Fit, click force, and motion control at normal desktop speeds. High DPI doesn’t help if the shell forces overreach or if the clicks are stiff enough to trigger finger strain by mid-afternoon.</p>
+              <p><strong>Bluetooth or USB dongle: which is better for pain-sensitive work?</strong><br />For pure stability, 2.4GHz dongles still win in many busy wireless environments. Bluetooth is great for clean travel setups; just confirm wake latency and cursor consistency on your specific laptop.</p>
+              <p><strong>What if two models feel almost identical on day one?</strong><br />Use a 5-day comparison log: morning comfort, afternoon fatigue, and evening soreness. The better long-session mouse usually reveals itself by day 3–5, especially when workloads include drag/drop and spreadsheet-heavy tasks.</p>
+              <p><strong>What hand size counts as “small” for mouse fitting?</strong><br />As a practical buying heuristic, under ~17cm wrist-crease-to-middle-fingertip usually benefits from compact shells first. People with narrow palms may also need smaller width even if finger length is average.</p>
+              <p><strong>What vertical angle should beginners start with?</strong><br />Around 57° is a reliable baseline for many users because it reduces pronation without feeling extreme. Steeper or more sculpted designs can work better for pain, but they often demand longer adaptation.</p>
+              <p><strong>Are trackballs better than vertical mice for tendonitis or carpal tunnel?</strong><br />They can be, especially if arm movement is a major trigger. But trackballs often require more thumb/finger retraining, so many users do better starting with a well-fitted vertical mouse and moving to trackball only if symptoms remain.</p>
+              <p><strong>Can you game with a vertical mouse if you have small hands?</strong><br />Casual and strategy games are usually fine. For high-level FPS play, most users still prefer conventional mice for rapid flick mechanics; a dual-mouse setup is often the best compromise.</p>
+              <p><strong>Should I use a mouse wrist rest?</strong><br />Usually, light forearm support is safer than loading body weight directly into the wrist. If you use a rest, keep contact gentle and avoid compressing the carpal tunnel area during clicks.</p>
+              <p><strong>How quickly should pain improve after switching?</strong><br />Some people feel early relief in the first week, but consistent improvements often take 2–4 weeks because tissue irritability and movement habits need time to settle. If symptoms worsen quickly, stop and reassess fit immediately.</p>
+              <p><strong>What is the single most important buying rule?</strong><br />Size fit before features. A correctly sized, medium-spec mouse almost always beats a premium oversized model for real-world pain-aware productivity.</p>
             </div>
           </section>
 
@@ -267,7 +314,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><Link className="underline" href="https://www.reddit.com/r/UXDesign/comments/wgzaj9/vertical_mouse_for_small_hand/" target="_blank">Reddit UXDesign: small-hand sizing pain point</Link></li>
               <li><Link className="underline" href="https://www.reddit.com/r/ehlersdanlos/comments/16y57sl/anyone_have_a_rec_for_an_ergonomic_mouse_for/" target="_blank">Reddit EDS: larger mice requiring harder grip</Link></li>
               <li><Link className="underline" href="https://www.reddit.com/r/Revit/comments/vlgf4v/mice_options_and_alternatives_to_reduce_carpal/" target="_blank">Reddit Revit: carpal tunnel risk and alternatives</Link></li>
-              <li><Link className="underline" href="https://forums.tomshardware.com/threads/opinions-on-vertical-mice.3723455/" target="_blank">Tom's Hardware forum: comfort is subjective, test-first advice</Link></li>
+              <li><Link className="underline" href="https://forums.tomshardware.com/threads/opinions-on-vertical-mice.3723455/" target="_blank">Tom&apos;s Hardware forum: comfort is subjective, test-first advice</Link></li>
             </ul>
           </section>
 
