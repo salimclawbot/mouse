@@ -126,6 +126,28 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </div>
           </section>
 
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Comfort Timeline: Week 1 → Week 3</h2>
+            <p className="text-slate-600">Typical transition pattern users report after switching from an oversized flat mouse to a well-fitted vertical model.</p>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <p className="text-xs font-semibold uppercase text-amber-700">Days 1–3</p>
+                <p className="mt-1 font-semibold">Adjustment Phase</p>
+                <p className="mt-1 text-sm text-slate-700">Movement feels unfamiliar; accuracy may dip slightly while grip patterns reset.</p>
+              </div>
+              <div className="rounded-xl border border-cyan-200 bg-cyan-50 p-4">
+                <p className="text-xs font-semibold uppercase text-cyan-700">Days 4–10</p>
+                <p className="mt-1 font-semibold">Stability Phase</p>
+                <p className="mt-1 text-sm text-slate-700">Control returns, click fatigue often drops, wrist posture starts feeling more natural.</p>
+              </div>
+              <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                <p className="text-xs font-semibold uppercase text-emerald-700">Week 2–3</p>
+                <p className="mt-1 font-semibold">Comfort Lock-In</p>
+                <p className="mt-1 text-sm text-slate-700">Consistent all-day comfort for most users with proper desk setup and break cadence.</p>
+              </div>
+            </div>
+          </section>
+
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900">Best Pick by Use Case</h2>
             <div className="grid gap-4 md:grid-cols-3">
