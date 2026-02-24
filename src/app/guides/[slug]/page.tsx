@@ -17,14 +17,16 @@ export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const guide = guides.find((g) => g.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const guide = guides.find((g) => g.slug === slug);
   if (!guide) return {};
   return { title: guide.title, description: guide.description };
 }
 
-export default function GuidePage({ params }: { params: { slug: string } }) {
-  const guide = guides.find((g) => g.slug === params.slug);
+export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const guide = guides.find((g) => g.slug === slug);
   if (!guide) notFound();
 
   return (
