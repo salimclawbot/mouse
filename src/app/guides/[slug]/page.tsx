@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import QuizRecommender from "@/components/quiz-recommender";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -148,25 +149,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </div>
           </section>
 
-          <section className="space-y-4 rounded-2xl border border-indigo-200 bg-indigo-50/60 p-6">
-            <h2 className="text-2xl font-bold text-slate-900">Quick Decision Quiz (30 Seconds)</h2>
-            <p className="text-slate-700">Answer these 3 checks and jump to the right pick faster:</p>
-            <div className="space-y-3 text-slate-800">
-              <div className="rounded-lg border border-indigo-200 bg-white p-4">
-                <p><strong>1) Is your hand length under ~17cm?</strong></p>
-                <p className="mt-1 text-sm">Yes → prioritize compact/tiny shells. No → small/medium options may fit better.</p>
-              </div>
-              <div className="rounded-lg border border-indigo-200 bg-white p-4">
-                <p><strong>2) Do stiff clicks worsen your pain after 1–2 hours?</strong></p>
-                <p className="mt-1 text-sm">Yes → choose low click-force models first, even over premium feature sets.</p>
-              </div>
-              <div className="rounded-lg border border-indigo-200 bg-white p-4">
-                <p><strong>3) Need easiest transition from a flat mouse?</strong></p>
-                <p className="mt-1 text-sm">Yes → start with a 57° model and moderate DPI; avoid extreme tilt on day one.</p>
-              </div>
-            </div>
-            <p className="text-sm text-slate-600">Default recommendation if unsure: <strong>Logitech Lift</strong> for balanced comfort + low adaptation friction.</p>
-          </section>
+          <QuizRecommender products={guide.products} />
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900">Best Pick by Use Case</h2>
