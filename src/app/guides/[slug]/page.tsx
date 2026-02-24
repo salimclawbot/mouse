@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { guides } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -22,6 +23,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const guide = guides.find((g) => g.slug === slug);
   if (!guide) return {};
+
+  if (slug === "best-vertical-mouse-small-hands-carpal-tunnel") {
+    return {
+      title: guide.title,
+      description:
+        "In-depth 2026 guide to the best vertical mouse for small hands and carpal tunnel sensitivity: 10 model tradeoffs, comfort-fit framework, FAQs, and buyer picks.",
+    };
+  }
+
   return { title: guide.title, description: guide.description };
 }
 
@@ -32,8 +42,60 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   const isPremiumDemo = slug === "best-vertical-mouse-small-hands-carpal-tunnel";
 
+  const faqForSchema = [
+    {
+      q: "Can a vertical mouse cure carpal tunnel syndrome?",
+      a: "No. It can reduce aggravating posture and grip stress, but it is not a medical cure.",
+    },
+    {
+      q: "How long does adaptation take?",
+      a: "Most users adapt in about 3 to 10 days, with better stability by week two.",
+    },
+    {
+      q: "What matters more than DPI for comfort?",
+      a: "Correct size fit, lighter click force, and stable control at normal work speed.",
+    },
+  ];
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.description,
+    dateModified: guide.updated,
+    datePublished: "2026-02-24",
+    author: {
+      "@type": "Organization",
+      name: "ErgoMint Editorial",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ErgoMint",
+    },
+    mainEntityOfPage: `${"https://mouse-one-rouge.vercel.app"}/guides/${guide.slug}`,
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqForSchema.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <article className="space-y-10 leading-8 text-slate-800">
+      {isPremiumDemo && (
+        <>
+          <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+          <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        </>
+      )}
       <div className="group relative overflow-hidden rounded-2xl border border-slate-200">
         <Image src={guide.heroImage} alt={guide.title} width={1600} height={900} className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-transparent to-cyan-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -305,6 +367,15 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <p><strong>How quickly should pain improve after switching?</strong><br />Some people feel early relief in the first week, but consistent improvements often take 2–4 weeks because tissue irritability and movement habits need time to settle. If symptoms worsen quickly, stop and reassess fit immediately.</p>
               <p><strong>What is the single most important buying rule?</strong><br />Size fit before features. A correctly sized, medium-spec mouse almost always beats a premium oversized model for real-world pain-aware productivity.</p>
             </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Editorial Method + Safety Notes</h2>
+            <ul className="list-disc space-y-2 pl-6 text-slate-700">
+              <li><strong>Method:</strong> ranking is weighted by fit (35%), comfort (25%), control (20%), and value (20%) for small-hand use cases.</li>
+              <li><strong>Scope:</strong> this is a buyer guide, not a medical diagnosis. Persistent numbness/tingling should be assessed by a licensed clinician.</li>
+              <li><strong>Update policy:</strong> we revise recommendations when major model revisions, pricing shifts, or availability changes alter value.</li>
+            </ul>
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
