@@ -155,14 +155,32 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold">FAQ</h2>
+            <h2 className="text-2xl font-bold">FAQ (Extended)</h2>
             <div className="space-y-3 text-slate-700">
               <p><strong>Can a vertical mouse cure carpal tunnel?</strong><br />No. It may reduce aggravating posture/load but is not a cure.</p>
               <p><strong>How long does adaptation take?</strong><br />Usually 3–10 days for office users.</p>
               <p><strong>What matters more than DPI?</strong><br />Fit, click force, and stability under normal work speed.</p>
               <p><strong>Should I use Bluetooth or dongle?</strong><br />Dongle is often more stable; Bluetooth is cleaner for travel.</p>
               <p><strong>What if two mice feel similar?</strong><br />Keep the one with lower finger fatigue by day 5.</p>
+              <p><strong>What hand size is considered small?</strong><br />Typically under ~17cm from wrist crease to middle fingertip.</p>
+              <p><strong>What vertical angle should I start with?</strong><br />Most users do best around 57° as a beginner baseline.</p>
+              <p><strong>Are trackballs better for wrist pain?</strong><br />For some users yes, but vertical mice are often easier to adapt to first.</p>
+              <p><strong>Can I use a vertical mouse for gaming?</strong><br />Casual gaming yes; competitive FPS usually favors traditional shapes.</p>
+              <p><strong>Should I add a wrist rest?</strong><br />For mouse use, light forearm support often helps more than pressing on a wrist rest.</p>
+              <p><strong>How long before I notice comfort improvement?</strong><br />Many users report improvement within 1–3 weeks with proper setup habits.</p>
+              <p><strong>What’s the #1 buying tip?</strong><br />Measure your hand first. Correct size beats extra features every time.</p>
             </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold">What Real Users Commonly Report</h2>
+            <p className="text-slate-700">Across Reddit and forum threads, repeated patterns are: oversized mice causing thumb strain, stiff clicks worsening flare-ups, and major comfort gains after switching to smaller shells.</p>
+            <ul className="list-disc space-y-2 pl-6 text-slate-700">
+              <li><Link className="underline" href="https://www.reddit.com/r/UXDesign/comments/wgzaj9/vertical_mouse_for_small_hand/" target="_blank">Reddit UXDesign: small-hand sizing pain point</Link></li>
+              <li><Link className="underline" href="https://www.reddit.com/r/ehlersdanlos/comments/16y57sl/anyone_have_a_rec_for_an_ergonomic_mouse_for/" target="_blank">Reddit EDS: larger mice requiring harder grip</Link></li>
+              <li><Link className="underline" href="https://www.reddit.com/r/Revit/comments/vlgf4v/mice_options_and_alternatives_to_reduce_carpal/" target="_blank">Reddit Revit: carpal tunnel risk and alternatives</Link></li>
+              <li><Link className="underline" href="https://forums.tomshardware.com/threads/opinions-on-vertical-mice.3723455/" target="_blank">Tom's Hardware forum: comfort is subjective, test-first advice</Link></li>
+            </ul>
           </section>
         </>
       )}
