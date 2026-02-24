@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { site } from "@/lib/content";
+import ReadingProgress from "@/components/reading-progress";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className="text-slate-900 antialiased">
+        <ReadingProgress />
         <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
             <Link href="/" className="text-xl font-extrabold tracking-tight text-emerald-700">

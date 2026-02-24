@@ -32,41 +32,51 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isPremiumDemo = slug === "best-vertical-mouse-small-hands-carpal-tunnel";
 
   return (
-    <article className="space-y-10">
-      <div className="overflow-hidden rounded-2xl border border-slate-200">
-        <Image src={guide.heroImage} alt={guide.title} width={1600} height={900} className="h-[360px] w-full object-cover" />
+    <article className="space-y-10 leading-8 text-slate-800">
+      <div className="group relative overflow-hidden rounded-2xl border border-slate-200">
+        <Image src={guide.heroImage} alt={guide.title} width={1600} height={900} className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-transparent to-cyan-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
 
       <header className="space-y-3">
         <Badge variant="secondary" className="capitalize">{guide.intent}</Badge>
-        <h1 className="text-4xl font-extrabold tracking-tight">{guide.title}</h1>
-        <p className="text-lg text-slate-600">{guide.description}</p>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">{guide.title}</h1>
+        <p className="max-w-3xl text-lg leading-8 text-slate-600">{guide.description}</p>
         <p className="text-xs uppercase text-slate-500">Updated {guide.updated}</p>
       </header>
 
-      <section className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6">
-        <h2 className="text-2xl font-bold">Quick Answer (TL;DR)</h2>
+      <nav className="sticky top-16 z-30 rounded-xl border border-slate-200 bg-white/90 p-3 backdrop-blur">
+        <ul className="flex flex-wrap gap-2 text-sm">
+          <li><a href="#quick" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Picks</a></li>
+          <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
+          {isPremiumDemo && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
+          {isPremiumDemo && <li><a href="#verdict" className="rounded-md px-3 py-1 hover:bg-slate-100">Verdict</a></li>}
+        </ul>
+      </nav>
+
+      <section id="quick" className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 transition hover:shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">Quick Answer (TL;DR)</h2>
         {guide.body.map((p, i) => (
-          <p key={i} className="text-slate-700">{p}</p>
+          <p key={i} className="max-w-4xl text-slate-700">{p}</p>
         ))}
       </section>
 
       {isPremiumDemo && (
         <>
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold">Why Most "Ergonomic" Mice Fail Small Hands</h2>
-            <p>
+            <h2 className="text-2xl font-bold text-slate-900">Why Most "Ergonomic" Mice Fail Small Hands</h2>
+            <p className="max-w-4xl">
               Most models are tuned for average hand sizes. For smaller hands, this creates <strong>overreach</strong> on main clicks,
               awkward thumb extension, and unstable grip pressure. Over a full workday, those small compromises can increase fatigue.
             </p>
-            <p>
+            <p className="max-w-4xl">
               Our ranking framework prioritizes <span className="underline">fit-first ergonomics</span>: shell width, click force,
               thumb access, and long-session comfort consistency.
             </p>
           </section>
 
-          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold">How We Scored Each Mouse</h2>
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6 transition hover:shadow-sm">
+            <h2 className="text-2xl font-bold text-slate-900">How We Scored Each Mouse</h2>
             <ul className="list-disc space-y-2 pl-6 text-slate-700">
               <li><strong>Fit score (35%)</strong> — grip width, palm support, button reach</li>
               <li><strong>Comfort score (25%)</strong> — click effort, wrist neutrality, fatigue trend</li>
@@ -76,19 +86,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold">Best Pick by Use Case</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Best Pick by Use Case</h2>
             <div className="grid gap-4 md:grid-cols-3">
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-slate-200 p-4 transition hover:-translate-y-0.5 hover:shadow-sm">
                 <p className="text-sm text-slate-500">Best Overall</p>
                 <p className="font-semibold">Logitech Lift</p>
                 <p className="text-sm text-slate-600">Best blend of compact fit, switch feel, and reliability.</p>
               </div>
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-slate-200 p-4 transition hover:-translate-y-0.5 hover:shadow-sm">
                 <p className="text-sm text-slate-500">Best Budget</p>
                 <p className="font-semibold">Anker Ergonomic Vertical</p>
                 <p className="text-sm text-slate-600">Low-cost way to test vertical ergonomics first.</p>
               </div>
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-slate-200 p-4 transition hover:-translate-y-0.5 hover:shadow-sm">
                 <p className="text-sm text-slate-500">Best Rechargeable Value</p>
                 <p className="font-semibold">Lekvey Rechargeable</p>
                 <p className="text-sm text-slate-600">Decent comfort + USB charging at entry-tier pricing.</p>
@@ -98,11 +108,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </>
       )}
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold">Comparison Table</h2>
-        <div className="overflow-hidden rounded-xl border border-slate-200">
+      <section id="comparison" className="space-y-4">
+        <h2 className="text-2xl font-bold text-slate-900">Comparison Table</h2>
+        <div className="overflow-x-auto rounded-xl border border-slate-200">
           <Table>
-            <TableHeader>
+            <TableHeader className="sticky top-0 bg-slate-50">
               <TableRow>
                 <TableHead>Product</TableHead>
                 <TableHead>Best For</TableHead>
@@ -113,13 +123,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </TableHeader>
             <TableBody>
               {guide.products.map((p) => (
-                <TableRow key={p.name}>
+                <TableRow key={p.name} className="transition hover:bg-emerald-50/50">
                   <TableCell className="font-medium">{p.name}</TableCell>
                   <TableCell>{p.bestFor}</TableCell>
                   <TableCell>{p.price}</TableCell>
                   <TableCell>{p.rating}</TableCell>
                   <TableCell>
-                    <Button asChild size="sm">
+                    <Button asChild size="sm" className="transition hover:scale-[1.02]">
                       <Link href={p.amazonUrl} target="_blank">Check on Amazon</Link>
                     </Button>
                   </TableCell>
@@ -133,7 +143,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       {isPremiumDemo && (
         <>
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold">Who Should Buy (and Who Should Skip)</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Who Should Buy (and Who Should Skip)</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
                 <h3 className="font-semibold">Buy if you:</h3>
@@ -154,8 +164,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </div>
           </section>
 
-          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold">FAQ (Extended)</h2>
+          <section id="faq" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">FAQ (Extended)</h2>
             <div className="space-y-3 text-slate-700">
               <p><strong>Can a vertical mouse cure carpal tunnel?</strong><br />No. It may reduce aggravating posture/load but is not a cure.</p>
               <p><strong>How long does adaptation take?</strong><br />Usually 3–10 days for office users.</p>
@@ -173,7 +183,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold">What Real Users Commonly Report</h2>
+            <h2 className="text-2xl font-bold text-slate-900">What Real Users Commonly Report</h2>
             <p className="text-slate-700">Across Reddit and forum threads, repeated patterns are: oversized mice causing thumb strain, stiff clicks worsening flare-ups, and major comfort gains after switching to smaller shells.</p>
             <ul className="list-disc space-y-2 pl-6 text-slate-700">
               <li><Link className="underline" href="https://www.reddit.com/r/UXDesign/comments/wgzaj9/vertical_mouse_for_small_hand/" target="_blank">Reddit UXDesign: small-hand sizing pain point</Link></li>
@@ -181,6 +191,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><Link className="underline" href="https://www.reddit.com/r/Revit/comments/vlgf4v/mice_options_and_alternatives_to_reduce_carpal/" target="_blank">Reddit Revit: carpal tunnel risk and alternatives</Link></li>
               <li><Link className="underline" href="https://forums.tomshardware.com/threads/opinions-on-vertical-mice.3723455/" target="_blank">Tom's Hardware forum: comfort is subjective, test-first advice</Link></li>
             </ul>
+          </section>
+
+          <section id="verdict" className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-cyan-50 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Final Verdict</h2>
+            <p className="mt-2 max-w-4xl text-slate-700">For small hands and carpal tunnel-sensitive workflows, prioritize size fit and click effort first. Feature count is secondary. A correctly-sized vertical mouse with lower force clicks will usually outperform a premium oversized model in real-world comfort.</p>
           </section>
         </>
       )}
