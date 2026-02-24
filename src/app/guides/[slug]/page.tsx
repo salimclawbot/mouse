@@ -44,6 +44,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">{guide.title}</h1>
         <p className="max-w-3xl text-lg leading-8 text-slate-600">{guide.description}</p>
         <p className="text-xs uppercase text-slate-500">Updated {guide.updated}</p>
+        {isPremiumDemo && <p className="text-xs text-slate-500">Last reviewed for readability + SEO intent: 2026-02-24</p>}
       </header>
 
       <nav className="sticky top-16 z-30 rounded-xl border border-slate-200 bg-white/90 p-3 backdrop-blur">
@@ -56,16 +57,26 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       </nav>
 
       <section id="quick" className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 transition hover:shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Quick Answer (TL;DR)</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Quick Answer: Best Vertical Mouse for Small Hands</h2>
         {guide.body.map((p, i) => (
           <p key={i} className="max-w-4xl text-slate-700">{p}</p>
         ))}
+        <p className="text-sm font-medium text-emerald-800">Key takeaway: pick the smallest mouse that still supports your palm, then prioritize low click force.</p>
       </section>
 
       {isPremiumDemo && (
         <>
+          <section className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 className="text-2xl font-bold text-slate-900">Who This Guide Is For</h2>
+            <ul className="list-disc space-y-1 pl-5 text-slate-700">
+              <li>You have small or tiny hands and most mice feel too big.</li>
+              <li>You get wrist pain or finger fatigue after long work sessions.</li>
+              <li>You want a simple buying decision without tech fluff.</li>
+            </ul>
+          </section>
+
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-slate-900">Why Most "Ergonomic" Mice Fail Small Hands</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Why Many Ergonomic Mice Still Hurt Small Hands</h2>
             <p className="max-w-4xl">
               Most models are tuned for average hand sizes. For smaller hands, this creates <strong>overreach</strong> on main clicks,
               awkward thumb extension, and unstable grip pressure. Over a full workday, those small compromises can increase fatigue.
@@ -77,7 +88,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6 transition hover:shadow-sm">
-            <h2 className="text-2xl font-bold text-slate-900">How We Scored Each Mouse</h2>
+            <h2 className="text-2xl font-bold text-slate-900">How We Scored Each Small-Hand Vertical Mouse</h2>
             <ul className="list-disc space-y-2 pl-6 text-slate-700">
               <li><strong>Fit score (35%)</strong> — grip width, palm support, button reach</li>
               <li><strong>Comfort score (25%)</strong> — click effort, wrist neutrality, fatigue trend</li>
@@ -175,7 +186,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       )}
 
       <section id="comparison" className="space-y-4">
-        <h2 className="text-2xl font-bold text-slate-900">Comparison Table</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Comparison Table: Vertical Mouse for Small Hands</h2>
+        <p className="text-sm font-medium text-slate-600">Key takeaway: comfort fit beats raw specs for long-term wrist relief.</p>
         <div className="overflow-x-auto rounded-xl border border-slate-200">
           <Table>
             <TableHeader className="sticky top-0 bg-slate-50">
