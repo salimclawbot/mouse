@@ -29,25 +29,74 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const guide = guides.find((g) => g.slug === slug);
   if (!guide) notFound();
 
+  const isPremiumDemo = slug === "best-vertical-mouse-small-hands-carpal-tunnel";
+
   return (
-    <article className="space-y-8">
+    <article className="space-y-10">
       <div className="overflow-hidden rounded-2xl border border-slate-200">
-        <Image src={guide.heroImage} alt={guide.title} width={1600} height={900} className="h-[320px] w-full object-cover" />
+        <Image src={guide.heroImage} alt={guide.title} width={1600} height={900} className="h-[360px] w-full object-cover" />
       </div>
 
-      <div className="space-y-3">
+      <header className="space-y-3">
         <Badge variant="secondary" className="capitalize">{guide.intent}</Badge>
         <h1 className="text-4xl font-extrabold tracking-tight">{guide.title}</h1>
-        <p className="text-slate-600">{guide.description}</p>
+        <p className="text-lg text-slate-600">{guide.description}</p>
         <p className="text-xs uppercase text-slate-500">Updated {guide.updated}</p>
-      </div>
+      </header>
 
-      <div className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5">
-        <h2 className="text-xl font-bold">Quick Take</h2>
+      <section className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6">
+        <h2 className="text-2xl font-bold">Quick Answer (TL;DR)</h2>
         {guide.body.map((p, i) => (
           <p key={i} className="text-slate-700">{p}</p>
         ))}
-      </div>
+      </section>
+
+      {isPremiumDemo && (
+        <>
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">Why Most "Ergonomic" Mice Fail Small Hands</h2>
+            <p>
+              Most models are tuned for average hand sizes. For smaller hands, this creates <strong>overreach</strong> on main clicks,
+              awkward thumb extension, and unstable grip pressure. Over a full workday, those small compromises can increase fatigue.
+            </p>
+            <p>
+              Our ranking framework prioritizes <span className="underline">fit-first ergonomics</span>: shell width, click force,
+              thumb access, and long-session comfort consistency.
+            </p>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold">How We Scored Each Mouse</h2>
+            <ul className="list-disc space-y-2 pl-6 text-slate-700">
+              <li><strong>Fit score (35%)</strong> — grip width, palm support, button reach</li>
+              <li><strong>Comfort score (25%)</strong> — click effort, wrist neutrality, fatigue trend</li>
+              <li><strong>Control score (20%)</strong> — tracking stability, micro-adjustment confidence</li>
+              <li><strong>Value score (20%)</strong> — price-to-comfort ratio, warranty, return policy</li>
+            </ul>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">Best Pick by Use Case</h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-xl border border-slate-200 p-4">
+                <p className="text-sm text-slate-500">Best Overall</p>
+                <p className="font-semibold">Logitech Lift</p>
+                <p className="text-sm text-slate-600">Best blend of compact fit, switch feel, and reliability.</p>
+              </div>
+              <div className="rounded-xl border border-slate-200 p-4">
+                <p className="text-sm text-slate-500">Best Budget</p>
+                <p className="font-semibold">Anker Ergonomic Vertical</p>
+                <p className="text-sm text-slate-600">Low-cost way to test vertical ergonomics first.</p>
+              </div>
+              <div className="rounded-xl border border-slate-200 p-4">
+                <p className="text-sm text-slate-500">Best Rechargeable Value</p>
+                <p className="font-semibold">Lekvey Rechargeable</p>
+                <p className="text-sm text-slate-600">Decent comfort + USB charging at entry-tier pricing.</p>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">Comparison Table</h2>
@@ -79,10 +128,48 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </TableBody>
           </Table>
         </div>
-        <p className="text-xs text-slate-500">
-          Note: Amazon links may be affiliate links and can generate commissions at no extra cost to you.
-        </p>
       </section>
+
+      {isPremiumDemo && (
+        <>
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">Who Should Buy (and Who Should Skip)</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                <h3 className="font-semibold">Buy if you:</h3>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+                  <li>Have small hands and feel cramped on larger ergonomic mice</li>
+                  <li>Work 5+ hours/day on a mouse-heavy workflow</li>
+                  <li>Need lower click force and better thumb reach</li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-rose-200 bg-rose-50 p-4">
+                <h3 className="font-semibold">Skip if you:</h3>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+                  <li>Need ultra-fast competitive gaming precision only</li>
+                  <li>Prefer very flat mice and zero adaptation period</li>
+                  <li>Use fingertip grip with high sensitivity exclusively</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold">FAQ</h2>
+            <div className="space-y-3 text-slate-700">
+              <p><strong>Can a vertical mouse cure carpal tunnel?</strong><br />No. It may reduce aggravating posture/load but is not a cure.</p>
+              <p><strong>How long does adaptation take?</strong><br />Usually 3–10 days for office users.</p>
+              <p><strong>What matters more than DPI?</strong><br />Fit, click force, and stability under normal work speed.</p>
+              <p><strong>Should I use Bluetooth or dongle?</strong><br />Dongle is often more stable; Bluetooth is cleaner for travel.</p>
+              <p><strong>What if two mice feel similar?</strong><br />Keep the one with lower finger fatigue by day 5.</p>
+            </div>
+          </section>
+        </>
+      )}
+
+      <p className="text-xs text-slate-500">
+        Note: Amazon links may be affiliate links and can generate commissions at no extra cost to you.
+      </p>
     </article>
   );
 }
