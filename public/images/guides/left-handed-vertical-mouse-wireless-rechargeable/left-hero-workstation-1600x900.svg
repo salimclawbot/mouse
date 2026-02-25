@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Left-Handed Vertical Mouse Buying Guide">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g opacity="0.14" fill="#ffffff">
+    <circle cx="240" cy="210" r="120"/><circle cx="1320" cy="690" r="160"/><rect x="640" y="180" width="820" height="32" rx="16"/>
+  </g>
+  <text x="100" y="420" font-family="Inter,Arial,sans-serif" font-size="56" fill="#ffffff" font-weight="700">Left-Handed Vertical Mouse Buying Guide</text>
+  <text x="100" y="490" font-family="Inter,Arial,sans-serif" font-size="30" fill="#ecfeff">Wireless + Rechargeable tradeoffs for real buyers</text>
+  <text x="100" y="820" font-family="Inter,Arial,sans-serif" font-size="24" fill="#d1fae5">ErgoMint Placeholder • replace with generated photo asset</text>
+</svg>
