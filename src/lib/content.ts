@@ -61,7 +61,7 @@ export const guides: Guide[] = [
     description: "Left-handed ergonomic picks with true wireless reliability, practical recharge options, and real office comfort tradeoffs.",
     intent: "transactional",
     updated: "2026-02-25",
-    heroImage: "/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.svg",
+    heroImage: "/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg",
     body: [
       "Most left-handed buyers get a fake choice: either buy a right-handed model and adapt, or settle for an under-specced lefty mouse with weak battery life. This guide fixes that by ranking models that are actually purchasable, support long work sessions, and offer realistic wireless or rechargeable behavior.",
       "The key buying rule is simple: prioritize shape and switch feel first, then power system, then connectivity extras. A perfect feature list on a fatiguing shell is still the wrong buy for pain-aware productivity.",
@@ -100,7 +100,7 @@ export const guides: Guide[] = [
     description: "The best silent or low-noise vertical mice for open offices, calls, libraries, and shared home workspaces.",
     intent: "transactional",
     updated: "2026-02-25",
-    heroImage: "/images/guides/quiet-click-vertical-mouse-office/quiet-hero-open-office-1600x900.svg",
+    heroImage: "/images/guides/quiet-click-vertical-mouse-office/quiet-hero-open-office-1600x900.jpg",
     body: [
       "A quiet click is not just about being polite in an open office. It also changes perceived fatigue during long workdays, especially for analysts, coordinators, and support teams who click thousands of times per day.",
       "The hard part: many mice advertised as 'silent' only mute primary buttons while scroll wheels and side switches stay loud. This guide ranks true day-to-day quietness plus ergonomic comfort so you do not trade noise reduction for wrist pain.",

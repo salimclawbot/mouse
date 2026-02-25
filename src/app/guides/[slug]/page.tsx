@@ -393,7 +393,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li>You care about <strong>wireless reliability and recharge practicality</strong>.</li>
               <li>You want explicit <strong>tradeoff guidance</strong> across 10 realistic models.</li>
             </ul>
-            <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-model-grid-tradeoffs-1600x900.svg" alt="Comparison matrix showing left-handed vertical mouse model tradeoffs across comfort, wireless stability, charging style, and value" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-model-grid-tradeoffs-1600x900.jpg" alt="Comparison matrix showing left-handed vertical mouse model tradeoffs across comfort, wireless stability, charging style, and value" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -406,7 +406,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><strong>Power & connectivity:</strong> wake consistency, dropouts, recharge friction, battery replacement ease.</li>
               <li><strong>Ownership confidence:</strong> return policy, warranty reputation, replacement availability.</li>
             </ul>
-            <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-fit-measurement-1600x900.svg" alt="Left-handed ergonomic fit measurement workflow using palm width, thumb reach, and click-force comfort checks" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-fit-measurement-1600x900.jpg" alt="Left-handed ergonomic fit measurement workflow using palm width, thumb reach, and click-force comfort checks" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -423,7 +423,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>3M Wireless Ergonomic Left:</strong> Neutral-angle comfort profile for some pain patterns. Tradeoff: bulky form and premium cost for niche preference.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Nulea M503 Left:</strong> Low-cost tri-mode utility choice. Tradeoff: quality-control variance and lower confidence for high-intensity workflows.</p></div>
             </div>
-            <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-battery-connectivity-1600x900.svg" alt="Decision chart comparing rechargeable left-handed mice versus replaceable-battery wireless models for office productivity" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-battery-connectivity-1600x900.jpg" alt="Decision chart comparing rechargeable left-handed mice versus replaceable-battery wireless models for office productivity" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -517,7 +517,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <h2 className="text-2xl font-bold text-slate-900">Why Quiet-Click Quality Matters More Than Most Teams Realize</h2>
             <p className="text-slate-700">In shared offices, repetitive click noise becomes cognitive friction. It distracts nearby teammates, bleeds into calls, and adds subtle stress over long project cycles. Quiet-click vertical mice solve two productivity constraints at once: lower acoustic disruption and improved ergonomic posture.</p>
             <p className="text-slate-700">But not all “silent” labels are equal. Some models dampen only left/right clicks while scroll-wheel detents and side buttons remain loud. Others feel overly mushy, reducing confidence during spreadsheet-heavy or design workflows. This guide focuses on complete office behavior, not marketing claims.</p>
-            <Image src="/images/guides/quiet-click-vertical-mouse-office/quiet-acoustic-comparison-1600x900.svg" alt="Office acoustic comparison chart for vertical mice showing quiet click profiles across primary, side, and scroll inputs" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/quiet-click-vertical-mouse-office/quiet-acoustic-comparison-1600x900.jpg" alt="Office acoustic comparison chart for vertical mice showing quiet click profiles across primary, side, and scroll inputs" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -529,7 +529,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><strong>Reliability:</strong> wake speed, dropouts, and consistent input during calls/screenshares.</li>
               <li><strong>Ownership value:</strong> pricing, switch stability, support ecosystem.</li>
             </ul>
-            <Image src="/images/guides/quiet-click-vertical-mouse-office/quiet-workflow-calls-focus-1600x900.svg" alt="Hybrid office workflow scene illustrating quiet mouse behavior during calls, focused work, and shared spaces" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/quiet-click-vertical-mouse-office/quiet-workflow-calls-focus-1600x900.jpg" alt="Hybrid office workflow scene illustrating quiet mouse behavior during calls, focused work, and shared spaces" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -546,7 +546,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Nulea M501:</strong> tri-mode flexibility at low cost. Tradeoff: consistency depends on unit quality and environment.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>J-Tech Digital V628:</strong> strong palm shelf support for larger hands. Tradeoff: moderate click/noise footprint compared with top quiet picks.</p></div>
             </div>
-            <Image src="/images/guides/quiet-click-vertical-mouse-office/quiet-long-session-ergonomics-1600x900.svg" alt="Long-session office ergonomics comparison of quiet vertical mice with notes on click force and fatigue" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/quiet-click-vertical-mouse-office/quiet-long-session-ergonomics-1600x900.jpg" alt="Long-session office ergonomics comparison of quiet vertical mice with notes on click force and fatigue" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
