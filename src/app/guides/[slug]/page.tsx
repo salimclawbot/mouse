@@ -147,6 +147,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               Our ranking framework prioritizes <span className="underline">fit-first ergonomics</span>: shell width, click force,
               thumb access, and long-session comfort consistency.
             </p>
+            <figure className="overflow-hidden rounded-xl border border-slate-200">
+              <Image
+                src="/images/guides/small-hands-carpal/small-hand-mouse-fit-check.jpg"
+                alt="Small-hand user testing vertical mouse button reach and thumb comfort at a desk"
+                width={1600}
+                height={900}
+                className="h-auto w-full object-cover"
+              />
+              <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">Fit-first check: thumb reach and click comfort matter more than spec-sheet DPI.</figcaption>
+            </figure>
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6 transition hover:shadow-sm">
@@ -157,6 +167,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><strong>Control score (20%)</strong> — tracking stability, micro-adjustment confidence</li>
               <li><strong>Value score (20%)</strong> — price-to-comfort ratio, warranty, return policy</li>
             </ul>
+            <figure className="overflow-hidden rounded-xl border border-slate-200">
+              <Image
+                src="/images/guides/small-hands-carpal/wrist-posture-workstation-setup.jpg"
+                alt="Neutral wrist posture workstation setup with ergonomic mouse and forearm support"
+                width={1600}
+                height={1067}
+                className="h-auto w-full object-cover"
+              />
+              <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">Comfort scoring favors neutral wrist posture and low-force clicking over flashy features.</figcaption>
+            </figure>
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -210,6 +230,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Comfort Timeline: Week 1 → Week 3</h2>
             <p className="text-slate-600">Typical transition pattern users report after switching from an oversized flat mouse to a well-fitted vertical model.</p>
+            <figure className="overflow-hidden rounded-xl border border-slate-200">
+              <Image
+                src="/images/guides/small-hands-carpal/comfort-timeline-ergonomic-workflow.jpg"
+                alt="Long work session desk setup showing ergonomic workflow improvements over time"
+                width={1600}
+                height={1067}
+                className="h-auto w-full object-cover"
+              />
+              <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">Most users move from awkward control to stable comfort during the first 1-3 weeks.</figcaption>
+            </figure>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
                 <p className="text-xs font-semibold uppercase text-amber-700">Days 1–3</p>
@@ -255,6 +285,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Deep Model Coverage: 10 Popular Options and Their Tradeoffs</h2>
             <p className="text-slate-700">Below is the practical shortlist most readers compare. Instead of pretending there is one perfect mouse, we focus on tradeoffs: shell size, click feel, weight, connectivity, and adaptation friction.</p>
+            <figure className="overflow-hidden rounded-xl border border-slate-200">
+              <Image
+                src="/images/guides/small-hands-carpal/vertical-mouse-comparison-desk.jpg"
+                alt="Side-by-side ergonomic mouse comparison on a clean desk for small-hand fit decisions"
+                width={1600}
+                height={1200}
+                className="h-auto w-full object-cover"
+              />
+              <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">Compare shell width, thumb-rest shape, and click reach before buying.</figcaption>
+            </figure>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Logitech Lift</strong> — The safest small-hand recommendation. Pros: compact body, predictable clicks, strong software support. Tradeoff: not the cheapest option and still not tiny for very short fingers.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Anker Ergonomic Vertical</strong> — Best test-drive budget pick. Pros: very affordable, familiar shape. Tradeoff: quality-control variance, occasionally stiffer click feel out of the box.</p></div>
@@ -331,6 +371,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <>
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900">Who Should Buy (and Who Should Skip)</h2>
+            <figure className="overflow-hidden rounded-xl border border-slate-200">
+              <Image
+                src="/images/guides/small-hands-carpal/buy-or-skip-ergonomic-workflow.jpg"
+                alt="Compact ergonomic mouse setup for deciding who should switch from a standard mouse"
+                width={1600}
+                height={2000}
+                className="h-auto w-full object-cover"
+              />
+              <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">Best results come from mouse fit plus forearm support, desk height, and break cadence.</figcaption>
+            </figure>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
                 <h3 className="font-semibold">Buy if you:</h3>

@@ -27,7 +27,7 @@ export const guides: Guide[] = [
     description: "Narrow-grip ergonomic picks that reduce wrist tension for smaller hands.",
     intent: "commercial",
     updated: "2026-02-24",
-    heroImage: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/guides/small-hands-carpal/vertical-mouse-small-hands-hero.jpg",
     body: [
       "If you have small hands and wrist discomfort, fit is everything. Many so-called ergonomic mice are designed around medium-to-large hand geometry, which forces smaller hands to overreach for clicks and side buttons. That overreach can increase thumb pinch and forearm tension over long sessions.",
       "A better approach is to prioritize shell width, click force, and neutral wrist posture over marketing specs like extreme DPI. In daily office work, comfort and control matter more than headline numbers.",
