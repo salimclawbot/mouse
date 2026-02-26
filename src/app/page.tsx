@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
@@ -19,19 +20,19 @@ const personas = [
   {
     title: "Desk Athletes",
     blurb: "8+ hour makers and operators who need low-fatigue comfort all week.",
-    href: "/guides/best-wireless-ergonomic-mouse-for-work-from-home",
+    href: "/guides/best-vertical-mouse-small-hands-carpal-tunnel",
     icon: HeartPulse,
   },
   {
     title: "Precision Creators",
     blurb: "Designers, editors, and builders balancing pixel-level control with joint care.",
-    href: "/guides/best-ergonomic-mouse-for-programmers",
+    href: "/guides/left-handed-vertical-mouse-wireless-rechargeable",
     icon: MousePointer2,
   },
   {
     title: "Budget Smart Upgraders",
     blurb: "First ergonomic switchers who want tangible relief without overspending.",
-    href: "/guides/best-vertical-mouse-under-50",
+    href: "/guides/quiet-click-vertical-mouse-office",
     icon: TrendingUp,
   },
 ];
@@ -61,7 +62,7 @@ const comparePillars = [
 ];
 
 export default function Home() {
-  const featured = guides.slice(0, 6);
+  const featured = guides.slice(0, 3);
 
   return (
     <div className="space-y-14 pb-4">
@@ -184,7 +185,16 @@ export default function Home() {
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((g) => (
-            <Card key={g.slug} className="group transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <Card key={g.slug} className="group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              <div className="relative h-44 w-full">
+                <Image
+                  src={g.heroImage}
+                  alt={g.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <CardHeader className="space-y-3">
                 <Badge variant="secondary" className="w-fit capitalize">
                   {g.intent}

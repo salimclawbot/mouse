@@ -10,7 +10,7 @@ export default function GuidesPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold">All ErgoMint Guides</h1>
-        <p className="text-slate-600">15 high-intent pages designed for conversions and SEO depth.</p>
+        <p className="text-slate-600">3 high-intent buying guides, deeply updated and conversion-focused.</p>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {guides.map((g) => (
