@@ -57,8 +57,8 @@ export const guides: Guide[] = [
   },
   {
     slug: "left-handed-vertical-mouse-wireless-rechargeable",
-    title: "Best Left-Handed Vertical Mouse (Wireless + Rechargeable)",
-    description: "Left-handed ergonomic picks with true wireless reliability, practical recharge options, and real office comfort tradeoffs.",
+    title: "Best Left-Handed Vertical Mouse (Wireless + Rechargeable, 2026)",
+    description: "Ranked left-handed ergonomic picks with wireless reliability, rechargeable vs battery tradeoffs, and practical office comfort insights.",
     intent: "transactional",
     updated: "2026-02-25",
     heroImage: "/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg",

@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (slug === "left-handed-vertical-mouse-wireless-rechargeable") {
     return {
-      title: "Best Left-Handed Vertical Mouse (Wireless + Rechargeable) [2026 Buyer Guide]",
+      title: "Best Left-Handed Vertical Mouse (Wireless + Rechargeable, 2026 Ranked & Tested)",
       description:
-        "Domination-grade left-handed vertical mouse guide: 10 top models, wireless vs rechargeable tradeoffs, fit framework, buying methodology, and practical FAQ.",
+        "2026 ranked guide to left-handed vertical mice: 10 tested picks with wireless vs rechargeable tradeoffs, fit guidance, and practical buyer FAQ.",
     };
   }
 
@@ -60,6 +60,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isLeftGuide = slug === "left-handed-vertical-mouse-wireless-rechargeable";
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide;
+  const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
+  const topPicks = guide.products.slice(0, 3);
 
   const faqForSchema = isLeftGuide
     ? [
@@ -160,19 +162,54 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
       <nav className="sticky top-16 z-30 rounded-xl border border-slate-200 bg-white/90 p-3 backdrop-blur">
         <ul className="flex flex-wrap gap-2 text-sm">
+          {isLeftGuide && <li><a href="#overview" className="rounded-md px-3 py-1 hover:bg-slate-100">Overview</a></li>}
           <li><a href="#quick" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Picks</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
+          {isLeftGuide && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
           {isPremiumArticle && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
+          {isLeftGuide && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
           {isPremiumArticle && <li><a href="#verdict" className="rounded-md px-3 py-1 hover:bg-slate-100">Verdict</a></li>}
         </ul>
       </nav>
 
+      {isLeftGuide && (
+        <>
+          <section id="overview" className="space-y-4 rounded-2xl border border-cyan-200 bg-cyan-50/50 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Quick Verdict (60-Second Read)</h2>
+            <p className="text-slate-700"><strong>Definition:</strong> A vertical mouse keeps your hand in a handshake posture to reduce forearm pronation and lower wrist strain during long desk sessions.</p>
+            <p className="text-slate-700"><strong>Best overall in this guide:</strong> {guide.products[0]?.name}. <strong>Best value:</strong> {guide.products[1]?.name}. <strong>Best premium alternative:</strong> {guide.products[2]?.name}.</p>
+            <div className="grid gap-3 md:grid-cols-3">
+              {topPicks.map((pick) => (
+                <div key={pick.name} className="rounded-xl border border-slate-200 bg-white p-4">
+                  <p className="text-xs uppercase tracking-wide text-slate-500">{pick.bestFor}</p>
+                  <p className="mt-1 font-semibold text-slate-900">{pick.name}</p>
+                  <p className="text-sm text-slate-600">Rating: {pick.rating} · Price: {pick.price}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-slate-600">Jump to <a href="#comparison" className="underline">comparison table</a> if you want specs fast, or keep reading for fit-by-use-case guidance.</p>
+            <div className="grid gap-2 pt-1 text-sm md:grid-cols-2">
+              <Link href="/guides/vertical-mouse-for-wrist-pain-no-pronation" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Need low-pronation fit guidance? Read the wrist-pain framework.</Link>
+              <Link href="/guides/best-vertical-mouse-under-50" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Shopping on budget? Compare the top sub-$50 options.</Link>
+            </div>
+          </section>
+
+          <section id="transparency" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-bold text-slate-900">Editorial Transparency</h2>
+            <p className="text-sm text-slate-700">Author: ErgoMint Editorial Team · Last reviewed: {guide.updated}. We evaluate comfort, fit, workflow reliability, and value tradeoffs for real office usage.</p>
+            <p className="text-sm text-slate-700">See our <Link href="/about" className="underline">About / methodology</Link>, <Link href="/affiliate-disclosure" className="underline">affiliate disclosure</Link>, and <Link href="/privacy-policy" className="underline">privacy policy</Link>.</p>
+            <p className="text-xs text-slate-500">Medical note: This guide is educational and does not replace diagnosis or treatment advice from a qualified clinician.</p>
+          </section>
+        </>
+      )}
+
       <section id="quick" className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 transition hover:shadow-sm">
         <h2 className="text-2xl font-bold text-slate-900">Quick Answer: {guide.title}</h2>
-        {guide.body.map((p, i) => (
+        {introParagraphs.map((p, i) => (
           <p key={i} className="max-w-4xl text-slate-700">{p}</p>
         ))}
         <p className="text-sm font-medium text-emerald-800">Key takeaway: pick the smallest mouse that still supports your palm, then prioritize low click force.</p>
+        {isLeftGuide && <p className="text-sm text-slate-700">Semantic intent covered: left-handed ergonomic mouse, left-handed vertical mouse wireless, rechargeable left-handed mouse, and office-comfort fit tradeoffs.</p>}
       </section>
 
       {isPremiumDemo && (
@@ -396,7 +433,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <Image src="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-model-grid-tradeoffs-1600x900.jpg" alt="Comparison matrix showing left-handed vertical mouse model tradeoffs across comfort, wireless stability, charging style, and value" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
-          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+          <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Our Left-Handed Selection Methodology (How Winners Are Chosen)</h2>
             <p className="text-slate-700">Left-handed ergonomic inventory is smaller than right-handed inventory, so we use a stricter filter before ranking. First, the model must have recurring real availability. Second, shape quality must support neutral wrist posture for left-thumb users. Third, power behavior must be predictable: either stable built-in recharge cycles or reliable replaceable battery economics.</p>
             <p className="text-slate-700">Scoring weights: <strong>fit and hand geometry 35%</strong>, <strong>long-session comfort 25%</strong>, <strong>wireless/recharge reliability 20%</strong>, and <strong>value + support 20%</strong>. This weighting is intentionally buyer-centric. A mouse with premium materials but weak fit still loses.</p>
