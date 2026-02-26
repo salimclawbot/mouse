@@ -241,6 +241,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           {premiumMedia?.infographic && <li><a href="#infographic" className="rounded-md px-3 py-1 hover:bg-slate-100">Infographic</a></li>}
           {hasVideoSection && <li><a href="#video-demo" className="rounded-md px-3 py-1 hover:bg-slate-100">30s Demo</a></li>}
           <li><a href="#quick" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Picks</a></li>
+          {isPremiumArticle && <li><a href="#quick-compare" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Compare</a></li>}
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
           {isLeftGuide && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
           {isPremiumArticle && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
@@ -337,6 +338,35 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <p className="text-sm font-medium text-emerald-800">Key takeaway: pick the smallest mouse that still supports your palm, then prioritize low click force.</p>
         {isLeftGuide && <p className="text-sm text-slate-700">Semantic intent covered: left-handed ergonomic mouse, left-handed vertical mouse wireless, rechargeable left-handed mouse, and office-comfort fit tradeoffs.</p>}
       </section>
+
+      {isPremiumArticle && (
+        <section id="quick-compare" className="space-y-4 rounded-2xl border border-cyan-200 bg-cyan-50/40 p-6">
+          <h2 className="text-2xl font-bold text-slate-900">Top Picks Quick Comparison</h2>
+          <p className="text-sm text-slate-700">Fast shortlist for decision-first readers. Full table remains below for complete detail.</p>
+          <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Product</TableHead>
+                  <TableHead>Best For</TableHead>
+                  <TableHead>Price</TableHead>
+                  <TableHead>Rating</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {guide.products.slice(0, 5).map((p) => (
+                  <TableRow key={`quick-${p.name}`}>
+                    <TableCell className="font-medium">{p.name}</TableCell>
+                    <TableCell>{p.bestFor}</TableCell>
+                    <TableCell>{p.price}</TableCell>
+                    <TableCell>{p.rating}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        </section>
+      )}
 
       {isPremiumDemo && (
         <>
