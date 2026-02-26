@@ -15,6 +15,82 @@ import {
 } from "@/components/ui/table";
 import QuizRecommender from "@/components/quiz-recommender";
 
+type PremiumMediaTemplate = {
+  infographic: {
+    src: string;
+    heading: string;
+    alt: string;
+    caption: string;
+  };
+  video: {
+    src: string;
+    poster: string;
+    heading: string;
+    description: string;
+    caption: string;
+    schemaName: string;
+    schemaDescription: string;
+    uploadDate: string;
+  };
+};
+
+const premiumTemplateBySlug: Record<string, PremiumMediaTemplate> = {
+  "best-vertical-mouse-small-hands-carpal-tunnel": {
+    infographic: {
+      src: "/images/guides/best-vertical-mouse-small-hands-carpal-tunnel/infographic-best-vertical-mouse-small-hands-carpal-tunnel.png",
+      heading: "Infographic: Small-Hand Vertical Mouse Buying Framework",
+      alt: "Infographic style visual blocks showing a 5-step buying framework for small-hand vertical mouse fit, comfort, reliability, value, and final verdict",
+      caption: "Use this quick framework before purchase: fit first, then click comfort, reliability, value, and final shortlisting.",
+    },
+    video: {
+      src: "/videos/best-vertical-mouse-small-hands-carpal-tunnel/best-vertical-mouse-small-hands-carpal-tunnel-30s.mp4",
+      poster: "/videos/best-vertical-mouse-small-hands-carpal-tunnel/poster-best-vertical-mouse-small-hands-carpal-tunnel.jpg",
+      heading: "30-Second Video: Small-Hand Fit Checklist",
+      description: "Fast walkthrough of sizing and comfort checks for small-hand vertical mouse buyers.",
+      caption: "30-second buyer walkthrough for small-hand fit and comfort screening.",
+      schemaName: "30-Second Small-Hand Vertical Mouse Fit Checklist",
+      schemaDescription: "Short buyer checklist video covering fit, click comfort, reliability, and value decisions for small-hand vertical mouse users.",
+      uploadDate: "2026-02-26",
+    },
+  },
+  "left-handed-vertical-mouse-wireless-rechargeable": {
+    infographic: {
+      src: "/images/guides/left-handed-vertical-mouse-wireless-rechargeable/infographic-left-handed-vertical-mouse-wireless-rechargeable.png",
+      heading: "Infographic: Left-Handed Wireless vs Rechargeable Decision Grid",
+      alt: "Infographic style visual showing left-handed vertical mouse decision flow across fit, comfort, battery model, and ownership value",
+      caption: "Use this decision grid to choose between rechargeable convenience and replaceable-battery reliability.",
+    },
+    video: {
+      src: "/videos/left-handed-vertical-mouse-wireless-rechargeable/left-handed-vertical-mouse-wireless-rechargeable-30s.mp4",
+      poster: "/videos/left-handed-vertical-mouse-wireless-rechargeable/poster-left-handed-vertical-mouse-wireless-rechargeable.jpg",
+      heading: "30-Second Video: Left-Handed Fit and Power Tradeoffs",
+      description: "Quick visual guide for left-handed fit, click reach, and wireless/rechargeable tradeoffs.",
+      caption: "30-second left-handed buying primer for fit and power system selection.",
+      schemaName: "30-Second Left-Handed Vertical Mouse Buying Primer",
+      schemaDescription: "A fast left-handed guide covering shape fit, thumb reach, and battery-vs-recharge purchasing tradeoffs.",
+      uploadDate: "2026-02-26",
+    },
+  },
+  "quiet-click-vertical-mouse-office": {
+    infographic: {
+      src: "/images/guides/quiet-click-vertical-mouse-office/infographic-quiet-click-vertical-mouse-office.png",
+      heading: "Infographic: Quiet-Click Office Selection Framework",
+      alt: "Infographic style office buying framework for quiet-click vertical mice across acoustics, comfort, reliability, and value",
+      caption: "Rank office picks by acoustic profile, ergonomic endurance, reliability, and procurement value.",
+    },
+    video: {
+      src: "/videos/quiet-click-vertical-mouse-office/quiet-click-vertical-mouse-office-30s.mp4",
+      poster: "/videos/quiet-click-vertical-mouse-office/poster-quiet-click-vertical-mouse-office.jpg",
+      heading: "30-Second Video: Quiet Office Mouse Evaluation",
+      description: "Short office evaluation checklist for noise, comfort, and workflow consistency.",
+      caption: "30-second office checklist for click acoustics, comfort, and reliability.",
+      schemaName: "30-Second Quiet Office Vertical Mouse Evaluation",
+      schemaDescription: "Quick scoring walkthrough for office buyers evaluating quiet-click behavior, comfort, and reliability.",
+      uploadDate: "2026-02-26",
+    },
+  },
+};
+
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
 }
@@ -60,6 +136,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isLeftGuide = slug === "left-handed-vertical-mouse-wireless-rechargeable";
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide;
+  const premiumMedia = premiumTemplateBySlug[slug];
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
   const topPicks = guide.products.slice(0, 3);
 
@@ -163,7 +240,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <nav className="sticky top-16 z-30 rounded-xl border border-slate-200 bg-white/90 p-3 backdrop-blur">
         <ul className="flex flex-wrap gap-2 text-sm">
           {isLeftGuide && <li><a href="#overview" className="rounded-md px-3 py-1 hover:bg-slate-100">Overview</a></li>}
-          {isLeftGuide && <li><a href="#video-demo" className="rounded-md px-3 py-1 hover:bg-slate-100">30s Demo</a></li>}
+          {isPremiumArticle && <li><a href="#infographic" className="rounded-md px-3 py-1 hover:bg-slate-100">Infographic</a></li>}
+          {isPremiumArticle && <li><a href="#video-demo" className="rounded-md px-3 py-1 hover:bg-slate-100">30s Demo</a></li>}
           <li><a href="#quick" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Picks</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
           {isLeftGuide && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
@@ -195,59 +273,42 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </div>
           </section>
 
-          <section id="video-demo" className="space-y-4 rounded-2xl border border-violet-200 bg-violet-50/40 p-6" aria-labelledby="video-demo-title">
-            <div className="space-y-1">
-              <h2 id="video-demo-title" className="text-2xl font-bold text-slate-900">30-Second Fit Demo: Left-Handed Vertical Mouse Check</h2>
-              <p className="text-sm text-slate-700">Watch this quick visual checklist before buying: grip fit, click reach, and wireless/rechargeable decision points.</p>
-            </div>
-
-            <figure
-              className="overflow-hidden rounded-xl border border-slate-200 bg-black"
-              itemScope
-              itemType="https://schema.org/VideoObject"
-            >
-              <video
-                className="h-auto w-full"
-                controls
-                preload="metadata"
-                poster="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg"
-                aria-label="30-second left-handed vertical mouse fit demo"
-              >
-                <source src="/videos/left-handed-vertical/left-handed-vertical-30s.mp4" type="video/mp4" />
-                Your browser does not support embedded video. Use the quick checklist below as fallback.
-              </video>
-              <figcaption className="bg-slate-900 px-4 py-3 text-sm text-slate-200">
-                Placeholder embed block (TODO): pending hosted 30-second demo URL. Poster preview remains accessible so users still get visual context.
-              </figcaption>
-
-              <meta itemProp="name" content="30-Second Left-Handed Vertical Mouse Fit Demo" />
-              <meta
-                itemProp="description"
-                content="Quick fit walkthrough covering palm support, thumb-button reach, and wireless vs rechargeable buying tradeoffs for left-handed users."
-              />
-              <meta
-                itemProp="thumbnailUrl"
-                content="https://mouse-one-rouge.vercel.app/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg"
-              />
-              <meta itemProp="uploadDate" content="2026-02-26" />
-              <meta itemProp="duration" content="PT30S" />
-            </figure>
-
-            <div className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-700">
-              <p className="font-semibold text-slate-900">Quick fallback checklist (no video required)</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>Can your thumb hit back/forward buttons without wrist twist?</li>
-                <li>Does palm contact stay stable without finger clawing?</li>
-                <li>Do you prefer rechargeable convenience or replaceable battery longevity?</li>
-              </ul>
-            </div>
-          </section>
-
           <section id="transparency" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-bold text-slate-900">Editorial Transparency</h2>
             <p className="text-sm text-slate-700">Author: ErgoMint Editorial Team · Last reviewed: {guide.updated}. We evaluate comfort, fit, workflow reliability, and value tradeoffs for real office usage.</p>
             <p className="text-sm text-slate-700">See our <Link href="/about" className="underline">About / methodology</Link>, <Link href="/affiliate-disclosure" className="underline">affiliate disclosure</Link>, and <Link href="/privacy-policy" className="underline">privacy policy</Link>.</p>
             <p className="text-xs text-slate-500">Medical note: This guide is educational and does not replace diagnosis or treatment advice from a qualified clinician.</p>
+          </section>
+        </>
+      )}
+
+      {isPremiumArticle && premiumMedia && (
+        <>
+          <section id="infographic" className="space-y-4 rounded-2xl border border-indigo-200 bg-indigo-50/40 p-6" aria-labelledby="infographic-title">
+            <h2 id="infographic-title" className="text-2xl font-bold text-slate-900">{premiumMedia.infographic.heading}</h2>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <Image src={premiumMedia.infographic.src} alt={premiumMedia.infographic.alt} width={1600} height={900} className="h-auto w-full object-cover" loading="lazy" />
+              <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">{premiumMedia.infographic.caption}</figcaption>
+            </figure>
+          </section>
+
+          <section id="video-demo" className="space-y-4 rounded-2xl border border-violet-200 bg-violet-50/40 p-6" aria-labelledby="video-demo-title">
+            <div className="space-y-1">
+              <h2 id="video-demo-title" className="text-2xl font-bold text-slate-900">{premiumMedia.video.heading}</h2>
+              <p className="text-sm text-slate-700">{premiumMedia.video.description}</p>
+            </div>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-black" itemScope itemType="https://schema.org/VideoObject">
+              <video className="h-auto w-full" controls preload="metadata" poster={premiumMedia.video.poster} aria-label={premiumMedia.video.heading}>
+                <source src={premiumMedia.video.src} type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+              <figcaption className="bg-slate-900 px-4 py-3 text-sm text-slate-200">{premiumMedia.video.caption}</figcaption>
+              <meta itemProp="name" content={premiumMedia.video.schemaName} />
+              <meta itemProp="description" content={premiumMedia.video.schemaDescription} />
+              <meta itemProp="thumbnailUrl" content={`${"https://mouse-one-rouge.vercel.app"}${premiumMedia.video.poster}`} />
+              <meta itemProp="uploadDate" content={premiumMedia.video.uploadDate} />
+              <meta itemProp="duration" content="PT30S" />
+            </figure>
           </section>
         </>
       )}
