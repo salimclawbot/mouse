@@ -163,6 +163,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <nav className="sticky top-16 z-30 rounded-xl border border-slate-200 bg-white/90 p-3 backdrop-blur">
         <ul className="flex flex-wrap gap-2 text-sm">
           {isLeftGuide && <li><a href="#overview" className="rounded-md px-3 py-1 hover:bg-slate-100">Overview</a></li>}
+          {isLeftGuide && <li><a href="#video-demo" className="rounded-md px-3 py-1 hover:bg-slate-100">30s Demo</a></li>}
           <li><a href="#quick" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Picks</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
           {isLeftGuide && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
@@ -191,6 +192,55 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <div className="grid gap-2 pt-1 text-sm md:grid-cols-2">
               <Link href="/guides/vertical-mouse-for-wrist-pain-no-pronation" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Need low-pronation fit guidance? Read the wrist-pain framework.</Link>
               <Link href="/guides/best-vertical-mouse-under-50" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Shopping on budget? Compare the top sub-$50 options.</Link>
+            </div>
+          </section>
+
+          <section id="video-demo" className="space-y-4 rounded-2xl border border-violet-200 bg-violet-50/40 p-6" aria-labelledby="video-demo-title">
+            <div className="space-y-1">
+              <h2 id="video-demo-title" className="text-2xl font-bold text-slate-900">30-Second Fit Demo: Left-Handed Vertical Mouse Check</h2>
+              <p className="text-sm text-slate-700">Watch this quick visual checklist before buying: grip fit, click reach, and wireless/rechargeable decision points.</p>
+            </div>
+
+            <figure
+              className="overflow-hidden rounded-xl border border-slate-200 bg-black"
+              itemScope
+              itemType="https://schema.org/VideoObject"
+            >
+              <video
+                className="h-auto w-full"
+                controls
+                preload="metadata"
+                poster="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg"
+                aria-label="30-second left-handed vertical mouse fit demo"
+              >
+                {/* TODO(video): Replace placeholder source with hosted 30-second demo URL when available in repo/config. */}
+                <source src="" type="video/mp4" />
+                Your browser does not support embedded video. Use the quick checklist below as fallback.
+              </video>
+              <figcaption className="bg-slate-900 px-4 py-3 text-sm text-slate-200">
+                Placeholder embed block (TODO): pending hosted 30-second demo URL. Poster preview remains accessible so users still get visual context.
+              </figcaption>
+
+              <meta itemProp="name" content="30-Second Left-Handed Vertical Mouse Fit Demo" />
+              <meta
+                itemProp="description"
+                content="Quick fit walkthrough covering palm support, thumb-button reach, and wireless vs rechargeable buying tradeoffs for left-handed users."
+              />
+              <meta
+                itemProp="thumbnailUrl"
+                content="https://mouse-one-rouge.vercel.app/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg"
+              />
+              <meta itemProp="uploadDate" content="2026-02-26" />
+              <meta itemProp="duration" content="PT30S" />
+            </figure>
+
+            <div className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-700">
+              <p className="font-semibold text-slate-900">Quick fallback checklist (no video required)</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5">
+                <li>Can your thumb hit back/forward buttons without wrist twist?</li>
+                <li>Does palm contact stay stable without finger clawing?</li>
+                <li>Do you prefer rechargeable convenience or replaceable battery longevity?</li>
+              </ul>
             </div>
           </section>
 
