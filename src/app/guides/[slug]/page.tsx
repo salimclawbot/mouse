@@ -118,7 +118,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
-  const hasVideoSection = isLeftGuide && Boolean(premiumMedia?.video);
+  const hasVideoSection = isPremiumArticle && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
   const topPicks = guide.products.slice(0, 3);
 
