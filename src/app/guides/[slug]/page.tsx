@@ -118,7 +118,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
-  const hasVideoSection = Boolean(premiumMedia?.video);
+  const hasVideoSection = false;
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
   const topPicks = guide.products.slice(0, 3);
 
@@ -199,19 +199,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     })),
   };
 
-  const videoSchema = hasVideoSection && premiumMedia
-    ? {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        name: premiumMedia.video.schemaName,
-        description: premiumMedia.video.schemaDescription,
-        thumbnailUrl: [`${"https://mouse-one-rouge.vercel.app"}${premiumMedia.video.poster}`],
-        uploadDate: premiumMedia.video.uploadDate,
-        duration: "PT30S",
-        contentUrl: `${"https://mouse-one-rouge.vercel.app"}${premiumMedia.video.src}`,
-        embedUrl: `${"https://mouse-one-rouge.vercel.app"}/guides/${guide.slug}#video-demo`,
-      }
-    : null;
+  const videoSchema = null;
 
   return (
     <article className="space-y-10 leading-8 text-slate-800">
