@@ -213,8 +213,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 poster="/images/guides/left-handed-vertical-mouse-wireless-rechargeable/left-hero-workstation-1600x900.jpg"
                 aria-label="30-second left-handed vertical mouse fit demo"
               >
-                {/* TODO(video): Replace placeholder source with hosted 30-second demo URL when available in repo/config. */}
-                <source src="" type="video/mp4" />
+                <source src="/videos/left-handed-vertical/left-handed-vertical-30s.mp4" type="video/mp4" />
                 Your browser does not support embedded video. Use the quick checklist below as fallback.
               </video>
               <figcaption className="bg-slate-900 px-4 py-3 text-sm text-slate-200">
