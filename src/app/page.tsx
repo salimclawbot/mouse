@@ -133,26 +133,26 @@ export default function Home() {
           {personas.map((persona) => {
             const Icon = persona.icon;
             return (
-              <Card
+              <Link
                 key={persona.title}
-                className="group border-slate-200 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
+                href={persona.href}
+                className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
               >
-                <CardHeader className="space-y-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
-                    <Icon className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-lg text-slate-900">{persona.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-slate-600">{persona.blurb}</p>
-                  <Link
-                    href={persona.href}
-                    className="inline-flex items-center text-sm font-medium text-emerald-700 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                  >
-                    See best matches <ArrowRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </CardContent>
-              </Card>
+                <Card className="group h-full border-slate-200 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md">
+                  <CardHeader className="space-y-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <CardTitle className="text-lg text-slate-900">{persona.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-sm text-slate-600">{persona.blurb}</p>
+                    <span className="inline-flex items-center text-sm font-medium text-emerald-700 underline-offset-4 group-hover:underline">
+                      See best matches <ArrowRight className="ml-1 h-4 w-4" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>
