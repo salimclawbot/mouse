@@ -77,7 +77,7 @@ export default function Home() {
               Ergonomic mouse guides with personality, clarity, and conversion-friendly picks
             </h1>
             <p className="max-w-2xl text-lg text-slate-700">
-              ErgoMint turns mouse research into a fast, confidence-building flow: understand your pain points, compare meaningful specs, then pick what fits your day.
+              Vertical Mouse Guide turns mouse research into a fast, confidence-building flow: understand your pain points, compare meaningful specs, then pick what fits your day.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -87,11 +87,11 @@ export default function Home() {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="border-slate-300 bg-white/80">
-                <Link href="/about">How ErgoMint compares gear</Link>
+                <Link href="/about">How Vertical Mouse Guide compares gear</Link>
               </Button>
             </div>
 
-            <ul className="grid gap-2 text-sm text-slate-700 sm:grid-cols-2" aria-label="ErgoMint value highlights">
+            <ul className="grid gap-2 text-sm text-slate-700 sm:grid-cols-2" aria-label="Vertical Mouse Guide value highlights">
               {proofPoints.map((point) => (
                 <li key={point} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden="true" />
@@ -185,40 +185,39 @@ export default function Home() {
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((g) => (
-            <Card key={g.slug} className="group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
-              <div className="relative h-44 w-full">
-                <Image
-                  src={g.heroImage}
-                  alt={g.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <CardHeader className="space-y-3">
-                <Badge variant="secondary" className="w-fit capitalize">
-                  {g.intent}
-                </Badge>
-                <CardTitle className="text-lg leading-snug text-slate-900">
-                  <Link
-                    href={`/guides/${g.slug}`}
-                    className="underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                  >
-                    {g.title}
-                  </Link>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-slate-600">{g.description}</p>
-              </CardContent>
-            </Card>
+            <Link
+              key={g.slug}
+              href={`/guides/${g.slug}`}
+              className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+            >
+              <Card className="group h-full overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                <div className="relative h-44 w-full">
+                  <Image
+                    src={g.heroImage}
+                    alt={g.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <CardHeader className="space-y-3">
+                  <Badge variant="secondary" className="w-fit capitalize">
+                    {g.intent}
+                  </Badge>
+                  <CardTitle className="text-lg leading-snug text-slate-900">{g.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-slate-600">{g.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>
 
       <section aria-labelledby="compare-heading" className="space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-6 md:p-8">
         <h2 id="compare-heading" className="text-2xl font-bold text-slate-900">
-          How ErgoMint compares ergonomic mice
+          How Vertical Mouse Guide compares ergonomic mice
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
           {comparePillars.map((pillar) => {
