@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { guides } from "@/lib/content";
+import { guides, site } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -72,6 +72,12 @@ premiumTemplateBySlug["quiet-click-vertical-mouse-office"].infographic = {
   caption: "Rank office picks by acoustic profile, ergonomic endurance, reliability, and procurement value.",
 };
 
+const toProductImagePath = (name: string) =>
+  `/images/products/${name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")}.jpg`;
+
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
 }
@@ -81,31 +87,46 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const guide = guides.find((g) => g.slug === slug);
   if (!guide) return {};
 
+  const withSeo = (title: string, description: string) => ({
+    title,
+    description,
+    alternates: { canonical: `/guides/${guide.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `${site.url}/guides/${guide.slug}`,
+      images: [{ url: guide.heroImage }],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title,
+      description,
+      images: [guide.heroImage],
+    },
+  });
+
   if (slug === "best-vertical-mouse-small-hands-carpal-tunnel") {
-    return {
-      title: "Best Vertical Mouse for Small Hands & Carpal Tunnel (2026 Ranked Picks)",
-      description:
-        "Quick answer + full 2026 ranking of 10 compact vertical mice for small hands: top picks, fit checklist, FAQs, and comfort tradeoffs for carpal-tunnel-sensitive workflows.",
-    };
+    return withSeo(
+      "Best Vertical Mouse for Small Hands & Carpal Tunnel (2026 Ranked Picks)",
+      "Quick answer + full 2026 ranking of 10 compact vertical mice for small hands: top picks, fit checklist, FAQs, and comfort tradeoffs for carpal-tunnel-sensitive workflows.",
+    );
   }
 
   if (slug === "left-handed-vertical-mouse-wireless-rechargeable") {
-    return {
-      title: "Best Left-Handed Vertical Mouse (Wireless + Rechargeable, 2026)",
-      description:
-        "Fast answer + full ranking of 10 left-handed vertical mice with wireless vs rechargeable tradeoffs, fit guidance, and practical office-focused buying FAQs.",
-    };
+    return withSeo(
+      "Best Left-Handed Vertical Mouse (Wireless + Rechargeable, 2026)",
+      "Fast answer + full ranking of 10 left-handed vertical mice with wireless vs rechargeable tradeoffs, fit guidance, and practical office-focused buying FAQs.",
+    );
   }
 
   if (slug === "quiet-click-vertical-mouse-office") {
-    return {
-      title: "Best Quiet-Click Vertical Mouse for Office Work (2026 Ranked)",
-      description:
-        "Quick answer + ranked list of 10 quiet vertical mice for offices, calls, and shared spaces, with acoustic tradeoffs, long-session comfort notes, and team-buying guidance.",
-    };
+    return withSeo(
+      "Best Quiet-Click Vertical Mouse for Office Work (2026 Ranked)",
+      "Quick answer + ranked list of 10 quiet vertical mice for offices, calls, and shared spaces, with acoustic tradeoffs, long-session comfort notes, and team-buying guidance.",
+    );
   }
 
-  return { title: guide.title, description: guide.description };
+  return withSeo(guide.title, guide.description);
 }
 
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -172,18 +193,45 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     "@type": "Article",
     headline: guide.title,
     description: guide.description,
-    image: [`${"https://mouse-one-rouge.vercel.app"}${guide.heroImage}`],
+    image: [`${site.url}${guide.heroImage}`],
     dateModified: guide.updated,
     datePublished: slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office" ? "2026-02-25" : "2026-02-24",
     author: {
       "@type": "Organization",
-      name: "ErgoMint Editorial",
+      name: "Vertical Mouse Guide Editorial",
     },
     publisher: {
       "@type": "Organization",
-      name: "ErgoMint",
+      name: site.name,
     },
-    mainEntityOfPage: `${"https://mouse-one-rouge.vercel.app"}/guides/${guide.slug}`,
+    mainEntityOfPage: `${site.url}/guides/${guide.slug}`,
+  };
+
+
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${site.url}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: guide.title,
+        item: `${site.url}/guides/${guide.slug}`,
+      },
+    ],
   };
 
   const faqSchema = {
@@ -205,11 +253,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         "@type": "VideoObject",
         name: premiumMedia.video.schemaName,
         description: premiumMedia.video.schemaDescription,
-        thumbnailUrl: [`${"https://mouse-one-rouge.vercel.app"}${premiumMedia.video.poster}`],
+        thumbnailUrl: [`${site.url}${premiumMedia.video.poster}`],
         uploadDate: premiumMedia.video.uploadDate,
         duration: "PT30S",
-        contentUrl: `${"https://mouse-one-rouge.vercel.app"}${premiumMedia.video.src}`,
-        embedUrl: `${"https://mouse-one-rouge.vercel.app"}/guides/${guide.slug}#video-demo`,
+        contentUrl: `${site.url}${premiumMedia.video.src}`,
+        embedUrl: `${site.url}/guides/${guide.slug}#video-demo`,
       }
     : null;
 
@@ -221,6 +269,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         </>
       )}
+      <Script id={`breadcrumb-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {videoSchema && <Script id={`video-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />}
       <div className="group relative overflow-hidden rounded-2xl border border-slate-200">
         <Image src={guide.heroImage} alt={guide.title} width={1600} height={900} className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
@@ -242,6 +291,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           {hasVideoSection && <li><a href="#video-demo" className="rounded-md px-3 py-1 hover:bg-slate-100">30s Demo</a></li>}
           <li><a href="#quick" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Picks</a></li>
           {isPremiumArticle && <li><a href="#quick-compare" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Compare</a></li>}
+          <li><a href="#product-photos" className="rounded-md px-3 py-1 hover:bg-slate-100">Product Photos</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
           {isLeftGuide && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
           {isPremiumArticle && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
@@ -274,7 +324,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
           <section id="transparency" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-bold text-slate-900">Editorial Transparency</h2>
-            <p className="text-sm text-slate-700">Author: ErgoMint Editorial Team · Last reviewed: {guide.updated}. We evaluate comfort, fit, workflow reliability, and value tradeoffs for real office usage.</p>
+            <p className="text-sm text-slate-700">Author: Vertical Mouse Guide Editorial Team · Last reviewed: {guide.updated}. We evaluate comfort, fit, workflow reliability, and value tradeoffs for real office usage.</p>
             <p className="text-sm text-slate-700">See our <Link href="/about" className="underline">About / methodology</Link>, <Link href="/affiliate-disclosure" className="underline">affiliate disclosure</Link>, and <Link href="/privacy-policy" className="underline">privacy policy</Link>.</p>
             <p className="text-xs text-slate-500">Medical note: This guide is educational and does not replace diagnosis or treatment advice from a qualified clinician.</p>
           </section>
@@ -323,7 +373,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <figcaption className="bg-slate-900 px-4 py-3 text-sm text-slate-200">{premiumMedia.video.caption}</figcaption>
             <meta itemProp="name" content={premiumMedia.video.schemaName} />
             <meta itemProp="description" content={premiumMedia.video.schemaDescription} />
-            <meta itemProp="thumbnailUrl" content={`${"https://mouse-one-rouge.vercel.app"}${premiumMedia.video.poster}`} />
+            <meta itemProp="thumbnailUrl" content={`${site.url}${premiumMedia.video.poster}`} />
             <meta itemProp="uploadDate" content={premiumMedia.video.uploadDate} />
             <meta itemProp="duration" content="PT30S" />
           </figure>
@@ -838,6 +888,29 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
         </>
       )}
+
+      <section id="product-photos" className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50/60 p-6">
+        <h2 className="text-2xl font-bold text-slate-900">Real Product Photos: All Reviewed Models</h2>
+        <p className="text-sm text-slate-700">Each image below is a real product listing photo stored locally for faster loads and stable rendering.</p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {guide.products.map((p) => (
+            <figure key={`photo-${p.name}`} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <Image
+                src={toProductImagePath(p.name)}
+                alt={`${p.name} vertical mouse product photo used in ${guide.title}`}
+                width={320}
+                height={320}
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="h-48 w-full object-contain bg-white p-3"
+              />
+              <figcaption className="border-t border-slate-100 px-3 py-2 text-xs text-slate-600">
+                <span className="font-semibold text-slate-800">{p.name}</span> — {p.bestFor}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
 
       <section id="comparison" className="space-y-4">
         <h2 className="text-2xl font-bold text-slate-900">Comparison Table: {guide.title}</h2>
