@@ -100,8 +100,11 @@ export const guides: Guide[] = [
   },
 ];
 
+const DEFAULT_SITE_URL = "https://www.verticalmouseguide.com";
+
 export const site = {
-  name: "ErgoMint",
-  description: "Evidence-led ergonomic buying guides for pain-aware productivity.",
-  url: "https://mouse-one-rouge.vercel.app",
+  name: "Vertical Mouse Guide",
+  description: "Evidence-led vertical and ergonomic mouse buying guides for pain-aware productivity.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL,
+  ogImage: "/images/brand/og-default.jpg",
 };
