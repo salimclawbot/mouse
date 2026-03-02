@@ -97,7 +97,33 @@ export const guides: Guide[] = [
       { name: "Nulea M501", bestFor: "Best tri-mode quiet workflow", price: "$", rating: "4.1/5", amazonUrl: a("Nulea M501 vertical silent") },
       { name: "J-Tech Digital V628", bestFor: "Best large-palm shelf with moderate noise", price: "$$", rating: "4.2/5", amazonUrl: a("J-Tech V628 vertical") },
     ],
+  },  {
+    slug: "best-vertical-mouse-large-hands",
+    title: "Best Vertical Mouse for Large Hands (2026)",
+    description: "Large-hand vertical mouse picks with fit-first guidance, click-force tradeoffs, and practical all-day comfort recommendations.",
+    intent: "commercial",
+    updated: "2026-03-02",
+    heroImage: "/images/guides/quiet-click-vertical-mouse-office/quiet-workflow-calls-focus-1600x900.jpg",
+    body: [
+      "Large hands often struggle with compact ergonomic mice that force finger curl and increase click fatigue over long sessions.",
+      "The right vertical mouse for large hands should support full palm contact, reduce pinch tension, and keep forearm posture neutral.",
+      "In this guide, we prioritize shell size, button effort, and long-session control rather than marketing specs.",
+      "If you are between sizes, a slightly larger shell with stable palm support usually outperforms a smaller model with higher DPI.",
+    ],
+    products: [
+      { name: "Logitech MX Vertical", bestFor: "Best overall for large hands", price: "$$$", rating: "4.5/5", amazonUrl: a("Logitech MX Vertical") },
+      { name: "Evoluent VerticalMouse D", bestFor: "Best true ergonomic contour", price: "$$$", rating: "4.4/5", amazonUrl: a("Evoluent VerticalMouse D") },
+      { name: "J-Tech Digital V628", bestFor: "Best palm shelf support", price: "$$", rating: "4.2/5", amazonUrl: a("J-Tech Digital V628") },
+      { name: "Delux M618 Plus", bestFor: "Best value for bigger grip", price: "$$", rating: "4.2/5", amazonUrl: a("Delux M618 Plus vertical mouse") },
+      { name: "Kensington Pro Fit Ergo Vertical", bestFor: "Best conservative transition shape", price: "$$", rating: "4.2/5", amazonUrl: a("Kensington Pro Fit Ergo vertical") },
+      { name: "Anker Wireless Vertical", bestFor: "Best budget starter", price: "$", rating: "4.3/5", amazonUrl: a("Anker wireless vertical mouse") },
+      { name: "Lekvey Rechargeable Vertical", bestFor: "Best cheap rechargeable", price: "$", rating: "4.3/5", amazonUrl: a("Lekvey rechargeable vertical mouse") },
+      { name: "Perixx PERIMICE-718", bestFor: "Best wired reliability", price: "$", rating: "4.2/5", amazonUrl: a("Perixx PERIMICE-718") },
+      { name: "ProtoArc EM11 NL", bestFor: "Best hybrid office option", price: "$$", rating: "4.4/5", amazonUrl: a("ProtoArc EM11 NL vertical mouse") },
+      { name: "Nulea M501", bestFor: "Best tri-mode budget option", price: "$", rating: "4.1/5", amazonUrl: a("Nulea M501 vertical mouse") },
+    ],
   },
+
 ];
 
 const DEFAULT_SITE_URL = "https://www.verticalmouseguide.com";
