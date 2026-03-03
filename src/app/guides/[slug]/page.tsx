@@ -126,6 +126,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     );
   }
 
+  if (slug === "best-ergonomic-mouse-for-wrist-pain-office") {
+    return withSeo(
+      "Best Ergonomic Mouse for Wrist Pain in Office Work (2026)",
+      "Fast answer + ranked ergonomic mouse picks for office wrist pain with fit criteria, comfort tradeoffs, and practical adaptation guidance.",
+    );
+  }
+
   return withSeo(guide.title, guide.description);
 }
 
