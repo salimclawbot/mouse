@@ -141,16 +141,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   if (slug === "best-ergonomic-mouse-for-wrist-pain-office") {
-    return withSeo(
-      "Best Ergonomic Mouse for Wrist Pain in Office Work (2026)",
-      "Fast answer + ranked ergonomic mouse picks for office wrist pain with fit criteria, comfort tradeoffs, and practical adaptation guidance.",
-    );
+    return {
+      ...withSeo(
+        "Best Ergonomic Mouse for Wrist Pain in Office Work (Quick Guide, 2026)",
+        "Quick-answer version of our office wrist-pain ergonomic mouse rankings. For full depth, see the deep-dive buyer guide.",
+      ),
+      alternates: { canonical: "/guides/office-ergonomic-mouse-wrist-pain-deep-dive" },
+    };
   }
 
   if (slug === "office-ergonomic-mouse-wrist-pain-deep-dive") {
     return withSeo(
       "Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide (2026)",
       "Methodology-first office buyer guide with ranked ergonomic mouse picks, fit decisioning, adaptation timeline, FAQ schema, and team rollout playbooks.",
+    );
+  }
+
+  if (slug === "best-ergonomic-mouse-for-programmers-wrist-pain") {
+    return withSeo(
+      "Best Ergonomic Mouse for Programmers with Wrist Pain (2026)",
+      "Programmer-focused ergonomic mouse guide for coding workloads: fit, click fatigue, reliability, and desk-friendly comfort tradeoffs.",
     );
   }
 
@@ -541,6 +551,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
       {isWristGuide && (
         <>
+          <section className="rounded-2xl border border-indigo-200 bg-indigo-50/50 p-5">
+            <p className="text-sm text-slate-700"><strong>Quick-guide note:</strong> this page is the fast version. For the primary comprehensive article, use <Link className="underline" href="/guides/office-ergonomic-mouse-wrist-pain-deep-dive">Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide</Link>.</p>
+          </section>
+
           <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">How We Tested for Office Wrist-Discomfort Workflows</h2>
             <p className="text-slate-700">This guide is built for professionals running pointer-heavy office work for 6 to 9 hours per day: spreadsheets, CRM tabs, decks, ticket queues, and document review. We score each model using weighted criteria that map to day-to-day output, not spec-sheet hype: fit and posture support (35%), long-session comfort stability (25%), control reliability (20%), and ownership value (20%).</p>
