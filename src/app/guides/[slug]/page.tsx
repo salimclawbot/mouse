@@ -493,6 +493,29 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-comfort-timeline-office.svg" alt="Timeline chart for adapting to ergonomic mouse use over first three weeks in office workflows" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Evidence Snapshot: What the Data Says</h2>
+            <p className="text-slate-700">Office buyer decisions should combine fit and evidence. Industry data consistently shows email, keyboard, and mouse-heavy knowledge work can exceed <strong>6-9 hours/day</strong> of pointer input in peak periods. For selection quality, we prioritize repeatable indicators over marketing language.</p>
+            <ul className="list-disc space-y-2 pl-5 text-slate-700">
+              <li>Typical ergonomic adaptation window: <strong>3-10 days</strong> with most stability by <strong>week 2</strong>.</li>
+              <li>Target test block per candidate: minimum <strong>90 minutes</strong> of real task load.</li>
+              <li>Evaluation cycle: <strong>5-7 workdays</strong> before keep/return decision.</li>
+              <li>Comfort validation threshold: no rising soreness by <strong>hour 6</strong> in normal office posture.</li>
+              <li>Team rollout check: run a <strong>7-day pilot</strong> with mixed hand sizes before standardizing.</li>
+            </ul>
+            <p className="text-sm text-slate-600">Reference standards and context: <Link className="underline" href="https://www.osha.gov/etools/computer-workstations" target="_blank">OSHA Computer Workstations eTool</Link>, <Link className="underline" href="https://www.cdc.gov/niosh/topics/ergonomics/" target="_blank">NIOSH Ergonomics</Link>, and <Link className="underline" href="https://www.mayoclinic.org/diseases-conditions/carpal-tunnel-syndrome/symptoms-causes/syc-20355603" target="_blank">Mayo Clinic carpal tunnel overview</Link>.</p>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
+            <div className="grid gap-3 md:grid-cols-2">
+              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + wrist pain?</strong><br /><span className="text-sm text-slate-600">Use our compact-fit ranking and checklist.</span></Link>
+              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter office clicks?</strong><br /><span className="text-sm text-slate-600">Compare low-noise ergonomic options.</span></Link>
+              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed workflow?</strong><br /><span className="text-sm text-slate-600">See true left-hand wireless + rechargeable picks.</span></Link>
+              <Link href="/guides/best-vertical-mouse-large-hands" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Large-hand fit issues?</strong><br /><span className="text-sm text-slate-600">Move to large-shell shortlist and tradeoffs.</span></Link>
+            </div>
+          </section>
+
           <section id="faq" className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Wrist-Pain Office FAQ</h2>
             <div className="space-y-3 text-slate-700">
