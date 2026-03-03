@@ -79,6 +79,13 @@ premiumTemplateBySlug["best-ergonomic-mouse-for-wrist-pain-office"].infographic 
   caption: "Use this grid to shortlist the best ergonomic mouse for your wrist pain pattern and office workflow.",
 };
 
+premiumTemplateBySlug["office-ergonomic-mouse-wrist-pain-deep-dive"].infographic = {
+  src: "/images/guides/office-ergonomic-mouse-wrist-pain-deep-dive/2026-03-03-20-42-shape-comparison-checklist.png",
+  heading: "Infographic: Office Wrist-Support Mouse Selection Matrix",
+  alt: "Top-down office desk visual comparing ergonomic mouse shapes with fit, click effort, and forearm comfort checklist labels",
+  caption: "Use this matrix to shortlist by fit class, click effort, and comfort durability before you buy.",
+};
+
 const toProductImagePath = (name: string) =>
   `/images/products/${name
     .toLowerCase()
@@ -140,6 +147,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     );
   }
 
+  if (slug === "office-ergonomic-mouse-wrist-pain-deep-dive") {
+    return withSeo(
+      "Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide (2026)",
+      "Methodology-first office buyer guide with ranked ergonomic mouse picks, fit decisioning, adaptation timeline, FAQ schema, and team rollout playbooks.",
+    );
+  }
+
   return withSeo(guide.title, guide.description);
 }
 
@@ -152,9 +166,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isLeftGuide = slug === "left-handed-vertical-mouse-wireless-rechargeable";
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isWristGuide = slug === "best-ergonomic-mouse-for-wrist-pain-office";
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide;
+  const isWristDeepGuide = slug === "office-ergonomic-mouse-wrist-pain-deep-dive";
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
-  const hasVideoSection = isPremiumArticle && !isWristGuide && Boolean(premiumMedia?.video);
+  const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
   const topPicks = guide.products.slice(0, 3);
 
@@ -203,7 +218,22 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               a: "Posture support and fit come first. Quiet clicks help office comfort, but the wrong shell geometry will still drive wrist fatigue.",
             },
           ]
-        : [
+        : isWristDeepGuide
+          ? [
+              {
+                q: "What should office buyers prioritize first when wrist pain is involved?",
+                a: "Prioritize shell fit and click effort first, then validate comfort with a 5- to 7-day real-work trial before deciding.",
+              },
+              {
+                q: "How many ergonomic mouse models should a team pilot?",
+                a: "Usually two models performs best: one default fit and one alternative geometry for hand-size mismatch coverage.",
+              },
+              {
+                q: "Is this article medical advice?",
+                a: "No. It is non-medical office buying guidance and should not replace diagnosis or treatment from a qualified clinician.",
+              },
+            ]
+          : [
             {
               q: "Can a vertical mouse cure carpal tunnel syndrome?",
               a: "No. It can reduce aggravating posture and grip stress, but it is not a medical cure.",
@@ -225,7 +255,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     description: guide.description,
     image: [`${site.url}${guide.heroImage}`],
     dateModified: guide.updated,
-    datePublished: slug === "best-ergonomic-mouse-for-wrist-pain-office"
+    datePublished: slug === "best-ergonomic-mouse-for-wrist-pain-office" || slug === "office-ergonomic-mouse-wrist-pain-deep-dive"
       ? "2026-03-03"
       : slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office"
         ? "2026-02-25"
@@ -327,9 +357,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           {isPremiumArticle && <li><a href="#quick-compare" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Compare</a></li>}
           <li><a href="#product-photos" className="rounded-md px-3 py-1 hover:bg-slate-100">Product Photos</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
-          {(isLeftGuide || isWristGuide) && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
+          {(isLeftGuide || isWristGuide || isWristDeepGuide) && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
           {isPremiumArticle && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
-          {(isLeftGuide || isWristGuide) && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
+          {(isLeftGuide || isWristGuide || isWristDeepGuide) && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
           {isPremiumArticle && <li><a href="#verdict" className="rounded-md px-3 py-1 hover:bg-slate-100">Verdict</a></li>}
         </ul>
       </nav>
@@ -450,6 +480,63 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </Table>
           </div>
         </section>
+      )}
+
+      {isWristDeepGuide && (
+        <>
+          <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Methodology: Office-Grade Wrist-Support Scoring</h2>
+            <p className="text-slate-700">We score each model against office reality, not spec sheets: fit/posture support (35%), six-hour comfort durability (25%), control reliability in multi-app workflows (20%), and value confidence including return-risk (20%).</p>
+            <p className="text-slate-700">Passing criteria: stable comfort through the hardest daily work block by day five. Failing criteria: rising soreness, overreach clicks, or unstable pointer confidence after normal adaptation.</p>
+            <Image src="/images/guides/office-ergonomic-mouse-wrist-pain-deep-dive/2026-03-03-20-42-shape-comparison-checklist.png" alt="Top-down office mouse shape comparison with a fit and click-effort checklist used in ergonomic scoring" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Decision Tree: Match Pain Pattern to Mouse Class</h2>
+            <div className="grid gap-3 md:grid-cols-2 text-slate-700">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Thumb-base flare first:</strong> prioritize compact-to-mid shells with easy thumb parking and low side-button resistance.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Forearm ache first:</strong> choose stronger vertical posture support and keep grip force low during long blocks.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Finger fatigue first:</strong> select lower click effort before pursuing extra buttons or high-DPI options.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Mixed-team procurement:</strong> deploy two approved shapes to reduce fit mismatch across hand sizes.</p></div>
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Adaptation Timeline and Keep/Return Triggers</h2>
+            <p className="text-slate-700">Evaluate on Day 1, Day 3, and Week 2 checkpoints. Keep models with stable or improving comfort; return models with worsening soreness or persistent control tension.</p>
+            <Image src="/images/guides/office-ergonomic-mouse-wrist-pain-deep-dive/2026-03-03-20-43-adaptation-timeline-workflow.png" alt="Office adaptation timeline board from day one to week three for ergonomic mouse testing" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
+            <div className="grid gap-3 md:grid-cols-2">
+              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + wrist pain?</strong><br /><span className="text-sm text-slate-600">Use compact-fit picks and overreach prevention checklist.</span></Link>
+              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need low-noise office clicks?</strong><br /><span className="text-sm text-slate-600">Compare acoustic profiles and comfort tradeoffs.</span></Link>
+              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed setup?</strong><br /><span className="text-sm text-slate-600">See true left-hand wireless + rechargeable options.</span></Link>
+              <Link href="/guides/best-ergonomic-mouse-for-wrist-pain-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need the shorter version?</strong><br /><span className="text-sm text-slate-600">Read our fast office wrist-pain ranking guide.</span></Link>
+            </div>
+          </section>
+
+          <section id="faq" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Office Wrist-Support FAQ</h2>
+            <div className="space-y-3 text-slate-700">
+              <p><strong>How long should we pilot before buying in bulk?</strong><br />Run a 7-day pilot with mixed hand sizes, then standardize only models with stable comfort and control scores.</p>
+              <p><strong>Should we buy the same mouse for every employee?</strong><br />Usually no. A two-model policy significantly reduces mismatch and return churn.</p>
+              <p><strong>What matters more for comfort: angle or click force?</strong><br />Both matter, but high click effort can ruin an otherwise good posture angle over long shifts.</p>
+            </div>
+          </section>
+
+          <section id="transparency" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-bold text-slate-900">Editorial Transparency</h2>
+            <p className="text-sm text-slate-700">Author: Vertical Mouse Guide Editorial Team · Visual assets: Vinnie lane (2K custom renders) · Last reviewed: {guide.updated}.</p>
+            <p className="text-sm text-slate-700">This page is educational buyer guidance and does not replace diagnosis or treatment advice from a qualified clinician.</p>
+          </section>
+
+          <section id="verdict" className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-cyan-50 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Final Verdict: Deep-Dive Office Buyers</h2>
+            <p className="mt-2 text-slate-700">Choose the model that remains comfortable in your hardest workload block by day five. For most teams: start with Lift, add MX Vertical for larger hands, and keep a budget trial lane with Anker for cost-sensitive rollout.</p>
+          </section>
+        </>
       )}
 
       {isWristGuide && (

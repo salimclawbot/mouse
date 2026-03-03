@@ -154,6 +154,37 @@ export const guides: Guide[] = [
     ],
   },
 
+  {
+    slug: "office-ergonomic-mouse-wrist-pain-deep-dive",
+    title: "Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide (2026)",
+    description: "A methodology-first office guide for choosing an ergonomic mouse for wrist pain, including fit decisioning, adaptation checkpoints, and team rollout playbooks.",
+    intent: "commercial",
+    updated: "2026-03-03",
+    heroImage: "/images/guides/office-ergonomic-mouse-wrist-pain-deep-dive/2026-03-03-20-42-hero-neutral-posture.png",
+    body: [
+      "Most office wrist pain decisions fail because buyers compare features before they validate fit. For daily computer work, shell geometry and click force dominate comfort outcomes over DPI claims.",
+      "This deep-dive guide ranks ergonomic mice with a practical office weighting model: fit and posture support (35%), six-hour comfort durability (25%), control reliability (20%), and value confidence (20%).",
+      "Quick shortlist: Logitech Lift is the safest all-round choice for most teams, MX Vertical wins for larger hands and premium stability, and Anker Wireless Vertical is the lowest-risk budget trial.",
+      "Use a 5- to 7-day real-work test, not a 20-minute desk impression. The right mouse usually shows clear comfort stability by day three.",
+      "If soreness rises after week one, treat that as shape mismatch rather than user failure. Swap shell size or angle before blaming the ergonomic category.",
+      "For procurement, run a two-model pilot (default + alternative fit) across mixed hand sizes before standardizing office-wide.",
+      "This article stays non-medical: it is buyer guidance for office ergonomics, not diagnosis or treatment advice.",
+    ],
+    products: [
+      { name: "Logitech Lift", bestFor: "Best overall for most office teams", price: "$$", rating: "4.6/5", amazonUrl: a("Logitech Lift vertical mouse") },
+      { name: "Logitech MX Vertical", bestFor: "Best premium for larger hands", price: "$$$", rating: "4.5/5", amazonUrl: a("Logitech MX Vertical") },
+      { name: "Evoluent VerticalMouse 4", bestFor: "Best posture-first contour", price: "$$$", rating: "4.4/5", amazonUrl: a("Evoluent VerticalMouse 4") },
+      { name: "ProtoArc EM11 NL", bestFor: "Best quiet-value office option", price: "$$", rating: "4.4/5", amazonUrl: a("ProtoArc EM11 NL vertical mouse") },
+      { name: "Anker Wireless Vertical", bestFor: "Best low-risk budget trial", price: "$", rating: "4.3/5", amazonUrl: a("Anker wireless vertical mouse") },
+      { name: "Kensington Pro Fit Ergo Vertical", bestFor: "Best transition from standard shape", price: "$$", rating: "4.2/5", amazonUrl: a("Kensington Pro Fit Ergo vertical") },
+      { name: "J-Tech Digital V628", bestFor: "Best palm shelf support", price: "$$", rating: "4.2/5", amazonUrl: a("J-Tech Digital V628") },
+      { name: "Delux M618 Plus", bestFor: "Best feature-rich value", price: "$$", rating: "4.2/5", amazonUrl: a("Delux M618 Plus vertical mouse") },
+      { name: "Lekvey Rechargeable Vertical", bestFor: "Best cheap rechargeable pick", price: "$", rating: "4.3/5", amazonUrl: a("Lekvey rechargeable vertical mouse") },
+      { name: "Perixx PERIMICE-718", bestFor: "Best wired reliability at fixed desks", price: "$", rating: "4.2/5", amazonUrl: a("Perixx PERIMICE-718") },
+    ],
+  },
+
+
 ];
 
 const DEFAULT_SITE_URL = "https://www.verticalmouseguide.com";
