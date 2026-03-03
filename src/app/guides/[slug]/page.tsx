@@ -177,7 +177,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isWristGuide = slug === "best-ergonomic-mouse-for-wrist-pain-office";
   const isWristDeepGuide = slug === "office-ergonomic-mouse-wrist-pain-deep-dive";
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide;
+  const isProgrammerGuide = slug === "best-ergonomic-mouse-for-programmers-wrist-pain";
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -243,7 +244,22 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 a: "No. It is non-medical office buying guidance and should not replace diagnosis or treatment from a qualified clinician.",
               },
             ]
-          : [
+          : isProgrammerGuide
+            ? [
+                {
+                  q: "What is the safest first ergonomic mouse for programmers with wrist pain?",
+                  a: "For most developers, Logitech Lift is the safest first pick because it balances fit, click effort, and stable control during long coding sessions.",
+                },
+                {
+                  q: "How should programmers test a new mouse before committing?",
+                  a: "Run a 5- to 7-day coding workflow test that includes IDE navigation, terminal work, browser research, and pull-request review blocks.",
+                },
+                {
+                  q: "Is this guide medical advice?",
+                  a: "No. This is non-medical buyer guidance for coding ergonomics and does not replace diagnosis or treatment advice.",
+                },
+              ]
+            : [
             {
               q: "Can a vertical mouse cure carpal tunnel syndrome?",
               a: "No. It can reduce aggravating posture and grip stress, but it is not a medical cure.",
@@ -265,7 +281,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     description: guide.description,
     image: [`${site.url}${guide.heroImage}`],
     dateModified: guide.updated,
-    datePublished: slug === "best-ergonomic-mouse-for-wrist-pain-office" || slug === "office-ergonomic-mouse-wrist-pain-deep-dive"
+    datePublished: slug === "best-ergonomic-mouse-for-wrist-pain-office" || slug === "office-ergonomic-mouse-wrist-pain-deep-dive" || slug === "best-ergonomic-mouse-for-programmers-wrist-pain"
       ? "2026-03-03"
       : slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office"
         ? "2026-02-25"
@@ -367,9 +383,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           {isPremiumArticle && <li><a href="#quick-compare" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Compare</a></li>}
           <li><a href="#product-photos" className="rounded-md px-3 py-1 hover:bg-slate-100">Product Photos</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
-          {(isLeftGuide || isWristGuide || isWristDeepGuide) && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
+          {(isLeftGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide) && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
           {isPremiumArticle && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
-          {(isLeftGuide || isWristGuide || isWristDeepGuide) && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
+          {(isLeftGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide) && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
           {isPremiumArticle && <li><a href="#verdict" className="rounded-md px-3 py-1 hover:bg-slate-100">Verdict</a></li>}
         </ul>
       </nav>
@@ -401,6 +417,73 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="text-sm text-slate-700">Author: Vertical Mouse Guide Editorial Team · Last reviewed: {guide.updated}. We evaluate comfort, fit, workflow reliability, and value tradeoffs for real office usage.</p>
             <p className="text-sm text-slate-700">See our <Link href="/about" className="underline">About / methodology</Link>, <Link href="/affiliate-disclosure" className="underline">affiliate disclosure</Link>, and <Link href="/privacy-policy" className="underline">privacy policy</Link>.</p>
             <p className="text-xs text-slate-500">Medical note: This guide is educational and does not replace diagnosis or treatment advice from a qualified clinician.</p>
+          </section>
+        </>
+      )}
+
+
+      {isProgrammerGuide && (
+        <>
+          <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">How We Tested for Real Coding Workloads</h2>
+            <p className="text-slate-700">This ranking is tuned for developers spending 6 to 10 hours in IDEs, terminals, docs, PR review, and browser debugging loops. We weight fit + posture support (35%), click fatigue under sustained use (25%), cursor reliability during multi-window work (20%), and long-term ownership value (20%).</p>
+            <p className="text-slate-700">Any model that triggers rising thumb strain, forearm tension, or unstable pointer confidence by day five drops in rank regardless of branding.</p>
+            <p className="text-sm text-slate-600">Scope note: this is non-medical buyer guidance for programming ergonomics.</p>
+            <Image src="/images/guides/best-ergonomic-mouse-for-programmers-wrist-pain/2026-03-03-23-50-shape-comparison-coding.png" alt="Top-down ergonomic mouse shape comparison for programmers evaluating click effort, shell fit, and coding-session comfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Programmer Workflow Playbook (7-Day Evaluation)</h2>
+            <div className="grid gap-3 md:grid-cols-2 text-slate-700">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>IDE-heavy coding blocks:</strong> run 90-minute implementation sessions and track pointer accuracy + click fatigue near the final 20 minutes.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Debug + docs loops:</strong> test frequent app switching between terminal, browser, and editor to validate precision under context switching.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>PR review sessions:</strong> assess scroll-wheel consistency and micro-navigation control across long diff reviews.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Meeting + screenshare days:</strong> verify low-noise click behavior and stable pointer confidence while presenting live code.</p></div>
+            </div>
+            <Image src="/images/guides/best-ergonomic-mouse-for-programmers-wrist-pain/2026-03-03-23-50-adaptation-timeline-coding.png" alt="Programming adaptation timeline from day one to week three when switching to an ergonomic mouse for coding comfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Decision Framework: Match Symptom Pattern to Mouse Profile</h2>
+            <div className="grid gap-3 md:grid-cols-2 text-slate-700">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Thumb-base strain first:</strong> favor compact-to-mid shells with easy thumb parking and lighter side-button force.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Forearm ache first:</strong> prioritize stronger vertical support and lower grip effort across long compile/debug loops.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Finger fatigue from clicks:</strong> prioritize softer primary switch feel before chasing extra buttons.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Team rollout:</strong> pilot two models (default + alternative fit) across mixed hand sizes before bulk ordering.</p></div>
+            </div>
+            <Image src="/images/guides/best-ergonomic-mouse-for-programmers-wrist-pain/2026-03-03-23-50-team-pilot-developers.png" alt="Software development team running a two-model ergonomic mouse pilot in a collaborative office environment" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
+            <div className="grid gap-3 md:grid-cols-2">
+              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter switches for shared offices?</strong><br /><span className="text-sm text-slate-600">Compare low-noise ergonomic picks for developer teams.</span></Link>
+              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Smaller hands in your dev team?</strong><br /><span className="text-sm text-slate-600">Use compact-fit shortlist and overreach checklist.</span></Link>
+              <Link href="/guides/office-ergonomic-mouse-wrist-pain-deep-dive" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need full office procurement depth?</strong><br /><span className="text-sm text-slate-600">Use deep-dive methodology and rollout framework.</span></Link>
+              <Link href="/guides/best-ergonomic-mouse-for-wrist-pain-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Want the shorter office summary?</strong><br /><span className="text-sm text-slate-600">Read the quick ranking version.</span></Link>
+            </div>
+          </section>
+
+          <section id="faq" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Programmer Ergonomic Mouse FAQ</h2>
+            <div className="space-y-3 text-slate-700">
+              <p><strong>What is the best first ergonomic mouse for most programmers?</strong><br />Logitech Lift is usually the safest first choice thanks to balanced fit, lower click effort, and stable all-day coding comfort.</p>
+              <p><strong>How long should I adapt before deciding?</strong><br />Use a 5- to 7-day real coding workflow before keep/return decisions, with stronger comfort validation by week two.</p>
+              <p><strong>Should developers prioritize DPI upgrades?</strong><br />For comfort outcomes, shell fit and click force matter more than headline DPI numbers.</p>
+              <p><strong>Can one model fit an entire engineering team?</strong><br />Usually no. A two-model policy reduces mismatch and improves adoption across hand sizes.</p>
+            </div>
+          </section>
+
+          <section id="transparency" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-bold text-slate-900">Editorial Transparency</h2>
+            <p className="text-sm text-slate-700">Author: Vertical Mouse Guide Editorial Team · Visual assets: Vinnie lane (programmer article image set) · Last reviewed: {guide.updated}.</p>
+            <p className="text-sm text-slate-700">This page is educational buyer guidance and does not replace diagnosis or treatment advice from a qualified clinician.</p>
+          </section>
+
+          <section id="verdict" className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-cyan-50 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Final Verdict: Programmers With Wrist Discomfort</h2>
+            <p className="mt-2 text-slate-700">For most coding workloads, start with Logitech Lift, keep MX Vertical as the larger-hand premium lane, and use ProtoArc EM11 NL when quieter shared-office clicks are important.</p>
+            <p className="text-slate-700">The winning mouse is the one that keeps comfort stable during your hardest coding block by day five, not the one with the longest feature list.</p>
           </section>
         </>
       )}

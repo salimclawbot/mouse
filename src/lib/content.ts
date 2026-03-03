@@ -189,7 +189,7 @@ export const guides: Guide[] = [
     description: "Keyword-focused programmer guide covering coding workloads, click fatigue, and all-day comfort tradeoffs for wrist-sensitive developers.",
     intent: "commercial",
     updated: "2026-03-03",
-    heroImage: "/images/guides/office-ergonomic-mouse-wrist-pain-deep-dive/2026-03-03-20-42-team-pilot-procurement.png",
+    heroImage: "/images/guides/best-ergonomic-mouse-for-programmers-wrist-pain/2026-03-03-23-50-hero-programmer-posture.png",
     body: [
       "If you code for 6 to 10 hours a day, your mouse decision should be based on workload behavior, not raw specs. Developers need stable cursor control, low click fatigue, and posture support across long debugging sessions.",
       "This guide targets high-intent programmer search terms including ergonomic mouse for programmers, best mouse for coding wrist pain, vertical mouse for developers, and RSI-friendly office mouse options.",
