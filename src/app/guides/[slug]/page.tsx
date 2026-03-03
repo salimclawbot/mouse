@@ -459,7 +459,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="text-slate-700">This guide is built for professionals running pointer-heavy office work for 6 to 9 hours per day: spreadsheets, CRM tabs, decks, ticket queues, and document review. We score each model using weighted criteria that map to day-to-day output, not spec-sheet hype: fit and posture support (35%), long-session comfort stability (25%), control reliability (20%), and ownership value (20%).</p>
             <p className="text-slate-700">Our ranking gate is practical: if a mouse repeatedly triggers thumb overreach, ring-finger pressure, or rising end-of-day soreness after a normal adaptation window, it drops—regardless of premium branding or feature count.</p>
             <p className="text-sm text-slate-600">Editorial scope note: this is office buyer guidance, not medical diagnosis or treatment advice.</p>
-            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-fit-measurement-checklist.svg" alt="Checklist for measuring hand fit and click comfort when selecting an ergonomic mouse for office wrist discomfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/2026-03-03-20-32-compare-mouse-shapes.png" alt="Top-down comparison of three ergonomic mouse shapes with fit, click-force, and posture notes for office wrist-discomfort buyers" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -472,7 +472,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-slate-700">
               <strong>Not this guide:</strong> high-speed gaming optimization, medical diagnosis, or rehab protocol design.
             </div>
-            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-pain-office-hero-framework.svg" alt="Visual framework showing fit, click force, posture support, and reliability priorities for office ergonomic mouse selection" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/2026-03-03-20-32-hero-office-wrist-pain.png" alt="Professional office worker using a vertical ergonomic mouse with neutral wrist posture in a modern productivity desk setup" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -505,7 +505,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Adaptation Timeline (Day 1 to Week 3)</h2>
             <p className="text-slate-700">Most users should judge comfort after repeated real workloads, not first-hour impressions. Use morning + afternoon + end-of-day checks before deciding.</p>
-            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-comfort-timeline-office.svg" alt="Timeline chart for adapting to ergonomic mouse use over first three weeks in office workflows" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/2026-03-03-20-32-workflow-playbook.png" alt="Office support workflow scene showing ergonomic vertical mouse use during spreadsheet and ticket-management tasks" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
