@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f0fdfa"/>
+  <text x="120" y="150" font-family="Inter,Arial" font-size="56" font-weight="700" fill="#0f172a">Comfort Timeline: Week 1 → Week 3</text>
+  <line x1="140" y1="620" x2="1480" y2="620" stroke="#94a3b8" stroke-width="6"/>
+  <g font-family="Inter,Arial" fill="#0f172a">
+    <circle cx="340" cy="620" r="20" fill="#f59e0b"/><text x="260" y="700" font-size="30">Days 1-3</text>
+    <rect x="200" y="280" width="290" height="260" rx="20" fill="#fffbeb" stroke="#fbbf24"/><text x="230" y="350" font-size="30" font-weight="700">Adjust</text><text x="230" y="400" font-size="24">Lower speed 10%</text><text x="230" y="440" font-size="24">Expect minor awkwardness</text>
+    <circle cx="810" cy="620" r="20" fill="#06b6d4"/><text x="725" y="700" font-size="30">Days 4-10</text>
+    <rect x="660" y="220" width="310" height="320" rx="20" fill="#ecfeff" stroke="#67e8f9"/><text x="700" y="290" font-size="30" font-weight="700">Stabilize</text><text x="700" y="340" font-size="24">Cursor confidence returns</text><text x="700" y="380" font-size="24">Click fatigue drops</text>
+    <circle cx="1260" cy="620" r="20" fill="#10b981"/><text x="1180" y="700" font-size="30">Week 2-3</text>
+    <rect x="1100" y="160" width="310" height="380" rx="20" fill="#ecfdf5" stroke="#6ee7b7"/><text x="1140" y="230" font-size="30" font-weight="700">Lock-In</text><text x="1140" y="280" font-size="24">All-day comfort target</text><text x="1140" y="320" font-size="24">Validate on hardest tasks</text>
+  </g>
+</svg>

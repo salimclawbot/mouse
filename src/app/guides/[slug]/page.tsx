@@ -72,6 +72,13 @@ premiumTemplateBySlug["quiet-click-vertical-mouse-office"].infographic = {
   caption: "Rank office picks by acoustic profile, ergonomic endurance, reliability, and procurement value.",
 };
 
+premiumTemplateBySlug["best-ergonomic-mouse-for-wrist-pain-office"].infographic = {
+  src: "/images/guides/best-ergonomic-mouse-for-wrist-pain-office/infographic-best-ergonomic-mouse-for-wrist-pain-office.svg",
+  heading: "Infographic: Office Wrist-Pain Mouse Decision Grid",
+  alt: "Infographic decision grid for choosing an ergonomic mouse for office wrist pain based on fit, click force, comfort hours, and noise profile",
+  caption: "Use this grid to shortlist the best ergonomic mouse for your wrist pain pattern and office workflow.",
+};
+
 const toProductImagePath = (name: string) =>
   `/images/products/${name
     .toLowerCase()
@@ -144,9 +151,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isPremiumDemo = slug === "best-vertical-mouse-small-hands-carpal-tunnel";
   const isLeftGuide = slug === "left-handed-vertical-mouse-wireless-rechargeable";
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide;
+  const isWristGuide = slug === "best-ergonomic-mouse-for-wrist-pain-office";
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
-  const hasVideoSection = isPremiumArticle && Boolean(premiumMedia?.video);
+  const hasVideoSection = isPremiumArticle && !isWristGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
   const topPicks = guide.products.slice(0, 3);
 
@@ -180,20 +188,35 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             a: "Yes, if shape fit and click force are right. Noise reduction only helps if the shell also supports neutral posture and low fatigue.",
           },
         ]
-      : [
-          {
-            q: "Can a vertical mouse cure carpal tunnel syndrome?",
-            a: "No. It can reduce aggravating posture and grip stress, but it is not a medical cure.",
-          },
-          {
-            q: "How long does adaptation take?",
-            a: "Most users adapt in about 3 to 10 days, with better stability by week two.",
-          },
-          {
-            q: "What matters more than DPI for comfort?",
-            a: "Correct size fit, lighter click force, and stable control at normal work speed.",
-          },
-        ];
+      : isWristGuide
+        ? [
+            {
+              q: "What is the best ergonomic mouse for office wrist pain?",
+              a: "For most office users, Logitech Lift is the safest all-round ergonomic pick, while MX Vertical suits larger hands and premium build preference.",
+            },
+            {
+              q: "How long does wrist-pain adaptation take?",
+              a: "Most people adapt in 3 to 10 days, with stronger comfort stability by week two if the shell size and click force are correct.",
+            },
+            {
+              q: "Should I prioritize quiet clicks or posture support?",
+              a: "Posture support and fit come first. Quiet clicks help office comfort, but the wrong shell geometry will still drive wrist fatigue.",
+            },
+          ]
+        : [
+            {
+              q: "Can a vertical mouse cure carpal tunnel syndrome?",
+              a: "No. It can reduce aggravating posture and grip stress, but it is not a medical cure.",
+            },
+            {
+              q: "How long does adaptation take?",
+              a: "Most users adapt in about 3 to 10 days, with better stability by week two.",
+            },
+            {
+              q: "What matters more than DPI for comfort?",
+              a: "Correct size fit, lighter click force, and stable control at normal work speed.",
+            },
+          ];
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -202,7 +225,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     description: guide.description,
     image: [`${site.url}${guide.heroImage}`],
     dateModified: guide.updated,
-    datePublished: slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office" ? "2026-02-25" : "2026-02-24",
+    datePublished: slug === "best-ergonomic-mouse-for-wrist-pain-office"
+      ? "2026-03-03"
+      : slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office"
+        ? "2026-02-25"
+        : "2026-02-24",
     author: {
       "@type": "Organization",
       name: "Vertical Mouse Guide Editorial",
@@ -300,9 +327,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           {isPremiumArticle && <li><a href="#quick-compare" className="rounded-md px-3 py-1 hover:bg-slate-100">Quick Compare</a></li>}
           <li><a href="#product-photos" className="rounded-md px-3 py-1 hover:bg-slate-100">Product Photos</a></li>
           <li><a href="#comparison" className="rounded-md px-3 py-1 hover:bg-slate-100">Comparison</a></li>
-          {isLeftGuide && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
+          {(isLeftGuide || isWristGuide) && <li><a href="#method" className="rounded-md px-3 py-1 hover:bg-slate-100">How We Tested</a></li>}
           {isPremiumArticle && <li><a href="#faq" className="rounded-md px-3 py-1 hover:bg-slate-100">FAQ</a></li>}
-          {isLeftGuide && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
+          {(isLeftGuide || isWristGuide) && <li><a href="#transparency" className="rounded-md px-3 py-1 hover:bg-slate-100">Transparency</a></li>}
           {isPremiumArticle && <li><a href="#verdict" className="rounded-md px-3 py-1 hover:bg-slate-100">Verdict</a></li>}
         </ul>
       </nav>
@@ -423,6 +450,71 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </Table>
           </div>
         </section>
+      )}
+
+      {isWristGuide && (
+        <>
+          <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">How We Tested for Office Wrist-Pain Use Cases</h2>
+            <p className="text-slate-700">This guide is designed for office workers running mouse-heavy workflows for 6 to 9 hours per day. We score each model on four weighted factors: fit and posture support (35%), long-session comfort (25%), control reliability (20%), and ownership value (20%).</p>
+            <p className="text-slate-700">Our pass/fail threshold is simple: if a model causes thumb extension strain, ring-finger curl pressure, or rising end-of-day soreness after adaptation week, it drops in rank regardless of feature count.</p>
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-fit-measurement-checklist.svg" alt="Checklist for measuring hand fit and click comfort when selecting an ergonomic mouse for office wrist pain" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Who This Article Is For</h2>
+            <ul className="list-disc space-y-1 pl-5 text-slate-700">
+              <li>Desk professionals with recurring wrist ache, click fatigue, or forearm tension.</li>
+              <li>Teams choosing ergonomic mice for productivity + comfort, not gaming specs.</li>
+              <li>Buyers deciding between premium and budget options with clear tradeoffs.</li>
+            </ul>
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-pain-office-hero-framework.svg" alt="Visual framework showing fit, click force, posture support, and reliability priorities for office mouse selection" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Top 10 Ergonomic Mice: Practical Tradeoffs</h2>
+            <div className="grid gap-4 md:grid-cols-2 text-slate-700">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Logitech Lift:</strong> best all-round fit and low click effort for most office hands. Tradeoff: mid-tier price vs basic budget models.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Logitech MX Vertical:</strong> premium build and stable precision for larger hands. Tradeoff: too large for many small-hand users.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Evoluent VerticalMouse 4:</strong> strong pronation relief profile. Tradeoff: adaptation curve can be longer.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Anker Wireless Vertical:</strong> low-cost trial option. Tradeoff: quality consistency can vary.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>ProtoArc EM11 NL:</strong> quiet-click value in shared offices. Tradeoff: lighter long-term track record than premium brands.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Kensington Pro Fit Ergo Vertical:</strong> easier transition from standard mice. Tradeoff: less aggressive wrist-neutral angle.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>J-Tech Digital V628:</strong> excellent palm shelf support. Tradeoff: bulk can feel slow for tight desk zones.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Delux M618 Plus:</strong> feature-rich value pick. Tradeoff: click feel can vary by unit.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Lekvey Rechargeable Vertical:</strong> convenient rechargeable budget option. Tradeoff: switch consistency under heavy usage.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Perixx PERIMICE-718:</strong> wired stability for fixed desks. Tradeoff: cable drag for hybrid setups.</p></div>
+            </div>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Adaptation Timeline (Day 1 to Week 3)</h2>
+            <p className="text-slate-700">Most users should judge comfort after repeated real workloads, not first-hour impressions. Use morning + afternoon + end-of-day checks before deciding.</p>
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-comfort-timeline-office.svg" alt="Timeline chart for adapting to ergonomic mouse use over first three weeks in office workflows" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+          </section>
+
+          <section id="faq" className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Wrist-Pain Office FAQ</h2>
+            <div className="space-y-3 text-slate-700">
+              <p><strong>Can an ergonomic mouse remove wrist pain completely?</strong><br />It can reduce common aggravators, but results depend on fit, desk setup, and workload pacing.</p>
+              <p><strong>Which matters more: DPI or click force?</strong><br />Click force and shell fit matter more for office comfort than high DPI marketing specs.</p>
+              <p><strong>How long should I test before returning?</strong><br />Use at least 5 to 7 workdays with your real workload before making a keep/return decision.</p>
+              <p><strong>Should teams buy one model for everyone?</strong><br />Usually no. A two-model policy (default + alternative fit) reduces mismatch and fatigue complaints.</p>
+            </div>
+          </section>
+
+          <section id="transparency" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-bold text-slate-900">Editorial Transparency</h2>
+            <p className="text-sm text-slate-700">Author: Vertical Mouse Guide Editorial Team · Visual assets: Vinnie lane (article-specific image set) · Last reviewed: {guide.updated}.</p>
+            <p className="text-sm text-slate-700">This page is educational buyer guidance and does not replace diagnosis or treatment from a qualified clinician.</p>
+          </section>
+
+          <section id="verdict" className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-cyan-50 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Final Verdict: Office Wrist-Pain Buyers</h2>
+            <p className="mt-2 text-slate-700">For most office users, Logitech Lift remains the safest first choice. If your hand is larger or you need premium shell support, move to MX Vertical. If budget is strict, Anker Wireless Vertical is the best low-risk entry test.</p>
+            <p className="text-slate-700">The winning model is the one that keeps comfort stable through your hardest work block by day five—not the one with the longest spec sheet.</p>
+          </section>
+        </>
       )}
 
       {isPremiumDemo && (

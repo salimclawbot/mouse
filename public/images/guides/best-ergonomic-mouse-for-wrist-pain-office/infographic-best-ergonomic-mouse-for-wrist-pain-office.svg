@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="110" y="130" font-family="Inter,Arial" font-size="52" font-weight="700" fill="#0f172a">Infographic: Office Wrist-Pain Mouse Decision Grid</text>
+  <g font-family="Inter,Arial" font-size="28" fill="#0f172a">
+    <rect x="110" y="190" width="1380" height="620" rx="24" fill="#fff" stroke="#cbd5e1"/>
+    <text x="170" y="270" font-weight="700">Question</text><text x="690" y="270" font-weight="700">If YES</text><text x="1080" y="270" font-weight="700">If NO</text>
+    <line x1="150" y1="300" x2="1450" y2="300" stroke="#cbd5e1"/>
+    <text x="170" y="370">Do clicks feel heavy after 2 hours?</text><text x="690" y="370">Pick low-force switches</text><text x="1080" y="370">Prioritize fit first</text>
+    <line x1="150" y1="410" x2="1450" y2="410" stroke="#e2e8f0"/>
+    <text x="170" y="480">Is thumb stretching to reach buttons?</text><text x="690" y="480">Downsize shell width</text><text x="1080" y="480">Keep current size</text>
+    <line x1="150" y1="520" x2="1450" y2="520" stroke="#e2e8f0"/>
+    <text x="170" y="590">Do you work 6+ hours/day?</text><text x="690" y="590">Choose premium comfort tier</text><text x="1080" y="590">Value tier can work</text>
+    <line x1="150" y1="630" x2="1450" y2="630" stroke="#e2e8f0"/>
+    <text x="170" y="700">Need quiet clicks for shared office?</text><text x="690" y="700">Favor quiet-switch models</text><text x="1080" y="700">Standard switches acceptable</text>
+  </g>
+</svg>
