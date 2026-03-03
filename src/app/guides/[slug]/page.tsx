@@ -455,20 +455,24 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       {isWristGuide && (
         <>
           <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold text-slate-900">How We Tested for Office Wrist-Pain Use Cases</h2>
-            <p className="text-slate-700">This guide is designed for office workers running mouse-heavy workflows for 6 to 9 hours per day. We score each model on four weighted factors: fit and posture support (35%), long-session comfort (25%), control reliability (20%), and ownership value (20%).</p>
-            <p className="text-slate-700">Our pass/fail threshold is simple: if a model causes thumb extension strain, ring-finger curl pressure, or rising end-of-day soreness after adaptation week, it drops in rank regardless of feature count.</p>
-            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-fit-measurement-checklist.svg" alt="Checklist for measuring hand fit and click comfort when selecting an ergonomic mouse for office wrist pain" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <h2 className="text-2xl font-bold text-slate-900">How We Tested for Office Wrist-Discomfort Workflows</h2>
+            <p className="text-slate-700">This guide is built for professionals running pointer-heavy office work for 6 to 9 hours per day: spreadsheets, CRM tabs, decks, ticket queues, and document review. We score each model using weighted criteria that map to day-to-day output, not spec-sheet hype: fit and posture support (35%), long-session comfort stability (25%), control reliability (20%), and ownership value (20%).</p>
+            <p className="text-slate-700">Our ranking gate is practical: if a mouse repeatedly triggers thumb overreach, ring-finger pressure, or rising end-of-day soreness after a normal adaptation window, it drops—regardless of premium branding or feature count.</p>
+            <p className="text-sm text-slate-600">Editorial scope note: this is office buyer guidance, not medical diagnosis or treatment advice.</p>
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-fit-measurement-checklist.svg" alt="Checklist for measuring hand fit and click comfort when selecting an ergonomic mouse for office wrist discomfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
-            <h2 className="text-2xl font-bold text-slate-900">Who This Article Is For</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Who This Article Is For (and Not For)</h2>
             <ul className="list-disc space-y-1 pl-5 text-slate-700">
-              <li>Desk professionals with recurring wrist ache, click fatigue, or forearm tension.</li>
-              <li>Teams choosing ergonomic mice for productivity + comfort, not gaming specs.</li>
-              <li>Buyers deciding between premium and budget options with clear tradeoffs.</li>
+              <li>Office professionals with recurring wrist ache, click fatigue, or forearm tension during real computer work.</li>
+              <li>Managers or procurement leads choosing mice for mixed hand sizes and mixed workloads.</li>
+              <li>Buyers deciding between premium and budget options who want explicit tradeoffs, not generic “best mouse” lists.</li>
             </ul>
-            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-pain-office-hero-framework.svg" alt="Visual framework showing fit, click force, posture support, and reliability priorities for office mouse selection" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-slate-700">
+              <strong>Not this guide:</strong> high-speed gaming optimization, medical diagnosis, or rehab protocol design.
+            </div>
+            <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-pain-office-hero-framework.svg" alt="Visual framework showing fit, click force, posture support, and reliability priorities for office ergonomic mouse selection" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -488,6 +492,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Pain-Pattern Decisioning: Start With What Flares First</h2>
+            <div className="grid gap-3 md:grid-cols-2 text-slate-700">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Thumb-base discomfort first:</strong> favor compact-to-mid shells with easier thumb parking and lighter side-button force. Avoid tall, aggressive thumb ridges.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Wrist + forearm ache first:</strong> prioritize neutral posture support and lower grip tension. Match shell size to palm width before chasing extra features.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Finger-joint fatigue from clicking:</strong> prioritize lower click effort and clear actuation feel. Stiff switches usually underperform by hour six.</p></div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Shoulder tension during long sessions:</strong> combine a right-size mouse with tighter mousing zone setup and forearm support to reduce reach load.</p></div>
+            </div>
+            <p className="text-sm text-slate-600">Decision rule: choose the model that keeps discomfort stable or lower through your hardest daily work block by day five.</p>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Adaptation Timeline (Day 1 to Week 3)</h2>
             <p className="text-slate-700">Most users should judge comfort after repeated real workloads, not first-hour impressions. Use morning + afternoon + end-of-day checks before deciding.</p>
             <Image src="/images/guides/best-ergonomic-mouse-for-wrist-pain-office/wrist-comfort-timeline-office.svg" alt="Timeline chart for adapting to ergonomic mouse use over first three weeks in office workflows" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
@@ -504,6 +519,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li>Team rollout check: run a <strong>7-day pilot</strong> with mixed hand sizes before standardizing.</li>
             </ul>
             <p className="text-sm text-slate-600">Reference standards and context: <Link className="underline" href="https://www.osha.gov/etools/computer-workstations" target="_blank">OSHA Computer Workstations eTool</Link>, <Link className="underline" href="https://www.cdc.gov/niosh/topics/ergonomics/" target="_blank">NIOSH Ergonomics</Link>, and <Link className="underline" href="https://www.mayoclinic.org/diseases-conditions/carpal-tunnel-syndrome/symptoms-causes/syc-20355603" target="_blank">Mayo Clinic carpal tunnel overview</Link>.</p>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Office Workflow Playbooks (How to Test in Real Work)</h2>
+            <div className="space-y-3 text-slate-700">
+              <p><strong>Spreadsheet-heavy roles:</strong> run a 90-minute block with dense click + scroll activity and monitor micro-accuracy plus finger fatigue near day-end.</p>
+              <p><strong>Ops/support roles:</strong> test rapid tab switching, ticket triage, and copy/paste bursts. Prioritize wake reliability and predictable click feedback.</p>
+              <p><strong>Meetings + documents workflows:</strong> check side-button behavior, cursor stability during screenshare, and perceived noise in shared spaces.</p>
+              <p><strong>Manager/procurement pilots:</strong> use a 7-day, two-model pilot across mixed hand sizes before standardizing team purchases.</p>
+            </div>
+            <p className="text-sm text-slate-600">Simple tracking template: morning comfort / afternoon fatigue / end-of-day soreness / task confidence.</p>
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
