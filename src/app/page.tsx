@@ -61,17 +61,6 @@ const comparePillars = [
   },
 ];
 
-const homepageAssets = [
-  { src: "/images/vmg-visual-assets/generated/vertical-mouse-guide-hero-2026.webp", alt: "Vertical mouse in natural handshake grip position" },
-  { src: "/images/vmg-visual-assets/generated/100-point-vertical-mouse-scoring-methodology.webp", alt: "100-point scoring methodology visual" },
-  { src: "/images/vmg-visual-assets/generated/measure-your-hand-vertical-mouse-sizing.webp", alt: "Hand measurement for vertical mouse sizing" },
-  { src: "/images/vmg-visual-assets/generated/vertical-mouse-guide-categories-overview.webp", alt: "Guide category overview with multiple vertical mice" },
-  { src: "/images/vmg-visual-assets/generated/how-to-choose-vertical-mouse-flowchart-infographic.png", alt: "How to choose your vertical mouse flowchart infographic" },
-  { src: "/images/vmg-visual-assets/generated/featured-guide-large-hands-vertical-mouse.webp", alt: "Featured large-hands vertical mouse visual" },
-  { src: "/images/vmg-visual-assets/generated/featured-guide-small-hands-vertical-mouse.webp", alt: "Featured small-hands vertical mouse visual" },
-  { src: "/images/vmg-visual-assets/generated/featured-guide-vertical-vs-trackball-comparison.webp", alt: "Vertical mouse vs trackball featured comparison visual" },
-];
-
 export default function Home() {
   const featured = guides.slice(0, 3);
 
@@ -251,17 +240,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="homepage-assets-title">
-        <h2 id="homepage-assets-title" className="text-2xl font-bold text-slate-900">Homepage visual assets</h2>
-        <div className="grid gap-4 md:grid-cols-2">
-          {homepageAssets.map((img) => (
-            <figure key={img.src} className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <img src={img.src} alt={img.alt} loading="lazy" className="h-auto w-full" />
-              <figcaption className="px-3 py-2 text-xs text-slate-600">{img.alt}</figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
