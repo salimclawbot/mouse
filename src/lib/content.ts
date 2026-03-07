@@ -103,7 +103,7 @@ export const guides: Guide[] = [
     description: "Large-hand vertical mouse picks with fit-first guidance, click-force tradeoffs, and practical all-day comfort recommendations.",
     intent: "commercial",
     updated: "2026-03-02",
-    heroImage: "/images/guides/quiet-click-vertical-mouse-office/quiet-workflow-calls-focus-1600x900.jpg",
+    heroImage: "/images/vmg-visual-assets/generated/best-vertical-mouse-large-hands-comparison-2026.webp",
     body: [
       "Large hands often struggle with compact ergonomic mice that force finger curl and increase click fatigue over long sessions.",
       "The right vertical mouse for large hands should support full palm contact, reduce pinch tension, and keep forearm posture neutral.",

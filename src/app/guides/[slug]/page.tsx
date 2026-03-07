@@ -86,6 +86,61 @@ premiumTemplateBySlug["office-ergonomic-mouse-wrist-pain-deep-dive"].infographic
   caption: "Use this matrix to shortlist by fit class, click effort, and comfort durability before you buy.",
 };
 
+const vmgAssetGalleries: Record<string, { heading: string; images: { src: string; alt: string }[] }[]> = {
+  "best-vertical-mouse-large-hands": [
+    {
+      heading: "Large-hands guide visuals",
+      images: [
+        { src: "/images/vmg-visual-assets/generated/how-to-measure-hand-size-vertical-mouse.webp", alt: "Diagram showing hand length, width, and grip span measurements" },
+        { src: "/images/vmg-visual-assets/generated/best-vertical-mouse-large-hands-comparison-2026.webp", alt: "Top five vertical mice for large hands comparison visual" },
+        { src: "/images/vmg-visual-assets/generated/logitech-mx-vertical-large-hand-grip.webp", alt: "Large hand gripping Logitech MX Vertical at 57-degree angle" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-adaptation-timeline-large-hands.webp", alt: "Adaptation timeline for large-hand vertical mouse users" },
+        { src: "/images/vmg-visual-assets/generated/ergonomic-desk-setup-vertical-mouse-large-hands.webp", alt: "Ergonomic desk setup for large hands using a vertical mouse" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-large-hands-sizing-guide-infographic.png", alt: "Complete vertical mouse sizing and scoring infographic for large hands" },
+        { src: "/images/vmg-visual-assets/generated/logitech-mx-vertical-product-photo.webp", alt: "Logitech MX Vertical product photo" },
+        { src: "/images/vmg-visual-assets/generated/evoluent-verticalmouse-4-product-photo.webp", alt: "Evoluent VerticalMouse 4 product photo" },
+        { src: "/images/vmg-visual-assets/generated/anker-ergonomic-vertical-mouse-product-photo.webp", alt: "Anker ergonomic vertical mouse product photo" },
+        { src: "/images/vmg-visual-assets/generated/perixx-perimice-713-product-photo.webp", alt: "Perixx PERIMICE-713 product photo" },
+        { src: "/images/vmg-visual-assets/generated/jtech-digital-v628-vertical-mouse-product-photo.webp", alt: "J-Tech Digital V628 product photo" },
+      ],
+    },
+  ],
+  "vertical-mouse-vs-trackball": [
+    {
+      heading: "Vertical mouse vs trackball visuals",
+      images: [
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-vs-trackball-comparison-hero.webp", alt: "Vertical mouse and trackball side-by-side hero comparison" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-vs-trackball-hand-position-diagram.webp", alt: "Hand-position diagram comparing vertical mouse and trackball posture" },
+        { src: "/images/vmg-visual-assets/generated/wrist-vs-shoulder-pain-ergonomic-mouse-choice.webp", alt: "Pain-location guide for choosing vertical mouse or trackball" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-vs-trackball-learning-curve-timeline.webp", alt: "Learning curve timeline: vertical mouse vs trackball" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-trackball-dual-ergonomic-desk-setup.webp", alt: "Dual ergonomic desk setup with vertical mouse and trackball" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-vs-trackball-complete-comparison-infographic.png", alt: "Complete vertical mouse vs trackball infographic" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-comparison-product-shot.webp", alt: "Vertical mouse comparison product shot" },
+        { src: "/images/vmg-visual-assets/generated/logitech-m575-trackball-product-photo.webp", alt: "Logitech M575 trackball product photo" },
+        { src: "/images/vmg-visual-assets/generated/kensington-expert-mouse-trackball-product-photo.webp", alt: "Kensington Expert Mouse trackball product photo" },
+        { src: "/images/vmg-visual-assets/generated/logitech-mx-ergo-trackball-product-photo.webp", alt: "Logitech MX Ergo trackball product photo" },
+      ],
+    },
+  ],
+  "vertical-mouse-vs-regular-mouse": [
+    {
+      heading: "Vertical vs regular mouse visuals",
+      images: [
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-vs-regular-mouse-comparison-hero.webp", alt: "Vertical mouse and regular mouse side-by-side hero" },
+        { src: "/images/vmg-visual-assets/generated/forearm-pronation-vs-neutral-vertical-mouse-anatomy.webp", alt: "Forearm pronation vs neutral anatomy diagram" },
+        { src: "/images/vmg-visual-assets/generated/should-i-switch-to-vertical-mouse-decision-guide.webp", alt: "Who should switch to vertical mouse decision guide" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-adaptation-timeline-phases.webp", alt: "Vertical mouse adaptation phases timeline" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-myths-vs-facts.webp", alt: "Vertical mouse myths versus facts visual" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-vs-regular-mouse-key-differences-infographic.png", alt: "Vertical vs regular mouse key differences infographic" },
+        { src: "/images/vmg-visual-assets/generated/regular-mouse-product-photo-comparison.webp", alt: "Regular mouse product photo for comparison" },
+        { src: "/images/vmg-visual-assets/generated/ergonomic-regular-mouse-product-photo.webp", alt: "Ergonomic regular mouse product photo" },
+        { src: "/images/vmg-visual-assets/generated/vertical-mouse-57-degree-angle-product-photo.webp", alt: "Vertical mouse showing 57-degree ergonomic angle" },
+        { src: "/images/vmg-visual-assets/generated/vertical-vs-regular-mouse-side-by-side-product-photo.webp", alt: "Vertical and regular mouse side-by-side product photo" },
+      ],
+    },
+  ],
+};
+
 const toProductImagePath = (name: string) =>
   `/images/products/${name
     .toLowerCase()
@@ -545,6 +600,20 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <p className="text-sm font-medium text-emerald-800">Key takeaway: pick the smallest mouse that still supports your palm, then prioritize low click force.</p>
         {isLeftGuide && <p className="text-sm text-slate-700">Semantic intent covered: left-handed ergonomic mouse, left-handed vertical mouse wireless, rechargeable left-handed mouse, and office-comfort fit tradeoffs.</p>}
       </section>
+
+      {vmgAssetGalleries[slug]?.map((block) => (
+        <section key={block.heading} className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-slate-900">{block.heading}</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {block.images.map((img) => (
+              <figure key={img.src} className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                <img src={img.src} alt={img.alt} loading="lazy" className="h-auto w-full" />
+                <figcaption className="px-3 py-2 text-xs text-slate-600">{img.alt}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ))}
 
       {isPremiumArticle && (
         <section id="quick-compare" className="space-y-4 rounded-2xl border border-cyan-200 bg-cyan-50/40 p-6">
