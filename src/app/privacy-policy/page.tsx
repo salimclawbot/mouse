@@ -158,6 +158,21 @@ export default function PrivacyPage() {
         By using the site, you consent to this transfer of information.
       </p>
 
+      <h2 className="text-xl font-semibold">Data Security</h2>
+      <p>
+        We use commercially reasonable technical and organizational safeguards to protect data
+        processed through our website. These safeguards include access controls, routine software
+        updates, secure hosting infrastructure, and limited administrative access to analytics and
+        operational tools. No website or internet transmission is completely secure, and we cannot
+        guarantee absolute security. However, we take privacy and data protection seriously and
+        review our security posture regularly as part of ongoing site maintenance.
+      </p>
+      <p>
+        If we become aware of a data-security issue that materially affects visitor information under
+        our control, we will investigate promptly and, where required by law, provide notice through
+        appropriate channels.
+      </p>
+
       <h2 className="text-xl font-semibold">Changes to This Policy</h2>
       <p>
         We may update this Privacy Policy from time to time. When we make changes, we will update
