@@ -195,12 +195,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isProgrammersTrackballGuide = slug === "vertical-mouse-vs-trackball-programmers";
   const isMacbookProGuide = slug === "best-vertical-mouse-macbook-pro";
   const isMxVerticalReviewGuide = slug === "logitech-mx-vertical-review";
+  const isErgoBuyingGuide = slug === "ergonomic-mouse-buying-guide";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -392,6 +393,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "How is MX Vertical different from cheaper vertical mice?", a: "Core ergonomic angle is similar, but MX adds better sensor quality, software controls, and connectivity options." },
       { q: "Is MX Vertical good on Mac?", a: "Yes, it has strong macOS support with Logi Options+ and reliable Bluetooth performance." },
       { q: "What are the main weaknesses of MX Vertical?", a: "High price, large body for small hands, no left-hand model, and office-grade polling rate." },
+    ],
+    "ergonomic-mouse-buying-guide": [
+      { q: "What ergonomic mouse type should I buy first?", a: "Choose by pain pattern: vertical for pronation strain, trackball for repetitive movement strain, sculpted regular for comfort-first transition." },
+      { q: "Is vertical better than trackball?", a: "Neither is universally better; each addresses different biomechanics and workflows." },
+      { q: "How much should I spend on an ergonomic mouse?", a: "Budget models can deliver core ergonomic benefit; premium tiers mainly add sensor, software, and build quality." },
+      { q: "Can I alternate ergonomic and regular mice?", a: "Yes, many users mix devices by task to balance comfort and performance." },
     ],
   };
 
