@@ -23,7 +23,7 @@ const a = (q: string) => `${AMZ}${encodeURIComponent(q)}`;
 export const guides: Guide[] = [
   {
     slug: "best-vertical-mouse-small-hands-carpal-tunnel",
-    title: "Best Vertical Mouse for Small Hands & Carpal Tunnel (2026)",
+    title: "Best Vertical Mouse Small Hands (2026)",
     description: "Narrow-grip ergonomic picks that reduce wrist tension for smaller hands.",
     intent: "commercial",
     updated: "2026-02-24",
@@ -49,7 +49,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "left-handed-vertical-mouse-wireless-rechargeable",
-    title: "Best Left-Handed Vertical Mouse (Wireless + Rechargeable, 2026)",
+    title: "Left-Handed Vertical Mouse (2026)",
     description: "Ranked left-handed ergonomic picks with wireless reliability, rechargeable vs battery tradeoffs, and practical office comfort insights.",
     intent: "transactional",
     updated: "2026-02-25",
@@ -74,7 +74,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "quiet-click-vertical-mouse-office",
-    title: "Best Quiet-Click Vertical Mouse for Office Work",
+    title: "Quiet Click Vertical Mouse (2026)",
     description: "The best silent or low-noise vertical mice for open offices, calls, libraries, and shared home workspaces.",
     intent: "transactional",
     updated: "2026-02-25",
@@ -99,8 +99,8 @@ export const guides: Guide[] = [
     ],
   },  {
     slug: "best-vertical-mouse-large-hands",
-    title: "Best Vertical Mouse for Large Hands (2026)",
-    description: "Vertical mouse for large hands (2026): 5 ergonomic mice scored on fit, comfort, control & value with our 100-point methodology.",
+    title: "Vertical Mouse for Large Hands (2026)",
+    description: "Vertical mouse for large hands (2026): 5 ergonomic picks scored on hand fit, comfort & control. Find your perfect match with our 100-point methodology →",
     intent: "commercial",
     updated: "2026-03-09",
     heroImage: "/images/vmg-visual-assets/generated/best-vertical-mouse-large-hands-comparison-2026.webp",
@@ -346,8 +346,8 @@ export const guides: Guide[] = [
   },
   {
     slug: "best-ergonomic-mouse-for-wrist-pain-office",
-    title: "Best Ergonomic Mouse for Wrist Pain in Office Work (Quick Guide, 2026)",
-    description: "Quick-answer version of our office wrist-pain ergonomic mouse rankings. For full depth, use the deep-dive methodology guide.",
+    title: "Ergonomic Mouse for Wrist Pain (2026)",
+    description: "Best ergonomic mouse for wrist pain at the office (2026): 6 models tested for comfort, support & relief. Find the one that fits your hand →",
     intent: "commercial",
     updated: "2026-03-03",
     heroImage: "/images/guides/small-hands-carpal/wrist-posture-workstation-setup.jpg",
@@ -377,7 +377,7 @@ export const guides: Guide[] = [
 
   {
     slug: "office-ergonomic-mouse-wrist-pain-deep-dive",
-    title: "Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide (2026)",
+    title: "Office Wrist Pain Mouse Guide (2026)",
     description: "A methodology-first office guide for choosing an ergonomic mouse for wrist pain, including fit decisioning, adaptation checkpoints, and team rollout playbooks.",
     intent: "commercial",
     updated: "2026-03-03",
@@ -406,8 +406,8 @@ export const guides: Guide[] = [
   },
   {
     slug: "best-ergonomic-mouse-for-programmers-wrist-pain",
-    title: "Best Ergonomic Mouse for Programmers with Wrist Pain (2026)",
-    description: "Keyword-focused programmer guide covering coding workloads, click fatigue, and all-day comfort tradeoffs for wrist-sensitive developers.",
+    title: "Ergonomic Mouse for Programmers (2026)",
+    description: "Ergonomic mouse for programmers (2026): reduce wrist pain during long coding sessions with our top picks, tested for click feel, grip & precision →",
     intent: "commercial",
     updated: "2026-03-03",
     heroImage: "/images/guides/best-ergonomic-mouse-for-programmers-wrist-pain/2026-03-03-23-50-hero-programmer-posture.png",
@@ -436,8 +436,8 @@ export const guides: Guide[] = [
   },
   {
     slug: "vertical-mouse-vs-trackball",
-    title: "Vertical Mouse vs Trackball: Which Is Better? (2026)",
-    description: "Vertical mouse vs trackball compared (2026): one fixes wrist angle, the other eliminates arm movement. Pros, cons & use cases.",
+    title: "Vertical Mouse vs Trackball (2026)",
+    description: "Vertical mouse vs trackball (2026): we compare ergonomics, precision, price & portability so you can pick the right alternative to a standard mouse →",
     intent: "commercial",
     updated: "2026-03-09",
     heroImage: "/images/vmg-visual-assets/generated/vertical-mouse-vs-trackball-comparison-hero.webp",
@@ -643,8 +643,8 @@ export const guides: Guide[] = [
   },
   {
     slug: "vertical-mouse-vs-regular-mouse",
-    title: "Vertical Mouse vs Regular Mouse Compared (2026)",
-    description: "Vertical mouse vs regular mouse compared (2026): real ergonomic differences, who should switch, and who should stay put.",
+    title: "Vertical Mouse vs Regular (2026)",
+    description: "Vertical vs regular mouse (2026): side-by-side comparison on wrist angle, comfort, price & learning curve. Find out which is right for you →",
     intent: "commercial",
     updated: "2026-03-09",
     heroImage: "/images/vmg-visual-assets/generated/vertical-mouse-vs-regular-mouse-comparison-hero.webp",
@@ -832,7 +832,7 @@ export const guides: Guide[] = [
   {
     slug: "best-vertical-mouse-for-mac",
     title: "Best Vertical Mouse for Mac (2026)",
-    description: "Best vertical mouse for Mac users (2026): 6 ergonomic mice scored on macOS compatibility, comfort, and ergonomic fit.",
+    description: "Best vertical mouse for Mac (2026): 6 picks tested on macOS compatibility, Bluetooth performance & desk ergonomics. Our top pick may surprise you →",
     intent: "commercial",
     updated: "2026-03-09",
     heroImage: "/images/vmg-visual-assets/generated/vertical-mouse-guide-hero-2026.webp",

@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!guide) return {};
 
   const withSeo = (title: string, description: string) => ({
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/guides/${guide.slug}` },
     openGraph: {
@@ -121,21 +121,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (slug === "best-vertical-mouse-small-hands-carpal-tunnel") {
     return withSeo(
-      "Best Vertical Mouse for Small Hands & Carpal Tunnel (2026 Ranked Picks)",
+      "Best Vertical Mouse Small Hands (2026)",
       "Quick answer + full 2026 ranking of 10 compact vertical mice for small hands: top picks, fit checklist, FAQs, and comfort tradeoffs for carpal-tunnel-sensitive workflows.",
     );
   }
 
   if (slug === "left-handed-vertical-mouse-wireless-rechargeable") {
     return withSeo(
-      "Best Left-Handed Vertical Mouse (Wireless + Rechargeable, 2026)",
+      "Left-Handed Vertical Mouse (2026)",
       "Fast answer + full ranking of 10 left-handed vertical mice with wireless vs rechargeable tradeoffs, fit guidance, and practical office-focused buying FAQs.",
     );
   }
 
   if (slug === "quiet-click-vertical-mouse-office") {
     return withSeo(
-      "Best Quiet-Click Vertical Mouse for Office Work (2026 Ranked)",
+      "Quiet Click Vertical Mouse (2026)",
       "Quick answer + ranked list of 10 quiet vertical mice for offices, calls, and shared spaces, with acoustic tradeoffs, long-session comfort notes, and team-buying guidance.",
     );
   }
@@ -143,7 +143,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (slug === "best-ergonomic-mouse-for-wrist-pain-office") {
     return {
       ...withSeo(
-        "Best Ergonomic Mouse for Wrist Pain in Office Work (Quick Guide, 2026)",
+        "Ergonomic Mouse for Wrist Pain (2026)",
         "Quick-answer version of our office wrist-pain ergonomic mouse rankings. For full depth, see the deep-dive buyer guide.",
       ),
       alternates: { canonical: "/guides/office-ergonomic-mouse-wrist-pain-deep-dive" },
@@ -152,14 +152,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (slug === "office-ergonomic-mouse-wrist-pain-deep-dive") {
     return withSeo(
-      "Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide (2026)",
+      "Office Wrist Pain Mouse Guide (2026)",
       "Methodology-first office buyer guide with ranked ergonomic mouse picks, fit decisioning, adaptation timeline, FAQ schema, and team rollout playbooks.",
     );
   }
 
   if (slug === "best-ergonomic-mouse-for-programmers-wrist-pain") {
     return withSeo(
-      "Best Ergonomic Mouse for Programmers with Wrist Pain (2026)",
+      "Ergonomic Mouse for Programmers (2026)",
       "Programmer-focused ergonomic mouse guide for coding workloads: fit, click fatigue, reliability, and desk-friendly comfort tradeoffs.",
     );
   }
