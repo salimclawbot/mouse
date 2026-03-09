@@ -186,12 +186,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isUnder50Guide = slug === "best-vertical-mouse-under-50";
   const isAdjustGuide = slug === "how-long-adjust-vertical-mouse";
   const isAdjustGuideV2 = slug === "how-long-to-adjust-vertical-mouse";
+  const isGamingGuide = slug === "best-vertical-mouse-gaming";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -341,6 +342,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Is mild forearm soreness normal during transition?", a: "Yes, mild temporary soreness can be normal as different forearm muscles engage in the new grip." },
       { q: "Which models are easiest to adjust to?", a: "Moderate-angle models like Logitech MX Vertical and Lift are often easier transition options." },
       { q: "Cold turkey or gradual switch?", a: "Cold turkey typically adapts faster, while gradual switching can feel easier but takes longer." },
+    ],
+    "best-vertical-mouse-gaming": [
+      { q: "Can you use a vertical mouse for gaming?", a: "Yes for many genres like strategy and MMO, but competitive FPS players usually perform better with flat gaming mice." },
+      { q: "What DPI is enough for gaming with a vertical mouse?", a: "At least 3200 DPI with clean tracking and easy adjustment is a practical baseline for most gaming scenarios." },
+      { q: "What polling rate should I target?", a: "500 Hz minimum, with 1000 Hz preferred for smoother responsiveness in faster games." },
+      { q: "Will a vertical mouse help wrist pain from long gaming sessions?", a: "For many users yes, because the handshake grip reduces sustained forearm pronation strain." },
     ],
   };
 
