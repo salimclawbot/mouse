@@ -194,12 +194,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isWirelessGuide2 = slug === "best-wireless-vertical-mouse";
   const isProgrammersTrackballGuide = slug === "vertical-mouse-vs-trackball-programmers";
   const isMacbookProGuide = slug === "best-vertical-mouse-macbook-pro";
+  const isMxVerticalReviewGuide = slug === "logitech-mx-vertical-review";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -385,6 +386,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Bluetooth or dongle for MacBook Pro?", a: "Bluetooth is usually best because it avoids USB adapters and preserves limited USB-C ports." },
       { q: "Why does cursor feel odd on macOS sometimes?", a: "macOS acceleration differs from Windows; mouse utility apps can help tune tracking behavior." },
       { q: "Can one mouse switch between MacBook and iPad?", a: "Many Bluetooth vertical mice can pair with multiple devices and switch quickly." },
+    ],
+    "logitech-mx-vertical-review": [
+      { q: "Is Logitech MX Vertical worth $100?", a: "For heavy daily users, yes; premium build, software, and multi-device support justify the price for many workflows." },
+      { q: "How is MX Vertical different from cheaper vertical mice?", a: "Core ergonomic angle is similar, but MX adds better sensor quality, software controls, and connectivity options." },
+      { q: "Is MX Vertical good on Mac?", a: "Yes, it has strong macOS support with Logi Options+ and reliable Bluetooth performance." },
+      { q: "What are the main weaknesses of MX Vertical?", a: "High price, large body for small hands, no left-hand model, and office-grade polling rate." },
     ],
   };
 
