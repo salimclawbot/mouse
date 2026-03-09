@@ -180,6 +180,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isProgrammerGuide = slug === "best-ergonomic-mouse-for-programmers-wrist-pain";
   const isMacGuide = slug === "best-vertical-mouse-for-mac";
   const isLargeHandsGuide = slug === "best-vertical-mouse-large-hands";
+  const isTrackballGuide = slug === "vertical-mouse-vs-trackball";
+  const isRegularGuide = slug === "vertical-mouse-vs-regular-mouse";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
@@ -1373,7 +1375,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 <TableRow key={p.name} className="transition hover:bg-emerald-50/50">
                   {isComparisonGuideWithInlineProductImages && (
                     <TableCell>
-                      <Image src={toProductImagePath(p.name)} alt={`${p.name} product image`} width={72} height={72} className="h-14 w-14 rounded border border-slate-200 object-contain bg-white p-1" />
+                      <figure className="w-[76px]">
+                        <Image src={toProductImagePath(p.name)} alt={`${p.name} product image`} width={72} height={72} className="h-14 w-14 rounded border border-slate-200 object-contain bg-white p-1" />
+                        <figcaption className="mt-1 text-[10px] leading-tight text-slate-500">{p.name}</figcaption>
+                      </figure>
                     </TableCell>
                   )}
                   <TableCell className="font-medium">{p.name}</TableCell>
