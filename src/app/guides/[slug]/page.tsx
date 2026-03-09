@@ -196,12 +196,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isMacbookProGuide = slug === "best-vertical-mouse-macbook-pro";
   const isMxVerticalReviewGuide = slug === "logitech-mx-vertical-review";
   const isErgoBuyingGuide = slug === "ergonomic-mouse-buying-guide";
+  const isOfficeGuide = slug === "best-vertical-mouse-office";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -399,6 +400,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Is vertical better than trackball?", a: "Neither is universally better; each addresses different biomechanics and workflows." },
       { q: "How much should I spend on an ergonomic mouse?", a: "Budget models can deliver core ergonomic benefit; premium tiers mainly add sensor, software, and build quality." },
       { q: "Can I alternate ergonomic and regular mice?", a: "Yes, many users mix devices by task to balance comfort and performance." },
+    ],
+    "best-vertical-mouse-office": [
+      { q: "Is a vertical mouse good for office work?", a: "Yes, especially for long daily mouse use where reduced pronation can improve comfort over time." },
+      { q: "How long does adjustment take at work?", a: "Most users adapt in about one to two weeks with normal daily use." },
+      { q: "Will office IT approve a vertical mouse?", a: "Usually yes, since most are standard Bluetooth or HID devices with plug-and-play behavior." },
+      { q: "Do I need wireless for office use?", a: "Wireless is usually more convenient, but wired options remain reliable and lower-cost." },
     ],
   };
 
