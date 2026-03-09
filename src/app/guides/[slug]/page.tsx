@@ -178,6 +178,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isWristGuide = slug === "best-ergonomic-mouse-for-wrist-pain-office";
   const isWristDeepGuide = slug === "office-ergonomic-mouse-wrist-pain-deep-dive";
   const isProgrammerGuide = slug === "best-ergonomic-mouse-for-programmers-wrist-pain";
+  const isMacGuide = slug === "best-vertical-mouse-for-mac";
   const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
@@ -544,6 +545,25 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <p className="text-sm font-medium text-emerald-800">Key takeaway: pick the smallest mouse that still supports your palm, then prioritize low click force.</p>
         {isLeftGuide && <p className="text-sm text-slate-700">Semantic intent covered: left-handed ergonomic mouse, left-handed vertical mouse wireless, rechargeable left-handed mouse, and office-comfort fit tradeoffs.</p>}
       </section>
+
+      {isMacGuide && (
+        <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-slate-900">Mac guide image gallery</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              ["/images/vmg/mac-vertical-mouse/connectivity-comparison.png", "Bluetooth vs USB-A dongle connectivity on Mac"],
+              ["/images/vmg/mac-vertical-mouse/infographic-mac-comparison.png", "Top vertical mice for Mac comparison infographic"],
+              ["/images/vmg/mac-vertical-mouse/hero-perfect-mac-setup.png", "Logitech MX Vertical setup beside MacBook Pro"],
+              ["/images/vmg/mac-vertical-mouse/software-integration-mockup.png", "Logi Options+ macOS customization mockup"],
+            ].map(([src, alt]) => (
+              <figure key={src} className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                <img src={src} alt={alt} loading="lazy" className="h-auto w-full" />
+                <figcaption className="px-3 py-2 text-xs text-slate-600">{alt}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       {isPremiumArticle && (
         <section id="quick-compare" className="space-y-4 rounded-2xl border border-cyan-200 bg-cyan-50/40 p-6">
