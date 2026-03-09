@@ -999,11 +999,11 @@ export const guides: Guide[] = [
 
   {
     slug: "wireless-vs-wired-vertical-mouse",
-    title: "Wireless vs Wired Vertical Mouse (2026)",
+    title: "Wireless vs Wired Vertical Mouse: Which to Buy (2026)",
     description: "Wireless vs wired vertical mouse in 2026: we compare latency, battery life, price & portability with honest pros and cons. Find your best option →",
     intent: "commercial",
     updated: "2026-03-10",
-    heroImage: "/images/vmg/wireless-vs-wired/hero-wireless-vs-wired.png",
+    heroImage: "/images/vmg-visual-assets/generated/vertical-mouse-guide-hero-2026.webp",
     body: [
       "Wireless vs Wired Vertical Mouse: Which to Buy (2026)",
       "By Matt Sullivan \u00b7 Last updated March 10, 2026",
