@@ -185,12 +185,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isWirelessVsWiredGuide = slug === "wireless-vs-wired-vertical-mouse";
   const isUnder50Guide = slug === "best-vertical-mouse-under-50";
   const isAdjustGuide = slug === "how-long-adjust-vertical-mouse";
+  const isAdjustGuideV2 = slug === "how-long-to-adjust-vertical-mouse";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -334,6 +335,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Will productivity drop during transition?", a: "Usually yes for a few days, especially for precision clicking tasks, then returns near baseline by week two." },
       { q: "Can I speed up adaptation?", a: "Yes: lower DPI initially, use the mouse full-time, and prioritize keyboard shortcuts during the first week." },
       { q: "Should I switch back and forth with a regular mouse?", a: "You can, but it typically slows adaptation by forcing your brain to maintain two movement maps." },
+    ],
+    "how-long-to-adjust-vertical-mouse": [
+      { q: "How long does it take to get used to a vertical mouse?", a: "Most people reach basic comfort in 3–5 days and full proficiency in around 2–4 weeks." },
+      { q: "Is mild forearm soreness normal during transition?", a: "Yes, mild temporary soreness can be normal as different forearm muscles engage in the new grip." },
+      { q: "Which models are easiest to adjust to?", a: "Moderate-angle models like Logitech MX Vertical and Lift are often easier transition options." },
+      { q: "Cold turkey or gradual switch?", a: "Cold turkey typically adapts faster, while gradual switching can feel easier but takes longer." },
     ],
   };
 
