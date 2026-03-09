@@ -200,12 +200,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isAnkerReviewGuide = slug === "anker-ergonomic-mouse-review";
   const isCleaningGuide = slug === "how-to-clean-vertical-mouse";
   const isDxtReviewGuide = slug === "dxt-ergonomic-mouse-review";
+  const isSensitivityGuide = slug === "vertical-mouse-sensitivity-settings";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide || isDxtReviewGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide || isDxtReviewGuide || isSensitivityGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -427,6 +428,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Is DXT good for design work?", a: "Yes, many design users like its finger-driven precision for detailed cursor movement." },
       { q: "How does DXT compare to MX Vertical?", a: "DXT emphasizes pen-grip precision and ambidextrous use, while MX Vertical prioritizes palm-grip comfort and mainstream workflow features." },
       { q: "What is the biggest DXT downside?", a: "The learning curve is steeper than typical palm-grip vertical mice for many users." },
+    ],
+    "vertical-mouse-sensitivity-settings": [
+      { q: "What DPI should I start with on a vertical mouse?", a: "Start around 1200 DPI for a single monitor, then adjust based on comfort and screen setup." },
+      { q: "Should I disable acceleration?", a: "Usually yes for consistency, especially when adapting to a new vertical mouse." },
+      { q: "What DPI for dual monitors?", a: "Many users prefer 1600–2400 DPI on dual monitor setups." },
+      { q: "Does polling rate matter for office work?", a: "125 Hz is usually sufficient; higher rates matter more for fast gaming contexts." },
     ],
   };
 
