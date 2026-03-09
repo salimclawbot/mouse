@@ -197,12 +197,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isMxVerticalReviewGuide = slug === "logitech-mx-vertical-review";
   const isErgoBuyingGuide = slug === "ergonomic-mouse-buying-guide";
   const isOfficeGuide = slug === "best-vertical-mouse-office";
+  const isAnkerReviewGuide = slug === "anker-ergonomic-mouse-review";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -406,6 +407,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "How long does adjustment take at work?", a: "Most users adapt in about one to two weeks with normal daily use." },
       { q: "Will office IT approve a vertical mouse?", a: "Usually yes, since most are standard Bluetooth or HID devices with plug-and-play behavior." },
       { q: "Do I need wireless for office use?", a: "Wireless is usually more convenient, but wired options remain reliable and lower-cost." },
+    ],
+    "anker-ergonomic-mouse-review": [
+      { q: "Is the Anker ergonomic mouse worth buying?", a: "For many users, yes. It delivers core vertical ergonomics at a much lower price than premium options." },
+      { q: "How does Anker compare with Logitech MX Vertical?", a: "Ergonomic angle is similar, but MX Vertical adds premium sensor, software, and connectivity features." },
+      { q: "Is Anker good for gaming?", a: "It is fine for casual use, but not ideal for competitive gaming due to sensor and polling limitations." },
+      { q: "What are Anker's biggest downsides?", a: "No Bluetooth on many variants, no advanced software, louder clicks, and more basic build feel." },
     ],
   };
 
