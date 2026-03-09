@@ -191,12 +191,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isWomensSmallHandsGuide = slug === "best-vertical-mouse-small-hands-womens";
   const isCarpalTunnelGuide = slug === "best-vertical-mouse-carpal-tunnel";
   const isWristPainGuide2 = slug === "do-vertical-mice-help-wrist-pain";
+  const isWirelessGuide2 = slug === "best-wireless-vertical-mouse";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -364,6 +365,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Are vertical mice good for women with smaller hands?", a: "Yes, as long as the mouse size matches hand dimensions and does not force thumb or finger overreach." },
       { q: "Why do many vertical mice feel too large?", a: "Most mainstream models are sized for medium-to-large hands, which can create stretch strain for small hands." },
       { q: "Is Logitech MX Vertical good for very small hands?", a: "Usually no; many small-hand users find it too wide and better served by compact alternatives." },
+    ],
+    "best-wireless-vertical-mouse": [
+      { q: "Do I need a dongle for a wireless vertical mouse?", a: "Not with Bluetooth-capable models; they pair directly with built-in Bluetooth radios." },
+      { q: "Bluetooth or 2.4 GHz for office use?", a: "Bluetooth is usually best for convenience and port-free setups; 2.4 GHz can offer lower latency." },
+      { q: "How long does battery usually last?", a: "Most models last from several weeks to several months depending on usage and connection mode." },
+      { q: "Can wireless vertical mice connect to multiple devices?", a: "Many premium models can pair with 2–3 devices and switch quickly between them." },
     ],
   };
 
