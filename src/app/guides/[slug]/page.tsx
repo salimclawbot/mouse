@@ -188,12 +188,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isAdjustGuideV2 = slug === "how-long-to-adjust-vertical-mouse";
   const isGamingGuide = slug === "best-vertical-mouse-gaming";
   const isAdjustGuideV3 = slug === "how-long-adjust-vertical-mouse-2026";
+  const isWomensSmallHandsGuide = slug === "best-vertical-mouse-small-hands-womens";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -355,6 +356,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Is a temporary productivity drop normal?", a: "Yes. A short-term drop is common in the first days and usually improves steadily across week one." },
       { q: "Should I switch gradually or all at once?", a: "Gradual switching is often easier for deadline-heavy work, while full-time switching usually adapts faster." },
       { q: "When should I stop and reassess?", a: "If pain worsens daily or includes tingling/numbness, reassess sizing, desk setup, and seek clinical advice." },
+    ],
+    "best-vertical-mouse-small-hands-womens": [
+      { q: "What size vertical mouse fits small hands best?", a: "Generally a grip width under about 65 mm is the safest target for small-hand fit and button reach." },
+      { q: "Are vertical mice good for women with smaller hands?", a: "Yes, as long as the mouse size matches hand dimensions and does not force thumb or finger overreach." },
+      { q: "Why do many vertical mice feel too large?", a: "Most mainstream models are sized for medium-to-large hands, which can create stretch strain for small hands." },
+      { q: "Is Logitech MX Vertical good for very small hands?", a: "Usually no; many small-hand users find it too wide and better served by compact alternatives." },
     ],
   };
 
