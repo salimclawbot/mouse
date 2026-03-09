@@ -182,12 +182,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isLargeHandsGuide = slug === "best-vertical-mouse-large-hands";
   const isTrackballGuide = slug === "vertical-mouse-vs-trackball";
   const isRegularGuide = slug === "vertical-mouse-vs-regular-mouse";
+  const isWirelessVsWiredGuide = slug === "wireless-vs-wired-vertical-mouse";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -309,6 +310,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "What DPI is practical for Retina displays?", a: "Around 1600 DPI minimum for single-display setups; higher helps with multi-monitor workflows." },
       { q: "Can I remap buttons on macOS without vendor apps?", a: "Yes, using third-party tools, though native vendor software usually provides smoother integration." },
     ],
+    "wireless-vs-wired-vertical-mouse": [
+      { q: "Is a wireless vertical mouse as accurate as wired?", a: "For productivity work, yes. Modern 2.4 GHz and Bluetooth vertical mice have imperceptible latency in office tasks." },
+      { q: "How long does a wireless vertical mouse battery last?", a: "Most rechargeable or battery-powered models last roughly 3 to 6 months depending on usage and connection mode." },
+      { q: "Do wireless vertical mice have input lag?", a: "2.4 GHz models are typically near-wired responsiveness, while Bluetooth is slightly slower but still fine for normal work." },
+      { q: "Can I use a wireless vertical mouse with a USB-C MacBook?", a: "Yes with Bluetooth directly; 2.4 GHz USB-A receivers require a USB-C adapter." },
+      { q: "Is a wired vertical mouse better for gaming?", a: "Wired has lower theoretical latency, but vertical mice generally are not optimized for competitive gaming regardless of connection type." },
+      { q: "Should I buy wireless or wired if I have a standing desk?", a: "Wireless is usually better because it avoids cable drag and cable tension changes as desk height moves." },
+      { q: "Are wired vertical mice cheaper than wireless?", a: "Generally yes. Wired entry models are usually the lowest-cost path, while premium wireless models are more expensive." },
+      { q: "What happens if my wireless mouse battery dies mid-work?", a: "Rechargeable models can often be used while charging; replaceable-battery models need a quick battery swap." },
+    ],
   };
 
   const faqResolved = faqOverrides[slug] ?? faqForSchema;
@@ -316,23 +327,44 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: guide.title,
-    description: guide.description,
-    image: [`${site.url}${guide.heroImage}`],
-    dateModified: guide.updated,
-    datePublished: slug === "best-ergonomic-mouse-for-wrist-pain-office" || slug === "office-ergonomic-mouse-wrist-pain-deep-dive" || slug === "best-ergonomic-mouse-for-programmers-wrist-pain"
-      ? "2026-03-03"
-      : slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office"
-        ? "2026-02-25"
-        : "2026-02-24",
-    author: {
-      "@type": "Organization",
-      name: "Vertical Mouse Guide Editorial",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-    },
+    headline: isWirelessVsWiredGuide ? "Wireless vs Wired Vertical Mouse: Which to Buy (2026)" : guide.title,
+    description: isWirelessVsWiredGuide
+      ? "Wireless vs wired vertical mouse in 2026: we compare latency, battery life, price and portability with honest pros and cons."
+      : guide.description,
+    image: isWirelessVsWiredGuide
+      ? [
+          `${site.url}/images/vmg/wireless-vs-wired/hero-wireless-vs-wired.png`,
+          `${site.url}/images/vmg/wireless-vs-wired/latency-comparison-infographic.png`,
+          `${site.url}/images/vmg/wireless-vs-wired/five-mice-wireless-wired-comparison.png`,
+        ]
+      : [`${site.url}${guide.heroImage}`],
+    dateModified: isWirelessVsWiredGuide ? "2026-03-10" : guide.updated,
+    datePublished: isWirelessVsWiredGuide
+      ? "2026-03-10"
+      : slug === "best-ergonomic-mouse-for-wrist-pain-office" || slug === "office-ergonomic-mouse-wrist-pain-deep-dive" || slug === "best-ergonomic-mouse-for-programmers-wrist-pain"
+        ? "2026-03-03"
+        : slug === "left-handed-vertical-mouse-wireless-rechargeable" || slug === "quiet-click-vertical-mouse-office"
+          ? "2026-02-25"
+          : "2026-02-24",
+    author: isWirelessVsWiredGuide
+      ? { "@type": "Person", name: "Matt Sullivan" }
+      : {
+          "@type": "Organization",
+          name: "Vertical Mouse Guide Editorial",
+        },
+    publisher: isWirelessVsWiredGuide
+      ? {
+          "@type": "Organization",
+          name: site.name,
+          logo: {
+            "@type": "ImageObject",
+            url: "https://verticalmouseguide.com/logo.png",
+          },
+        }
+      : {
+          "@type": "Organization",
+          name: site.name,
+        },
     mainEntityOfPage: `${site.url}/guides/${guide.slug}`,
   };
 
@@ -1396,6 +1428,44 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </Table>
         </div>
       </section>
+
+      {isWirelessVsWiredGuide && (
+        <>
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Latency context after the comparison table</h2>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+              <img src="/images/vmg/wireless-vs-wired/latency-comparison-infographic.png" alt="Latency comparison infographic for wireless versus wired vertical mice" loading="lazy" className="h-auto w-full" />
+              <figcaption className="px-3 py-2 text-xs text-slate-600">Wireless latency is effectively negligible for office workflows in 2026.</figcaption>
+            </figure>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Product examples in real setups</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                <img src="/images/vmg/wireless-vs-wired/logitech-mx-vertical-wireless-desk.png" alt="Logitech MX Vertical wireless setup on desk" loading="lazy" className="h-auto w-full" />
+                <figcaption className="px-3 py-2 text-xs text-slate-600">Logitech MX Vertical in a clean wireless desk setup.</figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                <img src="/images/vmg/wireless-vs-wired/anker-wired-vertical-mouse-cable.png" alt="Anker wired vertical mouse showing cable routing" loading="lazy" className="h-auto w-full" />
+                <figcaption className="px-3 py-2 text-xs text-slate-600">Anker wired model with visible cable path and drag tradeoff.</figcaption>
+              </figure>
+            </div>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+              <img src="/images/vmg/wireless-vs-wired/five-mice-wireless-wired-comparison.png" alt="Five vertical mice side by side comparing wireless and wired models" loading="lazy" className="h-auto w-full" />
+              <figcaption className="px-3 py-2 text-xs text-slate-600">All five recommended models side by side: wireless and wired options.</figcaption>
+            </figure>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Ergonomics: grip and cable resistance</h2>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+              <img src="/images/vmg/wireless-vs-wired/mx-vertical-wireless-ergonomic-grip.png" alt="Ergonomic grip demonstration on a wireless vertical mouse" loading="lazy" className="h-auto w-full" />
+              <figcaption className="px-3 py-2 text-xs text-slate-600">Wireless grip posture without front-cable drag fighting the vertical angle.</figcaption>
+            </figure>
+          </section>
+        </>
+      )}
 
       {isPremiumDemo && (
         <>
