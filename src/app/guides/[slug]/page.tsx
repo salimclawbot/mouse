@@ -193,12 +193,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isWristPainGuide2 = slug === "do-vertical-mice-help-wrist-pain";
   const isWirelessGuide2 = slug === "best-wireless-vertical-mouse";
   const isProgrammersTrackballGuide = slug === "vertical-mouse-vs-trackball-programmers";
+  const isMacbookProGuide = slug === "best-vertical-mouse-macbook-pro";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -378,6 +379,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Which is better for RSI prevention in coding?", a: "Both can help in different ways: vertical mice reduce pronation; trackballs reduce wrist movement and desk reach." },
       { q: "Is precision good enough in IDEs with a trackball?", a: "Yes for most IDE tasks, though long click-drag actions may feel easier with a vertical mouse." },
       { q: "Can programmers use both devices together?", a: "Yes, alternating devices can reduce repetitive strain by spreading load across different movement patterns." },
+    ],
+    "best-vertical-mouse-macbook-pro": [
+      { q: "Do vertical mice work with MacBook Pro?", a: "Yes, Bluetooth vertical mice pair directly with macOS and work without drivers for basic use." },
+      { q: "Bluetooth or dongle for MacBook Pro?", a: "Bluetooth is usually best because it avoids USB adapters and preserves limited USB-C ports." },
+      { q: "Why does cursor feel odd on macOS sometimes?", a: "macOS acceleration differs from Windows; mouse utility apps can help tune tracking behavior." },
+      { q: "Can one mouse switch between MacBook and iPad?", a: "Many Bluetooth vertical mice can pair with multiple devices and switch quickly." },
     ],
   };
 
