@@ -179,6 +179,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isWristDeepGuide = slug === "office-ergonomic-mouse-wrist-pain-deep-dive";
   const isProgrammerGuide = slug === "best-ergonomic-mouse-for-programmers-wrist-pain";
   const isMacGuide = slug === "best-vertical-mouse-for-mac";
+  const isLargeHandsGuide = slug === "best-vertical-mouse-large-hands";
+  const isComparisonGuideWithInlineProductImages = [
+    "best-vertical-mouse-small-hands-carpal-tunnel",
+    "left-handed-vertical-mouse-wireless-rechargeable",
+    "quiet-click-vertical-mouse-office",
+  ].includes(slug);
   const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
@@ -275,6 +281,36 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             },
           ];
 
+  const faqOverrides: Record<string, { q: string; a: string }[]> = {
+    "best-vertical-mouse-large-hands": [
+      { q: "What hand size is considered large for vertical mice?", a: "Generally 19 cm or more from wrist crease to middle fingertip, with palm width above about 9.5 cm." },
+      { q: "What is the best budget vertical mouse for large hands?", a: "Anker is the standard low-cost trial pick, but very large hands usually outgrow it and should move to MX Vertical or Evoluent." },
+      { q: "How long does vertical mouse adaptation take?", a: "Most users adapt in 2 to 3 weeks, with full precision returning around week 4 to 6." },
+      { q: "Should large-hand users choose wireless or wired?", a: "Wireless is typically better to reduce cable drag with heavier hand movement, unless you specifically need fixed wired consistency." },
+      { q: "Is MX Vertical big enough for 21+ cm hands?", a: "It is the largest mainstream choice, but users over 21 cm may still experience some overhang." },
+    ],
+    "vertical-mouse-vs-trackball": [
+      { q: "Is a vertical mouse better than a trackball for wrist pain?", a: "Usually yes when wrist/forearm pronation strain is the main issue, because vertical mice correct hand angle." },
+      { q: "Is a trackball better for shoulder pain?", a: "Often yes, because trackballs reduce repeated arm movement and can lower shoulder workload." },
+      { q: "Which has the shorter learning curve?", a: "Vertical mice are typically faster to adapt to than trackballs." },
+      { q: "Can I use both in one setup?", a: "Yes. Many heavy users alternate: vertical mouse for general work, trackball for low-movement sessions." },
+    ],
+    "vertical-mouse-vs-regular-mouse": [
+      { q: "Do vertical mice reduce pronation compared to regular mice?", a: "Yes. Vertical mice shift toward a handshake posture that usually reduces forearm pronation." },
+      { q: "Who should switch to a vertical mouse?", a: "Users with high daily mouse time and recurring wrist/forearm discomfort are usually the best candidates." },
+      { q: "How long does switching adaptation take?", a: "Most users need a short adaptation period before full speed returns, often around one to two weeks." },
+      { q: "Are regular ergonomic mice enough for everyone?", a: "For some users yes, but many still remain in pronated posture and do better with vertical geometry." },
+    ],
+    "best-vertical-mouse-for-mac": [
+      { q: "Do vertical mice work with macOS?", a: "Yes, for basic cursor input. Advanced features depend on vendor macOS software support." },
+      { q: "Do I need a dongle for Mac?", a: "Not with Bluetooth-capable models like MX Vertical, Lift, and similar dual-mode options." },
+      { q: "What DPI is practical for Retina displays?", a: "Around 1600 DPI minimum for single-display setups; higher helps with multi-monitor workflows." },
+      { q: "Can I remap buttons on macOS without vendor apps?", a: "Yes, using third-party tools, though native vendor software usually provides smoother integration." },
+    ],
+  };
+
+  const faqResolved = faqOverrides[slug] ?? faqForSchema;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -328,7 +364,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqForSchema.map((item) => ({
+    mainEntity: faqResolved.map((item) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: {
@@ -355,10 +391,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   return (
     <article className="space-y-10 leading-8 text-slate-800">
       {isPremiumArticle && (
-        <>
-          <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-          <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        </>
+        <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      )}
+      {faqResolved.length > 0 && (
+        <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
       <Script id={`breadcrumb-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {videoSchema && <Script id={`video-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />}
@@ -545,6 +581,25 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <p className="text-sm font-medium text-emerald-800">Key takeaway: pick the smallest mouse that still supports your palm, then prioritize low click force.</p>
         {isLeftGuide && <p className="text-sm text-slate-700">Semantic intent covered: left-handed ergonomic mouse, left-handed vertical mouse wireless, rechargeable left-handed mouse, and office-comfort fit tradeoffs.</p>}
       </section>
+
+      {isLargeHandsGuide && (
+        <>
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Large-hand fit context</h2>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+              <img src="/images/vmg/large-hands/hero-large-hand-grip.png" alt="Large hand using a vertical mouse in a neutral handshake grip" loading="lazy" className="h-auto w-full" />
+            </figure>
+            <p className="text-sm text-slate-700">For hands above 19 cm, full palm support and thumb rest depth matter more than spec-sheet features.</p>
+          </section>
+
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+            <h2 className="text-2xl font-bold text-slate-900">Measure first, then buy</h2>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+              <img src="/images/vmg/large-hands/hand-sizing-infographic.png" alt="Hand sizing infographic for choosing a vertical mouse for large hands" loading="lazy" className="h-auto w-full" />
+            </figure>
+          </section>
+        </>
+      )}
 
       {isMacGuide && (
         <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
@@ -1268,36 +1323,44 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </>
       )}
 
-      <section id="product-photos" className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50/60 p-6">
-        <h2 className="text-2xl font-bold text-slate-900">Real Product Photos: All Reviewed Models</h2>
-        <p className="text-sm text-slate-700">Each image below is a real product listing photo stored locally for faster loads and stable rendering.</p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {guide.products.map((p) => (
-            <figure key={`photo-${p.name}`} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-              <Image
-                src={toProductImagePath(p.name)}
-                alt={`${p.name} vertical mouse product photo used in ${guide.title}`}
-                width={320}
-                height={320}
-                loading="lazy"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="h-48 w-full object-contain bg-white p-3"
-              />
-              <figcaption className="border-t border-slate-100 px-3 py-2 text-xs text-slate-600">
-                <span className="font-semibold text-slate-800">{p.name}</span> — {p.bestFor}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
+      {!isComparisonGuideWithInlineProductImages && (
+        <section id="product-photos" className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50/60 p-6">
+          <h2 className="text-2xl font-bold text-slate-900">Real Product Photos: All Reviewed Models</h2>
+          <p className="text-sm text-slate-700">Each image below is a real product listing photo stored locally for faster loads and stable rendering.</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {guide.products.map((p) => (
+              <figure key={`photo-${p.name}`} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <Image
+                  src={toProductImagePath(p.name)}
+                  alt={`${p.name} vertical mouse product photo used in ${guide.title}`}
+                  width={320}
+                  height={320}
+                  loading="lazy"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="h-48 w-full object-contain bg-white p-3"
+                />
+                <figcaption className="border-t border-slate-100 px-3 py-2 text-xs text-slate-600">
+                  <span className="font-semibold text-slate-800">{p.name}</span> — {p.bestFor}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section id="comparison" className="space-y-4">
         <h2 className="text-2xl font-bold text-slate-900">Comparison Table: {guide.title}</h2>
         <p className="text-sm font-medium text-slate-600">Key takeaway: comfort fit beats raw specs for long-term productivity.</p>
+        {isLargeHandsGuide && (
+          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+            <img src="/images/vmg/large-hands/size-comparison.png" alt="Size comparison visual for top vertical mice suitable for large hands" loading="lazy" className="h-auto w-full" />
+          </figure>
+        )}
         <div className="overflow-x-auto rounded-xl border border-slate-200">
           <Table>
             <TableHeader className="sticky top-0 bg-slate-50">
               <TableRow>
+                {isComparisonGuideWithInlineProductImages && <TableHead>Photo</TableHead>}
                 <TableHead>Product</TableHead>
                 <TableHead>Best For</TableHead>
                 <TableHead>Price Band</TableHead>
@@ -1308,6 +1371,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <TableBody>
               {guide.products.map((p) => (
                 <TableRow key={p.name} className="transition hover:bg-emerald-50/50">
+                  {isComparisonGuideWithInlineProductImages && (
+                    <TableCell>
+                      <Image src={toProductImagePath(p.name)} alt={`${p.name} product image`} width={72} height={72} className="h-14 w-14 rounded border border-slate-200 object-contain bg-white p-1" />
+                    </TableCell>
+                  )}
                   <TableCell className="font-medium">{p.name}</TableCell>
                   <TableCell>{p.bestFor}</TableCell>
                   <TableCell>{p.price}</TableCell>
