@@ -198,12 +198,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isErgoBuyingGuide = slug === "ergonomic-mouse-buying-guide";
   const isOfficeGuide = slug === "best-vertical-mouse-office";
   const isAnkerReviewGuide = slug === "anker-ergonomic-mouse-review";
+  const isCleaningGuide = slug === "how-to-clean-vertical-mouse";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -413,6 +414,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "How does Anker compare with Logitech MX Vertical?", a: "Ergonomic angle is similar, but MX Vertical adds premium sensor, software, and connectivity features." },
       { q: "Is Anker good for gaming?", a: "It is fine for casual use, but not ideal for competitive gaming due to sensor and polling limitations." },
       { q: "What are Anker's biggest downsides?", a: "No Bluetooth on many variants, no advanced software, louder clicks, and more basic build feel." },
+    ],
+    "how-to-clean-vertical-mouse": [
+      { q: "How often should I clean a vertical mouse?", a: "Quick clean every 1–2 weeks, deeper maintenance every 1–3 months depending on dust and usage." },
+      { q: "Can I use alcohol wipes on my mouse?", a: "Yes, 70% isopropyl wipes are generally safe for hard plastic shells when used carefully." },
+      { q: "Why does a dirty sensor affect tracking?", a: "Dust and oils on the lens disrupt optical reading, causing skipping or jumpy cursor movement." },
+      { q: "Do I need to open the mouse to clean it?", a: "Usually no. External cleaning handles most issues unless debris is trapped inside moving parts." },
     ],
   };
 
