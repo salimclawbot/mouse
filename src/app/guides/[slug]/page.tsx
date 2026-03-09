@@ -183,12 +183,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isTrackballGuide = slug === "vertical-mouse-vs-trackball";
   const isRegularGuide = slug === "vertical-mouse-vs-regular-mouse";
   const isWirelessVsWiredGuide = slug === "wireless-vs-wired-vertical-mouse";
+  const isUnder50Guide = slug === "best-vertical-mouse-under-50";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -319,6 +320,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Should I buy wireless or wired if I have a standing desk?", a: "Wireless is usually better because it avoids cable drag and cable tension changes as desk height moves." },
       { q: "Are wired vertical mice cheaper than wireless?", a: "Generally yes. Wired entry models are usually the lowest-cost path, while premium wireless models are more expensive." },
       { q: "What happens if my wireless mouse battery dies mid-work?", a: "Rechargeable models can often be used while charging; replaceable-battery models need a quick battery swap." },
+    ],
+    "best-vertical-mouse-under-50": [
+      { q: "Are cheap vertical mice actually ergonomic?", a: "Yes. The core ergonomic benefit is the handshake grip angle, which works regardless of price tier." },
+      { q: "What DPI should I look for under $50?", a: "For office use, 800–1600 DPI is typically sufficient, with higher settings useful on larger displays." },
+      { q: "Will a budget vertical mouse help wrist pain?", a: "It can reduce strain from forearm pronation, but it is not a medical treatment for diagnosed conditions." },
+      { q: "Wireless or wired under $50?", a: "Wireless is usually better for daily desk convenience, while wired avoids battery maintenance." },
+      { q: "How long do budget vertical mice last?", a: "Expect roughly 1–3 years depending on daily click volume and build quality." },
     ],
   };
 
