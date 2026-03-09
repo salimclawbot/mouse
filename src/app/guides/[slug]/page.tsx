@@ -199,12 +199,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isOfficeGuide = slug === "best-vertical-mouse-office";
   const isAnkerReviewGuide = slug === "anker-ergonomic-mouse-review";
   const isCleaningGuide = slug === "how-to-clean-vertical-mouse";
+  const isDxtReviewGuide = slug === "dxt-ergonomic-mouse-review";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide;
+  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide || isDxtReviewGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -420,6 +421,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Can I use alcohol wipes on my mouse?", a: "Yes, 70% isopropyl wipes are generally safe for hard plastic shells when used carefully." },
       { q: "Why does a dirty sensor affect tracking?", a: "Dust and oils on the lens disrupt optical reading, causing skipping or jumpy cursor movement." },
       { q: "Do I need to open the mouse to clean it?", a: "Usually no. External cleaning handles most issues unless debris is trapped inside moving parts." },
+    ],
+    "dxt-ergonomic-mouse-review": [
+      { q: "What is the DXT ergonomic mouse?", a: "It is a pen-grip vertical mouse designed for precision control and ambidextrous use." },
+      { q: "Is DXT good for design work?", a: "Yes, many design users like its finger-driven precision for detailed cursor movement." },
+      { q: "How does DXT compare to MX Vertical?", a: "DXT emphasizes pen-grip precision and ambidextrous use, while MX Vertical prioritizes palm-grip comfort and mainstream workflow features." },
+      { q: "What is the biggest DXT downside?", a: "The learning curve is steeper than typical palm-grip vertical mice for many users." },
     ],
   };
 
