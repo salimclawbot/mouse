@@ -565,6 +565,34 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </section>
       )}
 
+      {slug === "vertical-mouse-vs-trackball" && (
+        <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-slate-900">Posture and pain-pattern visuals</h2>
+          <p className="text-slate-700">Use these diagrams to match your pain pattern to the right device class before buying.</p>
+          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+            <img src="/images/vmg/vs-trackball/hero-core-choice.png" alt="Vertical mouse versus trackball core decision hero visual" loading="lazy" className="h-auto w-full" />
+          </figure>
+          <div className="grid gap-4 md:grid-cols-2">
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/images/vmg/vs-trackball/anatomical-difference.png" alt="Anatomical posture difference between vertical mouse and trackball use" loading="lazy" className="h-auto w-full" /></figure>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/images/vmg/vs-trackball/pain-localization-guide.png" alt="Pain localization guide for choosing vertical mouse or trackball" loading="lazy" className="h-auto w-full" /></figure>
+          </div>
+        </section>
+      )}
+
+      {slug === "vertical-mouse-vs-regular-mouse" && (
+        <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-slate-900">Biomechanics and switch-decision visuals</h2>
+          <p className="text-slate-700">These visuals explain forearm mechanics and help decide whether switching will likely improve comfort for your workflow.</p>
+          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+            <img src="/images/vmg/vs-regular/hero-anatomic-choice.png" alt="Vertical versus regular mouse decision hero visual" loading="lazy" className="h-auto w-full" />
+          </figure>
+          <div className="grid gap-4 md:grid-cols-2">
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/images/vmg/vs-regular/ergonomics-comparison.png" alt="Forearm pronation versus neutral posture ergonomic comparison" loading="lazy" className="h-auto w-full" /></figure>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/images/vmg/vs-regular/who-should-switch-guide.png" alt="Guide showing who should switch from regular to vertical mouse" loading="lazy" className="h-auto w-full" /></figure>
+          </div>
+        </section>
+      )}
+
       {isPremiumArticle && (
         <section id="quick-compare" className="space-y-4 rounded-2xl border border-cyan-200 bg-cyan-50/40 p-6">
           <h2 className="text-2xl font-bold text-slate-900">Top Picks Quick Comparison</h2>
