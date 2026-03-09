@@ -30,6 +30,12 @@ const personas = [
     icon: MousePointer2,
   },
   {
+    title: "Mac Power Users",
+    blurb: "MacBook and multi-device users who need native Bluetooth and smooth macOS controls.",
+    href: "/guides/best-vertical-mouse-for-mac",
+    icon: ShieldCheck,
+  },
+  {
     title: "Budget Smart Upgraders",
     blurb: "First ergonomic switchers who want tangible relief without overspending.",
     href: "/guides/quiet-click-vertical-mouse-office",
