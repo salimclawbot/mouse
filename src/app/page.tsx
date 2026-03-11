@@ -80,7 +80,7 @@ export default function Home() {
           <div className="space-y-5">
             <Badge className="bg-emerald-600 text-white hover:bg-emerald-600">Pain-aware productivity</Badge>
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-              Ergonomic mouse guides with personality, clarity, and conversion-friendly picks
+              Best Vertical Ergonomic Mice (2026): Expert-Tested Picks for Wrist Pain
             </h1>
             <p className="max-w-2xl text-lg text-slate-700">
               Vertical Mouse Guide turns mouse research into a fast, confidence-building flow: understand your pain points, compare meaningful specs, then pick what fits your day.
