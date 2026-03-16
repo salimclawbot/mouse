@@ -137,10 +137,10 @@ Most users report matching or exceeding their previous speed. Many find that pic
 ## Common Myths About Vertical Mice
 
 ### "Vertical mice are less accurate than regular mice"
-After the 2–4 week adaptation period, vertical mice with modern sensors (1600+ DPI) match regular mice for all standard productivity tasks. The MX Vertical at 4000 DPI handles multi-monitor setups and high-resolution displays without issue. You sacrifice nothing in accuracy for daily work.
+After the 2–4 week adaptation period, vertical mice with modern sensors (1600+ DPI) match regular mice for all standard productivity tasks. The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) at 4000 DPI handles multi-monitor setups and high-resolution displays without issue. You sacrifice nothing in accuracy for daily work.
 
 ### "You need an expensive one for it to work"
-The Anker Ergonomic Vertical Mouse at under $25 provides genuine ergonomic benefit. The core advantage — neutral forearm position — is a function of the vertical shape, not the price tag. Premium options add better sensors, wireless connectivity, and multi-device pairing, but the biomechanical benefit is present even at the budget level. See our [quiet click guide](/best-quiet-click-vertical-mouse/) for office-specific recommendations at various price points.
+The [Anker Ergonomic Vertical Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20) at under $25 provides genuine ergonomic benefit. The core advantage — neutral forearm position — is a function of the vertical shape, not the price tag. Premium options add better sensors, wireless connectivity, and multi-device pairing, but the biomechanical benefit is present even at the budget level. See our [quiet click guide](/best-quiet-click-vertical-mouse/) for office-specific recommendations at various price points.
 
 ### "Vertical mice prevent carpal tunnel syndrome"
 Vertical mice reduce one risk factor (pronation) associated with carpal tunnel compression. They do not prevent, treat, or cure carpal tunnel syndrome. If you suspect carpal tunnel, see a healthcare professional. A vertical mouse can be part of an ergonomic strategy, not a medical intervention.

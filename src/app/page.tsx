@@ -245,6 +245,8 @@ export default function Home() {
           </Button>
         </div>
       </section>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best vertical mouse in 2026?","acceptedAnswer":{"@type":"Answer","text":"The Logitech MX Vertical is our top pick for 2026, combining excellent ergonomics, wireless connectivity, and MagSpeed scrolling."}},{"@type":"Question","name":"Are vertical mice better for wrist health?","acceptedAnswer":{"@type":"Answer","text":"Yes — vertical mice reduce forearm muscle activity by up to 10% vs standard mice, significantly lowering risk of RSI and carpal tunnel syndrome with prolonged use."}},{"@type":"Question","name":"What angle is a vertical mouse held at?","acceptedAnswer":{"@type":"Answer","text":"Vertical mice orient your hand at 57-90 degrees (handshake position), keeping the forearm neutral and reducing the pronation that causes wrist strain."}}]}' }} />
+
 
     </div>
   );

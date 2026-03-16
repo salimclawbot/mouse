@@ -2,7 +2,7 @@
 
 **By Dr. Alex Chen** · Last updated March 17, 2026
 
-**The best wireless vertical mouse without a dongle is the Logitech MX Vertical — it connects via Bluetooth to up to 3 devices, lasts 4 months per charge, and pairs instantly with Mac, Windows, and Linux without occupying a USB port.** For a dongle-free desk, Bluetooth is the only path. Five models below, from $20 to $100, all connect without plugging anything in.
+**The best wireless vertical mouse without a dongle is the [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) — it connects via Bluetooth to up to 3 devices, lasts 4 months per charge, and pairs instantly with Mac, Windows, and Linux without occupying a USB port.** For a dongle-free desk, Bluetooth is the only path. Five models below, from $20 to $100, all connect without plugging anything in.
 
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
@@ -96,10 +96,10 @@ Several vertical mice offer both Bluetooth and 2.4 GHz in the same device. Use B
 | Mouse | Bluetooth | 2.4 GHz | Multi-Device | Battery Life | DPI | Weight | Price | Best For |
 |-------|:--------:|:-------:|:-----------:|:------------|:---:|:------:|:-----:|----------|
 | **Logitech MX Vertical** | ✅ BT + Unifying | ✅ | 3 devices | 4 months (rechargeable) | 4000 | 135g | ~$90 | Best overall |
-| **iClever TM209G** | ✅ BT | ✅ | 2 devices | 2–3 months (rechargeable) | 2400 | 98g | ~$20 | Best budget Bluetooth |
+| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G+Vertical+Mouse&tag=theforge05-20)** | ✅ BT | ✅ | 2 devices | 2–3 months (rechargeable) | 2400 | 98g | ~$20 | Best budget Bluetooth |
 | **Anker Vertical** | ❌ | ✅ only | 1 device | 6+ months (AA battery) | 1600 | 122g | ~$25 | Best if dongle is acceptable |
-| **Nulea M501** | ✅ BT | ✅ | 2 devices | 2–3 months (rechargeable) | 2400 | 100g | ~$16 | Cheapest Bluetooth option |
-| **ProtoArc EM01** | ✅ BT | ✅ | 3 devices | 3–4 months (rechargeable) | 4000 | 120g | ~$30 | Best mid-range dual-mode |
+| **[Nulea M501](https://www.amazon.com/s?k=Nulea+M501+Vertical+Mouse&tag=theforge05-20)** | ✅ BT | ✅ | 2 devices | 2–3 months (rechargeable) | 2400 | 100g | ~$16 | Cheapest Bluetooth option |
+| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01+Vertical+Mouse&tag=theforge05-20)** | ✅ BT | ✅ | 3 devices | 3–4 months (rechargeable) | 4000 | 120g | ~$30 | Best mid-range dual-mode |
 
 <!-- [IMAGE PLACEHOLDER: All 5 wireless vertical mice showing dongle vs no-dongle comparison, alt="Five best wireless vertical mice with Bluetooth connectivity shown without dongles"] -->
 
@@ -137,7 +137,7 @@ The 4000 DPI sensor tracks on any surface including glass — no mouse pad neede
 - 78 mm grip width — too large for small hands
 - Unifying Receiver uses USB-A (needs adapter for USB-C-only laptops)
 
-[Search for Logitech MX Vertical on Amazon](https://www.amazon.com/s?k=Logitech+MX+Vertical)
+[Search for Logitech MX Vertical on Amazon](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)
 
 **Best for:** Professionals who work across multiple devices and want the most polished wireless vertical mouse experience. The default recommendation. For the full ergonomic comparison, see our [vertical mouse vs regular mouse](/vertical-mouse-vs-regular-mouse) guide.
 
@@ -172,7 +172,7 @@ USB-C rechargeable with 2–3 months of battery life per charge. The clicks are 
 - Limited brand recognition and long-term reliability data
 - No gesture or flow features
 
-[Search for iClever TM209G on Amazon](https://www.amazon.com/s?k=iClever+TM209G+Vertical+Mouse)
+[Search for iClever TM209G on Amazon](https://www.amazon.com/s?k=iClever+TM209G+Vertical+Mouse&tag=theforge05-20)
 
 **Best for:** Budget buyers who want dongle-free Bluetooth without spending $90. The best value Bluetooth vertical mouse available. For small-hand sizing, see our [best vertical mouse for small hands](/best-vertical-mouse-small-hands) guide.
 
@@ -205,7 +205,7 @@ If Bluetooth is a hard requirement, skip to any other mouse on this list. If you
 - AA battery adds long-term cost vs rechargeable
 - Dongle is small and losable
 
-[Search for Anker Vertical Ergonomic Mouse on Amazon](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse)
+[Search for Anker Vertical Ergonomic Mouse on Amazon](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)
 
 **Best for:** Users who have USB-A ports, do not need multi-device, and want the most proven budget ergonomic value. Not dongle-free, but included for context. For a comprehensive budget comparison, see our [best vertical mouse under $50](/best-vertical-mouse-under-50) guide.
 
@@ -239,7 +239,7 @@ Bluetooth + 2.4 GHz dual-mode is included — unexpected at $16. The USB-C recha
 - Grip contouring is basic
 - Long-term reliability unproven
 
-[Search for Nulea M501 Vertical Mouse on Amazon](https://www.amazon.com/s?k=Nulea+M501+Vertical+Mouse)
+[Search for Nulea M501 Vertical Mouse on Amazon](https://www.amazon.com/s?k=Nulea+M501+Vertical+Mouse&tag=theforge05-20)
 
 **Best for:** Absolute minimum spend for dongle-free wireless. A low-risk way to test if Bluetooth vertical mouse works for your setup before investing in the MX Vertical.
 
@@ -274,7 +274,7 @@ The 3-device Bluetooth pairing works reliably across Mac, Windows, and iPadOS. T
 - Newer brand — less long-term reliability data
 - Bluetooth pairing occasionally requires re-pairing after OS updates
 
-[Search for ProtoArc EM01 Vertical Mouse on Amazon](https://www.amazon.com/s?k=ProtoArc+EM01+Vertical+Mouse)
+[Search for ProtoArc EM01 Vertical Mouse on Amazon](https://www.amazon.com/s?k=ProtoArc+EM01+Vertical+Mouse&tag=theforge05-20)
 
 **Best for:** Users who want multi-device Bluetooth and high DPI without spending $90. The smart choice for testing whether MX Vertical-level wireless features justify the upgrade later.
 

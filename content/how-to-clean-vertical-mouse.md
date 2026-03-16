@@ -198,11 +198,11 @@ The scroll wheel is the dirtiest component inside any mouse. Your index finger t
 
 | Mouse | Scroll Wheel Access | Cleaning Difficulty |
 |-------|-------------------|:------------------:|
-| **Logitech MX Vertical** | Tight gap; smooth wheel | ⚠️ Moderate — gap is narrow; Blu-Tack works well |
-| **Anker Vertical** | Standard gap; stepped wheel | ✅ Easy — wider gap allows toothpick and cotton swab |
-| **Evoluent VM4** | Standard gap; stepped wheel | ✅ Easy — accessible from both sides |
-| **ProtoArc EM01** | Tight gap; smooth wheel | ⚠️ Moderate — similar to MX Vertical |
-| **iClever TM209G** | Standard gap; stepped wheel | ✅ Easy — standard cleaning approach |
+| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)** | Tight gap; smooth wheel | ⚠️ Moderate — gap is narrow; Blu-Tack works well |
+| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)** | Standard gap; stepped wheel | ✅ Easy — wider gap allows toothpick and cotton swab |
+| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)** | Standard gap; stepped wheel | ✅ Easy — accessible from both sides |
+| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20)** | Tight gap; smooth wheel | ⚠️ Moderate — similar to MX Vertical |
+| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G&tag=theforge05-20)** | Standard gap; stepped wheel | ✅ Easy — standard cleaning approach |
 
 ---
 

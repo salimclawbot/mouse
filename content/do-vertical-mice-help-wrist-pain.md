@@ -168,7 +168,7 @@ This is why the benefit is most clear for people whose pain is directly caused b
 
 ### Group 4: Already Using Low-Pronation Input
 
-**Profile:** Already uses a trackball, vertical-ish ergonomic mouse (like the Logitech MX Master at ~25°), touchpad, or pen/stylus. Current setup already minimizes pronation.
+**Profile:** Already uses a trackball, vertical-ish ergonomic mouse (like the [Logitech MX Master](https://www.amazon.com/s?k=Logitech+MX+Master&tag=theforge05-20) at ~25°), touchpad, or pen/stylus. Current setup already minimizes pronation.
 
 **Why vertical does not help:** The pronation reduction is already achieved. Switching to a vertical mouse provides minimal additional benefit if the current device already reduces pronation.
 
@@ -310,8 +310,8 @@ The vertical grip shifts mouse movement from wrist deviation to forearm rotation
 ### If You Have Wrist Pain:
 
 1. **Identify the trigger.** Does pain correlate with mouse use, typing, or both? A pain journal for one week (note activity, pain level, and time) reveals this.
-2. **If mouse-triggered:** Try a vertical mouse. The Anker Vertical ($25) is the lowest-risk test. Use it for 4 weeks with proper desk height and light grip.
-3. **If it helps:** Consider upgrading to the Evoluent VM4 or MX Vertical for better build quality and more pronation reduction.
+2. **If mouse-triggered:** Try a vertical mouse. The [Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse&tag=theforge05-20) ($25) is the lowest-risk test. Use it for 4 weeks with proper desk height and light grip.
+3. **If it helps:** Consider upgrading to the [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) or [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) for better build quality and more pronation reduction.
 4. **If it does not help after 4 weeks:** The pain cause is likely not pronation-related. Explore trackball, ergonomic keyboard, or medical evaluation.
 5. **If pain is severe** (constant numbness, grip weakness, night waking): See a doctor. No mouse is the answer.
 

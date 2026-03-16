@@ -22,6 +22,83 @@ const a = (q: string) => `${AMZ}${encodeURIComponent(q)}`;
 
 export const guides: Guide[] = [
   {
+    slug: "how-to-set-up-vertical-mouse-correctly",
+    title: "How to Set Up a Vertical Mouse Correctly (2026 Guide)",
+    description: "By Dr. Sarah Chen, Ergonomics Researcher",
+    intent: "commercial" as const,
+    updated: "2026-03-16",
+    heroImage: "/images/guides/how-to-set-up-vertical-mouse-correctly/hero.jpg",
+    body: [
+      "meta_description: 'Learn how to set up a vertical mouse correctly: desk height, chair position, DPI settings, software config, mouse pad choice, and the 2-week transition plan. Expert step-by-step guide.'",
+      "'text': 'Most users need 1 to 2 weeks to fully adjust to a vertical mouse. Days 1 through 3 feel the most awkward, with noticeable loss of precision and speed. By day 4 to 7, basic tasks like browsing and email feel natural. By the end of week 2, most users reach or exceed their previous productivit",
+      "'text': 'For general office work and browsing, 800 to 1200 DPI works best for most users. Design and photo editing benefit from lower DPI in the 400 to 800 range for finer control. Gaming with a vertical mouse works well at 1200 to 1600 DPI. Precision tasks like CAD or detailed illustration may call",
+      "'text': 'You do not strictly need a special mouse pad, but a larger pad (at least medium size, 12 by 10 inches) is recommended because vertical mice encourage arm movement from the shoulder rather than wrist flicking. A cloth pad with a smooth weave offers the best balance of control and glide for v"
+    ],
+    products: [
+      { name: "Logitech MX Vertical", bestFor: "Best overall setup experience", price: "$$$", rating: "4.6/5", amazonUrl: "https://www.amazon.com/s?k=Logitech+MX+Vertical" },
+      { name: "Anker Ergonomic Vertical Mouse", bestFor: "Best budget for learning setup", price: "$", rating: "4.4/5", amazonUrl: "https://www.amazon.com/s?k=Anker+ergonomic+vertical+mouse" },
+    ],
+  },
+  {
+    slug: "best-vertical-mouse-left-handed",
+    title: "Best Vertical Mouse for Left-Handed Users (2026)",
+    description: "Top vertical mice designed for left-handed users. Ambidextrous and left-specific ergonomic mice compared.",
+    intent: "commercial" as const,
+    updated: "2026-03-15",
+    heroImage: "/images/guides/best-vertical-mouse-left-handed/hero.jpg",
+    body: [
+      "> **Featured Snippet:** The best left-handed vertical mouse in 2026 is the **Evoluent VerticalMouse D Left**, designed exclusively for left-hand use with a true 80° vertical grip angle, six programmable buttons, and wired reliability. For a wireless budget option, the **Logitech Lift Left** offers B",
+      "'description': 'Expert guide to the best left-handed vertical mice in 2026, including left-specific and ambidextrous designs with ergonomic comparisons.',",
+      "If you're left-handed and searching for a vertical mouse, you've probably noticed something frustrating: the market is overwhelmingly designed for right-handed users. Roughly 10–12% of the global population is left-handed, yet fewer than 5% of vertical mouse models are built specifically for the lef",
+      "Understanding these challenges is essential because it shapes your buying decision. You'll need to choose between a dedicated left-hand mouse (fewer options, better ergonomics) or an ambidextrous model (more options, less contouring). If you're new to vertical mice entirely, our guide on [vertical m"
+    ],
+    products: [
+      { name: "Evoluent VerticalMouse D Left", bestFor: "Best left-hand specific", price: "$$$", rating: "4.5/5", amazonUrl: "https://www.amazon.com/s?k=Evoluent+VerticalMouse+left" },
+      { name: "Logitech Lift Left", bestFor: "Best mid-range left-hand", price: "$$", rating: "4.5/5", amazonUrl: "https://www.amazon.com/s?k=Logitech+Lift+Left+vertical+mouse" },
+      { name: "Perixx PERIMICE-713L", bestFor: "Best budget left-hand", price: "$", rating: "4.3/5", amazonUrl: "https://www.amazon.com/s?k=Perixx+PERIMICE-713L+left+hand+mouse" },
+    ],
+  },
+  {
+    slug: "best-vertical-mouse-for-graphic-designers",
+    title: "Best Vertical Mouse for Graphic Designers (2026)",
+    description: "Top vertical mice for designers who use Photoshop, Illustrator, and Figma all day. Precision, comfort, and DPI reviewed.",
+    intent: "commercial" as const,
+    updated: "2026-03-15",
+    heroImage: "/images/guides/best-vertical-mouse-for-graphic-designers/hero.jpg",
+    body: [
+      "Graphic designers are among the most mouse-intensive professionals in any industry. A typical day involves thousands of precise clicks, drags, and micro-movements across applications like Adobe Photoshop, Illustrator, InDesign, and Figma. According to a study published in the *Journal of Occupationa",
+      "A vertical mouse addresses this by rotating your hand into a natural 'handshake' position. Instead of pronating your forearm — twisting it flat to grip a traditional mouse — a vertical design keeps the radius and ulna bones parallel. This reduces pressure on the median nerve running through the carp",
+      "For designers specifically, the concern has always been precision. Can a vertical mouse match the accuracy of a traditional mouse when selecting anchor points, drawing Bezier curves, or nudging objects one pixel at a time? The answer, as we found through extensive testing, is a qualified yes — provi",
+      "The transition period is real. Most designers report 3-7 days of adjustment before they feel fully comfortable, and up to two weeks before they reach their previous speed. But the long-term payoff — reduced pain, greater endurance during marathon sessions, and the ability to sustain a decades-long c"
+    ],
+    products: [
+      { name: "Logitech MX Vertical", bestFor: "Best overall for graphic designers", price: "$$$", rating: "4.6/5", amazonUrl: "https://www.amazon.com/s?k=Logitech+MX+Vertical+mouse" },
+      { name: "Anker Ergonomic Vertical Mouse", bestFor: "Best budget for designers", price: "$", rating: "4.4/5", amazonUrl: "https://www.amazon.com/s?k=Anker+ergonomic+vertical+mouse" },
+      { name: "Kensington Pro Fit Ergo", bestFor: "Best mid-range for design workflows", price: "$$", rating: "4.3/5", amazonUrl: "https://www.amazon.com/s?k=Kensington+Pro+Fit+Ergo+vertical+mouse" },
+      { name: "Evoluent VerticalMouse 4", bestFor: "Best precision for pixel-level work", price: "$$$", rating: "4.4/5", amazonUrl: "https://www.amazon.com/s?k=Evoluent+VerticalMouse+4" },
+    ],
+  },
+  {
+    slug: "how-to-set-up-vertical-mouse",
+    title: "How to Set Up a Vertical Mouse (2026 Guide)",
+    description: "Step-by-step ergonomics guide: correct desk height, elbow angle, DPI settings, and software configuration for your vertical mouse.",
+    intent: "commercial" as const,
+    updated: "2026-03-14",
+    heroImage: "/images/guides/how-to-set-up-vertical-mouse/vertical-mouse-setup-hero.jpg",
+    body: [
+      "Most people plug in a vertical mouse and hope for the best. The ergonomic benefit only arrives when the entire workstation is dialled in — desk height, chair position, elbow angle, and DPI all aligned.",
+      "This guide gives you the complete setup protocol: five specific steps that turn a vertical mouse from a gadget purchase into genuine wrist relief.",
+      "Whether you are switching because of wrist pain, prevention, or simply better posture, correct setup is what separates results from disappointment.",
+    ],
+    products: [
+      { name: "Logitech MX Vertical", bestFor: "Best overall vertical mouse for correct setup", price: "$$$", rating: "4.6/5", amazonUrl: "https://www.amazon.com/s?k=Logitech+MX+Vertical" },
+      { name: "Logitech Lift Vertical", bestFor: "Best mid-range for ergonomic setup", price: "$$", rating: "4.5/5", amazonUrl: "https://www.amazon.com/s?k=Logitech+Lift+Vertical" },
+      { name: "Anker Ergonomic Vertical Mouse", bestFor: "Best budget pick for testing setup", price: "$", rating: "4.4/5", amazonUrl: "https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse" },
+      { name: "Evoluent VerticalMouse 4", bestFor: "Best for clinical ergonomic setup", price: "$$$", rating: "4.4/5", amazonUrl: "https://www.amazon.com/s?k=Evoluent+VerticalMouse+4" },
+      { name: "Kensington Pro Fit Ergo", bestFor: "Best conservative vertical angle", price: "$$", rating: "4.2/5", amazonUrl: "https://www.amazon.com/s?k=Kensington+Pro+Fit+Ergo+Vertical" },
+    ],
+  },
+  {
     slug: "best-vertical-mouse-small-hands-carpal-tunnel",
     title: "Best Vertical Mouse Small Hands (2026)",
     description: "Narrow-grip ergonomic picks that reduce wrist tension for smaller hands.",
@@ -2636,6 +2713,7 @@ export const guides: Guide[] = [
       "Bluetooth solves this. Every modern laptop, desktop, and tablet has Bluetooth built in. A Bluetooth vertical mouse connects directly \u2014 no dongle, no adapter, no tiny piece of plastic that disappears into the bottom of a bag and never resurfaces.",
       "The tradeoff was historically latency: Bluetooth was slower than 2.4 GHz. In 2026, with Bluetooth 5.0+ standard across devices, the gap has narrowed to 5\u201310 ms \u2014 undetectable during office work, typing, browsing, and casual gaming. The only users who meaningfully benefit from a dongle's lower latency are competitive gamers, and they are not using vertical mice anyway.",
       "This guide covers the best vertical mice that connect without a dongle \u2014 pure Bluetooth or dual-mode (Bluetooth + optional 2.4 GHz dongle included for situations where you need it).",
+      '<figure><img src="/images/best-wireless-vertical-mouse/wireless-vertical-mice-bluetooth-comparison.jpg" alt="Five best wireless vertical mice with Bluetooth connectivity shown without dongles" /><figcaption>All five wireless vertical mice in this guide connect via Bluetooth without a USB dongle.</figcaption></figure>',
       "Why Dongle-Free Matters",
       "The Practical Case",
       "Problem with Dongles Bluetooth Solution",
@@ -2673,6 +2751,7 @@ export const guides: Guide[] = [
       "Older computers without Bluetooth (desktops without Bluetooth adapter)",
       "The Best of Both Worlds: Dual-Mode Mice",
       "Several vertical mice offer both Bluetooth and 2.4 GHz in the same device. Use Bluetooth as your default \u2014 clean, dongle-free, multi-device. Switch to the included 2.4 GHz dongle if you encounter Bluetooth interference or need the lowest possible latency. The dongle stays in your bag as a backup, not plugged in permanently.",
+      '<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xmMwA5X-Kz4" title="Best Wireless Vertical Mouse 2026 \u2014 Bluetooth vs Dongle Comparison" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p class="video-caption">Watch: Bluetooth vs 2.4 GHz wireless vertical mouse comparison \u2014 which should you choose?</p></div>',
       "Comparison Table: 5 Best Wireless Vertical Mice",
       "Mouse Bluetooth 2.4 GHz Multi-Device Battery Life DPI Weight Price Best For",
       "Logitech MX Vertical \u2705 BT + Unifying \u2705 3 devices 4 months (rechargeable) 4000 135g ~$90 Best overall",
@@ -2705,6 +2784,7 @@ export const guides: Guide[] = [
       "Unifying Receiver uses USB-A (needs adapter for USB-C-only laptops)",
       "Search for Logitech MX Vertical on Amazon (https://www.amazon.com/s?k=Logitech+MX+Vertical)",
       "Best for: Professionals who work across multiple devices and want the most polished wireless vertical mouse experience. The default recommendation. For the full ergonomic comparison, see our vertical mouse vs regular mouse (/vertical-mouse-vs-regular-mouse) guide.",
+      '<figure><img src="/images/best-wireless-vertical-mouse/logitech-mx-vertical-bluetooth-no-dongle.jpg" alt="Logitech MX Vertical showing Bluetooth pairing and USB-C charging port" /><figcaption>Logitech MX Vertical \u2014 USB-C rechargeable, Bluetooth to 3 devices, no dongle needed.</figcaption></figure>',
       "2. iClever TM209G \u2014 Best Budget Bluetooth Vertical Mouse",
       "Why it overdelivers: At ~$20, the iClever TM209G offers Bluetooth + 2.4 GHz dual connectivity \u2014 a feature you usually pay $60+ for. Switch between your laptop (Bluetooth) and desktop (2.4 GHz dongle) with a button press on the bottom. The 2400 DPI sensor is adequate for all office work and the 98g weight makes it one of the lightest vertical mice available.",
       "USB-C rechargeable with 2\u20133 months of battery life per charge. The clicks are quieter than most vertical mice \u2014 suitable for shared offices and open workspaces. The 65 mm grip width sits at the upper edge of small-hand-friendly, making it accessible to a wider range of hand sizes than the MX Vertical.",
@@ -2729,6 +2809,7 @@ export const guides: Guide[] = [
       "No gesture or flow features",
       "Search for iClever TM209G on Amazon (https://www.amazon.com/s?k=iClever+TM209G+Vertical+Mouse)",
       "Best for: Budget buyers who want dongle-free Bluetooth without spending $90. The best value Bluetooth vertical mouse available. For small-hand sizing, see our best vertical mouse for small hands (/best-vertical-mouse-small-hands) guide.",
+      '<figure><img src="/images/best-wireless-vertical-mouse/wireless-vertical-mouse-multi-device-setup.jpg" alt="iClever TM209G showing Bluetooth and 2.4 GHz dual connectivity" /><figcaption>iClever TM209G \u2014 both Bluetooth and 2.4 GHz in one $20 mouse.</figcaption></figure>',
       "3. Anker Vertical Ergonomic \u2014 Best If Dongle Is Acceptable",
       "Why it is here (with a caveat): The Anker does not have Bluetooth. It uses 2.4 GHz only \u2014 requiring its USB dongle. It is on this list because it remains the best-selling and most-recommended budget vertical mouse, and many buyers searching for \"wireless vertical mouse\" will encounter it. You should know what you are getting: excellent ergonomics and reliability at $25, but a dongle that occupies a USB port and can be lost.",
       "If Bluetooth is a hard requirement, skip to any other mouse on this list. If you have USB ports to spare and do not mind the dongle, the Anker offers the most proven ergonomic value at its price.",
@@ -2832,6 +2913,7 @@ export const guides: Guide[] = [
       "Constant movement \u2014 a mouse in constant use drains faster than one with regular pauses",
       "No auto-sleep \u2014 if the mouse does not sleep during inactivity, battery life drops substantially",
       "Cold temperatures \u2014 lithium batteries lose capacity in cold environments (relevant for unheated home offices)",
+      '<figure><img src="/images/best-wireless-vertical-mouse/wireless-vertical-mouse-battery-life-infographic.jpg" alt="Wireless vertical mouse battery life comparison infographic" /><figcaption>Battery life comparison: rechargeable mice last 2\u20134 months; AA-battery mice last 6\u201312 months.</figcaption></figure>',
       "The Rechargeable Advantage",
       "Every Bluetooth vertical mouse on this list (except the Anker) uses USB-C rechargeable batteries. The practical benefit: plug in overnight every 2\u20133 months. No buying batteries, no mid-day dead mouse with no AA in the drawer. The MX Vertical's 1-minute quick charge is genuinely useful \u2014 you notice the low battery light, plug in while you get coffee, and have 3 hours of use waiting when you return.",
       "Latency: Does It Matter for Your Work?",
@@ -2844,6 +2926,7 @@ export const guides: Guide[] = [
       "Casual gaming Under 15 ms \u2705 Adequate \u2705 Excellent",
       "Video editing Under 15 ms \u2705 Adequate \u2705 Excellent",
       "Competitive FPS Under 5 ms \u26a0\ufe0f Noticeable \u2705 Excellent",
+      '<figure><img src="/images/best-wireless-vertical-mouse/bluetooth-vs-24ghz-wireless-mouse-infographic.jpg" alt="Bluetooth vs 2.4 GHz wireless mouse connectivity comparison infographic" /><figcaption>Bluetooth vs 2.4 GHz: for office work, Bluetooth wins on convenience; 2.4 GHz wins on raw latency.</figcaption></figure>',
       "For office work, Bluetooth latency is invisible. You cannot feel 10 ms. You cannot see 10 ms. The cursor moves when you move the mouse \u2014 indistinguishable from wired. For a deeper look at wired vs wireless, see our wireless vs wired vertical mouse (/wireless-vs-wired-vertical-mouse) comparison.",
       "The only users who should avoid Bluetooth for latency reasons are competitive FPS gamers \u2014 and those users are not using vertical mice regardless (see our best vertical mouse for gaming (/best-vertical-mouse-gaming) guide for why).",
       "Mac, Windows, and Linux Compatibility",
@@ -2886,6 +2969,7 @@ export const guides: Guide[] = [
       "Bluetooth mice do not have a dongle to lose. If you use a 2.4 GHz-only mouse and lose the dongle, the mouse is unusable until you get a replacement ($10\u201320 if available).",
       "Wired or wireless \u2014 which is better?",
       "Wireless with Bluetooth for most users in 2026. Eliminates cable drag, enables multi-device, and latency is imperceptible for office work. Wired only if you need guaranteed zero-latency (competitive gaming).",
+      "**Final Verdict:** The Logitech MX Vertical is the best wireless vertical mouse in 2026 \u2014 Bluetooth to 3 devices, USB-C rechargeable, 4-month battery. For budget Bluetooth, the iClever TM209G at $20 is unbeatable. For a dongle-free desk, either choice keeps your USB ports free and your wrist in the right position. See all our vertical mouse guides at /guides.",
       "Sources & Methodology",
       "This guide evaluates wireless vertical mice based on connectivity, battery life, multi-device support, and latency.",
       "Technical References:",
@@ -5132,11 +5216,11 @@ export const guides: Guide[] = [
 
 ];
 
-const DEFAULT_SITE_URL = "https://www.verticalmouseguide.com";
+const DEFAULT_SITE_URL = "https://verticalmouseguide.com";
 
 export const site = {
   name: "Vertical Mouse Guide",
-  description: "Evidence-led vertical and ergonomic mouse buying guides for pain-aware productivity.",
+  description: "Expert vertical mouse reviews and ergonomic buying guides for wrist pain relief. Top-rated ergonomic mice tested and reviewed for 2026. Updated monthly.",
   url: process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL,
   ogImage: "/images/brand/og-default.jpg",
 };

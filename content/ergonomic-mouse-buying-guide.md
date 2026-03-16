@@ -2,7 +2,7 @@
 
 **By Dr. Alex Chen** · Last updated March 21, 2026
 
-**Choose a vertical mouse if your wrist pain comes from the palm-down position (pronation). Choose a trackball if it comes from repetitive sliding. Choose a sculpted ergonomic mouse if you want comfort without relearning your grip. The right type depends on your pain profile, not the price tag — a $25 Anker Vertical provides the same pronation relief as a $90 Logitech MX Vertical.** This guide matches your situation to the right device in three steps.
+**Choose a vertical mouse if your wrist pain comes from the palm-down position (pronation). Choose a trackball if it comes from repetitive sliding. Choose a sculpted ergonomic mouse if you want comfort without relearning your grip. The right type depends on your pain profile, not the price tag — a $25 [Anker Vertical](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20) provides the same pronation relief as a $90 [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20).** This guide matches your situation to the right device in three steps.
 
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
@@ -48,7 +48,7 @@ This guide cuts through the noise. Three types of ergonomic mouse cover 95% of b
 
 **What it fixes:** Repetitive wrist sliding — the back-and-forth motion that accumulates strain in the wrist, forearm, and shoulder. Also eliminates the keyboard-to-mouse reaching motion if positioned close to the keyboard.
 
-**What it does NOT fix:** Forearm pronation. Most trackballs keep the hand in a palm-down position (0–20 degrees). The Logitech MX Ergo adds a modest 20-degree tilt — helpful but not equivalent to a vertical mouse's 57–70 degrees.
+**What it does NOT fix:** Forearm pronation. Most trackballs keep the hand in a palm-down position (0–20 degrees). The [Logitech MX Ergo](https://www.amazon.com/s?k=Logitech+MX+Ergo&tag=theforge05-20) adds a modest 20-degree tilt — helpful but not equivalent to a vertical mouse's 57–70 degrees.
 
 **Learning curve:** 2–4 weeks (thumb trackball) or 3–5 weeks (finger trackball).
 
@@ -132,7 +132,7 @@ This guide cuts through the noise. Three types of ergonomic mouse cover 95% of b
 
 **Recommendation:** **Vertical mouse.** The pain profile matches pronation strain — the forearm rotation that a vertical mouse specifically addresses.
 
-**Angle guidance:** 57° (MX Vertical, Anker) for mild discomfort and prevention. 70° (Evoluent VM4) for moderate pain or diagnosed carpal tunnel. See our [do vertical mice help wrist pain](/do-vertical-mice-help-wrist-pain) evidence review.
+**Angle guidance:** 57° (MX Vertical, Anker) for mild discomfort and prevention. 70° ([Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)) for moderate pain or diagnosed carpal tunnel. See our [do vertical mice help wrist pain](/do-vertical-mice-help-wrist-pain) evidence review.
 
 ### Wrist and Shoulder Movement Pain
 
@@ -161,7 +161,7 @@ This guide cuts through the noise. Three types of ergonomic mouse cover 95% of b
 | Priority | Best Type | Why | Top Pick |
 |----------|:---------:|-----|----------|
 | Ergonomic benefit | Vertical | Reduces pronation during frequent clicking | MX Vertical ($90) or Anker ($25) |
-| Zero disruption | Sculpted | No learning curve; immediate comfort | Logitech MX Master 3S (~$100) |
+| Zero disruption | Sculpted | No learning curve; immediate comfort | [Logitech MX Master 3S](https://www.amazon.com/s?k=Logitech+MX+Master+3S&tag=theforge05-20) (~$100) |
 | Tiny desk | Trackball | Zero movement space needed | MX Ergo ($90) or Kensington Orbit ($30) |
 
 ### Programmer / Developer
@@ -196,7 +196,7 @@ This guide cuts through the noise. Three types of ergonomic mouse cover 95% of b
 
 | Type | Model | Price | What You Get |
 |------|-------|:-----:|-------------|
-| **Vertical** | J-Tech V628 | ~$13 | Smallest vertical mouse; basic but functional |
+| **Vertical** | [J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=theforge05-20) | ~$13 | Smallest vertical mouse; basic but functional |
 | **Vertical** | Anker Vertical | ~$25 | Best budget vertical — proven, reliable, 57° |
 | **Trackball** | Kensington Orbit | ~$30 | Simple thumb trackball; reliable entry point |
 | **Sculpted** | Logitech M330 Silent | ~$25 | Quiet, comfortable sculpted mouse |
@@ -207,9 +207,9 @@ This guide cuts through the noise. Three types of ergonomic mouse cover 95% of b
 
 | Type | Model | Price | What You Get |
 |------|-------|:-----:|-------------|
-| **Vertical** | ProtoArc EM01 | ~$30 | 3-device Bluetooth, 4000 DPI, USB-C |
+| **Vertical** | [ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20) | ~$30 | 3-device Bluetooth, 4000 DPI, USB-C |
 | **Trackball** | Kensington Expert | ~$60 | Large finger ball; scroll ring; most precise trackball |
-| **Sculpted** | Logitech Lift | ~$70 | Vertical-ish (57°) in a compact, quiet design |
+| **Sculpted** | [Logitech Lift](https://www.amazon.com/s?k=Logitech+Lift&tag=theforge05-20) | ~$70 | Vertical-ish (57°) in a compact, quiet design |
 
 ### Premium: $80–120
 

@@ -2,7 +2,7 @@
 
 **By Dr. Alex Chen** · Last updated March 25, 2026
 
-**The DXT Precision Mouse is the only mainstream vertical mouse built around a pen grip — you hold it like a thick marker instead of palming it like a traditional mouse. This gives it two advantages no palm-grip vertical mouse can match: finer cursor precision driven by finger dexterity instead of arm movement, and true ambidextrous use from a symmetrical body that works identically in either hand. It is not for everyone. It is excellent for the people it is for.**
+**The [DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=theforge05-20) is the only mainstream vertical mouse built around a pen grip — you hold it like a thick marker instead of palming it like a traditional mouse. This gives it two advantages no palm-grip vertical mouse can match: finer cursor precision driven by finger dexterity instead of arm movement, and true ambidextrous use from a symmetrical body that works identically in either hand. It is not for everyone. It is excellent for the people it is for.**
 
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
@@ -25,7 +25,7 @@
 
 ---
 
-Every other vertical mouse on the market uses a palm grip. The Logitech MX Vertical, the Anker, the Evoluent — you rest your hand on them and move your arm. They rotate your forearm to reduce pronation, but the input method is the same as a regular mouse: arm movements drive the cursor.
+Every other vertical mouse on the market uses a palm grip. The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20), the [Anker Ergonomic Vertical Mouse](https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse&tag=theforge05-20), the [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) — you rest your hand on them and move your arm. They rotate your forearm to reduce pronation, but the input method is the same as a regular mouse: arm movements drive the cursor.
 
 The DXT does something different. You hold it between your thumb and fingertips, like a thick pen. Your hand is vertical (same pronation reduction), but the cursor is driven by finger movements — the same fine-motor muscles you use when writing or drawing. This is not a gimmick. It is a fundamentally different input method that serves a specific audience better than any palm-grip vertical mouse can.
 

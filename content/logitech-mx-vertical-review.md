@@ -2,7 +2,7 @@
 
 **By Dr. Alex Chen** · Last updated March 20, 2026
 
-**The Logitech MX Vertical is the best vertical mouse you can buy — and the most expensive at ~$90–100. Its 4000 DPI Darkfield sensor, 3-device Bluetooth, USB-C charging, and Logi Options+ software are unmatched by any competitor. But you pay a 3–4× premium over the Anker Vertical ($25) for the same 57-degree ergonomic angle.** Whether that premium is worth it depends on how many hours you mouse, how many devices you use, and whether you need Mac software.
+**The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) is the best vertical mouse you can buy — and the most expensive at ~$90–100. Its 4000 DPI Darkfield sensor, 3-device Bluetooth, USB-C charging, and Logi Options+ software are unmatched by any competitor. But you pay a 3–4× premium over the [Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20) ($25) for the same 57-degree ergonomic angle.** Whether that premium is worth it depends on how many hours you mouse, how many devices you use, and whether you need Mac software.
 
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
@@ -107,7 +107,7 @@ At ~$90–100, no other mouse in any category ships with 125 Hz polling. Budget 
 
 ### 2. No Left-Hand Model
 
-Left-handed users cannot use the MX Vertical. There is no left-hand version and the asymmetric shape makes left-hand use physically impossible. The Evoluent VM4 offers left-hand models. The MX Vertical does not. For a left-handed buyer, the MX Vertical simply does not exist. See our [best left-handed vertical mouse](/best-left-handed-vertical-mouse) guide for alternatives.
+Left-handed users cannot use the MX Vertical. There is no left-hand version and the asymmetric shape makes left-hand use physically impossible. The [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) offers left-hand models. The MX Vertical does not. For a left-handed buyer, the MX Vertical simply does not exist. See our [best left-handed vertical mouse](/best-left-handed-vertical-mouse) guide for alternatives.
 
 ### 3. Too Large for Small Hands
 
@@ -263,7 +263,7 @@ If you use your mouse in one application and on one computer, the software advan
 
 ### Head-to-Head Summary
 
-| Factor | MX Vertical (~$90) | Evoluent VM4 (~$100) | Anker Vertical (~$25) | ProtoArc EM01 (~$30) |
+| Factor | MX Vertical (~$90) | Evoluent VM4 (~$100) | Anker Vertical (~$25) | [ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20) (~$30) |
 |--------|:------------------:|:-------------------:|:--------------------:|:-------------------:|
 | **Angle** | 57° | 70° | 57° | 60° |
 | **Sensor** | 4000 DPI Darkfield | 3200 DPI Optical | 1600 DPI Optical | 4000 DPI Optical |

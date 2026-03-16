@@ -154,7 +154,7 @@ Some users keep a vertical mouse on the right side and a trackball on the left, 
 
 ## What About Ergonomic Trackballs That Are Also Angled?
 
-A small number of products combine trackball functionality with a vertical or semi-vertical hand angle — the Logitech MX Ergo is the most notable, with an adjustable 0–20° tilt. These hybrids address both pronation and arm movement, but the tilt angle is much less than a true vertical mouse (50–70°). They are a reasonable middle ground if your discomfort is moderate across both wrist and shoulder, but they do not fully solve either problem the way a dedicated device does.
+A small number of products combine trackball functionality with a vertical or semi-vertical hand angle — the [Logitech MX Ergo](https://www.amazon.com/s?k=Logitech+MX+Ergo&tag=theforge05-20) is the most notable, with an adjustable 0–20° tilt. These hybrids address both pronation and arm movement, but the tilt angle is much less than a true vertical mouse (50–70°). They are a reasonable middle ground if your discomfort is moderate across both wrist and shoulder, but they do not fully solve either problem the way a dedicated device does.
 
 ---
 
@@ -194,7 +194,7 @@ A vertical mouse, by a significant margin. The movement pattern (push mouse, cur
 Thumb-operated trackballs (like the Logitech M575) can cause thumb fatigue or pain in some users, particularly during extended use. This is a different form of repetitive strain — you are essentially trading arm movement for thumb movement. Finger-operated trackballs (like the Kensington Expert Mouse) distribute the load across multiple fingers and are less likely to cause isolated thumb strain.
 
 ### How much do these devices cost compared to a regular mouse?
-Entry-level vertical mice start around $15–25 (Anker, J-Tech Digital). Premium options like the Logitech MX Vertical run $80–100. Trackballs range from $25 (Logitech M575) to $150+ (Kensington Expert Mouse, Logitech MX Ergo). Both categories are more expensive than basic mice but comparable to mid-range gaming or productivity mice.
+Entry-level vertical mice start around $15–25 ([Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20), [J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=theforge05-20)). Premium options like the [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) run $80–100. Trackballs range from $25 (Logitech M575) to $150+ (Kensington Expert Mouse, Logitech MX Ergo). Both categories are more expensive than basic mice but comparable to mid-range gaming or productivity mice.
 
 ### Should I get a wrist rest with either device?
 Generally, no. A vertical mouse is designed to keep your wrist elevated and neutral — a wrist rest undermines this position. Trackballs similarly work best when your hand rests on the device itself. If you feel the need for a wrist rest, your desk height or chair position may need adjustment. OSHA recommends a neutral wrist position as part of proper workstation setup.

@@ -132,13 +132,13 @@ The simplest way to find your ideal DPI: place your cursor on the left edge of y
 
 | Mouse | DPI Options | How to Change | Software |
 |-------|:----------:|:-------------:|:--------:|
-| **Logitech MX Vertical** | 400–4000 (any value) | Logi Options+ software | ✅ Full control |
-| **Anker Vertical** | 800 / 1200 / 1600 | Physical button (below scroll wheel) | ❌ None |
-| **Evoluent VM4** | 800 / 1200 / 1800 / 2600 | Evoluent Mouse Manager software | ✅ Full control |
-| **ProtoArc EM01** | 800 / 1200 / 1600 / 2400 / 4000 | Physical button | ❌ Basic |
-| **iClever TM209G** | 1000 / 1600 / 2400 | Physical button | ❌ None |
-| **J-Tech V628** | 600 / 1000 / 1600 | Physical button | ❌ None |
-| **DXT Precision** | 800 / 1200 / 1800 | Physical button | ❌ None |
+| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)** | 400–4000 (any value) | Logi Options+ software | ✅ Full control |
+| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)** | 800 / 1200 / 1600 | Physical button (below scroll wheel) | ❌ None |
+| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)** | 800 / 1200 / 1800 / 2600 | Evoluent Mouse Manager software | ✅ Full control |
+| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20)** | 800 / 1200 / 1600 / 2400 / 4000 | Physical button | ❌ Basic |
+| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G&tag=theforge05-20)** | 1000 / 1600 / 2400 | Physical button | ❌ None |
+| **[J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=theforge05-20)** | 600 / 1000 / 1600 | Physical button | ❌ None |
+| **[DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=theforge05-20)** | 800 / 1200 / 1800 | Physical button | ❌ None |
 
 ### Which Mice Limit Your Options
 

@@ -213,7 +213,7 @@ If the flat mouse is on your desk, you will grab it the moment the vertical mous
 
 ### 7. Choose the Right Starting Angle
 
-If you have never used a vertical mouse, start with a 57-degree model (like the Logitech MX Vertical or Anker Vertical Ergonomic). This angle is steep enough to provide ergonomic benefit but close enough to flat that the transition is not jarring. A 70-degree or 90-degree mouse as your first vertical mouse makes the transition harder and longer. For budget options to start with, see our [best vertical mouse under $50](/best-vertical-mouse-under-50) guide.
+If you have never used a vertical mouse, start with a 57-degree model (like the [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) or [Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)). This angle is steep enough to provide ergonomic benefit but close enough to flat that the transition is not jarring. A 70-degree or 90-degree mouse as your first vertical mouse makes the transition harder and longer. For budget options to start with, see our [best vertical mouse under $50](/best-vertical-mouse-under-50) guide.
 
 ---
 
@@ -228,7 +228,7 @@ Not all vertical mice are equally vertical. The angle of the grip directly affec
 | **0°** | Flat (palm down) | Baseline — full pronation | None | Standard flat mouse |
 | **25–35°** | Slight tilt | Mild pronation reduction | 2–5 days | Sculpted ergonomic mice (Logitech MX Master) |
 | **50–60°** | Moderate vertical | Significant pronation reduction | 1–2 weeks | Logitech MX Vertical (57°), Anker Vertical (57°) |
-| **65–75°** | Steep vertical | Major pronation reduction | 2–3 weeks | Evoluent VM4 (~70°) |
+| **65–75°** | Steep vertical | Major pronation reduction | 2–3 weeks | [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) (~70°) |
 | **80–90°** | Full handshake | Maximum pronation elimination | 3–4 weeks | DeLUX vertical, Unimouse (adjustable) |
 
 ### Why Steeper Takes Longer

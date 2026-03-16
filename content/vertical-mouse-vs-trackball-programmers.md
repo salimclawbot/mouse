@@ -217,9 +217,9 @@ By alternating between devices, no single muscle group accumulates the repetitiv
 
 | Mouse | Why It Suits Programmers | Multi-Device | DPI | Price |
 |-------|------------------------|:-----------:|:---:|:-----:|
-| **Logitech MX Vertical** | Logi Options+ per-app bindings; BT multi-device; Logitech Flow for cross-machine cursor | 3 devices | 4000 | ~$90 |
-| **Anker Vertical** | Budget — same ergonomic benefit; proven reliable | 1 device | 1600 | ~$25 |
-| **Evoluent VM4** | 6 buttons for macro binding; steepest angle (70°) for max RSI prevention | 1 device | 3200 | ~$100 |
+| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)** | Logi Options+ per-app bindings; BT multi-device; Logitech Flow for cross-machine cursor | 3 devices | 4000 | ~$90 |
+| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)** | Budget — same ergonomic benefit; proven reliable | 1 device | 1600 | ~$25 |
+| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)** | 6 buttons for macro binding; steepest angle (70°) for max RSI prevention | 1 device | 3200 | ~$100 |
 
 ### Developer-Specific Features
 
@@ -244,7 +244,7 @@ For a broader comparison including budget options, see our [best vertical mouse 
 
 | Trackball | Why It Suits Programmers | Ball Type | Multi-Device | Price |
 |-----------|------------------------|:---------:|:-----------:|:-----:|
-| **Logitech MX Ergo** | Adjustable tilt (0/20°); BT multi-device; Logi Options+ per-app bindings | Thumb | 2 devices | ~$90 |
+| **[Logitech MX Ergo](https://www.amazon.com/s?k=Logitech+MX+Ergo&tag=theforge05-20)** | Adjustable tilt (0/20°); BT multi-device; Logi Options+ per-app bindings | Thumb | 2 devices | ~$90 |
 | **Kensington Expert** | Large ball for precise navigation; scroll ring; ambidextrous | Finger (center) | 1 device (BT model available) | ~$60 |
 | **Kensington Orbit** | Budget — simple thumb trackball; compact; reliable | Thumb | 1 device | ~$30 |
 
