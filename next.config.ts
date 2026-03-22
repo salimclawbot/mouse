@@ -9,6 +9,24 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/vertical-mouse-vs-regular-mouse",
+        destination: "/guides/vertical-mouse-vs-regular-mouse",
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "verticalmouseguide.com" }],
+        destination: "https://www.verticalmouseguide.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

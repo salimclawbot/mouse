@@ -68,7 +68,14 @@ const comparePillars = [
 ];
 
 export default function Home() {
-  const featured = guides.slice(0, 3);
+  const featuredSlugs = [
+    "best-wireless-vertical-mouse",
+    "best-vertical-mouse-large-hands",
+    "best-vertical-mouse-for-graphic-designers",
+  ];
+  const featured = featuredSlugs
+    .map((slug) => guides.find((guide) => guide.slug === slug))
+    .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
 
   return (
     <div className="space-y-14 pb-4">

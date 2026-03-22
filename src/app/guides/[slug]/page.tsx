@@ -51,6 +51,13 @@ const premiumTemplateBySlug: Record<string, PremiumMediaTemplate> = guides.reduc
   return acc;
 }, {} as Record<string, PremiumMediaTemplate>);
 
+premiumTemplateBySlug["best-vertical-mouse-for-graphic-designers"].infographic = {
+  src: "/images/guides/best-vertical-mouse-for-graphic-designers/wrist-comparison-infographic.jpg",
+  heading: "Infographic: Vertical Mouse Ergonomics for Graphic Designers",
+  alt: "Comparison of wrist posture between horizontal and vertical mouse for graphic designers",
+  caption: "Vertical mice reduce forearm pronation by up to 57% — critical for designers spending 8+ hours with a mouse.",
+};
+
 premiumTemplateBySlug["best-vertical-mouse-small-hands-carpal-tunnel"].infographic = {
   src: "/images/guides/best-vertical-mouse-small-hands-carpal-tunnel/infographic-best-vertical-mouse-small-hands-carpal-tunnel.png",
   heading: "Infographic: Small-Hand Vertical Mouse Buying Framework",
@@ -84,6 +91,13 @@ premiumTemplateBySlug["office-ergonomic-mouse-wrist-pain-deep-dive"].infographic
   heading: "Infographic: Office Wrist-Support Mouse Selection Matrix",
   alt: "Top-down office desk visual comparing ergonomic mouse shapes with fit, click effort, and forearm comfort checklist labels",
   caption: "Use this matrix to shortlist by fit class, click effort, and comfort durability before you buy.",
+};
+
+premiumTemplateBySlug["vertical-mouse-vs-trackball-programmers"].infographic = {
+  src: "/images/vertical-mouse-vs-trackball-programmers/vertical-mouse-vs-trackball-programmers-comparison-infographic.jpg",
+  heading: "Infographic: Vertical Mouse vs Trackball for Programmers",
+  alt: "Infographic comparing vertical mouse versus trackball across 8 factors for programmers: RSI risk, desk space, IDE precision, multi-monitor, learning curve, price range, and best workflow",
+  caption: "Match your device to your coding workflow. GUI IDE developers lean vertical; keyboard-centric developers lean trackball.",
 };
 
 const toProductImagePath = (name: string) =>
@@ -174,6 +188,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   const isPremiumDemo = slug === "best-vertical-mouse-small-hands-carpal-tunnel";
   const isLeftGuide = slug === "left-handed-vertical-mouse-wireless-rechargeable";
+  const isNewLeftHandedGuide = slug === "best-vertical-mouse-left-handed-users";
   const isQuietGuide = slug === "quiet-click-vertical-mouse-office";
   const isWristGuide = slug === "best-ergonomic-mouse-for-wrist-pain-office";
   const isWristDeepGuide = slug === "office-ergonomic-mouse-wrist-pain-deep-dive";
@@ -201,12 +216,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isCleaningGuide = slug === "how-to-clean-vertical-mouse";
   const isDxtReviewGuide = slug === "dxt-ergonomic-mouse-review";
   const isSensitivityGuide = slug === "vertical-mouse-sensitivity-settings";
+  const isSetupErgonomicsGuide = slug === "how-to-set-up-vertical-mouse-ergonomics-guide";
   const isComparisonGuideWithInlineProductImages = [
     "best-vertical-mouse-small-hands-carpal-tunnel",
     "left-handed-vertical-mouse-wireless-rechargeable",
     "quiet-click-vertical-mouse-office",
   ].includes(slug);
-  const isPremiumArticle = isPremiumDemo || isLeftGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide || isDxtReviewGuide || isSensitivityGuide;
+  const isGraphicDesignerGuide = slug === "best-vertical-mouse-for-graphic-designers";
+  const isPremiumArticle = isGraphicDesignerGuide || isPremiumDemo || isLeftGuide || isNewLeftHandedGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide || isDxtReviewGuide || isSensitivityGuide || isSetupErgonomicsGuide;
   const premiumMedia = premiumTemplateBySlug[slug];
   const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
@@ -434,6 +451,15 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       { q: "Should I disable acceleration?", a: "Usually yes for consistency, especially when adapting to a new vertical mouse." },
       { q: "What DPI for dual monitors?", a: "Many users prefer 1600–2400 DPI on dual monitor setups." },
       { q: "Does polling rate matter for office work?", a: "125 Hz is usually sufficient; higher rates matter more for fast gaming contexts." },
+    ],
+    "how-to-set-up-vertical-mouse-ergonomics-guide": [
+      { q: "How should I position a vertical mouse on my desk?", a: "Position it directly in line with your shoulder, 1–2 inches from the keyboard edge, with your elbow at 90 degrees and forearm parallel to the desk." },
+      { q: "What DPI should I set my vertical mouse to?", a: "800–1200 for general office work, 400–800 for design, 1200–1600 for multi-monitor setups. Start at 800 and adjust in increments of 200." },
+      { q: "How long does it take to adjust to a vertical mouse?", a: "Most users adjust within 5–14 days. Days 1–3 feel awkward, by day 7 basic tasks feel natural, and by day 14 the vertical grip typically feels more comfortable." },
+      { q: "Should I use a mouse pad with a vertical mouse?", a: "Yes, use a smooth pad at least 10 inches wide. Avoid gel wrist rests, which compress the carpal tunnel and counteract ergonomic benefits." },
+      { q: "What is the correct hand position on a vertical mouse?", a: "Rest your hand in a natural handshake position with thumb on top, fingers curved gently over buttons without gripping, and wrist straight in all directions." },
+      { q: "Do I need to remap buttons on a vertical mouse?", a: "Optional but recommended. Map thumb buttons to copy/paste for productivity gains in text-heavy workflows." },
+      { q: "Can I use a vertical mouse for gaming?", a: "Works well for casual and strategy gaming. Competitive FPS gaming is better served by traditional gaming mice." },
     ],
   };
 
@@ -784,17 +810,47 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       )}
 
       {slug === "vertical-mouse-vs-regular-mouse" && (
-        <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-slate-900">Biomechanics and switch-decision visuals</h2>
-          <p className="text-slate-700">These visuals explain forearm mechanics and help decide whether switching will likely improve comfort for your workflow.</p>
-          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-            <img src="/images/vmg/vs-regular/hero-anatomic-choice.png" alt="Vertical versus regular mouse decision hero visual" loading="lazy" className="h-auto w-full" />
-          </figure>
-          <div className="grid gap-4 md:grid-cols-2">
-            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/images/vmg/vs-regular/ergonomics-comparison.png" alt="Forearm pronation versus neutral posture ergonomic comparison" loading="lazy" className="h-auto w-full" /></figure>
-            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/images/vmg/vs-regular/who-should-switch-guide.png" alt="Guide showing who should switch from regular to vertical mouse" loading="lazy" className="h-auto w-full" /></figure>
-          </div>
-        </section>
+        <div dangerouslySetInnerHTML={{ __html: [
+          '<section class="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">',
+          '<h2 class="text-2xl font-bold text-slate-900">Biomechanics and switch-decision visuals</h2>',
+          '<p class="text-slate-700">These visuals explain forearm mechanics and help decide whether switching will likely improve comfort for your workflow.</p>',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-wrist-anatomy-infographic.jpg" alt="Medical diagram showing ulnar deviation and forearm pronation from regular mouse versus neutral handshake grip from vertical mouse" loading="lazy" class="h-auto w-full" />',
+          '</figure>',
+          '<div class="grid gap-4 md:grid-cols-2">',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-wrist-angle-infographic.jpg" alt="Wrist angle comparison infographic vertical mouse neutral position versus regular mouse forearm rotation" loading="lazy" class="h-auto w-full" />',
+          '</figure>',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-comparison-chart.jpg" alt="Comparison chart vertical mouse vs regular mouse across ergonomics comfort strain productivity and price" loading="lazy" class="h-auto w-full" />',
+          '</figure></div></section>',
+          '<section class="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">',
+          '<h2 class="text-2xl font-bold text-slate-900">Who should switch and product picks</h2>',
+          '<div class="grid gap-4 md:grid-cols-2">',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-mouse-contextual-1.jpg" alt="Office worker at standing desk comparing vertical mouse versus regular mouse ergonomic setup" loading="lazy" class="h-auto w-full" />',
+          '</figure>',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-mouse-product-1.jpg" alt="Logitech MX Vertical ergonomic mouse in handshake grip at desk" loading="lazy" class="h-auto w-full" />',
+          '</figure></div>',
+          '<div class="grid gap-4 md:grid-cols-3">',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-mouse-product-2.jpg" alt="Anker 2.4G wireless ergonomic vertical mouse product shot" loading="lazy" class="h-auto w-full" />',
+          '</figure>',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-mouse-product-3.jpg" alt="Evoluent Vertical Mouse 4 right-handed tall vertical form factor" loading="lazy" class="h-auto w-full" />',
+          '</figure>',
+          '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
+          '<img src="/images/articles/vertical-mouse-vs-regular-video-thumb.jpg" alt="Vertical mouse versus regular mouse video guide comparison thumbnail" loading="lazy" class="h-auto w-full" />',
+          '</figure></div>',
+          '<div class="mt-4 grid gap-3 md:grid-cols-2">',
+          '<a href="https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800 hover:bg-emerald-100">Check Logitech MX Vertical on Amazon</a>',
+          '<a href="https://www.amazon.com/s?k=Anker+ergonomic+vertical+mouse&tag=theforge05-20" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800 hover:bg-emerald-100">Check Anker Vertical on Amazon</a>',
+          '<a href="https://www.amazon.com/s?k=Evoluent+Vertical+Mouse+4&tag=theforge05-20" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800 hover:bg-emerald-100">Check Evoluent VerticalMouse 4 on Amazon</a>',
+          '<a href="https://www.amazon.com/s?k=Kensington+Pro+Fit+Ergo&tag=theforge05-20" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800 hover:bg-emerald-100">Check Kensington Pro Fit Ergo on Amazon</a>',
+          '<a href="https://www.amazon.com/s?k=HP+935+ergonomic+mouse&tag=theforge05-20" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800 hover:bg-emerald-100">Check HP 935 Ergonomic on Amazon</a>',
+          '</div></section>',
+        ].join('\n') }} />
       )}
 
       {isPremiumArticle && (

@@ -1,4 +1,6 @@
-export const metadata = { title: "Privacy Policy" };
+export const metadata = { title: "Privacy Policy",
+  alternates: { canonical: "https://www.verticalmouseguide.com/privacy-policy" }
+};
 
 export default function PrivacyPage() {
   return (

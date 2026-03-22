@@ -1,4 +1,6 @@
-export const metadata = { title: "Terms of Service" };
+export const metadata = { title: "Terms of Service",
+  alternates: { canonical: "https://www.verticalmouseguide.com/terms-of-service" }
+};
 
 export default function TermsPage() {
   return (

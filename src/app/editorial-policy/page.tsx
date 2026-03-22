@@ -1,4 +1,6 @@
-export const metadata = { title: "Editorial Policy" };
+export const metadata = { title: "Editorial Policy",
+  alternates: { canonical: "https://www.verticalmouseguide.com/editorial-policy" }
+};
 
 export default function EditorialPolicyPage() {
   return (

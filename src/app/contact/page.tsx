@@ -1,4 +1,6 @@
-export const metadata = { title: "Contact" };
+export const metadata = { title: "Contact",
+  alternates: { canonical: "https://www.verticalmouseguide.com/contact" }
+};
 
 export default function ContactPage() {
   return (

@@ -5,12 +5,11 @@ import Script from "next/script";
 import { site } from "@/lib/content";
 import ReadingProgress from "@/components/reading-progress";
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL("https://www.verticalmouseguide.com"),
   title: {
     default: `${site.name} — Ergonomic Mouse Guides`,
     template: `%s | ${site.name}`,
@@ -84,14 +83,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className="text-slate-900 antialiased">
         <ReadingProgress />
-        {gaId ? (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaId}');`}
-            </Script>
-          </>
-        ) : null}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-HQ8HYJN2FS" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HQ8HYJN2FS');`}
+        </Script>
         <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <Script id="website-schema" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur">

@@ -1,4 +1,6 @@
-export const metadata = { title: "Affiliate Disclosure" };
+export const metadata = { title: "Affiliate Disclosure",
+  alternates: { canonical: "https://www.verticalmouseguide.com/affiliate-disclosure" }
+};
 
 export default function DisclosurePage() {
   return (
