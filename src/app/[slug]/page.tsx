@@ -2,14 +2,15 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getArticle, getAllSlugs } from "@/lib/articles";
 
-interface PageProps { params: { slug: string } }
+interface PageProps { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const article = await getArticle(params.slug);
+  const { slug } = await params;
+  const article = await getArticle(slug);
   if (!article) return { title: "Not Found" };
   return {
     title: { absolute: article.title },
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ArticlePage({ params }: PageProps) {
-  const article = await getArticle(params.slug);
+  const { slug } = await params;
+  const article = await getArticle(slug);
   if (!article) notFound();
 
   const articleSchema =

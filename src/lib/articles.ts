@@ -58,8 +58,10 @@ export async function getArticle(slug: string): Promise<Article | null> {
   const title = (data.title as string) || slug;
   const description = (data.meta_description as string) || (data.description as string) || "Vertical mouse guide.";
   const author = (data.author as string) || "James R., Ergonomics Specialist";
-  const date = (data.date as string) || (data.datePublished as string) || "2026-03-29";
-  const dateModified = (data.dateModified as string) || date;
+  const rawDate = data.date instanceof Date ? data.date.toISOString().split("T")[0] : (data.date as string);
+  const rawDateMod = data.dateModified instanceof Date ? data.dateModified.toISOString().split("T")[0] : (data.dateModified as string);
+  const date = rawDate || (data.datePublished as string) || "2026-03-29";
+  const dateModified = rawDateMod || date;
   const category = (data.category as string) || "Guide";
   const image = (data.image as string) || "/og-image.jpg";
 
