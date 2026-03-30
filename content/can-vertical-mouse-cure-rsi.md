@@ -320,7 +320,7 @@ If pain is not clearly trending downward after 6 weeks of consistent ergonomic c
 
 Do not continue self-managing severe or worsening symptoms.
 
-<video autoPlay muted loop playsInline poster="/images/articles/can-vertical-mouse-cure-rsi-thumb.jpg" style={{width:"100%",borderRadius:"8px",margin:"1.5rem 0"}}>
+<video autoplay muted loop playsinline poster="/images/articles/can-vertical-mouse-cure-rsi-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0">
   <source src="/videos/can-vertical-mouse-cure-rsi-demo.mp4" type="video/mp4" />
 </video>
 

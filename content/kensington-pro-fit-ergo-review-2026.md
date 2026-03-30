@@ -308,7 +308,7 @@ How does the Kensington Pro Fit Ergo stack up against the most popular vertical 
 
 The Kensington Pro Fit Ergo occupies the sweet spot between the budget Anker and the premium MX Vertical. If you want the best overall experience and can justify the price, the **Logitech MX Vertical** remains our top pick. If you want 80% of the ergonomic benefit at 50-60% of the cost, the **Kensington Pro Fit Ergo** delivers excellent value. The **Anker** is the entry-level option for users unsure about vertical mice. The **Evoluent** is specialist — best for users who need maximum vertical angle on therapist recommendation.
 
-For a comprehensive comparison of all the top models, see our [best vertical mouse buying guide](/best-vertical-mouse).
+For a comprehensive comparison of all the top models, see our [best vertical mouse buying guide](/best-vertical-mouse-carpal-tunnel).
 
 ---
 
@@ -331,7 +331,7 @@ For a comprehensive comparison of all the top models, see our [best vertical mou
 - You are a competitive gamer requiring high polling rates
 - You have small hands (under 17cm) — the body will feel oversized
 
-If you are comparing vertical mice to other ergonomic alternatives, our guide on [vertical mouse vs regular mouse](/vertical-mouse-vs-regular-mouse) breaks down the biomechanical differences and helps you decide which form factor suits your workflow. Left-handed users should check our dedicated guide to [vertical mice for left-handed users](/vertical-mouse-left-handed-users).
+If you are comparing vertical mice to other ergonomic alternatives, our guide on [vertical mouse vs regular mouse](/vertical-mouse-vs-regular-mouse) breaks down the biomechanical differences and helps you decide which form factor suits your workflow. Left-handed users should check our dedicated guide to [vertical mice for left-handed users](/vertical-mouse-vs-regular-mouse).
 
 ---
 
