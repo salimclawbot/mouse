@@ -26,7 +26,13 @@ article_schema: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"he
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
 
+![Vertical Mouse vs Trackball for Programmers (2026): hero image for this section](/images/articles/vertical-mouse-vs-trackball-programmers-hero.jpg)
+*Hero visual for this section*
+
 ## Table of Contents
+![Vertical Mouse vs Trackball for Programmers (2026): comparison image for Table of Contents](/images/articles/vertical-mouse-vs-trackball-programmers-comparison.jpg)
+*Comparison visual for Table of Contents*
+
 - [Why Programmers Need This Comparison](#why-programmers-need-this-comparison)
 - [The Head-to-Head: 10 Factors That Matter for Coding](#the-head-to-head-10-factors-that-matter-for-coding)
 - [RSI Prevention: The Developer-Specific Risks](#rsi-prevention-the-developer-specific-risks)
@@ -52,6 +58,9 @@ Both vertical mice and trackballs address this problem, but through fundamentall
 ---
 
 ## The Head-to-Head: 10 Factors That Matter for Coding
+![Vertical Mouse vs Trackball for Programmers (2026): infographic image for The Head-to-Head: 10 Factors That Matter for Coding](/images/articles/vertical-mouse-vs-trackball-programmers-infographic.jpg)
+*Infographic visual for The Head-to-Head: 10 Factors That Matter for Coding*
+
 
 | Factor | Vertical Mouse | Trackball | Winner for Programmers |
 |--------|:-------------:|:---------:|:---------------------:|
@@ -69,6 +78,9 @@ Both vertical mice and trackballs address this problem, but through fundamentall
 ---
 
 ## RSI Prevention: The Developer-Specific Risks
+![Vertical Mouse vs Trackball for Programmers (2026): setup image for RSI Prevention: The Developer-Specific Risks](/images/articles/vertical-mouse-vs-trackball-programmers-setup.jpg)
+*Setup visual for RSI Prevention: The Developer-Specific Risks*
+
 
 <figure>
   <img src="/images/vertical-mouse-vs-trackball-programmers/programmer-wrist-rsi-prevention-vertical-mouse-trackball.jpg" alt="Comparison of wrist and forearm posture using vertical mouse versus trackball, showing neutral positions that reduce RSI" />
@@ -124,6 +136,9 @@ Neither device solves all programmer-specific RSI risks. The vertical mouse fixe
 </div>
 
 ## IDE and Editor Workflows
+![Vertical Mouse vs Trackball for Programmers (2026): detail image for IDE and Editor Workflows](/images/articles/vertical-mouse-vs-trackball-programmers-detail.jpg)
+*Detail visual for IDE and Editor Workflows*
+
 
 ### Mouse-Heavy IDE Workflow (VS Code, IntelliJ, Xcode)
 
@@ -174,6 +189,9 @@ For most IDE tasks, both devices provide sufficient precision. The vertical mous
 ---
 
 ## Keyboard Proximity: The Reaching Problem
+![Vertical Mouse vs Trackball for Programmers (2026): lifestyle image for Keyboard Proximity: The Reaching Problem](/images/articles/vertical-mouse-vs-trackball-programmers-lifestyle.jpg)
+*Lifestyle visual for Keyboard Proximity: The Reaching Problem*
+
 
 ### The Hidden RSI Factor
 
@@ -222,6 +240,9 @@ For programmers prioritizing RSI prevention:
 ---
 
 ## The Dual-Device Strategy
+![Vertical Mouse vs Trackball for Programmers (2026): product lineup image for The Dual-Device Strategy](/images/articles/vertical-mouse-vs-trackball-programmers-product-lineup.jpg)
+*Product Lineup visual for The Dual-Device Strategy*
+
 
 ### Why Programmers Should Consider Two Devices
 
@@ -251,6 +272,9 @@ By alternating between devices, no single muscle group accumulates the repetitiv
 ---
 
 ## Best Vertical Mouse for Programmers
+![Vertical Mouse vs Trackball for Programmers (2026): tips image for Best Vertical Mouse for Programmers](/images/articles/vertical-mouse-vs-trackball-programmers-tips.jpg)
+*Tips visual for Best Vertical Mouse for Programmers*
+
 
 ### Top 3 Picks
 

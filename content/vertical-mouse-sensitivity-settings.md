@@ -1,4 +1,13 @@
+---
+title: "Vertical Mouse Sensitivity Settings Guide (DPI 2026)"
+faq_schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do vertical mice reduce wrist and forearm strain?","acceptedAnswer":{"@type":"Answer","text":"Vertical mice can reduce forearm pronation and may lower strain for many users. Benefits depend on fit, grip style, and overall desk ergonomics."}},{"@type":"Question","name":"How long does it take to adjust to a vertical mouse?","acceptedAnswer":{"@type":"Answer","text":"Most users adapt within several days to two weeks with regular use. Short focused sessions often make the transition smoother than all day switching at once."}},{"@type":"Question","name":"What features matter most when buying a vertical mouse?","acceptedAnswer":{"@type":"Answer","text":"Prioritize shape fit, sensor reliability, button placement, and connectivity options that match your workflow. Weight and surface glide also affect long term comfort."}},{"@type":"Question","name":"Can vertical mice work well for gaming and office work?","acceptedAnswer":{"@type":"Answer","text":"Yes, but performance depends on sensor quality, DPI tuning, and software support. Some models favor comfort while others balance comfort with faster tracking."}},{"@type":"Question","name":"How should I optimize settings after switching to a vertical mouse?","acceptedAnswer":{"@type":"Answer","text":"Start with moderate sensitivity and pointer speed, then adjust in small steps over a week. Consistent settings across devices can improve muscle memory and accuracy."}}]}'
+---
+
 # Vertical Mouse Sensitivity Settings Guide (DPI 2026)
+
+<video autoplay muted loop playsinline poster="/images/articles/vertical-mouse-sensitivity-settings-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
+  <source src="/videos/vertical-mouse-sensitivity-settings-demo.mp4" type="video/mp4">
+</video>
 
 **By Dr. Alex Chen** · Last updated March 26, 2026
 
@@ -7,7 +16,13 @@
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
 
+![Vertical Mouse Sensitivity Settings: hero image for this section](/images/articles/vertical-mouse-sensitivity-settings-hero.jpg)
+*Hero visual for this section*
+
 ## Table of Contents
+![Vertical Mouse Sensitivity Settings: comparison image for Table of Contents](/images/articles/vertical-mouse-sensitivity-settings-comparison.jpg)
+*Comparison visual for Table of Contents*
+
 - [DPI Explained (What It Actually Means)](#dpi-explained-what-it-actually-means)
 - [Ideal DPI by Use Case](#ideal-dpi-by-use-case)
 - [Ideal DPI by Monitor Setup](#ideal-dpi-by-monitor-setup)
@@ -33,6 +48,9 @@ This guide explains every sensitivity setting that affects your cursor, what to 
 ---
 
 ## DPI Explained (What It Actually Means)
+![Vertical Mouse Sensitivity Settings: infographic image for DPI Explained (What It Actually Means)](/images/articles/vertical-mouse-sensitivity-settings-infographic.jpg)
+*Infographic visual for DPI Explained (What It Actually Means)*
+
 
 ### The Simple Definition
 
@@ -66,6 +84,9 @@ The cleanest approach: set your hardware DPI to the right level for your task an
 ---
 
 ## Ideal DPI by Use Case
+![Vertical Mouse Sensitivity Settings: setup image for Ideal DPI by Use Case](/images/articles/vertical-mouse-sensitivity-settings-setup.jpg)
+*Setup visual for Ideal DPI by Use Case*
+
 
 ### Office Work
 
@@ -100,6 +121,9 @@ The cleanest approach: set your hardware DPI to the right level for your task an
 ---
 
 ## Ideal DPI by Monitor Setup
+![Vertical Mouse Sensitivity Settings: detail image for Ideal DPI by Monitor Setup](/images/articles/vertical-mouse-sensitivity-settings-detail.jpg)
+*Detail visual for Ideal DPI by Monitor Setup*
+
 
 ### Why Monitor Resolution and Count Matter
 
@@ -127,6 +151,9 @@ The simplest way to find your ideal DPI: place your cursor on the left edge of y
 ---
 
 ## DPI Settings by Vertical Mouse Model
+![Vertical Mouse Sensitivity Settings: lifestyle image for DPI Settings by Vertical Mouse Model](/images/articles/vertical-mouse-sensitivity-settings-lifestyle.jpg)
+*Lifestyle visual for DPI Settings by Vertical Mouse Model*
+
 
 ### Available DPI Options
 
@@ -149,6 +176,9 @@ The MX Vertical's advantage: Logi Options+ lets you set any DPI from 400 to 4000
 ---
 
 ## Windows Sensitivity Settings
+![Vertical Mouse Sensitivity Settings: product lineup image for Windows Sensitivity Settings](/images/articles/vertical-mouse-sensitivity-settings-product-lineup.jpg)
+*Product Lineup visual for Windows Sensitivity Settings*
+
 
 ### Finding the Settings
 
@@ -180,6 +210,9 @@ The Windows pointer speed slider has 11 positions. Position 6 (the exact center)
 ---
 
 ## macOS Sensitivity Settings
+![Vertical Mouse Sensitivity Settings: tips image for macOS Sensitivity Settings](/images/articles/vertical-mouse-sensitivity-settings-tips.jpg)
+*Tips visual for macOS Sensitivity Settings*
+
 
 ### The Mac Problem
 
