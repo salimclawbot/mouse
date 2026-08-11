@@ -1,3 +1,4 @@
+import { normalizeArticleHeadings as normalizeRenderedArticleHeadings } from "@/lib/article-copy";
 import { Metadata } from "next";
 import AmazonProductShowcase from "@/components/AmazonProductShowcase";
 import { getAmazonProductGroup } from "@/lib/amazon-product-registry";
@@ -129,7 +130,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const title = normalizeMetaTitle(article.title);
   const description = normalizeMetaDescription(article.description);
-  const { html, toc } = normalizeArticleHtml(article.htmlContent, article.title);
+  const { html, toc } = normalizeArticleHtml(normalizeRenderedArticleHeadings(article.htmlContent), article.title);
   const amazonProductGroup = getAmazonProductGroup(article.slug);
   const articleSchema = {
     "@context": "https://schema.org",
@@ -141,7 +142,7 @@ export default async function ArticlePage({ params }: PageProps) {
     <article className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <p className="text-xs font-semibold uppercase tracking-wide text-teal-700">{article.category}</p>
-      <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">{title}</h1>
+      <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">{article.title}</h1>
       <p className="mt-3 text-slate-600">By Vertical Mouse Guide Editorial Team · Updated {article.dateModified}</p>
       <figure className="my-7 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm">
         <img src="/editorial-hero.png" alt={article.title} className="aspect-[16/9] w-full object-cover" width="1536" height="864" fetchPriority="high" />

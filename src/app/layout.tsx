@@ -10,6 +10,13 @@ const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
+  keywords: ["vertical mouse","ergonomic mouse","wrist comfort","mouse reviews","office ergonomics"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
+
   metadataBase: new URL("https://verticalmouseguide.com"),
   title: {
     default: `${site.name} — Ergonomic Mouse Guides`,
@@ -52,6 +59,14 @@ export const metadata: Metadata = {
   },
 };
 
+const portfolioWebsiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Vertical Mouse Guide",
+  url: "https://verticalmouseguide.com",
+  publisher: { "@type": "Organization", name: "Vertical Mouse Guide", url: "https://verticalmouseguide.com" },
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -82,6 +97,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en">
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioWebsiteSchema) }} />
+      </head>
       <body className="text-slate-900 antialiased">
         <ReadingProgress />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-HQ8HYJN2FS" strategy="afterInteractive" />

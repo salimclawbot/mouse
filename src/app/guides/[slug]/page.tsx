@@ -128,6 +128,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description: normalizeMetaDescription(description),
       url: `${site.url}/guides/${guide.slug}`,
+      type: "article" as const,
       images: [{ url: `${site.url}/editorial-hero.png` }],
     },
     twitter: {

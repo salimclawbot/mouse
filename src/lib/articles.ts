@@ -4,6 +4,7 @@ import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
+import { normalizeArticleHeadings, resolveArticleDescription, resolveArticleTitle } from "@/lib/article-copy";
 
 export interface Article {
   slug: string;
@@ -55,8 +56,8 @@ export async function getArticle(slug: string): Promise<Article | null> {
   const content = processContent(parsed.content);
   const result = await remark().use(remarkGfm).use(html, { sanitize: false }).process(content);
 
-  const title = (data.title as string) || slug;
-  const description = (data.meta_description as string) || (data.description as string) || `${title}: practical, evidence-aware guidance from Vertical Mouse Guide.`;
+  const title = resolveArticleTitle(data.title, slug);
+  const description = resolveArticleDescription(data.meta_description || data.description, parsed.content, title);
   const author = "Vertical Mouse Guide Editorial Team";
   const rawDate = data.date instanceof Date ? data.date.toISOString().split("T")[0] : (data.date as string);
   const rawDateMod = data.dateModified instanceof Date ? data.dateModified.toISOString().split("T")[0] : (data.dateModified as string);
@@ -65,7 +66,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
   const category = (data.category as string) || "Guide";
   const image = (data.image as string) || "/editorial-hero.png";
 
-  let htmlContent = result.toString();
+  let htmlContent = normalizeArticleHeadings(result.toString());
 
   htmlContent = htmlContent.replace(/<(h[2-6])>(.*?)<\/\1>/g, (match: string, tag: string, text: string) => {
     const customIdMatch = text.match(/\{#([^}]+)\}/);
