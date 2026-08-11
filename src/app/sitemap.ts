@@ -3,7 +3,8 @@ import { guides, site } from '@/lib/content'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url
-  const guideUrls = guides.map((g) => ({
+  const redirectingSlugs = new Set(["best-ergonomic-mouse-for-wrist-pain-office"]);
+  const guideUrls = guides.filter((g) => !redirectingSlugs.has(g.slug)).map((g) => ({
     url: `${base}/guides/${g.slug}`,
     lastModified: g.updated,
     changeFrequency: 'weekly' as const,
