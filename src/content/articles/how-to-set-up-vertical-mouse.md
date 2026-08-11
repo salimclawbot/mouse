@@ -1,20 +1,18 @@
 ---
 title: "How to Set Up a Vertical Mouse Correctly (2026)"
 meta_description: "Learn how to set up a vertical mouse correctly in 2026 with our step-by-step ergonomics guide. Desk height, DPI, arm position and more → reduce pain today."
-author: "Dr. Alex Chen"
+author: Editorial Team
 datePublished: "2026-03-14"
 dateModified: "2026-03-14"
 slug: how-to-set-up-vertical-mouse
 primaryKeyword: how to set up a vertical mouse
-faq_schema: "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How high should my vertical mouse be on my desk?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Your vertical mouse should sit at the same height as your keyboard, which is typically 28–30 inches (71–76 cm) from the floor for most adults. The key test is that your elbow should form a 90° angle when your forearm rests on the desk and your hand grips the mouse. If your elbow angle is less than 90°, the surface is too high; if greater, it is too low.\"}},{\"@type\":\"Question\",\"name\":\"Which hand should I use with a vertical mouse?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Use the hand you normally mouse with. Most vertical mice are designed for right-handed use, but left-handed models are available from manufacturers like Evoluent and Logitech. Some ergonomists recommend alternating hands over the course of a workday to balance strain, but this requires a symmetrical or ambidextrous mouse and a significant adjustment period.\"}},{\"@type\":\"Question\",\"name\":\"How long does it take to adjust to a vertical mouse?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Most users report that basic comfort takes one to two weeks, while full precision and speed parity with a traditional mouse takes three to four weeks of consistent daily use. During the first week, expect reduced accuracy and some forearm fatigue as new muscle groups engage. Gradually increasing daily usage rather than switching cold turkey speeds up adaptation.\"}},{\"@type\":\"Question\",\"name\":\"Does a vertical mouse work with any desk or do I need a special setup?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A vertical mouse works with any standard desk, including sit-stand desks, corner desks, and traditional flat desks. The critical factor is that the mousing surface is at the correct height relative to your elbow. If your desk is too high or too low and is not adjustable, an adjustable keyboard tray or a desk riser can correct the height.\"}},{\"@type\":\"Question\",\"name\":\"Do I need a special mouse pad for a vertical mouse?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You do not strictly need a special mouse pad, but a large, low-friction pad (at least 12 × 10 inches) improves tracking consistency and comfort. Avoid pads with raised wrist rests, as these can force your wrist into extension when using a vertical mouse. A flat, cloth-surface pad works best for most optical and laser sensors.\"}},{\"@type\":\"Question\",\"name\":\"What DPI should I set my vertical mouse to?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"For general office work, 800–1200 DPI is recommended. For design and precision tasks, 400–800 DPI gives finer control. For coding or multi-monitor setups where you need to traverse large screen areas quickly, 1200–1800 DPI reduces wrist movement. Most quality vertical mice let you switch DPI on the fly, so you can adjust based on your current task.\"}},{\"@type\":\"Question\",\"name\":\"Can I use a vertical mouse if I have carpal tunnel syndrome?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A vertical mouse can help manage carpal tunnel symptoms by reducing forearm pronation, which in turn reduces pressure on the carpal tunnel. However, it is not a medical treatment. If you have diagnosed carpal tunnel syndrome, consult your healthcare provider and consider a vertical mouse as one part of a broader ergonomic strategy that may include wrist splints, stretching, and workstation adjustments.\"}}]}"
-article_schema: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"How to Set Up a Vertical Mouse Correctly (2026)\",\"description\":\"Step-by-step guide to setting up a vertical mouse correctly — desk height, arm alignment, DPI settings, and button configuration for ergonomic comfort.\",\"image\":\"https://verticalmouseguide.com/images/guides/how-to-set-up-vertical-mouse/vertical-mouse-setup-hero.jpg\",\"datePublished\":\"2026-03-14\",\"dateModified\":\"2026-03-14\",\"author\":{\"@type\":\"Person\",\"name\":\"Dr. Alex Chen\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vertical Mouse Guide\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://verticalmouseguide.com/images/logo.png\"}}}"
 ---
 
 # How to Set Up a Vertical Mouse Correctly (2026)
 
 **Knowing how to set up a vertical mouse correctly means the difference between ergonomic relief and wasted money. Position your desk so your elbow sits at 90°, place the mouse at keyboard height, align your forearm parallel to the floor, adjust DPI for your work type, and configure buttons. Get these right to cut wrist strain from day one.**
 
-*By Dr. Alex Chen, Ergonomics & Health Tech Researcher* · Last updated March 14, 2026
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 ![A person using a vertical mouse at a properly set up ergonomic workstation with correct arm position](/images/guides/how-to-set-up-vertical-mouse/vertical-mouse-setup-hero.jpg)
 *Correct vertical mouse workstation setup: neutral wrist, elbow at 90°, monitor at eye level*
@@ -128,7 +126,7 @@ For most people learning how to set up a vertical mouse, the following ranges ar
 - **Graphic design and precision work**: 400–800 DPI for detail work, with a higher DPI profile for canvas navigation
 - **Multi-monitor setups**: 1200–2000 DPI to reduce the physical distance required to traverse multiple screens
 
-Most quality vertical mice — including the Logitech MX Vertical, [Evoluent VerticalMouse D](https://www.amazon.com/s?k=Evoluent+VerticalMouse+D&tag=theforge05-20), and DeLUX M618DB — allow you to switch between DPI presets on the fly via a button on the mouse body. Set two or three profiles and switch based on your current task.
+Most quality vertical mice — including the Logitech MX Vertical, [Evoluent VerticalMouse D](https://www.amazon.com/s?k=Evoluent+VerticalMouse+D&tag=verticalmouse-20), and DeLUX M618DB — allow you to switch between DPI presets on the fly via a button on the mouse body. Set two or three profiles and switch based on your current task.
 
 ### Pointer Speed vs. DPI
 
@@ -145,15 +143,7 @@ This approach gives you a 1:1 relationship between hand movement and cursor move
 Don't overlook scroll speed. A scroll speed that's too fast forces you to make micro-corrections, while a speed that's too slow means excessive scrolling motion. Start with your OS default and adjust in small increments. Some mice have free-spin and ratchet scroll modes — ratchet mode is generally better for precision work, while free-spin is useful for long documents.
 
 <div class="video-embed my-8">
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/d2GC9OlCyLA" 
-    title="Is a Vertical Mouse REALLY Ergonomic? — Setup and Science Explained" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+  <p><strong>Video content moved here to keep the site YouTube-free.</strong> <span class="video-removed"><strong>Video content moved here to keep the site YouTube-free.</strong> Watch this content on our media page</span></p>
   <p class="caption">Is a vertical mouse really ergonomic? Setup science and positioning principles explained</p>
 </div>
 
@@ -298,7 +288,7 @@ Your vertical mouse should sit at the same height as your keyboard — typically
 
 ### Which hand should I use with a vertical mouse?
 
-Use the hand you currently mouse with. Most vertical mice are right-hand-specific due to their sculpted shape, but left-handed models exist from Evoluent, Logitech (the [Logitech Lift](https://www.amazon.com/s?k=Logitech+Lift&tag=theforge05-20) comes in a left-handed version), and others. Some ergonomists recommend learning to mouse with your non-dominant hand as well, alternating throughout the day to distribute strain — but this is an advanced strategy that requires its own adaptation period.
+Use the hand you currently mouse with. Most vertical mice are right-hand-specific due to their sculpted shape, but left-handed models exist from Evoluent, Logitech (the [Logitech Lift](https://www.amazon.com/s?k=Logitech+Lift&tag=verticalmouse-20) comes in a left-handed version), and others. Some ergonomists recommend learning to mouse with your non-dominant hand as well, alternating throughout the day to distribute strain — but this is an advanced strategy that requires its own adaptation period.
 
 ### How long does it take to adjust to a vertical mouse?
 
@@ -328,7 +318,7 @@ Learning how to set up a vertical mouse is straightforward once you follow the f
 
 ## Sources and Methodology
 
-This guide is based on published ergonomic research, institutional guidelines, and hands-on testing of vertical mouse setups across multiple workstation configurations.
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements or long-term-use claims.
 
 1. **OSHA Ergonomics Guidelines** — U.S. Occupational Safety and Health Administration. *Computer Workstations eTool: Components – Pointing Devices*. OSHA provides workstation setup standards including mouse positioning, desk height, and neutral posture guidelines that form the basis of our desk and chair setup recommendations.
 
@@ -340,8 +330,8 @@ This guide is based on published ergonomic research, institutional guidelines, a
 
 5. **NIOSH (National Institute for Occupational Safety and Health)** — *Elements of Ergonomics Programs*. NIOSH publication No. 97-117. Provides the framework for workstation ergonomic assessment that informs our step-by-step setup methodology.
 
-### Our Testing Methodology
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements or long-term-use claims.
 
-The setup recommendations in this guide were validated by testing six popular vertical mice (Logitech MX Vertical, Logitech Lift, Evoluent VerticalMouse D, DeLUX M618DB, Anker Ergonomic Vertical Mouse, and J-Tech Digital V628R) across three workstation configurations: a standard fixed-height desk, a sit-stand desk, and a desk with a keyboard tray. Each configuration was tested at multiple height settings with electromyography (EMG) readings from the forearm to confirm muscle load at different positions. DPI and pointer speed recommendations were tested over a four-week period across office, development, and design workflows.
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 *Last tested: March 2026*

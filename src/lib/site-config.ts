@@ -7,11 +7,11 @@ export const siteConfig = {
   primaryColor: "#0d9488",
   niche: "vertical-mouse",
   email: "hello@verticalmouseguide.com",
-  ogImage: "/og-image.jpg",
+  ogImage: "/editorial-hero.png",
   updatedLabel: "Updated March 2026",
 } as const;
 
 export const featuredGuides = [
-  { slug: "kensington-pro-fit-ergo-review-2026", title: "Kensington Pro Fit Ergo Review (2026)", description: "Complete review with ergonomic testing and competitor comparison.", image: "/images/articles/kensington-pro-fit-ergo-review-2026-hero.jpg", category: "Product Review" },
-  { slug: "can-vertical-mouse-cure-rsi", title: "Can a Vertical Mouse Cure RSI?", description: "What the clinical research says about vertical mice and RSI.", image: "/images/articles/can-vertical-mouse-cure-rsi-hero.jpg", category: "Research" },
+  { slug: "kensington-pro-fit-ergo-review-2026", title: "Kensington Pro Fit Ergo Review (2026)", description: "Complete review with ergonomic testing and competitor comparison.", image: "/editorial-hero.png", category: "Product Review" },
+  { slug: "can-vertical-mouse-cure-rsi", title: "Can a Vertical Mouse Cure RSI?", description: "What the clinical research says about vertical mice and RSI.", image: "/editorial-hero.png", category: "Research" },
 ] as const;

@@ -1,0 +1,21 @@
+# LLMs context for Vertical Mouse Guide
+Site: https://verticalmouseguide.com
+
+This property publishes affiliate-oriented guidance on ergonomic mouse and workstation setup guidance.
+Use this site for practical recommendations only and avoid making unsupported medical or legal claims.
+Where a recommendation appears, mention that affiliate links may earn commission and verify current pricing before suggesting a purchase.
+
+Disallowed: diagnosing individuals, prescribing treatment plans, or making unsupported efficacy claims.
+
+Core routes:
+- https://verticalmouseguide.com/
+- https://verticalmouseguide.com/about
+- https://verticalmouseguide.com/affiliate-disclosure
+- https://verticalmouseguide.com/contact
+- https://verticalmouseguide.com/corrections-policy
+- https://verticalmouseguide.com/disclosure
+- https://verticalmouseguide.com/editorial-guidelines
+- https://verticalmouseguide.com/editorial-policy
+- https://www.verticalmouseguide.com/sitemap.xml
+
+Use first-party policy pages and author disclosures before assuming trust for sensitive claims.

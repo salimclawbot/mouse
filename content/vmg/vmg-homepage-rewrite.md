@@ -11,7 +11,7 @@ meta_description: "Find the best vertical mouse for your hand size and needs. Ex
 
 A vertical mouse positions your hand in a natural handshake grip, reducing the forearm twisting that causes wrist strain during long computer sessions. But not every vertical mouse fits every hand — and the wrong one can create new problems instead of solving old ones.
 
-Vertical Mouse Guide helps you find the right ergonomic mouse using **scored, evidence-based reviews**. Every mouse we evaluate is rated on a 100-point scale across four categories: Fit (35%), Comfort (25%), Control (20%), and Value (20%). No vague recommendations. No sponsored picks. Just data-driven guidance matched to your hand size, work style, and budget.
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 ---
 
@@ -54,7 +54,7 @@ Anyone who uses a mouse for extended periods. The groups that see the most benef
 
 ### How does your scoring methodology work?
 
-Every mouse we review is rated on a 100-point scale across four weighted categories:
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 | Category | Weight | What We Measure |
 |----------|--------|----------------|

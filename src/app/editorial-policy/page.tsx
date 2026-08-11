@@ -1,6 +1,30 @@
-export const metadata = { title: "Editorial Policy",
-  alternates: { canonical: "https://www.verticalmouseguide.com/editorial-policy" }
-};
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Editorial Policy",
+  description: "Vertical Mouse Guide publishes review standards, evidence checks, and ranking rules to keep recommendations transparent and measurable.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/editorial-policy" },
+
+  openGraph: {
+    title: "Editorial Policy",
+    description: "Vertical Mouse Guide publishes review standards, evidence checks, and ranking rules to keep recommendations transparent and measurable.",
+    url: "https://www.verticalmouseguide.com/editorial-policy",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Editorial Policy",
+    description: "Vertical Mouse Guide publishes review standards, evidence checks, and ranking rules to keep recommendations transparent and measurable.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  }};
 
 export default function EditorialPolicyPage() {
   return (
@@ -41,7 +65,7 @@ export default function EditorialPolicyPage() {
         </li>
       </ul>
       <p>
-        Scores are determined by the editorial team based on hands-on testing and research. We
+        Scores are determined by the editorial team based on specification-based comparison and research. We
         publish the individual category scores alongside the overall score so readers can see
         exactly where a product excels and where it falls short.
       </p>

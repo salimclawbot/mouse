@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { site } from "@/lib/content";
 import ReadingProgress from "@/components/reading-progress";
+import AffiliateClickTracker from "@/components/AffiliateClickTracker";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   alternates: {
-    canonical: "/",
+    canonical: site.url,
   },
   openGraph: {
     title: `${site.name} — Ergonomic Mouse Guides`,
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
     images: [site.ogImage],
   },
   icons: {
-    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", sizes: "512x512", type: "image/png" }],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    icon: [{ url: "/favicon.ico" }, { url: "/editorial-hero.png", sizes: "512x512", type: "image/png" }],
+    apple: [{ url: "/editorial-hero.png", sizes: "180x180", type: "image/png" }],
   },
   verification: {
     google: googleSiteVerification,
@@ -123,6 +124,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </div>
           </div>
         </footer>
+        <AffiliateClickTracker />
       </body>
     </html>
   );

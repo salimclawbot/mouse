@@ -1,6 +1,30 @@
-export const metadata = { title: "Affiliate Disclosure",
-  alternates: { canonical: "https://www.verticalmouseguide.com/affiliate-disclosure" }
-};
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Affiliate Disclosure",
+  description: "Vertical Mouse Guide is transparent about affiliate links and sponsorships, with clear disclosures for every sponsored recommendation.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/affiliate-disclosure" },
+
+  openGraph: {
+    title: "Affiliate Disclosure",
+    description: "Vertical Mouse Guide is transparent about affiliate links and sponsorships, with clear disclosures for every sponsored recommendation.",
+    url: "https://www.verticalmouseguide.com/affiliate-disclosure",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Affiliate Disclosure",
+    description: "Vertical Mouse Guide is transparent about affiliate links and sponsorships, with clear disclosures for every sponsored recommendation.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  }};
 
 export default function DisclosurePage() {
   return (

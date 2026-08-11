@@ -1,6 +1,6 @@
 # How to Clean a Vertical Mouse (Step-by-Step 2026)
 
-**By Dr. Alex Chen** · Last updated March 24, 2026
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Clean your vertical mouse in 5 minutes: blow compressed air across the sensor and scroll wheel gaps, wipe the shell with a 70% isopropyl alcohol cloth, clean the sensor lens with a dry cotton swab, and pick debris from button edges with a wooden toothpick. Do this every 1–2 weeks and you will fix most tracking issues, eliminate sticky buttons, and add months to the mouse's lifespan.**
 
@@ -198,11 +198,11 @@ The scroll wheel is the dirtiest component inside any mouse. Your index finger t
 
 | Mouse | Scroll Wheel Access | Cleaning Difficulty |
 |-------|-------------------|:------------------:|
-| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)** | Tight gap; smooth wheel | ⚠️ Moderate — gap is narrow; Blu-Tack works well |
-| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)** | Standard gap; stepped wheel | ✅ Easy — wider gap allows toothpick and cotton swab |
-| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)** | Standard gap; stepped wheel | ✅ Easy — accessible from both sides |
-| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20)** | Tight gap; smooth wheel | ⚠️ Moderate — similar to MX Vertical |
-| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G&tag=theforge05-20)** | Standard gap; stepped wheel | ✅ Easy — standard cleaning approach |
+| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20)** | Tight gap; smooth wheel | ⚠️ Moderate — gap is narrow; Blu-Tack works well |
+| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=verticalmouse-20)** | Standard gap; stepped wheel | ✅ Easy — wider gap allows toothpick and cotton swab |
+| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20)** | Standard gap; stepped wheel | ✅ Easy — accessible from both sides |
+| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=verticalmouse-20)** | Tight gap; smooth wheel | ⚠️ Moderate — similar to MX Vertical |
+| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G&tag=verticalmouse-20)** | Standard gap; stepped wheel | ✅ Easy — standard cleaning approach |
 
 ---
 

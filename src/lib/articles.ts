@@ -1,6 +1,6 @@
+import { safeMatter } from "@/lib/safe-matter";
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
@@ -49,21 +49,21 @@ export async function getArticle(slug: string): Promise<Article | null> {
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, "utf-8");
-  const parsed = matter(raw);
+  const parsed = safeMatter(raw);
   const data = parsed.data as Record<string, unknown>;
 
   const content = processContent(parsed.content);
   const result = await remark().use(remarkGfm).use(html, { sanitize: false }).process(content);
 
   const title = (data.title as string) || slug;
-  const description = (data.meta_description as string) || (data.description as string) || "Vertical mouse guide.";
-  const author = (data.author as string) || "James R., Ergonomics Specialist";
+  const description = (data.meta_description as string) || (data.description as string) || `${title}: practical, evidence-aware guidance from Vertical Mouse Guide.`;
+  const author = "Vertical Mouse Guide Editorial Team";
   const rawDate = data.date instanceof Date ? data.date.toISOString().split("T")[0] : (data.date as string);
   const rawDateMod = data.dateModified instanceof Date ? data.dateModified.toISOString().split("T")[0] : (data.dateModified as string);
   const date = rawDate || (data.datePublished as string) || "2026-03-29";
   const dateModified = rawDateMod || date;
   const category = (data.category as string) || "Guide";
-  const image = (data.image as string) || "/og-image.jpg";
+  const image = (data.image as string) || "/editorial-hero.png";
 
   let htmlContent = result.toString();
 

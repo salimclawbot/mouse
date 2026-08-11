@@ -1,17 +1,16 @@
 ---
 title: "DXT Ergonomic Mouse Review: Pro-Grade Vertical (2026)"
-faq_schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do vertical mice reduce wrist and forearm strain?","acceptedAnswer":{"@type":"Answer","text":"Vertical mice can reduce forearm pronation and may lower strain for many users. Benefits depend on fit, grip style, and overall desk ergonomics."}},{"@type":"Question","name":"How long does it take to adjust to a vertical mouse?","acceptedAnswer":{"@type":"Answer","text":"Most users adapt within several days to two weeks with regular use. Short focused sessions often make the transition smoother than all day switching at once."}},{"@type":"Question","name":"What features matter most when buying a vertical mouse?","acceptedAnswer":{"@type":"Answer","text":"Prioritize shape fit, sensor reliability, button placement, and connectivity options that match your workflow. Weight and surface glide also affect long term comfort."}},{"@type":"Question","name":"Can vertical mice work well for gaming and office work?","acceptedAnswer":{"@type":"Answer","text":"Yes, but performance depends on sensor quality, DPI tuning, and software support. Some models favor comfort while others balance comfort with faster tracking."}},{"@type":"Question","name":"How should I optimize settings after switching to a vertical mouse?","acceptedAnswer":{"@type":"Answer","text":"Start with moderate sensitivity and pointer speed, then adjust in small steps over a week. Consistent settings across devices can improve muscle memory and accuracy."}}]}'
 ---
 
 # DXT Ergonomic Mouse Review: Pro-Grade Vertical (2026)
 
-<video autoplay muted loop playsinline poster="/images/articles/dxt-ergonomic-mouse-review-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
+<video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/dxt-ergonomic-mouse-review-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/dxt-ergonomic-mouse-review-demo.mp4" type="video/mp4">
 </video>
 
-**By Dr. Alex Chen** · Last updated March 25, 2026
+By Vertical Mouse Guide Editorial Team
 
-**The [DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=theforge05-20) is the only mainstream vertical mouse built around a pen grip — you hold it like a thick marker instead of palming it like a traditional mouse. This gives it two advantages no palm-grip vertical mouse can match: finer cursor precision driven by finger dexterity instead of arm movement, and true ambidextrous use from a symmetrical body that works identically in either hand. It is not for everyone. It is excellent for the people it is for.**
+**The [DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=verticalmouse-20) is the only mainstream vertical mouse built around a pen grip — you hold it like a thick marker instead of palming it like a traditional mouse. This gives it two advantages no palm-grip vertical mouse can match: finer cursor precision driven by finger dexterity instead of arm movement, and true ambidextrous use from a symmetrical body that works identically in either hand. It is not for everyone. It is excellent for the people it is for.**
 
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
@@ -40,7 +39,7 @@ faq_schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"
 
 ---
 
-Every other vertical mouse on the market uses a palm grip. The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20), the [Anker Ergonomic Vertical Mouse](https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse&tag=theforge05-20), the [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) — you rest your hand on them and move your arm. They rotate your forearm to reduce pronation, but the input method is the same as a regular mouse: arm movements drive the cursor.
+Every other vertical mouse on the market uses a palm grip. The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20), the [Anker Ergonomic Vertical Mouse](https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse&tag=verticalmouse-20), the [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20) — you rest your hand on them and move your arm. They rotate your forearm to reduce pronation, but the input method is the same as a regular mouse: arm movements drive the cursor.
 
 The DXT does something different. You hold it between your thumb and fingertips, like a thick pen. Your hand is vertical (same pronation reduction), but the cursor is driven by finger movements — the same fine-motor muscles you use when writing or drawing. This is not a gimmick. It is a fundamentally different input method that serves a specific audience better than any palm-grip vertical mouse can.
 

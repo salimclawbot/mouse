@@ -1,6 +1,30 @@
-export const metadata = { title: "Contact",
-  alternates: { canonical: "https://www.verticalmouseguide.com/contact" }
-};
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Contact",
+  description: "Vertical Mouse Guide is here to help with buying guidance, content requests, and practical affiliate support updates.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/contact" },
+
+  openGraph: {
+    title: "Contact",
+    description: "Vertical Mouse Guide is here to help with buying guidance, content requests, and practical affiliate support updates.",
+    url: "https://www.verticalmouseguide.com/contact",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact",
+    description: "Vertical Mouse Guide is here to help with buying guidance, content requests, and practical affiliate support updates.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  }};
 
 export default function ContactPage() {
   return (

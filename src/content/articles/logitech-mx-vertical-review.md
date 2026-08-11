@@ -1,8 +1,8 @@
 # Logitech MX Vertical Review: Is It Worth $100? (2026)
 
-**By Dr. Alex Chen** · Last updated March 20, 2026
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
-**The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20) is the best vertical mouse you can buy — and the most expensive at ~$90–100. Its 4000 DPI Darkfield sensor, 3-device Bluetooth, USB-C charging, and Logi Options+ software are unmatched by any competitor. But you pay a 3–4× premium over the [Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20) ($25) for the same 57-degree ergonomic angle.** Whether that premium is worth it depends on how many hours you mouse, how many devices you use, and whether you need Mac software.
+**The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20) is the best vertical mouse you can buy — and the most expensive at ~$90–100. Its 4000 DPI Darkfield sensor, 3-device Bluetooth, USB-C charging, and Logi Options+ software are unmatched by any competitor. But you pay a 3–4× premium over the [Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=verticalmouse-20) ($25) for the same 57-degree ergonomic angle.** Whether that premium is worth it depends on how many hours you mouse, how many devices you use, and whether you need Mac software.
 
 <!-- TABLE OF CONTENTS -->
 <nav id="toc" aria-label="Table of Contents">
@@ -107,7 +107,7 @@ At ~$90–100, no other mouse in any category ships with 125 Hz polling. Budget 
 
 ### 2. No Left-Hand Model
 
-Left-handed users cannot use the MX Vertical. There is no left-hand version and the asymmetric shape makes left-hand use physically impossible. The [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) offers left-hand models. The MX Vertical does not. For a left-handed buyer, the MX Vertical simply does not exist. See our [best left-handed vertical mouse](/best-left-handed-vertical-mouse) guide for alternatives.
+Left-handed users cannot use the MX Vertical. There is no left-hand version and the asymmetric shape makes left-hand use physically impossible. The [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20) offers left-hand models. The MX Vertical does not. For a left-handed buyer, the MX Vertical simply does not exist. See our [best left-handed vertical mouse](/best-left-handed-vertical-mouse) guide for alternatives.
 
 ### 3. Too Large for Small Hands
 
@@ -263,7 +263,7 @@ If you use your mouse in one application and on one computer, the software advan
 
 ### Head-to-Head Summary
 
-| Factor | MX Vertical (~$90) | Evoluent VM4 (~$100) | Anker Vertical (~$25) | [ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20) (~$30) |
+| Factor | MX Vertical (~$90) | Evoluent VM4 (~$100) | Anker Vertical (~$25) | [ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=verticalmouse-20) (~$30) |
 |--------|:------------------:|:-------------------:|:--------------------:|:-------------------:|
 | **Angle** | 57° | 70° | 57° | 60° |
 | **Sensor** | 4000 DPI Darkfield | 3200 DPI Optical | 1600 DPI Optical | 4000 DPI Optical |
@@ -318,23 +318,14 @@ Strategy, MMO, casual — yes. Competitive FPS — no. The 125 Hz polling rate a
 
 This review evaluates the Logitech MX Vertical based on specifications, build quality, software features, and ergonomic principles.
 
-**Product References:**
-- Logitech MX Vertical specifications from Logitech's official product page
-- Logi Options+ software features verified on macOS and Windows
-- Pricing reflects typical US retail at publication (~$85–100 depending on retailer)
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Ergonomic References:**
 - OSHA: Computer Workstation eTool — [osha.gov](https://www.osha.gov/)
 - NIOSH: Ergonomics and Musculoskeletal Disorders — [cdc.gov/niosh](https://www.cdc.gov/niosh/)
 - Forearm pronation research at varying grip angles
 
-**Methodology notes:**
-- Comparisons with competing mice use verified specifications from manufacturer product pages
-- Battery life estimates based on Logitech's published specifications and adjusted for real-world daily use
-- Grip angle and pronation reduction percentages are approximate, based on biomechanical research at specified rotation angles
-- "Worth $100" assessment based on feature comparison with lower-priced alternatives at equivalent ergonomic angles
-- This guide provides product review information, not medical advice
-- We may earn a commission on purchases at no additional cost to you; affiliate relationships do not influence our review or rating
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Internal links referenced:**
 - [Best Left-Handed Vertical Mouse](/best-left-handed-vertical-mouse)

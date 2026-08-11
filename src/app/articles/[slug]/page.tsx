@@ -1,5 +1,6 @@
 import GuidePage, { generateStaticParams as generateGuideStaticParams } from "../../guides/[slug]/page";
 import { guides, site } from "@/lib/content";
+import { normalizeMetaDescription } from "@/lib/article-page-utils";
 
 export function generateStaticParams() {
   return generateGuideStaticParams();
@@ -12,18 +13,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: { absolute: guide.title },
-    description: guide.description,
-    alternates: { canonical: `/articles/${guide.slug}` },
+    description: normalizeMetaDescription(guide.description),
+    alternates: { canonical: `${site.url}/guides/${guide.slug}` },
     openGraph: {
       title: guide.title,
-      description: guide.description,
-      url: `${site.url}/articles/${guide.slug}`,
+      description: normalizeMetaDescription(guide.description),
+      url: `${site.url}/guides/${guide.slug}`,
       images: [{ url: guide.heroImage }],
     },
     twitter: {
       card: "summary_large_image" as const,
       title: guide.title,
-      description: guide.description,
+      description: normalizeMetaDescription(guide.description),
       images: [guide.heroImage],
     },
   };

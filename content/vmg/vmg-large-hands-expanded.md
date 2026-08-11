@@ -51,11 +51,11 @@ If you are between medium and large, you may benefit from reading both this guid
 
 | Mouse | Overall Score | Fit | Comfort | Control | Value | Best For |
 |-------|:------------:|:---:|:-------:|:-------:|:-----:|----------|
-| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)** | 88/100 | 33/35 | 23/25 | 17/20 | 15/20 | Best overall for large hands |
-| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20) Right** | 85/100 | 31/35 | 22/25 | 16/20 | 16/20 | Best button customization |
-| **[Anker Ergonomic Vertical Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)** | 78/100 | 27/35 | 20/25 | 15/20 | 16/20 | Best budget option |
-| **[Perixx PERIMICE-713](https://www.amazon.com/s?k=Perixx+PERIMICE-713&tag=theforge05-20)** | 74/100 | 26/35 | 19/25 | 14/20 | 15/20 | Budget wireless option |
-| **[J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=theforge05-20)** | 72/100 | 25/35 | 18/25 | 14/20 | 15/20 | Ultra-budget entry point |
+| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20)** | 88/100 | 33/35 | 23/25 | 17/20 | 15/20 | Best overall for large hands |
+| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20) Right** | 85/100 | 31/35 | 22/25 | 16/20 | 16/20 | Best button customization |
+| **[Anker Ergonomic Vertical Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=verticalmouse-20)** | 78/100 | 27/35 | 20/25 | 15/20 | 16/20 | Best budget option |
+| **[Perixx PERIMICE-713](https://www.amazon.com/s?k=Perixx+PERIMICE-713&tag=verticalmouse-20)** | 74/100 | 26/35 | 19/25 | 14/20 | 15/20 | Budget wireless option |
+| **[J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=verticalmouse-20)** | 72/100 | 25/35 | 18/25 | 14/20 | 15/20 | Ultra-budget entry point |
 
 ---
 
@@ -79,7 +79,7 @@ The MX Vertical is the largest mainstream vertical mouse available and the one m
 
 **Who should buy this:** Power users with large hands who need multi-device support and are willing to pay for the best fit. If you spend 6+ hours daily at a computer and hand fatigue is a concern, this is the mouse to start with.
 
-[Check on Amazon](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)
+[Check on Amazon](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20)
 
 ---
 
@@ -101,7 +101,7 @@ Evoluent was one of the first companies to build vertical mice specifically, and
 
 **Who should buy this:** Users who rely heavily on mouse buttons for productivity shortcuts. If you use CAD software, video editing tools, or spreadsheets where extra programmable buttons save real time, the Evoluent trades a small amount of fit for significantly better button utility.
 
-[Check on Amazon](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)
+[Check on Amazon](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20)
 
 ---
 
@@ -121,7 +121,7 @@ The Anker is the default recommendation for anyone testing whether a vertical mo
 
 **Who should buy this:** Someone with large hands who wants to trial the vertical mouse concept for under $30. If the ergonomic position helps, upgrade to the MX Vertical or Evoluent within 3–6 months. If you find vertical mice are not for you, you have not invested heavily. Also consider a [quiet click vertical mouse](/best-quiet-click-vertical-mouse/) if you work in shared offices.
 
-[Check on Amazon](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)
+[Check on Amazon](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=verticalmouse-20)
 
 ---
 
@@ -141,7 +141,7 @@ The PERIMICE-713 is Perixx's mid-range wireless offering. It sits between the An
 
 **Who should buy this:** Budget-conscious users in the 19–20 cm hand range who want wireless convenience without the MX Vertical price tag. Not recommended for hands over 20.5 cm.
 
-[Check on Amazon](https://www.amazon.com/s?k=Perixx+PERIMICE-713&tag=theforge05-20)
+[Check on Amazon](https://www.amazon.com/s?k=Perixx+PERIMICE-713&tag=verticalmouse-20)
 
 ---
 
@@ -161,7 +161,7 @@ The V628 is a wired vertical mouse that serves as the absolute lowest-cost entry
 
 **Who should buy this:** Only recommended as a disposable trial device. If you want to test a vertical mouse at the lowest possible cost and your hands are in the 19–19.5 cm range, this works. For genuinely large hands (20 cm+), skip this and start with the Anker minimum.
 
-[Check on Amazon](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=theforge05-20)
+[Check on Amazon](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=verticalmouse-20)
 
 ---
 

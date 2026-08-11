@@ -1,6 +1,30 @@
-export const metadata = { title: "Terms of Service",
-  alternates: { canonical: "https://www.verticalmouseguide.com/terms-of-service" }
-};
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Terms of Service",
+  description: "Vertical Mouse Guide terms of service and platform usage expectations for tools, content, and reader-focused workflows.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/terms-of-service" },
+
+  openGraph: {
+    title: "Terms of Service",
+    description: "Vertical Mouse Guide terms of service and platform usage expectations for tools, content, and reader-focused workflows.",
+    url: "https://www.verticalmouseguide.com/terms-of-service",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service",
+    description: "Vertical Mouse Guide terms of service and platform usage expectations for tools, content, and reader-focused workflows.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  }};
 
 export default function TermsPage() {
   return (
@@ -31,7 +55,7 @@ export default function TermsPage() {
       <p>
         All content on Vertical Mouse Guide is provided for informational and educational purposes
         only. Our product reviews, buying guides, and ergonomic commentary are based on research and
-        hands-on testing, but they do not constitute medical, legal, or financial advice. You should
+        specification-based comparison, but they do not constitute medical, legal, or financial advice. You should
         consult a qualified professional before making health-related decisions about repetitive
         strain injuries, ergonomic setups, or workplace accommodations.
       </p>

@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { guides } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export const metadata = { title: "All Guides" };
+export const metadata: Metadata = {
+  title: "All Guides",
+  description: "Vertical Mouse Guide helps you find practical guides and product recommendations for confident buying decisions.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/guides" },
+  openGraph: {
+    title: "All Guides",
+    description: "Vertical Mouse Guide helps you find practical guides and product recommendations for confident buying decisions.",
+    url: "https://www.verticalmouseguide.com/guides",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Guides",
+    description: "Vertical Mouse Guide helps you find practical guides and product recommendations for confident buying decisions.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  },
+};
 
 export default function GuidesPage() {
   return (

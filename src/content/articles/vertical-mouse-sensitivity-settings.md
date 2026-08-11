@@ -1,6 +1,6 @@
 # Vertical Mouse Sensitivity Settings Guide (DPI 2026)
 
-**By Dr. Alex Chen** · Last updated March 26, 2026
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Set your vertical mouse DPI to 1200 as a starting baseline for a single monitor. Increase to 1600–2400 for dual monitors. Decrease to 800 for precision design work. Then disable mouse acceleration in your OS for consistent, predictable cursor movement. These three adjustments — DPI, acceleration off, OS sensitivity centered — take 5 minutes and transform how a vertical mouse feels from the first day.**
 
@@ -132,13 +132,13 @@ The simplest way to find your ideal DPI: place your cursor on the left edge of y
 
 | Mouse | DPI Options | How to Change | Software |
 |-------|:----------:|:-------------:|:--------:|
-| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=theforge05-20)** | 400–4000 (any value) | Logi Options+ software | ✅ Full control |
-| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=theforge05-20)** | 800 / 1200 / 1600 | Physical button (below scroll wheel) | ❌ None |
-| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=theforge05-20)** | 800 / 1200 / 1800 / 2600 | Evoluent Mouse Manager software | ✅ Full control |
-| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=theforge05-20)** | 800 / 1200 / 1600 / 2400 / 4000 | Physical button | ❌ Basic |
-| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G&tag=theforge05-20)** | 1000 / 1600 / 2400 | Physical button | ❌ None |
-| **[J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=theforge05-20)** | 600 / 1000 / 1600 | Physical button | ❌ None |
-| **[DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=theforge05-20)** | 800 / 1200 / 1800 | Physical button | ❌ None |
+| **[Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20)** | 400–4000 (any value) | Logi Options+ software | ✅ Full control |
+| **[Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=verticalmouse-20)** | 800 / 1200 / 1600 | Physical button (below scroll wheel) | ❌ None |
+| **[Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20)** | 800 / 1200 / 1800 / 2600 | Evoluent Mouse Manager software | ✅ Full control |
+| **[ProtoArc EM01](https://www.amazon.com/s?k=ProtoArc+EM01&tag=verticalmouse-20)** | 800 / 1200 / 1600 / 2400 / 4000 | Physical button | ❌ Basic |
+| **[iClever TM209G](https://www.amazon.com/s?k=iClever+TM209G&tag=verticalmouse-20)** | 1000 / 1600 / 2400 | Physical button | ❌ None |
+| **[J-Tech Digital V628](https://www.amazon.com/s?k=J-Tech+Digital+V628&tag=verticalmouse-20)** | 600 / 1000 / 1600 | Physical button | ❌ None |
+| **[DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=verticalmouse-20)** | 800 / 1200 / 1800 | Physical button | ❌ None |
 
 ### Which Mice Limit Your Options
 

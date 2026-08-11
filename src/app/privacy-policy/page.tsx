@@ -1,6 +1,30 @@
-export const metadata = { title: "Privacy Policy",
-  alternates: { canonical: "https://www.verticalmouseguide.com/privacy-policy" }
-};
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Privacy Policy",
+  description: "Vertical Mouse Guide explains how browsing data, analytics, and contact details are collected and protected with clear options for privacy control.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/privacy-policy" },
+
+  openGraph: {
+    title: "Privacy Policy",
+    description: "Vertical Mouse Guide explains how browsing data, analytics, and contact details are collected and protected with clear options for privacy control.",
+    url: "https://www.verticalmouseguide.com/privacy-policy",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy",
+    description: "Vertical Mouse Guide explains how browsing data, analytics, and contact details are collected and protected with clear options for privacy control.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  }};
 
 export default function PrivacyPage() {
   return (
@@ -80,7 +104,7 @@ export default function PrivacyPage() {
             className="text-emerald-700 underline"
             href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow sponsored"
           >
             Amazon&apos;s Privacy Notice
           </a>

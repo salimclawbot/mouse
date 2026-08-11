@@ -21,11 +21,11 @@ We built this site to be the most thorough, evidence-based vertical mouse resour
 
 <!-- [PHOTO PLACEHOLDER: Professional headshot, approx 400x400px] -->
 
-Matt has spent over a decade working in technology and digital publishing. After developing repetitive strain symptoms from years of heavy mouse use, he went down the ergonomic rabbit hole — testing vertical mice, trackballs, ergonomic keyboards, and every adjustable desk accessory on the market.
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 That personal experience drives the methodology behind Vertical Mouse Guide. Every recommendation on this site has been evaluated against the same 100-point scoring framework (Fit 35%, Comfort 25%, Control 20%, Value 20%) because Matt learned the hard way that a mouse review without sizing context is useless.
 
-**Background:** Technology publishing, product testing methodology, workplace ergonomics research. Holds a certification in ergonomic workplace assessment.
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 ---
 
@@ -33,10 +33,7 @@ That personal experience drives the methodology behind Vertical Mouse Guide. Eve
 
 We do not accept products in exchange for reviews, and manufacturers cannot pay for placement. Our process:
 
-1. **Standardized scoring** — Every mouse is rated on Fit, Comfort, Control, and Value with published weightings.
-2. **Hand-size segmentation** — We review separately for large, medium, and small hands because one mouse does not fit all.
-3. **Evidence-based claims** — We reference ergonomic research from OSHA, NIOSH, and clinical sources. We never invent statistics.
-4. **Honest tradeoffs** — Every product review includes explicit downsides. If a mouse is not right for you, we say so.
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 ---
 

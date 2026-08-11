@@ -1,6 +1,30 @@
-export const metadata = { title: "About",
-  alternates: { canonical: "https://www.verticalmouseguide.com/about" }
-};
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "About",
+  description: "Vertical Mouse Guide is your practical guide to evidence-forward product comparisons, buying support, and transparent recommendations.",
+  alternates: { canonical: "https://www.verticalmouseguide.com/about" },
+
+  openGraph: {
+    title: "About",
+    description: "Vertical Mouse Guide is your practical guide to evidence-forward product comparisons, buying support, and transparent recommendations.",
+    url: "https://www.verticalmouseguide.com/about",
+    siteName: "Vertical Mouse Guide",
+    type: "website",
+    images: [
+      {
+        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "About",
+    description: "Vertical Mouse Guide is your practical guide to evidence-forward product comparisons, buying support, and transparent recommendations.",
+    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+  }};
 
 export default function AboutPage() {
   return (

@@ -6,9 +6,7 @@ author: "Sarah Mitchell, Certified Ergonomics Consultant"
 date: "2026-03-25"
 dateModified: "2026-03-25"
 category: "Ergonomics"
-faq_schema: >-
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a vertical mouse cure RSI?","acceptedAnswer":{"@type":"Answer","text":"A vertical mouse cannot cure RSI, but it can significantly reduce the strain that causes it. Studies show vertical mice reduce forearm pronation by 20-30 degrees, lowering ulnar deviation and musculoskeletal load."}},{"@type":"Question","name":"How long does it take for a vertical mouse to help RSI?","acceptedAnswer":{"@type":"Answer","text":"Most users report reduced pain within 2-6 weeks of switching to a vertical mouse, assuming they also take regular breaks and address other ergonomic factors."}},{"@type":"Question","name":"What is the best vertical mouse for RSI?","acceptedAnswer":{"@type":"Answer","text":"The Logitech MX Vertical is the most clinically validated vertical mouse. The Evoluent VerticalMouse D is preferred by occupational therapists. The Anker Ergonomic Vertical Mouse is a strong budget option under $30."}},{"@type":"Question","name":"Can I use a vertical mouse with carpal tunnel syndrome?","acceptedAnswer":{"@type":"Answer","text":"Yes. Vertical mice are commonly recommended by occupational therapists for carpal tunnel syndrome because they reduce the wrist flexion and ulnar deviation that aggravate the median nerve."}},{"@type":"Question","name":"Do vertical mice work for everyone?","acceptedAnswer":{"@type":"Answer","text":"Vertical mice do not work equally for everyone. People with lateral epicondylitis may find vertical mice uncomfortable. There is a 2-4 week adjustment period."}}]}
-article_schema: >-
   {"@context":"https://schema.org","@type":"Article","headline":"Can a Vertical Mouse Cure RSI? (What the Research Says)","description":"Can a vertical mouse cure RSI? We examine the clinical evidence, expert opinions, and real-world results. Updated March 2026.","author":{"@type":"Person","name":"Sarah Mitchell","jobTitle":"Certified Ergonomics Consultant"},"publisher":{"@type":"Organization","name":"Vertical Mouse Guide","url":"https://verticalmouseguide.com"},"datePublished":"2026-03-25","dateModified":"2026-03-25","mainEntityOfPage":{"@type":"WebPage","@id":"https://verticalmouseguide.com/can-vertical-mouse-cure-rsi"}}
 ---
 
@@ -121,7 +119,7 @@ Logitech's own ergonomics research, conducted with independent physiologists, fo
 
 ### Systematic Reviews and Limitations
 
-A 2019 systematic review published in *IISE Transactions on Occupational Ergonomics and Human Factors* reviewed 11 studies on alternative mouse designs and concluded:
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 - Vertical mice consistently show **reduced forearm and wrist strain** versus standard mice
 - Evidence for **symptom improvement** in diagnosed RSI is promising but not yet definitive in controlled trials
@@ -187,7 +185,7 @@ Users with established tendinitis or moderate carpal tunnel syndrome typically n
       <p><strong>Best for:</strong> Overall RSI reduction</p>
       <p><strong>Tilt angle:</strong> 57 degrees</p>
       <p><strong>Connectivity:</strong> Bluetooth + USB receiver</p>
-      <a href="https://www.amazon.com/s?k=Logitech+MX+Vertical+Mouse&tag=theforge05-20" class="amazon-btn" target="_blank" rel="noopener">Check on Amazon →</a>
+      <a href="https://www.amazon.com/s?k=Logitech+MX+Vertical+Mouse&tag=verticalmouse-20" class="amazon-btn" target="_blank" rel="noopener noreferrer nofollow sponsored">Check on Amazon →</a>
     </div>
   </div>
   <div class="product-card">
@@ -197,7 +195,7 @@ Users with established tendinitis or moderate carpal tunnel syndrome typically n
       <p><strong>Best for:</strong> Carpal tunnel syndrome</p>
       <p><strong>Tilt angle:</strong> 90 degrees (true vertical)</p>
       <p><strong>Connectivity:</strong> Wireless</p>
-      <a href="https://www.amazon.com/s?k=Evoluent+VerticalMouse+D&tag=theforge05-20" class="amazon-btn" target="_blank" rel="noopener">Check on Amazon →</a>
+      <a href="https://www.amazon.com/s?k=Evoluent+VerticalMouse+D&tag=verticalmouse-20" class="amazon-btn" target="_blank" rel="noopener noreferrer nofollow sponsored">Check on Amazon →</a>
     </div>
   </div>
   <div class="product-card">
@@ -207,7 +205,7 @@ Users with established tendinitis or moderate carpal tunnel syndrome typically n
       <p><strong>Best for:</strong> Budget-friendly RSI start</p>
       <p><strong>Tilt angle:</strong> 60 degrees</p>
       <p><strong>Connectivity:</strong> USB wired</p>
-      <a href="https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse&tag=theforge05-20" class="amazon-btn" target="_blank" rel="noopener">Check on Amazon →</a>
+      <a href="https://www.amazon.com/s?k=Anker+Ergonomic+Vertical+Mouse&tag=verticalmouse-20" class="amazon-btn" target="_blank" rel="noopener noreferrer nofollow sponsored">Check on Amazon →</a>
     </div>
   </div>
   <div class="product-card">
@@ -217,7 +215,7 @@ Users with established tendinitis or moderate carpal tunnel syndrome typically n
       <p><strong>Best for:</strong> Office professionals</p>
       <p><strong>Tilt angle:</strong> 60 degrees</p>
       <p><strong>Connectivity:</strong> Wireless dual-mode</p>
-      <a href="https://www.amazon.com/s?k=Kensington+Pro+Fit+Ergo+Vertical+Mouse&tag=theforge05-20" class="amazon-btn" target="_blank" rel="noopener">Check on Amazon →</a>
+      <a href="https://www.amazon.com/s?k=Kensington+Pro+Fit+Ergo+Vertical+Mouse&tag=verticalmouse-20" class="amazon-btn" target="_blank" rel="noopener noreferrer nofollow sponsored">Check on Amazon →</a>
     </div>
   </div>
   <div class="product-card">
@@ -227,12 +225,12 @@ Users with established tendinitis or moderate carpal tunnel syndrome typically n
       <p><strong>Best for:</strong> Mid-range value</p>
       <p><strong>Tilt angle:</strong> 70 degrees</p>
       <p><strong>Connectivity:</strong> 2.4G wireless</p>
-      <a href="https://www.amazon.com/s?k=Delux+M618+Plus+Vertical+Mouse&tag=theforge05-20" class="amazon-btn" target="_blank" rel="noopener">Check on Amazon →</a>
+      <a href="https://www.amazon.com/s?k=Delux+M618+Plus+Vertical+Mouse&tag=verticalmouse-20" class="amazon-btn" target="_blank" rel="noopener noreferrer nofollow sponsored">Check on Amazon →</a>
     </div>
   </div>
 </div>
 
-If you are already dealing with wrist or forearm pain related to computer use, also read about [carpal tunnel and mouse use](https://carpaltunnelguide.com/carpal-tunnel-syndrome-guide) for a deeper look at how mouse ergonomics affect median nerve health.
+If you are already dealing with wrist or forearm pain related to computer use, also read about carpal tunnel and mouse use for a deeper look at how mouse ergonomics affect median nerve health.
 
 ### What to Look For When Choosing for RSI
 
@@ -320,7 +318,7 @@ If pain is not clearly trending downward after 6 weeks of consistent ergonomic c
 
 Do not continue self-managing severe or worsening symptoms.
 
-<video autoplay muted loop playsinline poster="/images/articles/can-vertical-mouse-cure-rsi-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0">
+<video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/can-vertical-mouse-cure-rsi-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0">
   <source src="/videos/can-vertical-mouse-cure-rsi-demo.mp4" type="video/mp4" />
 </video>
 
@@ -362,8 +360,8 @@ This article reviewed peer-reviewed ergonomics research, manufacturer technical 
 6. **Logitech Ergonomics Research**. (2018). "MX Vertical advanced ergonomic mouse: clinical evidence summary." Internal white paper, peer-reviewed methodology.
 7. **IISE Transactions on Occupational Ergonomics and Human Factors**. (2019). Systematic review of alternative computer mouse designs and musculoskeletal outcomes.
 
-*Methodology: We reviewed 23 studies from 1995–2025 focusing on biomechanical, EMG, and clinical outcome data. We excluded studies with fewer than 15 participants or without control conditions. All product recommendations are based on published specifications and independent user data; we purchased or evaluated all recommended models.*
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 ---
 
-*Sarah Mitchell is a Certified Ergonomics Consultant (CEC) with 12 years of workplace ergonomics assessment experience. She has conducted assessments for more than 400 organisations and specialises in upper limb RSI prevention. She holds certifications from the Board of Certification in Professional Ergonomics (BCPE).*
+> **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
