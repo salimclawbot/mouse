@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Terms of Service",
   description: "Vertical Mouse Guide terms of service and platform usage expectations for tools, content, and reader-focused workflows.",
-  alternates: { canonical: "https://www.verticalmouseguide.com/terms-of-service" },
+  alternates: { canonical: "https://verticalmouseguide.com/terms-of-service" },
 
   openGraph: {
     title: "Terms of Service",
     description: "Vertical Mouse Guide terms of service and platform usage expectations for tools, content, and reader-focused workflows.",
-    url: "https://www.verticalmouseguide.com/terms-of-service",
+    url: "https://verticalmouseguide.com/terms-of-service",
     siteName: "Vertical Mouse Guide",
     type: "website",
     images: [
       {
-        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        url: "https://verticalmouseguide.com/editorial-hero.png",
         width: 1200,
         height: 630,
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = { title: "Terms of Service",
     card: "summary_large_image",
     title: "Terms of Service",
     description: "Vertical Mouse Guide terms of service and platform usage expectations for tools, content, and reader-focused workflows.",
-    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+    images: ["https://verticalmouseguide.com/editorial-hero.png"],
   }};
 
 export default function TermsPage() {

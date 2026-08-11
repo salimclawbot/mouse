@@ -7,16 +7,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "All Guides",
   description: "Vertical Mouse Guide helps you find practical guides and product recommendations for confident buying decisions.",
-  alternates: { canonical: "https://www.verticalmouseguide.com/guides" },
+  alternates: { canonical: "https://verticalmouseguide.com/guides" },
   openGraph: {
     title: "All Guides",
     description: "Vertical Mouse Guide helps you find practical guides and product recommendations for confident buying decisions.",
-    url: "https://www.verticalmouseguide.com/guides",
+    url: "https://verticalmouseguide.com/guides",
     siteName: "Vertical Mouse Guide",
     type: "website",
     images: [
       {
-        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        url: "https://verticalmouseguide.com/editorial-hero.png",
         width: 1200,
         height: 630,
       },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "All Guides",
     description: "Vertical Mouse Guide helps you find practical guides and product recommendations for confident buying decisions.",
-    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+    images: ["https://verticalmouseguide.com/editorial-hero.png"],
   },
 };
 

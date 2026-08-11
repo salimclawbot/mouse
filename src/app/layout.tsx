@@ -10,7 +10,7 @@ const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.verticalmouseguide.com"),
+  metadataBase: new URL("https://verticalmouseguide.com"),
   title: {
     default: `${site.name} — Ergonomic Mouse Guides`,
     template: `%s | ${site.name}`,

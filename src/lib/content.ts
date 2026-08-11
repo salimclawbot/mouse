@@ -5343,7 +5343,7 @@ export const guides: Guide[] = [
   },
 ];
 
-const DEFAULT_SITE_URL = "https://www.verticalmouseguide.com";
+const DEFAULT_SITE_URL = "https://verticalmouseguide.com";
 
 export const site = {
   name: "Vertical Mouse Guide",

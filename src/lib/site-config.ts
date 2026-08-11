@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Vertical Mouse Guide",
   tagline: "Ergonomic Mouse Guides & Reviews",
   description: "Expert vertical mouse reviews and ergonomic buying guides for wrist pain relief. Top-rated ergonomic mice tested and reviewed for 2026. Updated monthly.",
-  url: "https://www.verticalmouseguide.com",
+  url: "https://verticalmouseguide.com",
   author: "James R., Ergonomics Specialist",
   primaryColor: "#0d9488",
   niche: "vertical-mouse",

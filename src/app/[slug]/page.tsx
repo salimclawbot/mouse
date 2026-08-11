@@ -96,14 +96,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     keywords: buildKeywords(article.title, article.category),
-    alternates: { canonical: `https://www.verticalmouseguide.com/${article.slug}` },
+    alternates: { canonical: `https://verticalmouseguide.com/${article.slug}` },
     openGraph: {
       title,
       description,
-      url: `https://www.verticalmouseguide.com/${article.slug}`,
+      url: `https://verticalmouseguide.com/${article.slug}`,
       images: [
         {
-          url: `https://www.verticalmouseguide.com/editorial-hero.png`,
+          url: `https://verticalmouseguide.com/editorial-hero.png`,
           width: 1200,
           height: 630,
           alt: title,
@@ -116,7 +116,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title,
       description,
-      images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+      images: ["https://verticalmouseguide.com/editorial-hero.png"],
     },
   };
 }

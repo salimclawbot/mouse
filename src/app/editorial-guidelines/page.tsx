@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Editorial Guidelines | Vertical Mouse Guide",
   description: "Vertical Mouse Guide publishes review standards, evidence checks, and ranking rules to keep recommendations transparent and measurable.",
-  alternates: { canonical: "https://www.verticalmouseguide.com/editorial-guidelines" },
+  alternates: { canonical: "https://verticalmouseguide.com/editorial-guidelines" },
   openGraph: {
     title: "Editorial Guidelines | Vertical Mouse Guide",
     description: "Vertical Mouse Guide publishes review standards, evidence checks, and ranking rules to keep recommendations transparent and measurable.",
-    url: "https://www.verticalmouseguide.com/editorial-guidelines",
+    url: "https://verticalmouseguide.com/editorial-guidelines",
     siteName: "Vertical Mouse Guide",
     type: "website",
     images: [
       {
-        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        url: "https://verticalmouseguide.com/editorial-hero.png",
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Editorial Guidelines | Vertical Mouse Guide",
     description: "Vertical Mouse Guide publishes review standards, evidence checks, and ranking rules to keep recommendations transparent and measurable.",
-    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+    images: ["https://verticalmouseguide.com/editorial-hero.png"],
   },
 };
 

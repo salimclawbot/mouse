@@ -594,15 +594,15 @@ Button remapping is optional but recommended for productivity. Most vertical mic
     "name": "Vertical Mouse Guide",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.verticalmouseguide.com/images/brand/og-default.jpg"
+      "url": "https://verticalmouseguide.com/images/brand/og-default.jpg"
     }
   },
   "datePublished": "2026-03-22",
   "dateModified": "2026-03-22",
-  "image": ["https://www.verticalmouseguide.com/images/articles/vertical-mouse-setup-hero.png"],
+  "image": ["https://verticalmouseguide.com/images/articles/vertical-mouse-setup-hero.png"],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.verticalmouseguide.com/articles/how-to-set-up-vertical-mouse-ergonomics-guide"
+    "@id": "https://verticalmouseguide.com/articles/how-to-set-up-vertical-mouse-ergonomics-guide"
   }
 }
 </script>

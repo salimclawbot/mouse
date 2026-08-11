@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Privacy Policy",
   description: "Vertical Mouse Guide explains how browsing data, analytics, and contact details are collected and protected with clear options for privacy control.",
-  alternates: { canonical: "https://www.verticalmouseguide.com/privacy-policy" },
+  alternates: { canonical: "https://verticalmouseguide.com/privacy-policy" },
 
   openGraph: {
     title: "Privacy Policy",
     description: "Vertical Mouse Guide explains how browsing data, analytics, and contact details are collected and protected with clear options for privacy control.",
-    url: "https://www.verticalmouseguide.com/privacy-policy",
+    url: "https://verticalmouseguide.com/privacy-policy",
     siteName: "Vertical Mouse Guide",
     type: "website",
     images: [
       {
-        url: "https://www.verticalmouseguide.com/editorial-hero.png",
+        url: "https://verticalmouseguide.com/editorial-hero.png",
         width: 1200,
         height: 630,
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = { title: "Privacy Policy",
     card: "summary_large_image",
     title: "Privacy Policy",
     description: "Vertical Mouse Guide explains how browsing data, analytics, and contact details are collected and protected with clear options for privacy control.",
-    images: ["https://www.verticalmouseguide.com/editorial-hero.png"],
+    images: ["https://verticalmouseguide.com/editorial-hero.png"],
   }};
 
 export default function PrivacyPage() {

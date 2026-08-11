@@ -10,12 +10,12 @@ author: "Vertical Mouse Guide Editorial Team"
 og_title: "How Long to Adjust to a Vertical Mouse? (2026 Guide)"
 og_description: "How long to adjust to a vertical mouse in 2026? Day-by-day timeline, why the first 3 days are hardest, and 8 tips to speed up your transition. Full guide →"
 og_type: "article"
-og_url: "https://www.verticalmouseguide.com/guides/how-long-adjust-vertical-mouse"
-og_image: "https://www.verticalmouseguide.com/images/og-default.jpg"
+og_url: "https://verticalmouseguide.com/guides/how-long-adjust-vertical-mouse"
+og_image: "https://verticalmouseguide.com/images/og-default.jpg"
 twitter_card: "summary_large_image"
 twitter_title: "How Long to Adjust to a Vertical Mouse? (2026 Guide)"
 twitter_description: "How long to adjust to a vertical mouse in 2026? Day-by-day timeline, why the first 3 days are hardest, and 8 tips to speed up your transition. Full guide →"
-twitter_image: "https://www.verticalmouseguide.com/images/og-default.jpg"
+twitter_image: "https://verticalmouseguide.com/images/og-default.jpg"
 ---
 
 # How Long to Adjust to a Vertical Mouse? (2026 Guide)
