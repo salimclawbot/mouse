@@ -1,5 +1,3 @@
-# Do Vertical Mice Actually Help Wrist Pain? (2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Vertical mice help wrist pain for most users whose discomfort is caused by forearm pronation — the palm-down rotation that standard mice force for hours daily. Research shows vertical grips reduce pronation by 50–90% and lower carpal tunnel pressure compared to flat mice. But they are not universal: if your pain comes from typing, grip strength issues, or conditions unrelated to mouse posture, a vertical mouse will not fix it.** Here is what the evidence actually says.

@@ -1,5 +1,3 @@
-# Best Vertical Mouse for Carpal Tunnel Syndrome (2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **The best vertical mouse for carpal tunnel is the [Evoluent VerticalMouse 4](https://www.amazon.com/s?k=Evoluent+VerticalMouse+4&tag=verticalmouse-20) — its 70-degree grip angle brings the wrist closest to neutral, reducing carpal tunnel pressure more than any 57-degree competitor. Combined with proper desk height and light grip technique, a correctly angled vertical mouse can meaningfully reduce tingling, numbness, and end-of-day pain.** But it is not a cure. Here is what the evidence actually supports.

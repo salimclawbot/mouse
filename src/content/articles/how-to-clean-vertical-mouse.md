@@ -1,5 +1,3 @@
-# How to Clean a Vertical Mouse (Step-by-Step 2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Clean your vertical mouse in 5 minutes: blow compressed air across the sensor and scroll wheel gaps, wipe the shell with a 70% isopropyl alcohol cloth, clean the sensor lens with a dry cotton swab, and pick debris from button edges with a wooden toothpick. Do this every 1–2 weeks and you will fix most tracking issues, eliminate sticky buttons, and add months to the mouse's lifespan.**

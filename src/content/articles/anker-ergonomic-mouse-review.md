@@ -1,5 +1,3 @@
-# Anker Ergonomic Mouse Review: Budget Vertical Pick (2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **The Anker Ergonomic Vertical Mouse delivers the same 57-degree handshake angle and the same pronation reduction as the $90 Logitech MX Vertical — for $25. You sacrifice Bluetooth, glass tracking, multi-device pairing, and software customization. You do not sacrifice ergonomic benefit. For the majority of desk workers testing whether a vertical mouse reduces wrist strain, the Anker is the right starting point and, for many, the only mouse they will need.**

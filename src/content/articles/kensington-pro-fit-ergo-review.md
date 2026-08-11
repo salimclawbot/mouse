@@ -1,7 +1,5 @@
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
-# Kensington Pro Fit Ergo Review (2026): The Best Vertical Mouse for Wrist Health
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements or long-term-use claims.
 
 ---

@@ -10,8 +10,6 @@ category: "Ergonomics"
 
 *This post contains affiliate links. We may earn a commission at no extra cost to you.*
 
-# Can a Vertical Mouse Cure RSI? (What the Research Says)
-
 **By Sarah Mitchell, Certified Ergonomics Consultant** | Last updated March 2026
 
 **A vertical mouse cannot cure RSI, but it can dramatically reduce the musculoskeletal load that causes it. Clinical studies show vertical mice reduce forearm pronation by 20–30 degrees, cutting the repetitive strain on wrist extensors and forearm muscles. For most RSI sufferers, this reduction in daily load — combined with other ergonomic changes — allows recovery while preventing recurrence. Here is what the science actually says.**

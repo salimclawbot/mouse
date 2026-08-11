@@ -1,7 +1,5 @@
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
-# Best Vertical Mouse for Small Hands: Women's Guide (2026)
-
 By Vertical Mouse Guide Editorial Team
 
 **The best vertical mouse for women and small hands is the [Evoluent VerticalMouse Small](https://www.amazon.com/s?k=Evoluent+VerticalMouse+Small&tag=verticalmouse-20) — its 62mm grip width, shallow button depth, and compact body fit hands under 3 inches wide without forcing fingers to stretch or overreach. Below we compare five small vertical mice on grip width, weight, button reach, and comfort for hands under 3 inches.** Most vertical mice are built for medium-to-large male hands. If yours is too big, you replace wrist strain with finger strain. This guide covers 5 models that actually fit.

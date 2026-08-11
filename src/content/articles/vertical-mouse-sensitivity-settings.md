@@ -1,5 +1,3 @@
-# Vertical Mouse Sensitivity Settings Guide (DPI 2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Set your vertical mouse DPI to 1200 as a starting baseline for a single monitor. Increase to 1600–2400 for dual monitors. Decrease to 800 for precision design work. Then disable mouse acceleration in your OS for consistent, predictable cursor movement. These three adjustments — DPI, acceleration off, OS sensitivity centered — take 5 minutes and transform how a vertical mouse feels from the first day.**

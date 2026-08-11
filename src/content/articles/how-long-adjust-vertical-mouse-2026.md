@@ -1,5 +1,3 @@
-# How Long to Adjust to a Vertical Mouse (2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **Most people adjust to a vertical mouse in 1–3 weeks. Days 1–3 feel awkward with a 20–40% productivity drop. Days 4–7 the grip feels natural but fine control lags. By week 2, speed returns to 85–90% of normal. By week 3, the vertical mouse feels like your default.** The timeline depends on mouse angle, daily usage hours, and how many decades of flat mouse muscle memory you are overwriting.

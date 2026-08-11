@@ -2,8 +2,6 @@
 title: "DXT Ergonomic Mouse Review: Pro-Grade Vertical (2026)"
 ---
 
-# DXT Ergonomic Mouse Review: Pro-Grade Vertical (2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/dxt-ergonomic-mouse-review-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/dxt-ergonomic-mouse-review-demo.mp4" type="video/mp4">
 </video>

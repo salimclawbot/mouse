@@ -1,5 +1,3 @@
-# DXT Ergonomic Mouse Review: Pro-Grade Vertical (2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **The [DXT Precision Mouse](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=verticalmouse-20) is the only mainstream vertical mouse built around a pen grip — you hold it like a thick marker instead of palming it like a traditional mouse. This gives it two advantages no palm-grip vertical mouse can match: finer cursor precision driven by finger dexterity instead of arm movement, and true ambidextrous use from a symmetrical body that works identically in either hand. It is not for everyone. It is excellent for the people it is for.**

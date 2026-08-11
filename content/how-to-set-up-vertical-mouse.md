@@ -8,8 +8,6 @@ slug: how-to-set-up-vertical-mouse
 primaryKeyword: how to set up a vertical mouse
 ---
 
-# How to Set Up a Vertical Mouse Correctly (2026)
-
 **Knowing how to set up a vertical mouse correctly means the difference between ergonomic relief and wasted money. Position your desk so your elbow sits at 90°, place the mouse at keyboard height, align your forearm parallel to the floor, adjust DPI for your work type, and configure buttons. Get these right to cut wrist strain from day one.**
 
 By Vertical Mouse Guide Editorial Team

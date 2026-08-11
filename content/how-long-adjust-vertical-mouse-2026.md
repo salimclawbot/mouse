@@ -2,8 +2,6 @@
 title: "How Long to Adjust to a Vertical Mouse (2026)"
 ---
 
-# How Long to Adjust to a Vertical Mouse (2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/how-long-adjust-vertical-mouse-2026-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/how-long-adjust-vertical-mouse-2026-demo.mp4" type="video/mp4">
 </video>

@@ -2,8 +2,6 @@
 title: "Do Vertical Mice Actually Help Wrist Pain? (2026)"
 ---
 
-# Do Vertical Mice Actually Help Wrist Pain? (2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/do-vertical-mice-help-wrist-pain-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/do-vertical-mice-help-wrist-pain-demo.mp4" type="video/mp4">
 </video>

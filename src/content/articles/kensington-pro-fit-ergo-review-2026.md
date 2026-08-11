@@ -2,8 +2,6 @@
 
 *This post contains affiliate links. We may earn a commission at no extra cost to you. See our [affiliate disclosure](#sources-and-methodology) for details.*
 
-# Kensington Pro Fit Ergo Mouse Review (2026): Tested and Rated
-
 **By Alex Chen, Ergonomics Specialist** | Last updated March 2026
 
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.

@@ -1,5 +1,3 @@
-# Logitech MX Vertical Review: Is It Worth $100? (2026)
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **The [Logitech MX Vertical](https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20) is the best vertical mouse you can buy — and the most expensive at ~$90–100. Its 4000 DPI Darkfield sensor, 3-device Bluetooth, USB-C charging, and Logi Options+ software are unmatched by any competitor. But you pay a 3–4× premium over the [Anker Vertical Ergonomic Mouse](https://www.amazon.com/s?k=Anker+Vertical+Ergonomic+Mouse&tag=verticalmouse-20) ($25) for the same 57-degree ergonomic angle.** Whether that premium is worth it depends on how many hours you mouse, how many devices you use, and whether you need Mac software.

@@ -2,8 +2,6 @@
 title: "Vertical Mouse Sensitivity Settings Guide (DPI 2026)"
 ---
 
-# Vertical Mouse Sensitivity Settings Guide (DPI 2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/vertical-mouse-sensitivity-settings-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/vertical-mouse-sensitivity-settings-demo.mp4" type="video/mp4">
 </video>

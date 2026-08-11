@@ -10,8 +10,6 @@ author: "Vertical Mouse Guide Editorial Team"
 keywords: ["how to set up vertical mouse", "vertical mouse setup", "ergonomic mouse setup", "vertical mouse positioning", "vertical mouse DPI", "vertical mouse button mapping"]
 ---
 
-# How to Set Up a Vertical Mouse Correctly (Ergonomics Guide)
-
 By Vertical Mouse Guide Editorial Team
 
 <p><em>This post contains affiliate links. We may earn a commission at no extra cost to you.</em></p>

@@ -2,8 +2,6 @@
 title: "How to Clean a Vertical Mouse (Step-by-Step 2026)"
 ---
 
-# How to Clean a Vertical Mouse (Step-by-Step 2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/how-to-clean-vertical-mouse-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/how-to-clean-vertical-mouse-demo.mp4" type="video/mp4">
 </video>

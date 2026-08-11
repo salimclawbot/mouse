@@ -2,8 +2,6 @@
 title: "Logitech MX Vertical Review: Is It Worth $100? (2026)"
 ---
 
-# Logitech MX Vertical Review: Is It Worth $100? (2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/logitech-mx-vertical-review-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/logitech-mx-vertical-review-demo.mp4" type="video/mp4">
 </video>

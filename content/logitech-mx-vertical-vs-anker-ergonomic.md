@@ -7,8 +7,6 @@ dateModified: "2026-03-23"
 slug: "logitech-mx-vertical-vs-anker-ergonomic"
 ---
 
-# Logitech MX Vertical vs Anker Ergonomic: Full Comparison (2026)
-
 **Disclosure:** We may earn a commission from qualifying purchases made through links in this article.
 
 By Vertical Mouse Guide Editorial Team

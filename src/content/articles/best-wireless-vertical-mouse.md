@@ -9,8 +9,6 @@ dateModified: "2026-03-17"
 author: Editorial Team
 ---
 
-# Best Wireless Vertical Mouse (No Dongle) 2026
-
 > **Evidence note:** This comparison uses manufacturer specifications, published research, and independently reported owner feedback. We have not independently verified laboratory measurements, clinical outcomes, or long-term-use claims.
 
 **The best wireless vertical mouse without a dongle is the Logitech MX Vertical — it connects via Bluetooth to up to 3 devices, lasts 4 months per charge, and pairs with Mac, Windows, and Linux without using a USB port. Five models below, from $20 to $100, all connect without plugging anything in.**

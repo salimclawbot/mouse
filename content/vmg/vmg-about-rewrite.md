@@ -7,8 +7,6 @@ word_count: 420
 meta_description: "Meet the team behind Vertical Mouse Guide. Learn about our evidence-based review methodology and why we built the most thorough vertical mouse resource online."
 ---
 
-# About Vertical Mouse Guide
-
 Vertical Mouse Guide exists because most ergonomic mouse reviews are shallow. They list specs, repeat marketing copy, and slap an affiliate link at the bottom. We think people dealing with wrist pain deserve better than that.
 
 We built this site to be the most thorough, evidence-based vertical mouse resource available — with scored reviews, honest tradeoff analysis, and sizing guidance matched to real hand measurements. No sponsored placements. No "best overall" picks chosen by commission rate.

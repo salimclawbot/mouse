@@ -2,8 +2,6 @@
 title: "Ergonomic Mouse Buying Guide: Vertical vs Trackball vs Regular (2026)"
 ---
 
-# Ergonomic Mouse Buying Guide: Vertical vs Trackball vs Regular (2026)
-
 <video class="w-full rounded-lg my-6" preload="metadata" controls muted poster="/images/articles/ergonomic-mouse-buying-guide-video-thumb.jpg" style="width:100%;border-radius:8px;margin:1.5rem 0;">
   <source src="/videos/ergonomic-mouse-buying-guide-demo.mp4" type="video/mp4">
 </video>
