@@ -18,6 +18,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import QuizRecommender from "@/components/quiz-recommender";
+import { getArticleVisual } from "@/lib/article-visuals";
+
+function LegacyPlaceholderImage(_: Record<string, unknown>) {
+  return null;
+}
 
 type PremiumMediaTemplate = {
   infographic?: {
@@ -118,6 +123,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const guide = guides.find((g) => g.slug === slug);
   if (!guide) return {};
+  const visual = getArticleVisual(slug, guide.title);
 
   const withSeo = (title: string, description: string) => ({
     title: { absolute: title },
@@ -129,13 +135,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: normalizeMetaDescription(description),
       url: `${site.url}/guides/${guide.slug}`,
       type: "article" as const,
-      images: [{ url: `${site.url}/editorial-hero.png` }],
+      images: [{ url: `${site.url}${visual.src}`, alt: visual.alt }],
     },
     twitter: {
       card: "summary_large_image" as const,
       title,
       description: normalizeMetaDescription(description),
-      images: [`${site.url}/editorial-hero.png`],
+      images: [`${site.url}${visual.src}`],
     },
   });
 
@@ -191,6 +197,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const guide = guides.find((g) => g.slug === slug);
   if (!guide) notFound();
+  const visual = getArticleVisual(slug, guide.title);
   const amazonProductGroup = getAmazonProductGroup(slug) || {
     heading: `Products related to ${guide.title}`,
     similarQuery: guide.title,
@@ -231,8 +238,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const isComparisonGuideWithInlineProductImages = false;
   const isGraphicDesignerGuide = slug === "best-vertical-mouse-for-graphic-designers";
   const isPremiumArticle = isGraphicDesignerGuide || isPremiumDemo || isLeftGuide || isNewLeftHandedGuide || isQuietGuide || isWristGuide || isWristDeepGuide || isProgrammerGuide || isMacGuide || isLargeHandsGuide || isTrackballGuide || isRegularGuide || isWirelessVsWiredGuide || isUnder50Guide || isAdjustGuide || isAdjustGuideV2 || isGamingGuide || isAdjustGuideV3 || isWomensSmallHandsGuide || isCarpalTunnelGuide || isWristPainGuide2 || isWirelessGuide2 || isProgrammersTrackballGuide || isMacbookProGuide || isMxVerticalReviewGuide || isErgoBuyingGuide || isOfficeGuide || isAnkerReviewGuide || isCleaningGuide || isDxtReviewGuide || isSensitivityGuide || isSetupErgonomicsGuide;
-  const premiumMedia = premiumTemplateBySlug[slug];
-  const hasVideoSection = isPremiumArticle && !isWristGuide && !isWristDeepGuide && Boolean(premiumMedia?.video);
+  const premiumMedia = premiumTemplateBySlug[slug]
+    ? { ...premiumTemplateBySlug[slug], infographic: undefined }
+    : undefined;
+  const hasVideoSection = false;
   const introParagraphs = isLeftGuide ? guide.body.slice(0, 3) : guide.body;
   const topPicks = guide.products.slice(0, 3);
 
@@ -579,7 +588,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <Script id={`breadcrumb-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {videoSchema && <Script id={`video-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />}
       <div className="group relative overflow-hidden rounded-2xl border border-slate-200">
-        <Image src="/editorial-hero.png" alt={guide.title} width={1600} height={900} className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
+        <Image src={visual.src} alt={visual.alt} width={1600} height={1067} priority sizes="(max-width: 1024px) 100vw, 1024px" className="aspect-[3/2] h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-transparent to-cyan-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
 
@@ -592,6 +601,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       </header>
 
       {guide.products.length > 0 && <AffiliateDisclosureNotice />}
+      <AmazonProductShowcase group={amazonProductGroup} slug={slug} />
 
       <nav className="sticky top-16 z-30 rounded-xl border border-slate-200 bg-white/90 p-3 backdrop-blur">
         <ul className="flex flex-wrap gap-2 text-sm">
@@ -647,7 +657,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="text-slate-700">This ranking is tuned for developers spending 6 to 10 hours in IDEs, terminals, docs, PR review, and browser debugging loops. We weight fit + posture support (35%), click fatigue under sustained use (25%), cursor reliability during multi-window work (20%), and long-term ownership value (20%).</p>
             <p className="text-slate-700">Any model that triggers rising thumb strain, forearm tension, or unstable pointer confidence by day five drops in rank regardless of branding.</p>
             <p className="text-sm text-slate-600">Scope note: this is non-medical buyer guidance for programming ergonomics.</p>
-            <Image src="/editorial-hero.png" alt="Top-down ergonomic mouse shape comparison for programmers evaluating click effort, shell fit, and coding-session comfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Top-down ergonomic mouse shape comparison for programmers evaluating click effort, shell fit, and coding-session comfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -658,7 +668,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>PR review sessions:</strong> assess scroll-wheel consistency and micro-navigation control across long diff reviews.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Meeting + screenshare days:</strong> verify low-noise click behavior and stable pointer confidence while presenting live code.</p></div>
             </div>
-            <Image src="/editorial-hero.png" alt="Programming adaptation timeline from day one to week three when switching to an ergonomic mouse for coding comfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Programming adaptation timeline from day one to week three when switching to an ergonomic mouse for coding comfort" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -669,7 +679,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Finger fatigue from clicks:</strong> prioritize softer primary switch feel before chasing extra buttons.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Team rollout:</strong> pilot two models (default + alternative fit) across mixed hand sizes before bulk ordering.</p></div>
             </div>
-            <Image src="/editorial-hero.png" alt="Software development team running a two-model ergonomic mouse pilot in a collaborative office environment" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Software development team running a two-model ergonomic mouse pilot in a collaborative office environment" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -724,16 +734,6 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </section>
       )}
 
-      {premiumMedia?.infographic && (
-        <section id="infographic" className="space-y-4 rounded-2xl border border-indigo-200 bg-indigo-50/40 p-6" aria-labelledby="infographic-title">
-          <h2 id="infographic-title" className="text-2xl font-bold text-slate-900">{premiumMedia.infographic.heading}</h2>
-          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-            <Image src={premiumMedia.infographic.src} alt={premiumMedia.infographic.alt} width={1600} height={900} className="h-auto w-full object-cover" loading="lazy" />
-            <figcaption className="bg-slate-50 px-4 py-2 text-xs text-slate-600">{premiumMedia.infographic.caption}</figcaption>
-          </figure>
-        </section>
-      )}
-
       {hasVideoSection && premiumMedia && (
         <section id="video-demo" className="space-y-4 rounded-2xl border border-violet-200 bg-violet-50/40 p-6" aria-labelledby="video-demo-title">
           <div className="space-y-1">
@@ -769,7 +769,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
             <h2 className="text-2xl font-bold text-slate-900">Large-hand fit context</h2>
             <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <img src="/editorial-hero.png" alt="Large hand using a vertical mouse in a neutral handshake grip" loading="lazy" className="h-auto w-full" />
+              <LegacyPlaceholderImage src="/editorial-hero.png" alt="Large hand using a vertical mouse in a neutral handshake grip" loading="lazy" className="h-auto w-full" />
             </figure>
             <p className="text-sm text-slate-700">For hands above 19 cm, full palm support and thumb rest depth matter more than spec-sheet features.</p>
           </section>
@@ -777,7 +777,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
             <h2 className="text-2xl font-bold text-slate-900">Measure first, then buy</h2>
             <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <img src="/editorial-hero.png" alt="Hand sizing infographic for choosing a vertical mouse for large hands" loading="lazy" className="h-auto w-full" />
+              <LegacyPlaceholderImage src="/editorial-hero.png" alt="Hand sizing infographic for choosing a vertical mouse for large hands" loading="lazy" className="h-auto w-full" />
             </figure>
           </section>
         </>
@@ -807,11 +807,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <h2 className="text-2xl font-bold text-slate-900">Posture and pain-pattern visuals</h2>
           <p className="text-slate-700">Use these diagrams to match your pain pattern to the right device class before buying.</p>
           <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-            <img src="/editorial-hero.png" alt="Vertical mouse versus trackball core decision hero visual" loading="lazy" className="h-auto w-full" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Vertical mouse versus trackball core decision hero visual" loading="lazy" className="h-auto w-full" />
           </figure>
           <div className="grid gap-4 md:grid-cols-2">
-            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/editorial-hero.png" alt="Anatomical posture difference between vertical mouse and trackball use" loading="lazy" className="h-auto w-full" /></figure>
-            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><img src="/editorial-hero.png" alt="Pain localization guide for choosing vertical mouse or trackball" loading="lazy" className="h-auto w-full" /></figure>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><LegacyPlaceholderImage src="/editorial-hero.png" alt="Anatomical posture difference between vertical mouse and trackball use" loading="lazy" className="h-auto w-full" /></figure>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50"><LegacyPlaceholderImage src="/editorial-hero.png" alt="Pain localization guide for choosing vertical mouse or trackball" loading="lazy" className="h-auto w-full" /></figure>
           </div>
         </section>
       )}
@@ -822,33 +822,33 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           '<h2 class="text-2xl font-bold text-slate-900">Biomechanics and switch-decision visuals</h2>',
           '<p class="text-slate-700">These visuals explain forearm mechanics and help decide whether switching will likely improve comfort for your workflow.</p>',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Medical diagram showing ulnar deviation and forearm pronation from regular mouse versus neutral handshake grip from vertical mouse" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Medical diagram showing ulnar deviation and forearm pronation from regular mouse versus neutral handshake grip from vertical mouse" loading="lazy" class="h-auto w-full" />',
           '</figure>',
           '<div class="grid gap-4 md:grid-cols-2">',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Wrist angle comparison infographic vertical mouse neutral position versus regular mouse forearm rotation" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Wrist angle comparison infographic vertical mouse neutral position versus regular mouse forearm rotation" loading="lazy" class="h-auto w-full" />',
           '</figure>',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Comparison chart vertical mouse vs regular mouse across ergonomics comfort strain productivity and price" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Comparison chart vertical mouse vs regular mouse across ergonomics comfort strain productivity and price" loading="lazy" class="h-auto w-full" />',
           '</figure></div></section>',
           '<section class="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">',
           '<h2 class="text-2xl font-bold text-slate-900">Who should switch and product picks</h2>',
           '<div class="grid gap-4 md:grid-cols-2">',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Office worker at standing desk comparing vertical mouse versus regular mouse ergonomic setup" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Office worker at standing desk comparing vertical mouse versus regular mouse ergonomic setup" loading="lazy" class="h-auto w-full" />',
           '</figure>',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Logitech MX Vertical ergonomic mouse in handshake grip at desk" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Logitech MX Vertical ergonomic mouse in handshake grip at desk" loading="lazy" class="h-auto w-full" />',
           '</figure></div>',
           '<div class="grid gap-4 md:grid-cols-3">',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Anker 2.4G wireless ergonomic vertical mouse product shot" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Anker 2.4G wireless ergonomic vertical mouse product shot" loading="lazy" class="h-auto w-full" />',
           '</figure>',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Evoluent Vertical Mouse 4 right-handed tall vertical form factor" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Evoluent Vertical Mouse 4 right-handed tall vertical form factor" loading="lazy" class="h-auto w-full" />',
           '</figure>',
           '<figure class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">',
-          '<img src="/editorial-hero.png" alt="Vertical mouse versus regular mouse video guide comparison thumbnail" loading="lazy" class="h-auto w-full" />',
+          '<LegacyPlaceholderImage src="/editorial-hero.png" alt="Vertical mouse versus regular mouse video guide comparison thumbnail" loading="lazy" class="h-auto w-full" />',
           '</figure></div>',
           '<div class="mt-4 grid gap-3 md:grid-cols-2">',
           '<a href="https://www.amazon.com/s?k=Logitech+MX+Vertical&tag=verticalmouse-20" target="_blank" rel="noopener noreferrer nofollow sponsored" class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800 hover:bg-emerald-100">Check Logitech MX Vertical on Amazon</a>',
@@ -895,7 +895,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <h2 className="text-2xl font-bold text-slate-900">Methodology: Office-Grade Wrist-Support Scoring</h2>
             <p className="text-slate-700">We score each model against office reality, not spec sheets: fit/posture support (35%), six-hour comfort durability (25%), control reliability in multi-app workflows (20%), and value confidence including return-risk (20%).</p>
             <p className="text-slate-700">Passing criteria: stable comfort through the hardest daily work block by day five. Failing criteria: rising soreness, overreach clicks, or unstable pointer confidence after normal adaptation.</p>
-            <Image src="/editorial-hero.png" alt="Top-down office mouse shape comparison with a fit and click-effort checklist used in ergonomic scoring" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Top-down office mouse shape comparison with a fit and click-effort checklist used in ergonomic scoring" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -911,7 +911,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Adaptation Timeline and Keep/Return Triggers</h2>
             <p className="text-slate-700">Evaluate on Day 1, Day 3, and Week 2 checkpoints. Keep models with stable or improving comfort; return models with worsening soreness or persistent control tension.</p>
-            <Image src="/editorial-hero.png" alt="Office adaptation timeline board from day one to week three for ergonomic mouse testing" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Office adaptation timeline board from day one to week three for ergonomic mouse testing" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -957,7 +957,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="text-slate-700">This guide is built for professionals running pointer-heavy office work for 6 to 9 hours per day: spreadsheets, CRM tabs, decks, ticket queues, and document review. We score each model using weighted criteria that map to day-to-day output, not spec-sheet hype: fit and posture support (35%), long-session comfort stability (25%), control reliability (20%), and ownership value (20%).</p>
             <p className="text-slate-700">Our ranking gate is practical: if a mouse repeatedly triggers thumb overreach, ring-finger pressure, or rising end-of-day soreness after a normal adaptation window, it drops—regardless of premium branding or feature count.</p>
             <p className="text-sm text-slate-600">Editorial scope note: this is office buyer guidance, not medical diagnosis or treatment advice.</p>
-            <Image src="/editorial-hero.png" alt="Top-down comparison of three ergonomic mouse shapes with fit, click-force, and posture notes for office wrist-discomfort buyers" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Top-down comparison of three ergonomic mouse shapes with fit, click-force, and posture notes for office wrist-discomfort buyers" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -970,7 +970,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-slate-700">
               <strong>Not this guide:</strong> high-speed gaming optimization, medical diagnosis, or rehab protocol design.
             </div>
-            <Image src="/editorial-hero.png" alt="Professional office worker using a vertical ergonomic mouse with neutral wrist posture in a modern productivity desk setup" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Professional office worker using a vertical ergonomic mouse with neutral wrist posture in a modern productivity desk setup" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1003,7 +1003,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Adaptation Timeline (Day 1 to Week 3)</h2>
             <p className="text-slate-700">Most users should judge comfort after repeated real workloads, not first-hour impressions. Use morning + afternoon + end-of-day checks before deciding.</p>
-            <Image src="/editorial-hero.png" alt="Office support workflow scene showing ergonomic vertical mouse use during spreadsheet and ticket-management tasks" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Office support workflow scene showing ergonomic vertical mouse use during spreadsheet and ticket-management tasks" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1086,7 +1086,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               thumb access, and long-session comfort consistency.
             </p>
             <figure className="overflow-hidden rounded-xl border border-slate-200">
-              <Image
+              <LegacyPlaceholderImage
                 src="/editorial-hero.png"
                 alt="Small-hand user testing vertical mouse button reach and thumb comfort at a desk"
                 width={1600}
@@ -1106,7 +1106,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><strong>Value score (20%)</strong> — price-to-comfort ratio, warranty, return policy</li>
             </ul>
             <figure className="overflow-hidden rounded-xl border border-slate-200">
-              <Image
+              <LegacyPlaceholderImage
                 src="/editorial-hero.png"
                 alt="Neutral wrist posture workstation setup with ergonomic mouse and forearm support"
                 width={1600}
@@ -1169,7 +1169,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <h2 className="text-2xl font-bold text-slate-900">Comfort Timeline: Week 1 → Week 3</h2>
             <p className="text-slate-600">Typical transition pattern users report after switching from an oversized flat mouse to a well-fitted vertical model.</p>
             <figure className="overflow-hidden rounded-xl border border-slate-200">
-              <Image
+              <LegacyPlaceholderImage
                 src="/editorial-hero.png"
                 alt="Long work session desk setup showing ergonomic workflow improvements over time"
                 width={1600}
@@ -1224,7 +1224,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <h2 className="text-2xl font-bold text-slate-900">Deep Model Coverage: 10 Popular Options and Their Tradeoffs</h2>
             <p className="text-slate-700">Below is the practical shortlist most readers compare. Instead of pretending there is one perfect mouse, we focus on tradeoffs: shell size, click feel, weight, connectivity, and adaptation friction.</p>
             <figure className="overflow-hidden rounded-xl border border-slate-200">
-              <Image
+              <LegacyPlaceholderImage
                 src="/editorial-hero.png"
                 alt="Side-by-side ergonomic mouse comparison on a clean desk for small-hand fit decisions"
                 width={1600}
@@ -1284,7 +1284,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li>You care about <strong>wireless reliability and recharge practicality</strong>.</li>
               <li>You want explicit <strong>tradeoff guidance</strong> across 10 realistic models.</li>
             </ul>
-            <Image src="/editorial-hero.png" alt="Comparison matrix showing left-handed vertical mouse model tradeoffs across comfort, wireless stability, charging style, and value" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Comparison matrix showing left-handed vertical mouse model tradeoffs across comfort, wireless stability, charging style, and value" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1297,7 +1297,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><strong>Power & connectivity:</strong> wake consistency, dropouts, recharge friction, battery replacement ease.</li>
               <li><strong>Ownership confidence:</strong> return policy, warranty reputation, replacement availability.</li>
             </ul>
-            <Image src="/editorial-hero.png" alt="Left-handed ergonomic fit measurement workflow using palm width, thumb reach, and click-force comfort checks" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Left-handed ergonomic fit measurement workflow using palm width, thumb reach, and click-force comfort checks" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1314,7 +1314,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>3M Wireless Ergonomic Left:</strong> Neutral-angle comfort profile for some pain patterns. Tradeoff: bulky form and premium cost for niche preference.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Nulea M503 Left:</strong> Low-cost tri-mode utility choice. Tradeoff: quality-control variance and lower confidence for high-intensity workflows.</p></div>
             </div>
-            <Image src="/editorial-hero.png" alt="Decision chart comparing rechargeable left-handed mice versus replaceable-battery wireless models for office productivity" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Decision chart comparing rechargeable left-handed mice versus replaceable-battery wireless models for office productivity" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1410,7 +1410,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <h2 className="text-2xl font-bold text-slate-900">Why Quiet-Click Quality Matters More Than Most Teams Realize</h2>
             <p className="text-slate-700">In shared offices, repetitive click noise becomes cognitive friction. It distracts nearby teammates, bleeds into calls, and adds subtle stress over long project cycles. Quiet-click vertical mice solve two productivity constraints at once: lower acoustic disruption and improved ergonomic posture.</p>
             <p className="text-slate-700">But not all “silent” labels are equal. Some models dampen only left/right clicks while scroll-wheel detents and side buttons remain loud. Others feel overly mushy, reducing confidence during spreadsheet-heavy or design workflows. This guide focuses on complete office behavior, not marketing claims.</p>
-            <Image src="/editorial-hero.png" alt="Office acoustic comparison chart for vertical mice showing quiet click profiles across primary, side, and scroll inputs" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Office acoustic comparison chart for vertical mice showing quiet click profiles across primary, side, and scroll inputs" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1422,7 +1422,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <li><strong>Reliability:</strong> wake speed, dropouts, and consistent input during calls/screenshares.</li>
               <li><strong>Ownership value:</strong> pricing, switch stability, support ecosystem.</li>
             </ul>
-            <Image src="/editorial-hero.png" alt="Hybrid office workflow scene illustrating quiet mouse behavior during calls, focused work, and shared spaces" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Hybrid office workflow scene illustrating quiet mouse behavior during calls, focused work, and shared spaces" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1439,7 +1439,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>Nulea M501:</strong> tri-mode flexibility at low cost. Tradeoff: consistency depends on unit quality and environment.</p></div>
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p><strong>J-Tech Digital V628:</strong> strong palm shelf support for larger hands. Tradeoff: moderate click/noise footprint compared with top quiet picks.</p></div>
             </div>
-            <Image src="/editorial-hero.png" alt="Long-session office ergonomics comparison of quiet vertical mice with notes on click force and fatigue" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Long-session office ergonomics comparison of quiet vertical mice with notes on click force and fatigue" width={1600} height={900} loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full rounded-xl border border-slate-200" />
           </section>
 
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1535,12 +1535,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </>
       )}
 
+      <AmazonProductShowcase group={amazonProductGroup} slug={slug} />
+
       <section id="comparison" className="space-y-4">
         <h2 className="text-2xl font-bold text-slate-900">Comparison Table: {guide.title}</h2>
         <p className="text-sm font-medium text-slate-600">Key takeaway: comfort fit beats raw specs for long-term productivity.</p>
         {isLargeHandsGuide && (
           <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-            <img src="/editorial-hero.png" alt="Size comparison visual for top vertical mice suitable for large hands" loading="lazy" className="h-auto w-full" />
+            <LegacyPlaceholderImage src="/editorial-hero.png" alt="Size comparison visual for top vertical mice suitable for large hands" loading="lazy" className="h-auto w-full" />
           </figure>
         )}
         <div className="overflow-x-auto rounded-xl border border-slate-200">
@@ -1596,7 +1598,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
             <h2 className="text-2xl font-bold text-slate-900">Latency context after the comparison table</h2>
             <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <img src="/editorial-hero.png" alt="Latency comparison infographic for wireless versus wired vertical mice" loading="lazy" className="h-auto w-full" />
+              <LegacyPlaceholderImage src="/editorial-hero.png" alt="Latency comparison infographic for wireless versus wired vertical mice" loading="lazy" className="h-auto w-full" />
               <figcaption className="px-3 py-2 text-xs text-slate-600">Wireless latency is effectively negligible for office workflows in 2026.</figcaption>
             </figure>
           </section>
@@ -1605,16 +1607,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <h2 className="text-2xl font-bold text-slate-900">Product examples in real setups</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-                <img src="/editorial-hero.png" alt="Logitech MX Vertical wireless setup on desk" loading="lazy" className="h-auto w-full" />
+                <LegacyPlaceholderImage src="/editorial-hero.png" alt="Logitech MX Vertical wireless setup on desk" loading="lazy" className="h-auto w-full" />
                 <figcaption className="px-3 py-2 text-xs text-slate-600">Logitech MX Vertical in a clean wireless desk setup.</figcaption>
               </figure>
               <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-                <img src="/editorial-hero.png" alt="Anker wired vertical mouse showing cable routing" loading="lazy" className="h-auto w-full" />
+                <LegacyPlaceholderImage src="/editorial-hero.png" alt="Anker wired vertical mouse showing cable routing" loading="lazy" className="h-auto w-full" />
                 <figcaption className="px-3 py-2 text-xs text-slate-600">Anker wired model with visible cable path and drag tradeoff.</figcaption>
               </figure>
             </div>
             <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <img src="/editorial-hero.png" alt="Five vertical mice side by side comparing wireless and wired models" loading="lazy" className="h-auto w-full" />
+              <LegacyPlaceholderImage src="/editorial-hero.png" alt="Five vertical mice side by side comparing wireless and wired models" loading="lazy" className="h-auto w-full" />
               <figcaption className="px-3 py-2 text-xs text-slate-600">All five recommended models side by side: wireless and wired options.</figcaption>
             </figure>
           </section>
@@ -1622,7 +1624,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6">
             <h2 className="text-2xl font-bold text-slate-900">Ergonomics: grip and cable resistance</h2>
             <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <img src="/editorial-hero.png" alt="Ergonomic grip demonstration on a wireless vertical mouse" loading="lazy" className="h-auto w-full" />
+              <LegacyPlaceholderImage src="/editorial-hero.png" alt="Ergonomic grip demonstration on a wireless vertical mouse" loading="lazy" className="h-auto w-full" />
               <figcaption className="px-3 py-2 text-xs text-slate-600">Wireless grip posture without front-cable drag fighting the vertical angle.</figcaption>
             </figure>
           </section>
@@ -1634,7 +1636,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900">Who Should Buy (and Who Should Skip)</h2>
             <figure className="overflow-hidden rounded-xl border border-slate-200">
-              <Image
+              <LegacyPlaceholderImage
                 src="/editorial-hero.png"
                 alt="Compact ergonomic mouse setup for deciding who should switch from a standard mouse"
                 width={1600}

@@ -13,5 +13,5 @@ export const siteConfig = {
 
 export const featuredGuides = [
   { slug: "kensington-pro-fit-ergo-review-2026", title: "Kensington Pro Fit Ergo Review (2026)", description: "Complete review with ergonomic testing and competitor comparison.", image: "/editorial-hero.png", category: "Product Review" },
-  { slug: "can-vertical-mouse-cure-rsi", title: "Can a Vertical Mouse Cure RSI?", description: "What the clinical research says about vertical mice and RSI.", image: "/editorial-hero.png", category: "Research" },
+  { slug: "can-vertical-mouse-cure-rsi", title: "Can a Vertical Mouse Help With RSI Symptoms?", description: "What the clinical research says about vertical mice and RSI.", image: "/editorial-hero.png", category: "Research" },
 ] as const;

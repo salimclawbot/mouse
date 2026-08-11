@@ -14,6 +14,7 @@ import {
   type TocItem,
 } from "@/lib/article-page-utils";
 import { getArticle, getAllSlugs } from "@/lib/articles";
+import { getArticleVisual } from "@/lib/article-visuals";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -92,6 +93,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = normalizeMetaTitle(article.title);
   const description = normalizeMetaDescription(article.description);
+  const visual = getArticleVisual(article.slug, article.title);
 
   return {
     title,
@@ -104,10 +106,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://verticalmouseguide.com/${article.slug}`,
       images: [
         {
-          url: `https://verticalmouseguide.com/editorial-hero.png`,
+          url: `https://verticalmouseguide.com${visual.src}`,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: visual.alt,
         },
       ],
       type: "article",
@@ -117,7 +119,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title,
       description,
-      images: ["https://verticalmouseguide.com/editorial-hero.png"],
+      images: [`https://verticalmouseguide.com${visual.src}`],
     },
   };
 }
@@ -130,12 +132,14 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const title = normalizeMetaTitle(article.title);
   const description = normalizeMetaDescription(article.description);
+  const visual = getArticleVisual(article.slug, article.title);
   const { html, toc } = normalizeArticleHtml(normalizeRenderedArticleHeadings(article.htmlContent), article.title);
   const amazonProductGroup = getAmazonProductGroup(article.slug);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
+    image: `https://verticalmouseguide.com${visual.src}`,
   };
 
   return (
@@ -145,7 +149,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">{article.title}</h1>
       <p className="mt-3 text-slate-600">By Vertical Mouse Guide Editorial Team · Updated {article.dateModified}</p>
       <figure className="my-7 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm">
-        <img src="/editorial-hero.png" alt={article.title} className="aspect-[16/9] w-full object-cover" width="1536" height="864" fetchPriority="high" />
+        <img src={visual.src} alt={visual.alt} className="aspect-[3/2] w-full object-cover" width="1536" height="1024" fetchPriority="high" />
       </figure>
       <AffiliateDisclosureNotice />
 
@@ -153,7 +157,10 @@ export default async function ArticlePage({ params }: PageProps) {
       <AmazonProductShowcase group={amazonProductGroup} slug={article.slug} />
       <div className="prose prose-slate max-w-none mt-8" dangerouslySetInnerHTML={{ __html: html }} />
 
+      <AmazonProductShowcase group={amazonProductGroup} slug={article.slug} />
+
       <InternalLinks />
+      <AmazonProductShowcase group={amazonProductGroup} slug={article.slug} />
     </article>
   );
 }
