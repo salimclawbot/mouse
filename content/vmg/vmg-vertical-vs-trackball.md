@@ -54,7 +54,7 @@ OSHA ergonomic guidelines emphasize neutral wrist positioning as a key factor in
 
 A vertical mouse still moves like a mouse. You push it left, the cursor goes left. The spatial relationship between hand movement and screen movement is identical to what you already know. The only adaptation is the grip angle — most users reach full productivity within 2–3 weeks.
 
-For our hand-size-specific recommendations, see our guides for [large hands](/guides/best-vertical-mouse-large-hands/) and [small hands](/guides/best-vertical-mouse-small-hands-carpal-tunnel/).
+For our hand-size-specific recommendations, see our guides for [large hands](/best-vertical-mouse-large-hands/) and [small hands](/best-vertical-mouse-small-hands-carpal-tunnel/).
 
 ### You Game Casually
 

@@ -106,7 +106,7 @@ Most users report matching or exceeding their previous speed. Many find that pic
 - Can reduce existing discomfort and prevent future strain proactively
 
 **Cons:**
-- Sizing is critical — a poorly sized vertical mouse can cause new problems (see our [large hands](/guides/best-vertical-mouse-large-hands/) and [small hands](/guides/best-vertical-mouse-small-hands-carpal-tunnel/) guides)
+- Sizing is critical — a poorly sized vertical mouse can cause new problems (see our [large hands](/best-vertical-mouse-large-hands/) and [small hands](/best-vertical-mouse-small-hands-carpal-tunnel/) guides)
 - 2–4 week adaptation period with reduced productivity
 - Not suitable for competitive gaming
 - Very limited left-hand options (see our [left-handed guide](/best-left-handed-vertical-mouse/))
@@ -152,10 +152,10 @@ Repetitive strain develops gradually. By the time you feel symptoms, the underly
 
 If you have decided to try a vertical mouse, start here:
 
-1. **[Measure your hand](/guides/best-vertical-mouse-large-hands/#how-to-measure-your-hand)** — this determines which guide to follow
+1. **[Measure your hand](/best-vertical-mouse-large-hands/#how-to-measure-your-hand)** — this determines which guide to follow
 2. **Set a budget** — budget ($15–30), mid-range ($30–60), or premium ($60–100+)
 3. **Decide wireless vs. wired** — wireless is generally preferred for reduced desk drag
-4. **Read the guide for your hand size** — [large hands](/guides/best-vertical-mouse-large-hands/) or [small hands](/guides/best-vertical-mouse-small-hands-carpal-tunnel/)
+4. **Read the guide for your hand size** — [large hands](/best-vertical-mouse-large-hands/) or [small hands](/best-vertical-mouse-small-hands-carpal-tunnel/)
 5. **Commit to 3 weeks** — keep your old mouse accessible but use the vertical mouse as your primary device
 
 ---
@@ -181,7 +181,7 @@ No. After the adaptation period (2–4 weeks), most users match or exceed their 
 Yes, and your brain adapts to both surprisingly quickly. Many people use a vertical mouse at work and a regular mouse for home gaming. After initial adaptation, switching between the two takes seconds, not weeks. Your motor cortex retains both movement patterns.
 
 ### What is the best vertical mouse for beginners?
-For a first vertical mouse, the Anker Ergonomic Vertical Mouse (under $25) is the standard recommendation. It provides the core ergonomic benefit at minimal cost, letting you confirm that a vertical mouse works for you before investing in a premium option. Check our [hand-size-specific guides](/guides/best-vertical-mouse-large-hands/) to ensure you choose a size that fits.
+For a first vertical mouse, the Anker Ergonomic Vertical Mouse (under $25) is the standard recommendation. It provides the core ergonomic benefit at minimal cost, letting you confirm that a vertical mouse works for you before investing in a premium option. Check our [hand-size-specific guides](/best-vertical-mouse-large-hands/) to ensure you choose a size that fits.
 
 ---
 

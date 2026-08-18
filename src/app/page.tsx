@@ -20,25 +20,25 @@ const personas = [
   {
     title: "Desk Athletes",
     blurb: "8+ hour makers and operators who need low-fatigue comfort all week.",
-    href: "/guides/best-vertical-mouse-small-hands-carpal-tunnel",
+    href: "/best-vertical-mouse-small-hands-carpal-tunnel",
     icon: HeartPulse,
   },
   {
     title: "Precision Creators",
     blurb: "Designers, editors, and builders balancing pixel-level control with joint care.",
-    href: "/guides/left-handed-vertical-mouse-wireless-rechargeable",
+    href: "/left-handed-vertical-mouse-wireless-rechargeable",
     icon: MousePointer2,
   },
   {
     title: "Mac Power Users",
     blurb: "MacBook and multi-device users who need native Bluetooth and smooth macOS controls.",
-    href: "/guides/best-vertical-mouse-for-mac",
+    href: "/best-vertical-mouse-for-mac",
     icon: ShieldCheck,
   },
   {
     title: "Budget Smart Upgraders",
     blurb: "First ergonomic switchers who want tangible relief without overspending.",
-    href: "/guides/quiet-click-vertical-mouse-office",
+    href: "/quiet-click-vertical-mouse-office",
     icon: TrendingUp,
   },
 ];
@@ -200,7 +200,7 @@ export default function Home() {
           {featured.map((g) => (
             <Link
               key={g.slug}
-              href={`/guides/${g.slug}`}
+              href={`/${g.slug}`}
               className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
             >
               <Card className="group h-full overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">

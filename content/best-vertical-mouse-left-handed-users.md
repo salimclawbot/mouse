@@ -271,7 +271,7 @@ The DXT Precision Mouse is the best true ambidextrous option for left-handed use
 
 For left-handed graphic designers and CAD users, the DXT delivers pen-grip precision that matches the ergonomic benefit of dedicated left-hand models while providing finer cursor control than any palm-grip vertical mouse.
 
-We cover the DXT in detail in our [ergonomic mouse buying guide](/articles/ergonomic-mouse-buying-guide). For left-handers who alternate between their dominant and non-dominant hand to reduce cumulative strain, the DXT is unmatched — no other vertical mouse enables this strategy without changing hardware.
+We cover the DXT in detail in our [ergonomic mouse buying guide](/ergonomic-mouse-buying-guide). For left-handers who alternate between their dominant and non-dominant hand to reduce cumulative strain, the DXT is unmatched — no other vertical mouse enables this strategy without changing hardware.
 
 [Check DXT Precision Mouse on Amazon](https://www.amazon.com/s?k=DXT+Precision+Mouse&tag=verticalmouse-20)
 
@@ -441,7 +441,7 @@ Most left-hand vertical mice work plug-and-play with no software needed. However
 - **Evoluent Mouse Manager** (VM4 Left): Required for custom button programming
 - **No software needed**: J-Tech V628A, Goldtouch
 
-For Mac users, see our [best vertical mouse for wireless connectivity](/articles/best-wireless-vertical-mouse) guide which covers Mac-specific setup for left-hand mice.
+For Mac users, see our [best vertical mouse for wireless connectivity](/best-wireless-vertical-mouse) guide which covers Mac-specific setup for left-hand mice.
 
 ### 5. Budget Tiers
 
@@ -464,7 +464,7 @@ Left-handed gamers face double the challenge: most games assume right-hand mouse
 
 **Competitive FPS**: Left-handed competitive gamers typically use standard flat mice (some gaming brands make left-hand gaming mice). A vertical mouse's polling rate and DPI range are not designed for competitive FPS regardless of handedness.
 
-For more on vertical mouse gaming suitability, see our [best vertical mouse for gaming](/articles/best-vertical-mouse-gaming) guide.
+For more on vertical mouse gaming suitability, see our [best vertical mouse for gaming](/best-vertical-mouse-gaming) guide.
 
 ---
 
@@ -515,9 +515,9 @@ This guide evaluates left-handed and ambidextrous vertical mice based on ergonom
 - We may earn a commission at no extra cost to you; affiliate relationships do not influence our recommendations
 
 **Internal links referenced:**
-- [Ergonomic Mouse Buying Guide](/articles/ergonomic-mouse-buying-guide)
-- [Best Wireless Vertical Mouse](/articles/best-wireless-vertical-mouse)
-- [Best Vertical Mouse for Gaming](/articles/best-vertical-mouse-gaming)
+- [Ergonomic Mouse Buying Guide](/ergonomic-mouse-buying-guide)
+- [Best Wireless Vertical Mouse](/best-wireless-vertical-mouse)
+- [Best Vertical Mouse for Gaming](/best-vertical-mouse-gaming)
 
 ![Evoluent VerticalMouse 4 Left dedicated left-hand vertical mouse product photo](/images/articles/best-vertical-mouse-left-handed-evoluent-vm4.jpg)
 

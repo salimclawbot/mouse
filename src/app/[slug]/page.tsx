@@ -15,6 +15,8 @@ import {
 } from "@/lib/article-page-utils";
 import { getArticle, getAllSlugs } from "@/lib/articles";
 import { getArticleVisual } from "@/lib/article-visuals";
+import { guides, site } from "@/lib/content";
+import GuidePage from "../guides/[slug]/page";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -40,10 +42,10 @@ function TableOfContents({ items }: { items: TocItem[] }) {
 
 function InternalLinks() {
   const links = [
-    { label: "Ergonomic Vertical Mouse Setup Guide", slug: "/guides/vertical-mouse-setup-guide" },
-    { label: "Best Vertical Mouse for RSI", slug: "/guides/best-vertical-mouse-for-rsi" },
-    { label: "Compare Wireless Mice", slug: "/guides/wireless-mouse-comparison-2026" },
-    { label: "Trackpad vs Mouse for Carpal Pain", slug: "/guides/trackpad-vs-mouse-for-wrist-pain" },
+    { label: "Ergonomic Vertical Mouse Setup Guide", slug: "/how-to-set-up-vertical-mouse-ergonomics-guide" },
+    { label: "Do Vertical Mice Help Wrist Pain?", slug: "/do-vertical-mice-help-wrist-pain" },
+    { label: "Compare Wireless Vertical Mice", slug: "/best-wireless-vertical-mouse" },
+    { label: "Vertical Mouse vs Trackball", slug: "/vertical-mouse-vs-trackball-programmers" },
   ];
 
   return (
@@ -82,14 +84,42 @@ function FaqSection({ items, slug }: { items: { question: string; answer: string
 }
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  return Array.from(new Set([...getAllSlugs(), ...guides.map((guide) => guide.slug)])).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const article = await getArticle(slug);
 
-  if (!article) return { title: "Not Found" };
+  if (!article) {
+    const guide = guides.find((item) => item.slug === slug);
+    if (!guide) return { title: "Not Found" };
+
+    const title = normalizeMetaTitle(guide.title);
+    const description = normalizeMetaDescription(guide.description);
+    const visual = getArticleVisual(guide.slug, guide.title);
+
+    return {
+      title,
+      description,
+      keywords: buildKeywords(guide.title, "vertical mouse"),
+      alternates: { canonical: `${site.url}/${guide.slug}` },
+      openGraph: {
+        title,
+        description,
+        url: `${site.url}/${guide.slug}`,
+        images: [{ url: `${site.url}${visual.src}`, alt: visual.alt }],
+        type: "article",
+        siteName: "Vertical Mouse Guide",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [`${site.url}${visual.src}`],
+      },
+    };
+  }
 
   const title = normalizeMetaTitle(article.title);
   const description = normalizeMetaDescription(article.description);
@@ -128,7 +158,11 @@ export default async function ArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = await getArticle(slug);
 
-  if (!article) notFound();
+  if (!article) {
+    const guide = guides.find((item) => item.slug === slug);
+    if (!guide) notFound();
+    return <GuidePage params={params} />;
+  }
 
   const title = normalizeMetaTitle(article.title);
   const description = normalizeMetaDescription(article.description);

@@ -38,7 +38,7 @@ Switching to a vertical mouse is a smart move — it places your hand in a natur
 
 A vertical mouse used at the wrong height, with a poor chair setting, or with default software configuration can actually introduce *new* strain patterns. Your wrist might hyperextend to reach a surface that's too high. Your shoulder might hike up to compensate for a mouse placed too far away. Your forearm might fatigue from fighting oversensitive pointer acceleration.
 
-If you already experience wrist pain and are wondering whether a vertical mouse can help, our guide on [whether vertical mice help wrist pain](/guides/do-vertical-mice-help-wrist-pain) reviews the clinical evidence. The short answer: yes, but only with correct setup. That's what this guide delivers — a complete, step-by-step ergonomic setup protocol that ensures your vertical mouse actually does what it's designed to do.
+If you already experience wrist pain and are wondering whether a vertical mouse can help, our guide on [whether vertical mice help wrist pain](/do-vertical-mice-help-wrist-pain) reviews the clinical evidence. The short answer: yes, but only with correct setup. That's what this guide delivers — a complete, step-by-step ergonomic setup protocol that ensures your vertical mouse actually does what it's designed to do.
 
 OSHA's ergonomic guidelines emphasise that no single piece of equipment fixes poor posture in isolation. The workstation is a system — chair, desk, keyboard, mouse, and monitor must work together. Getting your vertical mouse setup right means getting the entire chain right, and that's exactly what we'll walk through.
 
@@ -78,7 +78,7 @@ The mouse should be close enough that your upper arm stays relaxed at your side,
 
 Use a flat, cloth-surface mouse pad at least 12 × 10 inches in size. Avoid mouse pads with built-in wrist rests — these are designed for traditional flat mice and can push your wrist into an unnatural angle with a vertical mouse. The vertical grip already neutralises your wrist; adding a raised rest underneath can force unwanted extension or deviation.
 
-For optical sensors (used in mice like the [Logitech MX Vertical](/guides/logitech-mx-vertical-review)), a cloth pad provides consistent tracking. For laser sensors, hard pads can also work well. The key is consistency — the pad surface should provide uniform friction so the cursor doesn't jump or skip.
+For optical sensors (used in mice like the [Logitech MX Vertical](/logitech-mx-vertical-review)), a cloth pad provides consistent tracking. For laser sensors, hard pads can also work well. The key is consistency — the pad surface should provide uniform friction so the cursor doesn't jump or skip.
 
 ![Diagram showing the correct height for placing a vertical mouse at desk level with elbow at 90 degrees](/images/guides/how-to-set-up-vertical-mouse/mouse-height-elbow-angle.jpg)
 *Mouse height guide: elbow should stay close to 90° with the mouse at the same level as your keyboard*
@@ -227,7 +227,7 @@ Developers spend less time on pixel-precise mouse work and more time navigating 
 - **Scroll**: Use ratchet mode for code review; free-spin for long log files
 - **Desk setup**: If you use a split keyboard, the vertical mouse sits naturally in the gap between halves
 
-Developers also tend to alternate heavily between keyboard and mouse. Position the mouse close to the keyboard to minimise transition distance. If you're comparing vertical mice to other ergonomic options for development work, our [vertical mouse vs trackball for programmers](/guides/vertical-mouse-vs-trackball-programmers) guide covers the trade-offs.
+Developers also tend to alternate heavily between keyboard and mouse. Position the mouse close to the keyboard to minimise transition distance. If you're comparing vertical mice to other ergonomic options for development work, our [vertical mouse vs trackball for programmers](/vertical-mouse-vs-trackball-programmers) guide covers the trade-offs.
 
 ### Graphic Design and Creative Work
 
@@ -239,7 +239,7 @@ Designers need precision above all. The mouse is a primary creative tool, not ju
 - **Mouse pad**: Large (at least 14 × 12 inches) cloth pad to support the wider arm movements needed at low DPI
 - **Desk setup**: Ensure ample space to the right of the keyboard — designers often need a larger mousing area than office workers
 
-For mouse recommendations tailored to design workflows, see our [best vertical mouse for graphic designers](/guides/best-vertical-mouse-graphic-designers) roundup.
+For mouse recommendations tailored to design workflows, see our [best vertical mouse for graphic designers](/best-vertical-mouse-graphic-designers) roundup.
 
 ### General Office Work
 
@@ -274,7 +274,7 @@ Most users report that the vertical grip starts to feel natural. Speed approache
 
 By week four, most users achieve full speed and precision parity with their previous mouse. Many report that going back to a flat mouse now feels awkward. Long-term users consistently cite reduced wrist and forearm fatigue at the end of the workday.
 
-For a deeper look at the adaptation timeline, including tips for speeding up the process, see our dedicated article: [How Long Does It Take to Adjust to a Vertical Mouse?](/guides/how-long-adjust-vertical-mouse)
+For a deeper look at the adaptation timeline, including tips for speeding up the process, see our dedicated article: [How Long Does It Take to Adjust to a Vertical Mouse?](/how-long-adjust-vertical-mouse)
 
 The key to a smooth transition: don't try to force full-time use on day one. Start with two to three hours per day, increasing by an hour each day. Keep your old mouse available for tasks that demand precision during the first week. By week two, commit to the vertical mouse full-time.
 
@@ -306,13 +306,13 @@ Start at 800–1200 DPI for general office work. For precision tasks like design
 
 ### Can I use a vertical mouse if I have carpal tunnel syndrome?
 
-A vertical mouse can help manage carpal tunnel symptoms by reducing forearm pronation, which in turn reduces pressure on the carpal tunnel. However, it is not a medical treatment. If you have diagnosed carpal tunnel syndrome, consult your healthcare provider and consider a vertical mouse as one part of a broader ergonomic strategy. Our guide on the [best vertical mouse for carpal tunnel](/guides/best-vertical-mouse-carpal-tunnel) reviews models specifically suited for this use case.
+A vertical mouse can help manage carpal tunnel symptoms by reducing forearm pronation, which in turn reduces pressure on the carpal tunnel. However, it is not a medical treatment. If you have diagnosed carpal tunnel syndrome, consult your healthcare provider and consider a vertical mouse as one part of a broader ergonomic strategy. Our guide on the [best vertical mouse for carpal tunnel](/best-vertical-mouse-carpal-tunnel) reviews models specifically suited for this use case.
 
 ## Conclusion
 
 Learning how to set up a vertical mouse is straightforward once you follow the five-step chain: desk and chair first, mouse height second, arm alignment third, DPI fourth, and button configuration fifth. Each step builds on the last, and skipping any one of them can undermine the ergonomic benefit of the switch. Bookmark this guide, revisit it after your first week, and fine-tune as your body adapts. A correctly set up vertical mouse should feel effortless — if it doesn't, one of these five links in the chain needs adjustment.
 
-**Next step:** If you haven't chosen a vertical mouse yet, start with our [best vertical mice of 2026](/guides/best-vertical-mouse) roundup — every recommendation in that guide pairs perfectly with the setup protocol above.
+**Next step:** If you haven't chosen a vertical mouse yet, start with our [best vertical mice of 2026](/best-vertical-mouse) roundup — every recommendation in that guide pairs perfectly with the setup protocol above.
 
 ## Sources & Methodology
 
