@@ -129,11 +129,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: title },
     description: normalizeMetaDescription(description),
     keywords: buildKeywords(title, "vertical mouse"),
-    alternates: { canonical: `${site.url}/guides/${guide.slug}` },
+    alternates: { canonical: `${site.url}/${guide.slug}` },
     openGraph: {
       title,
       description: normalizeMetaDescription(description),
-      url: `${site.url}/guides/${guide.slug}`,
+      url: `${site.url}/${guide.slug}`,
       type: "article" as const,
       images: [{ url: `${site.url}${visual.src}`, alt: visual.alt }],
     },
@@ -172,7 +172,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         "Ergonomic Mouse for Wrist Pain (2026)",
         "Quick-answer version of our office wrist-pain ergonomic mouse rankings. For full depth, see the deep-dive buyer guide.",
       ),
-      alternates: { canonical: `${site.url}/guides/office-ergonomic-mouse-wrist-pain-deep-dive` },
+      alternates: { canonical: `${site.url}/office-ergonomic-mouse-wrist-pain-deep-dive` },
     };
   }
 
@@ -635,8 +635,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </div>
             <p className="text-sm text-slate-600">Jump to <a href="#comparison" className="underline">comparison table</a> if you want specs fast, or keep reading for fit-by-use-case guidance.</p>
             <div className="grid gap-2 pt-1 text-sm md:grid-cols-2">
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Need low-pronation fit guidance? Read the wrist-pain framework.</Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Shopping on budget? Compare the top sub-$50 options.</Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Need low-pronation fit guidance? Read the wrist-pain framework.</Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-lg border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50">Shopping on budget? Compare the top sub-$50 options.</Link>
             </div>
           </section>
 
@@ -685,10 +685,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
             <div className="grid gap-3 md:grid-cols-2">
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter switches for shared offices?</strong><br /><span className="text-sm text-slate-600">Compare low-noise ergonomic picks for developer teams.</span></Link>
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Smaller hands in your dev team?</strong><br /><span className="text-sm text-slate-600">Use compact-fit shortlist and overreach checklist.</span></Link>
-              <Link href="/guides/office-ergonomic-mouse-wrist-pain-deep-dive" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need full office procurement depth?</strong><br /><span className="text-sm text-slate-600">Use deep-dive methodology and rollout framework.</span></Link>
-              <Link href="/guides/best-ergonomic-mouse-for-wrist-pain-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Want the shorter office summary?</strong><br /><span className="text-sm text-slate-600">Read the quick ranking version.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter switches for shared offices?</strong><br /><span className="text-sm text-slate-600">Compare low-noise ergonomic picks for developer teams.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Smaller hands in your dev team?</strong><br /><span className="text-sm text-slate-600">Use compact-fit shortlist and overreach checklist.</span></Link>
+              <Link href="/office-ergonomic-mouse-wrist-pain-deep-dive" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need full office procurement depth?</strong><br /><span className="text-sm text-slate-600">Use deep-dive methodology and rollout framework.</span></Link>
+              <Link href="/best-ergonomic-mouse-for-wrist-pain-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Want the shorter office summary?</strong><br /><span className="text-sm text-slate-600">Read the quick ranking version.</span></Link>
             </div>
           </section>
 
@@ -721,7 +721,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <h2 className="text-2xl font-bold text-slate-900">Quick Answer (TL;DR)</h2>
           <p className="text-slate-700"><strong>Best overall for small hands:</strong> Logitech Lift. <strong>Best budget:</strong> Anker Ergonomic Vertical. <strong>Best compact alternative:</strong> Delux M618 Mini.</p>
           <p className="text-slate-700">If wrist discomfort is your priority, choose the smallest shell that supports your palm and keeps clicks low-effort through a full workday.</p>
-          <p className="text-sm text-slate-600">Need left-hand-specific options or low-noise office picks? Jump to <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="underline">left-handed wireless/rechargeable guide</Link> or <Link href="/guides/quiet-click-vertical-mouse-office" className="underline">quiet-click office guide</Link>.</p>
+          <p className="text-sm text-slate-600">Need left-hand-specific options or low-noise office picks? Jump to <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="underline">left-handed wireless/rechargeable guide</Link> or <Link href="/quiet-click-vertical-mouse-office" className="underline">quiet-click office guide</Link>.</p>
         </section>
       )}
 
@@ -730,7 +730,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <h2 className="text-2xl font-bold text-slate-900">Quick Answer (TL;DR)</h2>
           <p className="text-slate-700"><strong>Best overall quiet office pick:</strong> Logitech Lift. <strong>Best value:</strong> ProtoArc EM11 NL. <strong>Best premium:</strong> Logitech MX Vertical.</p>
           <p className="text-slate-700">For open offices, prioritize low click sharpness plus ergonomic fit; quietness without comfort fails by hour six.</p>
-          <p className="text-sm text-slate-600">Need left-handed models or small-hand fit-first picks? See <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="underline">left-handed guide</Link> and <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="underline">small-hands guide</Link>.</p>
+          <p className="text-sm text-slate-600">Need left-handed models or small-hand fit-first picks? See <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="underline">left-handed guide</Link> and <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="underline">small-hands guide</Link>.</p>
         </section>
       )}
 
@@ -917,10 +917,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
             <div className="grid gap-3 md:grid-cols-2">
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + wrist pain?</strong><br /><span className="text-sm text-slate-600">Use compact-fit picks and overreach prevention checklist.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need low-noise office clicks?</strong><br /><span className="text-sm text-slate-600">Compare acoustic profiles and comfort tradeoffs.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed setup?</strong><br /><span className="text-sm text-slate-600">See true left-hand wireless + rechargeable options.</span></Link>
-              <Link href="/guides/best-ergonomic-mouse-for-wrist-pain-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need the shorter version?</strong><br /><span className="text-sm text-slate-600">Read our fast office wrist-pain ranking guide.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + wrist pain?</strong><br /><span className="text-sm text-slate-600">Use compact-fit picks and overreach prevention checklist.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need low-noise office clicks?</strong><br /><span className="text-sm text-slate-600">Compare acoustic profiles and comfort tradeoffs.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed setup?</strong><br /><span className="text-sm text-slate-600">See true left-hand wireless + rechargeable options.</span></Link>
+              <Link href="/best-ergonomic-mouse-for-wrist-pain-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need the shorter version?</strong><br /><span className="text-sm text-slate-600">Read our fast office wrist-pain ranking guide.</span></Link>
             </div>
           </section>
 
@@ -949,7 +949,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       {isWristGuide && (
         <>
           <section className="rounded-2xl border border-indigo-200 bg-indigo-50/50 p-5">
-            <p className="text-sm text-slate-700"><strong>Quick-guide note:</strong> this page is the fast version. For the primary comprehensive article, use <Link className="underline" href="/guides/office-ergonomic-mouse-wrist-pain-deep-dive">Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide</Link>.</p>
+            <p className="text-sm text-slate-700"><strong>Quick-guide note:</strong> this page is the fast version. For the primary comprehensive article, use <Link className="underline" href="/office-ergonomic-mouse-wrist-pain-deep-dive">Best Ergonomic Mouse for Office Wrist Pain: Deep-Dive Buyer Guide</Link>.</p>
           </section>
 
           <section id="method" className="space-y-4 rounded-2xl border border-slate-200 p-6">
@@ -1033,10 +1033,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
             <div className="grid gap-3 md:grid-cols-2">
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + wrist pain?</strong><br /><span className="text-sm text-slate-600">Use our compact-fit ranking and checklist.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter office clicks?</strong><br /><span className="text-sm text-slate-600">Compare low-noise ergonomic options.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed workflow?</strong><br /><span className="text-sm text-slate-600">See true left-hand wireless + rechargeable picks.</span></Link>
-              <Link href="/guides/best-vertical-mouse-large-hands" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Large-hand fit issues?</strong><br /><span className="text-sm text-slate-600">Move to large-shell shortlist and tradeoffs.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + wrist pain?</strong><br /><span className="text-sm text-slate-600">Use our compact-fit ranking and checklist.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter office clicks?</strong><br /><span className="text-sm text-slate-600">Compare low-noise ergonomic options.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed workflow?</strong><br /><span className="text-sm text-slate-600">See true left-hand wireless + rechargeable picks.</span></Link>
+              <Link href="/best-vertical-mouse-large-hands" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Large-hand fit issues?</strong><br /><span className="text-sm text-slate-600">Move to large-shell shortlist and tradeoffs.</span></Link>
             </div>
           </section>
 
@@ -1261,14 +1261,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides (Pick Your Intent)</h2>
             <div className="grid gap-3 md:grid-cols-2">
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Still deciding between Lift and MX Vertical?</strong><br /><span className="text-sm text-slate-600">See our direct size-fit and value comparison.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need to stay under $50?</strong><br /><span className="text-sm text-slate-600">Budget picks ranked by comfort-per-dollar.</span></Link>
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Wrist pain is your main issue?</strong><br /><span className="text-sm text-slate-600">Read our no-pronation angle and posture guide.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Considering trackballs instead?</strong><br /><span className="text-sm text-slate-600">Compare movement load and adaptation time.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Using a MacBook daily?</strong><br /><span className="text-sm text-slate-600">Bluetooth stability and macOS support picks.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Want the full desk setup fix?</strong><br /><span className="text-sm text-slate-600">Mouse + keyboard + desk-height stack that works together.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed buyer?</strong><br /><span className="text-sm text-slate-600">See dedicated left-handed wireless and rechargeable picks.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need low-noise clicks for shared spaces?</strong><br /><span className="text-sm text-slate-600">Use our quiet office ranking and acoustic framework.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Still deciding between Lift and MX Vertical?</strong><br /><span className="text-sm text-slate-600">See our direct size-fit and value comparison.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need to stay under $50?</strong><br /><span className="text-sm text-slate-600">Budget picks ranked by comfort-per-dollar.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Wrist pain is your main issue?</strong><br /><span className="text-sm text-slate-600">Read our no-pronation angle and posture guide.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Considering trackballs instead?</strong><br /><span className="text-sm text-slate-600">Compare movement load and adaptation time.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Using a MacBook daily?</strong><br /><span className="text-sm text-slate-600">Bluetooth stability and macOS support picks.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Want the full desk setup fix?</strong><br /><span className="text-sm text-slate-600">Mouse + keyboard + desk-height stack that works together.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Left-handed buyer?</strong><br /><span className="text-sm text-slate-600">See dedicated left-handed wireless and rechargeable picks.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need low-noise clicks for shared spaces?</strong><br /><span className="text-sm text-slate-600">Use our quiet office ranking and acoustic framework.</span></Link>
             </div>
           </section>
         </>
@@ -1386,12 +1386,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Internal Next-Step Guides</h2>
             <div className="grid gap-3 md:grid-cols-2">
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need more recharge-focused picks?</strong><br /><span className="text-sm text-slate-600">See dedicated rechargeable rankings.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Primarily work from home?</strong><br /><span className="text-sm text-slate-600">Wireless reliability picks for remote workflows.</span></Link>
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Pain-first purchase decision?</strong><br /><span className="text-sm text-slate-600">Use angle + posture framework before buying.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Considering mainstream Logitech options?</strong><br /><span className="text-sm text-slate-600">Read Lift vs MX Vertical tradeoffs.</span></Link>
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + pain-sensitive use?</strong><br /><span className="text-sm text-slate-600">Use the compact-fit buyer framework and shortlist.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter clicks for shared offices?</strong><br /><span className="text-sm text-slate-600">Compare low-noise vertical picks by acoustic profile.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need more recharge-focused picks?</strong><br /><span className="text-sm text-slate-600">See dedicated rechargeable rankings.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Primarily work from home?</strong><br /><span className="text-sm text-slate-600">Wireless reliability picks for remote workflows.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Pain-first purchase decision?</strong><br /><span className="text-sm text-slate-600">Use angle + posture framework before buying.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Considering mainstream Logitech options?</strong><br /><span className="text-sm text-slate-600">Read Lift vs MX Vertical tradeoffs.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands + pain-sensitive use?</strong><br /><span className="text-sm text-slate-600">Use the compact-fit buyer framework and shortlist.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need quieter clicks for shared offices?</strong><br /><span className="text-sm text-slate-600">Compare low-noise vertical picks by acoustic profile.</span></Link>
             </div>
           </section>
 
@@ -1516,12 +1516,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <section className="space-y-4 rounded-2xl border border-slate-200 p-6">
             <h2 className="text-2xl font-bold text-slate-900">Internal Links for Layered Intent</h2>
             <div className="grid gap-3 md:grid-cols-2">
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need wireless reliability too?</strong><br /><span className="text-sm text-slate-600">See WFH-focused wireless ergonomic picks.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Budget-constrained team purchase?</strong><br /><span className="text-sm text-slate-600">Compare sub-$50 comfort options.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Developer workflow heavy clicks?</strong><br /><span className="text-sm text-slate-600">Long-session picks for coding workloads.</span></Link>
-              <Link href="/guides/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need full desk-stack fixes?</strong><br /><span className="text-sm text-slate-600">Mouse + keyboard + desk-height strategy.</span></Link>
-              <Link href="/guides/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands and wrist sensitivity?</strong><br /><span className="text-sm text-slate-600">Use our compact-fit ranking and adaptation checklist.</span></Link>
-              <Link href="/guides/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need true left-handed ergonomics?</strong><br /><span className="text-sm text-slate-600">See left-handed wireless vs rechargeable tradeoffs.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need wireless reliability too?</strong><br /><span className="text-sm text-slate-600">See WFH-focused wireless ergonomic picks.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Budget-constrained team purchase?</strong><br /><span className="text-sm text-slate-600">Compare sub-$50 comfort options.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Developer workflow heavy clicks?</strong><br /><span className="text-sm text-slate-600">Long-session picks for coding workloads.</span></Link>
+              <Link href="/quiet-click-vertical-mouse-office" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need full desk-stack fixes?</strong><br /><span className="text-sm text-slate-600">Mouse + keyboard + desk-height strategy.</span></Link>
+              <Link href="/best-vertical-mouse-small-hands-carpal-tunnel" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Small hands and wrist sensitivity?</strong><br /><span className="text-sm text-slate-600">Use our compact-fit ranking and adaptation checklist.</span></Link>
+              <Link href="/left-handed-vertical-mouse-wireless-rechargeable" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50"><strong>Need true left-handed ergonomics?</strong><br /><span className="text-sm text-slate-600">See left-handed wireless vs rechargeable tradeoffs.</span></Link>
             </div>
           </section>
 
@@ -1577,7 +1577,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                       <Link
                         href={normalizeAmazonUrl(p.amazonUrl)}
                         target="_blank"
-                        rel="sponsored nofollow noopener"
+                        rel="sponsored nofollow noopener noreferrer"
                         data-affiliate-link="amazon"
                         data-affiliate-site="verticalmouseguide"
                         data-affiliate-page={slug}

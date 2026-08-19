@@ -1,12 +1,27 @@
 import { MetadataRoute } from 'next'
 import { guides, site } from '@/lib/content'
+import { getAllSlugs } from '@/lib/articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url
-  const redirectingSlugs = new Set(["best-ergonomic-mouse-for-wrist-pain-office"]);
-  const guideUrls = guides.filter((g) => !redirectingSlugs.has(g.slug)).map((g) => ({
-    url: `${base}/guides/${g.slug}`,
-    lastModified: g.updated,
+  const redirectingSlugs = new Set([
+    "best-ergonomic-mouse-for-wrist-pain-office",
+    "best-vertical-mouse-graphic-designers",
+    "best-vertical-mouse-left-handed-users",
+    "how-long-adjust-vertical-mouse",
+    "how-long-adjust-vertical-mouse-2026",
+    "how-to-set-up-vertical-mouse",
+    "how-to-set-up-vertical-mouse-correctly",
+    "kensington-pro-fit-ergo-review-2026",
+  ]);
+  const articleSlugs = getAllSlugs();
+  const publishedSlugs = Array.from(new Set([
+    ...guides.map((guide) => guide.slug),
+    ...articleSlugs,
+  ])).filter((slug) => !redirectingSlugs.has(slug));
+  const guideUrls = publishedSlugs.map((slug) => ({
+    url: `${base}/${slug}`,
+    lastModified: guides.find((guide) => guide.slug === slug)?.updated || "2026-08-18",
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))

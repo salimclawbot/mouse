@@ -99,16 +99,8 @@ export default function PrivacyPage() {
         <li>
           <strong>Amazon Associates Program</strong> — As an Amazon affiliate, when you click
           affiliate links on our site, Amazon may collect information about your visit through their
-          own cookies and tracking technologies. This data is governed by{" "}
-          <a
-            className="text-emerald-700 underline"
-            href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496"
-            target="_blank"
-            rel="noopener noreferrer nofollow sponsored"
-          >
-            Amazon&apos;s Privacy Notice
-          </a>
-          .
+          own cookies and tracking technologies. This data is governed by Amazon&apos;s Privacy
+          Notice.
         </li>
       </ul>
       <p>

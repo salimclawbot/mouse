@@ -23,6 +23,14 @@ export interface Article {
 }
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
+const REDIRECTED_SLUGS = new Set([
+  "best-vertical-mouse-graphic-designers",
+  "best-vertical-mouse-left-handed-users",
+  "how-long-adjust-vertical-mouse",
+  "how-long-adjust-vertical-mouse-2026",
+  "how-to-set-up-vertical-mouse",
+  "kensington-pro-fit-ergo-review-2026",
+]);
 
 function toSlug(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").trim();
@@ -105,7 +113,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
 export function getAllSlugs(): string[] {
   return fs
     .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith(".md"))
+    .filter((f) => f.endsWith(".md") && !REDIRECTED_SLUGS.has(f.replace(/\.md$/, "")))
     .map((f) => f.replace(/\.md$/, ""));
 }
 

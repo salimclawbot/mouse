@@ -17,8 +17,8 @@ A vertical mouse positions your hand in a natural handshake grip, reducing the f
 
 ### By Hand Size
 
-- **[Best Vertical Mouse for Large Hands](/guides/best-vertical-mouse-large-hands/)** — Scored picks for hands 19 cm+. Detailed sizing guide with measurement instructions and adaptation timeline.
-- **[Best Vertical Mouse for Small Hands](/guides/best-vertical-mouse-small-hands-carpal-tunnel/)** — Top-rated options for hands under 17.5 cm with fit-first scoring.
+- **[Best Vertical Mouse for Large Hands](/best-vertical-mouse-large-hands/)** — Scored picks for hands 19 cm+. Detailed sizing guide with measurement instructions and adaptation timeline.
+- **[Best Vertical Mouse for Small Hands](/best-vertical-mouse-small-hands-carpal-tunnel/)** — Top-rated options for hands under 17.5 cm with fit-first scoring.
 
 ### By Feature
 
@@ -65,10 +65,10 @@ Fit is weighted highest because an ergonomic mouse that does not fit your hand i
 
 ### How do I know which vertical mouse size I need?
 
-Measure your hand from wrist crease to the tip of your middle finger. Hands 19 cm (7.5 inches) or longer should start with our [large hands guide](/guides/best-vertical-mouse-large-hands/). Hands under 17.5 cm should start with our [small hands guide](/guides/best-vertical-mouse-small-hands-carpal-tunnel/). If you are between those ranges, either guide will help — many mid-sized options appear in both.
+Measure your hand from wrist crease to the tip of your middle finger. Hands 19 cm (7.5 inches) or longer should start with our [large hands guide](/best-vertical-mouse-large-hands/). Hands under 17.5 cm should start with our [small hands guide](/best-vertical-mouse-small-hands-carpal-tunnel/). If you are between those ranges, either guide will help — many mid-sized options appear in both.
 
 ---
 
 ## Start Here
 
-Not sure where to begin? **[Measure your hand](/guides/best-vertical-mouse-large-hands/#how-to-measure-your-hand)** and then pick the guide that matches your size. Most visitors find their answer within one guide.
+Not sure where to begin? **[Measure your hand](/best-vertical-mouse-large-hands/#how-to-measure-your-hand)** and then pick the guide that matches your size. Most visitors find their answer within one guide.

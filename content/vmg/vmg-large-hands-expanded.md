@@ -17,7 +17,7 @@ We have tested dozens of vertical mice across hand sizes. The reality is that mo
 
 ## How We Score: The 100-Point Methodology
 
-Every mouse in this guide is evaluated on four weighted criteria. This is the same methodology we use across all our guides — including our [best vertical mouse for small hands](/guides/best-vertical-mouse-small-hands-carpal-tunnel/) guide — so you can compare scores across hand sizes.
+Every mouse in this guide is evaluated on four weighted criteria. This is the same methodology we use across all our guides — including our [best vertical mouse for small hands](/best-vertical-mouse-small-hands-carpal-tunnel/) guide — so you can compare scores across hand sizes.
 
 | Category | Weight | What We Measure |
 |----------|--------|----------------|
@@ -41,7 +41,7 @@ Before choosing, measure accurately:
 - Hand width: 9.5 cm+ (3.7"+)
 - Grip span: 22 cm+ (8.7"+)
 
-If you are between medium and large, you may benefit from reading both this guide and our [small hands guide](/guides/best-vertical-mouse-small-hands-carpal-tunnel/) for comparison.
+If you are between medium and large, you may benefit from reading both this guide and our [small hands guide](/best-vertical-mouse-small-hands-carpal-tunnel/) for comparison.
 
 ---
 

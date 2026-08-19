@@ -41,7 +41,7 @@ The honest answer: for pure ergonomic benefit, both mice perform identically. Th
 
 The MX Vertical earns its premium through workflow features: multi-device Bluetooth, Darkfield glass tracking, per-app software customization, USB-C charging, and noticeably quieter clicks. These are genuine productivity advantages — they just have nothing to do with ergonomics.
 
-If you are experiencing wrist pain and want to understand how vertical mice address it, read our guide on [whether vertical mice actually help wrist pain](/guides/do-vertical-mice-help-wrist-pain) before choosing between these two models.
+If you are experiencing wrist pain and want to understand how vertical mice address it, read our guide on [whether vertical mice actually help wrist pain](/do-vertical-mice-help-wrist-pain) before choosing between these two models.
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0;">
   <div style="background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:1.5rem;">
@@ -125,7 +125,7 @@ If the mouse does not fill your palm properly, you will unconsciously grip tight
 
 Published ergonomic research consistently demonstrates that vertical mice at approximately 57 degrees significantly reduce forearm pronation compared to standard horizontal mice. Studies from occupational health literature show reduced muscle activity in the pronator teres and increased neutral wrist posture. Both mice achieve this identical biomechanical outcome.
 
-The research does not distinguish between budget and premium vertical mice. The angle is what drives the outcome. For carpal tunnel sufferers specifically, our guide to the [best vertical mouse for carpal tunnel](/guides/best-vertical-mouse-carpal-tunnel) covers the clinical evidence in detail.
+The research does not distinguish between budget and premium vertical mice. The angle is what drives the outcome. For carpal tunnel sufferers specifically, our guide to the [best vertical mouse for carpal tunnel](/best-vertical-mouse-carpal-tunnel) covers the clinical evidence in detail.
 
 ## Sensor and Tracking
 
@@ -340,7 +340,7 @@ Many users start with the Anker to validate the vertical mouse concept, then upg
   </div>
 </div>
 
-For a broader selection beyond these two models, see our [best wireless vertical mouse guide](/guides/best-wireless-vertical-mouse) which covers mice across every price point and connectivity type.
+For a broader selection beyond these two models, see our [best wireless vertical mouse guide](/best-wireless-vertical-mouse) which covers mice across every price point and connectivity type.
 
 ## Mac Users: Which to Choose
 
@@ -484,7 +484,7 @@ This comparison uses verified manufacturer specifications alongside published er
 - Microswitch click ratings based on manufacturer component specifications
 - This comparison provides product information, not medical advice — consult a healthcare professional for wrist pain diagnosis
 
-For carpal tunnel-specific recommendations, see our [best vertical mouse for carpal tunnel](/guides/best-vertical-mouse-carpal-tunnel) guide. For evidence on whether vertical mice reduce wrist pain, see our [do vertical mice help wrist pain](/guides/do-vertical-mice-help-wrist-pain) evidence review.
+For carpal tunnel-specific recommendations, see our [best vertical mouse for carpal tunnel](/best-vertical-mouse-carpal-tunnel) guide. For evidence on whether vertical mice reduce wrist pain, see our [do vertical mice help wrist pain](/do-vertical-mice-help-wrist-pain) evidence review.
 
 ---
 

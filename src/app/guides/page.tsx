@@ -41,7 +41,7 @@ export default function GuidesPage() {
         {guides.map((g) => (
           <Link
             key={g.slug}
-            href={`/guides/${g.slug}`}
+            href={`/${g.slug}`}
             className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
           >
             <Card className="h-full overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">

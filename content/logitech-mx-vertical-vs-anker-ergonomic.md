@@ -266,7 +266,7 @@ MacBook Pro has no USB-A ports. The Anker's USB-A dongle requires an adapter, ta
 
 Logi Options+ runs natively on macOS (Apple Silicon optimized) with per-app button customization mapping to Mission Control, Exposé, Spaces, and Launchpad.
 
-**Verdict for Mac users**: MX Vertical is significantly better. See our [best vertical mouse for MacBook Pro](/guides/best-vertical-mouse-macbook-pro) guide for full details.
+**Verdict for Mac users**: MX Vertical is significantly better. See our [best vertical mouse for MacBook Pro](/best-vertical-mouse-macbook-pro) guide for full details.
 
 ## Office Use Comparison {#office-use-comparison}
 
@@ -284,7 +284,7 @@ Logi Options+ runs natively on macOS (Apple Silicon optimized) with per-app butt
 
 For private offices where none of the above premium factors matter, the Anker delivers identical ergonomic value for $65 less.
 
-See our [best vertical mouse for office use](/guides/best-vertical-mouse-office) guide for a comprehensive office breakdown.
+See our [best vertical mouse for office use](/best-vertical-mouse-office) guide for a comprehensive office breakdown.
 
 ## Frequently Asked Questions {#frequently-asked-questions}
 
@@ -351,7 +351,7 @@ This comparison uses verified manufacturer specifications alongside published er
 - Battery life estimates based on manufacturer specifications; actual lifespan varies
 - This comparison provides product information, not medical advice
 
-For carpal tunnel-specific recommendations, see our [best vertical mouse for carpal tunnel](/guides/best-vertical-mouse-carpal-tunnel) guide. For information on whether vertical mice actually help, see our [do vertical mice help wrist pain](/guides/do-vertical-mice-help-wrist-pain) evidence review.
+For carpal tunnel-specific recommendations, see our [best vertical mouse for carpal tunnel](/best-vertical-mouse-carpal-tunnel) guide. For information on whether vertical mice actually help, see our [do vertical mice help wrist pain](/do-vertical-mice-help-wrist-pain) evidence review.
 
 ---
 
