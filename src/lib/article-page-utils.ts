@@ -1,6 +1,6 @@
-import fs from "node:fs";
-import path from "node:path";
 import { portfolioSite } from "@/lib/portfolio-config";
+
+const MISSING_LEGACY_IMAGE_PATTERN = /^\/images\/(?:articles\/(?:(?:anker-ergonomic-mouse-review|best-vertical-mouse-(?:carpal-tunnel|gaming|macbook-pro|office|under-50)|do-vertical-mice-help-wrist-pain|dxt-ergonomic-mouse-review|ergonomic-mouse-buying-guide|how-long-(?:adjust-vertical-mouse-2026|to-adjust-vertical-mouse)|how-to-clean-vertical-mouse|logitech-mx-vertical-review|vertical-mouse-sensitivity-settings|vertical-mouse-vs-trackball-programmers)-|can-vertical-mouse-cure-rsi-research-infographic\.jpg|logitech-mx-vertical-vs-anker-ergonomic\/(?:mx-vertical-desk-use|pronation-angle-diagram)\.jpg)|(?:ergonomic-desk-vertical-mouse-setup|forearm-pronation-comparison|hand-posture-flat-vs-vertical|vertical-mouse-adjustment-timeline|vertical-mouse-handshake-grip|vertical-mouse-office-vs-design)\.jpg|products\/evoluent-verticalmouse-d\.jpg)/i;
 
 export type TocItem = {
   id: string;
@@ -57,10 +57,7 @@ function normalizeImages(html: string, fallbackAlt: string): string {
   return html.replace(/<img\b([^>]*)>/gi, (_match, rawAttributes: string) => {
     const srcMatch = rawAttributes.match(/\bsrc=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
     let src = srcMatch?.[1] || srcMatch?.[2] || srcMatch?.[3] || "";
-    if (src.startsWith("/")) {
-      const localPath = src.split(/[?#]/)[0].replace(/^\/+/, "");
-      if (!fs.existsSync(path.join(process.cwd(), "public", localPath))) src = portfolioSite.heroImage;
-    }
+    if (MISSING_LEGACY_IMAGE_PATTERN.test(src.split(/[?#]/)[0])) src = portfolioSite.heroImage;
 
     const attributes = rawAttributes
       .replace(/\bsrc=(?:"[^"]+"|'[^']+'|[^\s>]+)/i, "")
