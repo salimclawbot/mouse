@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import AmazonProductShowcase from "@/components/AmazonProductShowcase";
 import { getAmazonProductGroup } from "@/lib/amazon-product-registry";
 import AffiliateDisclosureNotice from "@/components/AffiliateDisclosureNotice";
+import ContextualAmazonPlacements from "@/components/ContextualAmazonPlacements";
 import { notFound } from "next/navigation";
 import {
   buildKeywords,
@@ -189,6 +190,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
       <TableOfContents items={toc} />
       <AmazonProductShowcase group={amazonProductGroup} slug={article.slug} />
+      <ContextualAmazonPlacements group={amazonProductGroup} slug={article.slug} />
       <div className="prose prose-slate max-w-none mt-8" dangerouslySetInnerHTML={{ __html: html }} />
 
       <AmazonProductShowcase group={amazonProductGroup} slug={article.slug} />
