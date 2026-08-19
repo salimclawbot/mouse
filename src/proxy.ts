@@ -32,7 +32,7 @@ export function proxy(request: NextRequest) {
 
   if (pathname.startsWith("/guides/") || pathname.startsWith("/articles/")) {
     const canonical = request.nextUrl.clone();
-    canonical.pathname = pathname.replace(/^\/(guides|articles)/, "/");
+    canonical.pathname = pathname.replace(/^\/(?:guides|articles)\//, "/");
     return NextResponse.redirect(canonical, 308);
   }
 

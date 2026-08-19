@@ -1577,7 +1577,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                       <Link
                         href={normalizeAmazonUrl(p.amazonUrl)}
                         target="_blank"
-                        rel="sponsored nofollow noopener"
+                        rel="sponsored nofollow noopener noreferrer"
                         data-affiliate-link="amazon"
                         data-affiliate-site="verticalmouseguide"
                         data-affiliate-page={slug}
